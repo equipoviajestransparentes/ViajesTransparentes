@@ -1,4 +1,14 @@
 ViajesTransparentesApp::Application.routes.draw do
+
+  resources :public_officers do
+    resources :trips do
+      resources :expenses
+      resources :details do
+        resources :flights
+      end
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

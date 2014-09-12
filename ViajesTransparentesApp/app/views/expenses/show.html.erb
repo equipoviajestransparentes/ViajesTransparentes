@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Trip:</b>
+  <%= @expense.trip_id %>
+</p>
+
+<p>
+  <b>Id moneda:</b>
+  <%= @expense.id_moneda %>
+</p>
+
+<p>
+  <b>Gasto pasaje:</b>
+  <%= @expense.gasto_pasaje %>
+</p>
+
+<p>
+  <b>Gasto viatico:</b>
+  <%= @expense.gasto_viatico %>
+</p>
+
+<p>
+  <b>Costo hotel:</b>
+  <%= @expense.costo_hotel %>
+</p>
+
+<p>
+  <b>Comprobado:</b>
+  <%= @expense.comprobado %>
+</p>
+
+<p>
+  <b>Sin comprobar:</b>
+  <%= @expense.sin_comprobar %>
+</p>
+
+<p>
+  <b>Viatico devuelto:</b>
+  <%= @expense.viatico_devuelto %>
+</p>
+
+<p>
+  <b>Tarifa diaria:</b>
+  <%= @expense.tarifa_diaria %>
+</p>
+
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

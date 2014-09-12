@@ -1,0 +1,39 @@
+<h1>Listing expenses</h1>
+
+<table>
+  <tr>
+    <th>Trip</th>
+    <th>Id moneda</th>
+    <th>Gasto pasaje</th>
+    <th>Gasto viatico</th>
+    <th>Costo hotel</th>
+    <th>Comprobado</th>
+    <th>Sin comprobar</th>
+    <th>Viatico devuelto</th>
+    <th>Tarifa diaria</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @expenses.each do |expense| %>
+  <tr>
+    <td><%= expense.trip_id %></td>
+    <td><%= expense.id_moneda %></td>
+    <td><%= expense.gasto_pasaje %></td>
+    <td><%= expense.gasto_viatico %></td>
+    <td><%= expense.costo_hotel %></td>
+    <td><%= expense.comprobado %></td>
+    <td><%= expense.sin_comprobar %></td>
+    <td><%= expense.viatico_devuelto %></td>
+    <td><%= expense.tarifa_diaria %></td>
+    <td><%= link_to 'Show', expense %></td>
+    <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+    <td><%= link_to 'Destroy', expense, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Expense', new_expense_path %>

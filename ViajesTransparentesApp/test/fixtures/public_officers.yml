@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
+  puesto: 1
+  gastos_comprobados_total: 9.99
+  gastos_sin_comprobar_total: 9.99
+  costo_total: 
+  viaticos_devueltos_total: 9.99
+
+two:
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
+  puesto: 1
+  gastos_comprobados_total: 9.99
+  gastos_sin_comprobar_total: 9.99
+  costo_total: 
+  viaticos_devueltos_total: 9.99

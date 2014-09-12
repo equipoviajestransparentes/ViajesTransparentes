@@ -1,0 +1,53 @@
+<%= form_for(@trip) do |f| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+      <% @trip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :public_officer_id %><br />
+    <%= f.number_field :public_officer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :localidad_origen %><br />
+    <%= f.number_field :localidad_origen %>
+  </div>
+  <div class="field">
+    <%= f.label :localidad_destino %><br />
+    <%= f.number_field :localidad_destino %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_viaje %><br />
+    <%= f.number_field :tipo_viaje %>
+  </div>
+  <div class="field">
+    <%= f.label :fechainicio_com %><br />
+    <%= f.date_select :fechainicio_com %>
+  </div>
+  <div class="field">
+    <%= f.label :fechafin_com %><br />
+    <%= f.date_select :fechafin_com %>
+  </div>
+  <div class="field">
+    <%= f.label :tema %><br />
+    <%= f.text_field :tema %>
+  </div>
+  <div class="field">
+    <%= f.label :motivo %><br />
+    <%= f.text_area :motivo %>
+  </div>
+  <div class="field">
+    <%= f.label :resultado %><br />
+    <%= f.text_area :resultado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

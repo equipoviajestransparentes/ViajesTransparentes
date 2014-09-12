@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  public_officer_id: 1
+  localidad_origen: 1
+  localidad_destino: 1
+  tipo_viaje: 1
+  fechainicio_com: 2014-09-12
+  fechafin_com: 2014-09-12
+  tema: 
+  motivo: MyText
+  resultado: MyText
+
+two:
+  public_officer_id: 1
+  localidad_origen: 1
+  localidad_destino: 1
+  tipo_viaje: 1
+  fechainicio_com: 2014-09-12
+  fechafin_com: 2014-09-12
+  tema: 
+  motivo: MyText
+  resultado: MyText

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  detail_id: 1
+  vuelo_origen: 1
+  vuelo_regreso: 1
+  linea_origen: 1
+  linea_regreso: 1
+
+two:
+  detail_id: 1
+  vuelo_origen: 1
+  vuelo_regreso: 1
+  linea_origen: 1
+  linea_regreso: 1

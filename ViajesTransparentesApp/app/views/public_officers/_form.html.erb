@@ -1,0 +1,49 @@
+<%= form_for(@public_officer) do |f| %>
+  <% if @public_officer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@public_officer.errors.count, "error") %> prohibited this public_officer from being saved:</h2>
+
+      <ul>
+      <% @public_officer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :ap_paterno %><br />
+    <%= f.text_field :ap_paterno %>
+  </div>
+  <div class="field">
+    <%= f.label :ap_materno %><br />
+    <%= f.text_field :ap_materno %>
+  </div>
+  <div class="field">
+    <%= f.label :puesto %><br />
+    <%= f.number_field :puesto %>
+  </div>
+  <div class="field">
+    <%= f.label :gastos_comprobados_total %><br />
+    <%= f.text_field :gastos_comprobados_total %>
+  </div>
+  <div class="field">
+    <%= f.label :gastos_sin_comprobar_total %><br />
+    <%= f.text_field :gastos_sin_comprobar_total %>
+  </div>
+  <div class="field">
+    <%= f.label :costo_total %><br />
+    <%= f.text_field :costo_total %>
+  </div>
+  <div class="field">
+    <%= f.label :viaticos_devueltos_total %><br />
+    <%= f.text_field :viaticos_devueltos_total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

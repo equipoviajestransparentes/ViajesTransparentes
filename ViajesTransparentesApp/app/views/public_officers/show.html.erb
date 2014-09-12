@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @public_officer.nombre %>
+</p>
+
+<p>
+  <b>Ap paterno:</b>
+  <%= @public_officer.ap_paterno %>
+</p>
+
+<p>
+  <b>Ap materno:</b>
+  <%= @public_officer.ap_materno %>
+</p>
+
+<p>
+  <b>Puesto:</b>
+  <%= @public_officer.puesto %>
+</p>
+
+<p>
+  <b>Gastos comprobados total:</b>
+  <%= @public_officer.gastos_comprobados_total %>
+</p>
+
+<p>
+  <b>Gastos sin comprobar total:</b>
+  <%= @public_officer.gastos_sin_comprobar_total %>
+</p>
+
+<p>
+  <b>Costo total:</b>
+  <%= @public_officer.costo_total %>
+</p>
+
+<p>
+  <b>Viaticos devueltos total:</b>
+  <%= @public_officer.viaticos_devueltos_total %>
+</p>
+
+
+<%= link_to 'Edit', edit_public_officer_path(@public_officer) %> |
+<%= link_to 'Back', public_officers_path %>

@@ -1,0 +1,53 @@
+<%= form_for(@expense) do |f| %>
+  <% if @expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+
+      <ul>
+      <% @expense.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trip_id %><br />
+    <%= f.text_field :trip_id %>
+  </div>
+  <div class="field">
+    <%= f.label :id_moneda %><br />
+    <%= f.number_field :id_moneda %>
+  </div>
+  <div class="field">
+    <%= f.label :gasto_pasaje %><br />
+    <%= f.text_field :gasto_pasaje %>
+  </div>
+  <div class="field">
+    <%= f.label :gasto_viatico %><br />
+    <%= f.text_field :gasto_viatico %>
+  </div>
+  <div class="field">
+    <%= f.label :costo_hotel %><br />
+    <%= f.text_field :costo_hotel %>
+  </div>
+  <div class="field">
+    <%= f.label :comprobado %><br />
+    <%= f.text_field :comprobado %>
+  </div>
+  <div class="field">
+    <%= f.label :sin_comprobar %><br />
+    <%= f.text_field :sin_comprobar %>
+  </div>
+  <div class="field">
+    <%= f.label :viatico_devuelto %><br />
+    <%= f.text_field :viatico_devuelto %>
+  </div>
+  <div class="field">
+    <%= f.label :tarifa_diaria %><br />
+    <%= f.text_field :tarifa_diaria %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,73 @@
+<h1>Listing details</h1>
+
+<table>
+  <tr>
+    <th>Trip</th>
+    <th>Id mec origen</th>
+    <th>Inst genera</th>
+    <th>Ur</th>
+    <th>Tipo rep</th>
+    <th>Integer</th>
+    <th>Consecutivo</th>
+    <th>Acuerdo</th>
+    <th>Oficio</th>
+    <th>Tipo com</th>
+    <th>Evento</th>
+    <th>Url evento</th>
+    <th>Fechainicio part</th>
+    <th>Fechafin part</th>
+    <th>Antecedente</th>
+    <th>Actividad</th>
+    <th>Contribucion ifai</th>
+    <th>Url comunicado</th>
+    <th>Cubre pasaje</th>
+    <th>Tipo pasaje</th>
+    <th>Inst hospedaje</th>
+    <th>Hotel</th>
+    <th>Fechainicio hotel</th>
+    <th>Fechafin hotel</th>
+    <th>Observaciones</th>
+    <th>Detalle viaje col</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @details.each do |detail| %>
+  <tr>
+    <td><%= detail.trip_id %></td>
+    <td><%= detail.id_mec_origen %></td>
+    <td><%= detail.inst_genera %></td>
+    <td><%= detail.ur %></td>
+    <td><%= detail.tipo_rep %></td>
+    <td><%= detail.integer %></td>
+    <td><%= detail.consecutivo %></td>
+    <td><%= detail.acuerdo %></td>
+    <td><%= detail.oficio %></td>
+    <td><%= detail.tipo_com %></td>
+    <td><%= detail.evento %></td>
+    <td><%= detail.url_evento %></td>
+    <td><%= detail.fechainicio_part %></td>
+    <td><%= detail.fechafin_part %></td>
+    <td><%= detail.antecedente %></td>
+    <td><%= detail.actividad %></td>
+    <td><%= detail.contribucion_ifai %></td>
+    <td><%= detail.url_comunicado %></td>
+    <td><%= detail.cubre_pasaje %></td>
+    <td><%= detail.tipo_pasaje %></td>
+    <td><%= detail.inst_hospedaje %></td>
+    <td><%= detail.hotel %></td>
+    <td><%= detail.fechainicio_hotel %></td>
+    <td><%= detail.fechafin_hotel %></td>
+    <td><%= detail.observaciones %></td>
+    <td><%= detail.detalle_viaje_col %></td>
+    <td><%= link_to 'Show', detail %></td>
+    <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
+    <td><%= link_to 'Destroy', detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Detail', new_detail_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trip_id: 
+  id_moneda: 1
+  gasto_pasaje: 9.99
+  gasto_viatico: 9.99
+  costo_hotel: 9.99
+  comprobado: 9.99
+  sin_comprobar: 9.99
+  viatico_devuelto: 9.99
+  tarifa_diaria: 9.99
+
+two:
+  trip_id: 
+  id_moneda: 1
+  gasto_pasaje: 9.99
+  gasto_viatico: 9.99
+  costo_hotel: 9.99
+  comprobado: 9.99
+  sin_comprobar: 9.99
+  viatico_devuelto: 9.99
+  tarifa_diaria: 9.99
