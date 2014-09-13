@@ -105,12 +105,12 @@ ActiveRecord::Schema.define(:version => 20140913171143) do
   end
 
   create_table "trips", :force => true do |t|
+    t.integer  "officer_commission_id"
     t.integer  "localidad_origen"
     t.integer  "localidad_destino"
     t.integer  "tipo_viaje"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
-    t.integer  "officer_commission_id"
   end
 
 end
