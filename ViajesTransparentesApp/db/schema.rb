@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140913165623) do
+ActiveRecord::Schema.define(:version => 20140913171143) do
 
   create_table "commission_officers", :force => true do |t|
     t.integer  "public_officer_id"
@@ -44,15 +44,6 @@ ActiveRecord::Schema.define(:version => 20140913165623) do
 
   create_table "details", :force => true do |t|
     t.integer  "trip_id"
-    t.integer  "id_mec_origen"
-    t.string   "inst_genera"
-    t.string   "ur"
-    t.string   "tipo_rep"
-    t.string   "integer"
-    t.integer  "consecutivo"
-    t.string   "acuerdo"
-    t.string   "oficio"
-    t.integer  "tipo_com"
     t.string   "evento"
     t.string   "url_evento"
     t.date     "fechainicio_part"
@@ -67,10 +58,13 @@ ActiveRecord::Schema.define(:version => 20140913165623) do
     t.string   "hotel"
     t.date     "fechainicio_hotel"
     t.date     "fechafin_hotel"
-    t.text     "observaciones"
-    t.string   "detalle_viaje_col"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "id_tema_viaje"
+    t.string   "latitud_origen"
+    t.string   "longitud_origen"
+    t.string   "latitud_destino"
+    t.string   "longitud_destino"
   end
 
   create_table "expenses", :force => true do |t|
@@ -111,12 +105,12 @@ ActiveRecord::Schema.define(:version => 20140913165623) do
   end
 
   create_table "trips", :force => true do |t|
-    t.integer  "officer_commission_id"
     t.integer  "localidad_origen"
     t.integer  "localidad_destino"
     t.integer  "tipo_viaje"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.integer  "officer_commission_id"
   end
 
 end
