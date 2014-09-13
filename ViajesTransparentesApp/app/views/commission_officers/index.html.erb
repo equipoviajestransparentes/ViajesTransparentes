@@ -1,0 +1,29 @@
+<h1>Listing commission_officers</h1>
+
+<table>
+  <tr>
+    <th>Public officer</th>
+    <th>Commission</th>
+    <th>Resultado</th>
+    <th>Observaciones</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @commission_officers.each do |commission_officer| %>
+  <tr>
+    <td><%= commission_officer.public_officer_id %></td>
+    <td><%= commission_officer.commission_id %></td>
+    <td><%= commission_officer.resultado %></td>
+    <td><%= commission_officer.observaciones %></td>
+    <td><%= link_to 'Show', commission_officer %></td>
+    <td><%= link_to 'Edit', edit_commission_officer_path(commission_officer) %></td>
+    <td><%= link_to 'Destroy', commission_officer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Commission officer', new_commission_officer_path %>

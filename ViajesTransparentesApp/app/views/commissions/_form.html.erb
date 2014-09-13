@@ -1,0 +1,77 @@
+<%= form_for(@commission) do |f| %>
+  <% if @commission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commission.errors.count, "error") %> prohibited this commission from being saved:</h2>
+
+      <ul>
+      <% @commission.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_mec_origen %><br />
+    <%= f.number_field :id_mec_origen %>
+  </div>
+  <div class="field">
+    <%= f.label :id_tipo_comision %><br />
+    <%= f.number_field :id_tipo_comision %>
+  </div>
+  <div class="field">
+    <%= f.label :id_representacion %><br />
+    <%= f.number_field :id_representacion %>
+  </div>
+  <div class="field">
+    <%= f.label :fechainicio_com %><br />
+    <%= f.date_select :fechainicio_com %>
+  </div>
+  <div class="field">
+    <%= f.label :fechafin_com %><br />
+    <%= f.date_select :fechafin_com %>
+  </div>
+  <div class="field">
+    <%= f.label :inst_genera %><br />
+    <%= f.text_field :inst_genera %>
+  </div>
+  <div class="field">
+    <%= f.label :ur %><br />
+    <%= f.text_field :ur %>
+  </div>
+  <div class="field">
+    <%= f.label :consecutivo %><br />
+    <%= f.number_field :consecutivo %>
+  </div>
+  <div class="field">
+    <%= f.label :acuerdo %><br />
+    <%= f.text_field :acuerdo %>
+  </div>
+  <div class="field">
+    <%= f.label :oficio %><br />
+    <%= f.text_field :oficio %>
+  </div>
+  <div class="field">
+    <%= f.label :motivo %><br />
+    <%= f.text_area :motivo %>
+  </div>
+  <div class="field">
+    <%= f.label :comprobado_total %><br />
+    <%= f.text_field :comprobado_total %>
+  </div>
+  <div class="field">
+    <%= f.label :sin_comprobar_total %><br />
+    <%= f.text_field :sin_comprobar_total %>
+  </div>
+  <div class="field">
+    <%= f.label :viatico_devuelto_total %><br />
+    <%= f.text_field :viatico_devuelto_total %>
+  </div>
+  <div class="field">
+    <%= f.label :estatus_comision %><br />
+    <%= f.text_field :estatus_comision %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

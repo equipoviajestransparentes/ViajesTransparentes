@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_mec_origen: 1
+  id_tipo_comision: 1
+  id_representacion: 1
+  fechainicio_com: 2014-09-13
+  fechafin_com: 2014-09-13
+  inst_genera: MyString
+  ur: MyString
+  consecutivo: 1
+  acuerdo: MyString
+  oficio: MyString
+  motivo: MyText
+  comprobado_total: 9.99
+  sin_comprobar_total: 9.99
+  viatico_devuelto_total: 9.99
+  estatus_comision: 
+
+two:
+  id_mec_origen: 1
+  id_tipo_comision: 1
+  id_representacion: 1
+  fechainicio_com: 2014-09-13
+  fechafin_com: 2014-09-13
+  inst_genera: MyString
+  ur: MyString
+  consecutivo: 1
+  acuerdo: MyString
+  oficio: MyString
+  motivo: MyText
+  comprobado_total: 9.99
+  sin_comprobar_total: 9.99
+  viatico_devuelto_total: 9.99
+  estatus_comision: 

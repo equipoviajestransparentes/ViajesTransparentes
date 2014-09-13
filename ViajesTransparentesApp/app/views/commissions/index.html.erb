@@ -1,0 +1,51 @@
+<h1>Listing commissions</h1>
+
+<table>
+  <tr>
+    <th>Id mec origen</th>
+    <th>Id tipo comision</th>
+    <th>Id representacion</th>
+    <th>Fechainicio com</th>
+    <th>Fechafin com</th>
+    <th>Inst genera</th>
+    <th>Ur</th>
+    <th>Consecutivo</th>
+    <th>Acuerdo</th>
+    <th>Oficio</th>
+    <th>Motivo</th>
+    <th>Comprobado total</th>
+    <th>Sin comprobar total</th>
+    <th>Viatico devuelto total</th>
+    <th>Estatus comision</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @commissions.each do |commission| %>
+  <tr>
+    <td><%= commission.id_mec_origen %></td>
+    <td><%= commission.id_tipo_comision %></td>
+    <td><%= commission.id_representacion %></td>
+    <td><%= commission.fechainicio_com %></td>
+    <td><%= commission.fechafin_com %></td>
+    <td><%= commission.inst_genera %></td>
+    <td><%= commission.ur %></td>
+    <td><%= commission.consecutivo %></td>
+    <td><%= commission.acuerdo %></td>
+    <td><%= commission.oficio %></td>
+    <td><%= commission.motivo %></td>
+    <td><%= commission.comprobado_total %></td>
+    <td><%= commission.sin_comprobar_total %></td>
+    <td><%= commission.viatico_devuelto_total %></td>
+    <td><%= commission.estatus_comision %></td>
+    <td><%= link_to 'Show', commission %></td>
+    <td><%= link_to 'Edit', edit_commission_path(commission) %></td>
+    <td><%= link_to 'Destroy', commission, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Commission', new_commission_path %>
