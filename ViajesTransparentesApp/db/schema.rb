@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140913171143) do
+ActiveRecord::Schema.define(:version => 20140918031819) do
+
+  create_table "cargo_catalogos", :force => true do |t|
+    t.integer  "grupo_id"
+    t.string   "cargo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "commission_officers", :force => true do |t|
     t.integer  "public_officer_id"
@@ -91,6 +98,44 @@ ActiveRecord::Schema.define(:version => 20140913171143) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "grupo_catalogos", :force => true do |t|
+    t.string   "grupo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "grupos", :force => true do |t|
+    t.string   "grupo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "localidades_catalogos", :force => true do |t|
+    t.string   "pais"
+    t.string   "latitud_pais"
+    t.string   "longitud_pais"
+    t.string   "estado"
+    t.string   "latitud_estado"
+    t.string   "longitud_estado"
+    t.string   "ciudad"
+    t.string   "latitud_ciudad"
+    t.string   "longitud_ciudad"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "mecanismo_origen_catalogos", :force => true do |t|
+    t.string   "mec_origen"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "moneda_catalogos", :force => true do |t|
+    t.string   "moneda"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "public_officers", :force => true do |t|
     t.string   "nombre"
     t.string   "ap_paterno"
@@ -104,13 +149,37 @@ ActiveRecord::Schema.define(:version => 20140913171143) do
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "tema_de_viaje_catalogos", :force => true do |t|
+    t.string   "tema"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_comisions", :force => true do |t|
+    t.string   "tipo_com"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tipo_pasaje_catalogos", :force => true do |t|
+    t.string   "tipo_pasaje"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tipo_viaje_catalogos", :force => true do |t|
+    t.string   "tipo_viaje"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "trips", :force => true do |t|
-    t.integer  "officer_commission_id"
     t.integer  "localidad_origen"
     t.integer  "localidad_destino"
     t.integer  "tipo_viaje"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.integer  "officer_commission_id"
   end
 
 end

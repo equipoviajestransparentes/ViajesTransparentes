@@ -25,6 +25,7 @@
     <td><%= public_officer.gastos_sin_comprobar_total %></td>
     <td><%= public_officer.costo_total %></td>
     <td><%= public_officer.viaticos_devueltos_total %></td>
+    <td><%= link_to 'Nueva Comisión', new_public_officer_commission_officer_path(public_officer) %></td>
     <td><%= link_to 'Show', public_officer %></td>
     <td><%= link_to 'Edit', edit_public_officer_path(public_officer) %></td>
     <td><%= link_to 'Destroy', public_officer, confirm: 'Are you sure?', method: :delete %></td>

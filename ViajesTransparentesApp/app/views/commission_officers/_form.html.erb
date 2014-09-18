@@ -1,4 +1,4 @@
-<%= form_for(@commission_officer) do |f| %>
+<%= form_for [@public_officer, @commission_officer] do |f| %>
   <% if @commission_officer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@commission_officer.errors.count, "error") %> prohibited this commission_officer from being saved:</h2>

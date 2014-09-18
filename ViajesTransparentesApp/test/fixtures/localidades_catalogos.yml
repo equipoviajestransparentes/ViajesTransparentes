@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pais: MyString
+  latitud_pais: MyString
+  longitud_pais: MyString
+  estado: MyString
+  latitud_estado: MyString
+  longitud_estado: MyString
+  ciudad: MyString
+  latitud_ciudad: MyString
+  longitud_ciudad: MyString
+
+two:
+  pais: MyString
+  latitud_pais: MyString
+  longitud_pais: MyString
+  estado: MyString
+  latitud_estado: MyString
+  longitud_estado: MyString
+  ciudad: MyString
+  latitud_ciudad: MyString
+  longitud_ciudad: MyString
