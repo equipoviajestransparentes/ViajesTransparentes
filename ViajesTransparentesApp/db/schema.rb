@@ -11,22 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140918031819) do
+ActiveRecord::Schema.define(:version => 20140919153831) do
 
   create_table "cargo_catalogos", :force => true do |t|
     t.integer  "grupo_id"
     t.string   "cargo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "commission_officers", :force => true do |t|
-    t.integer  "public_officer_id"
-    t.integer  "commission_id"
-    t.text     "resultado"
-    t.text     "observaciones"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
   end
 
   create_table "commissions", :force => true do |t|
@@ -140,13 +131,19 @@ ActiveRecord::Schema.define(:version => 20140918031819) do
     t.string   "nombre"
     t.string   "ap_paterno"
     t.string   "ap_materno"
-    t.integer  "puesto"
     t.decimal  "gastos_comprobados_total"
     t.decimal  "gastos_sin_comprobar_total"
     t.decimal  "costo_total"
     t.decimal  "viaticos_devueltos_total"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.integer  "id_puesto"
+    t.integer  "id_cargo"
+    t.integer  "id_cargo_superior"
+    t.integer  "id_unidad_adm"
+    t.integer  "id_institucion"
+    t.integer  "id_tipo_personal"
+    t.string   "correo_electronico"
   end
 
   create_table "tema_de_viaje_catalogos", :force => true do |t|
