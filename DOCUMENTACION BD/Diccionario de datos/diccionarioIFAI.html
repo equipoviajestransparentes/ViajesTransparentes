@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="ifai Data Dictionary." />
+    <title>ifai Data Dictionary</title>
+    <style type="text/css">
+    table{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    abbr{
+        cursor: help;
+    }
+    table, td, th{
+        border-style: solid;
+        border-width: 1px;
+    }
+    table caption{
+        font-size: 120%;
+        font-weight: bold;
+    }
+    caption{
+        color: black;
+    }
+    td, th{
+        border-color: silver;
+    }
+    tr:hover{
+        color: #333;
+        background-color: #F2F2F2;
+    }
+    th{
+        background-color: silver;
+    }
+    td{
+        color: gray;
+    }
+    ul{
+        font-style: italic;
+    }
+    #title-sect{
+        color: gray;
+        text-align: right;
+    }
+    .proj-desc{
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+<div id="title-sect">
+<h1>ifai<br> Data Dictionay</h1>
+<p>
+<em>2014-09-19</em>
+</p>
+<p class="proj-desc">
+<em></em>
+</p>
+</div>
+<h2>Alphabetic Index</h2>
+<ul>
+<li><a href='#cargo_catalogo'>cargo_catalogo</a></li>
+<li><a href='#comision'>comision</a></li>
+<li><a href='#costo'>costo</a></li>
+<li><a href='#detalleViaje'>detalleViaje</a></li>
+<li><a href='#institucion_catalogo'>institucion_catalogo</a></li>
+<li><a href='#localidades_catalogo'>localidades_catalogo</a></li>
+<li><a href='#mecanismo_origen_catalogo'>mecanismo_origen_catalogo</a></li>
+<li><a href='#moneda_catalogo'>moneda_catalogo</a></li>
+<li><a href='#puesto_catalogo'>puesto_catalogo</a></li>
+<li><a href='#representacion_catalogo'>representacion_catalogo</a></li>
+<li><a href='#servidor_publico'>servidor_publico</a></li>
+<li><a href='#tema_de_viaje_catalogo'>tema_de_viaje_catalogo</a></li>
+<li><a href='#tipo_comision_catalogo'>tipo_comision_catalogo</a></li>
+<li><a href='#tipo_pasaje_catalogo'>tipo_pasaje_catalogo</a></li>
+<li><a href='#tipo_personal_catalogo'>tipo_personal_catalogo</a></li>
+<li><a href='#tipo_viaje_catalogo'>tipo_viaje_catalogo</a></li>
+<li><a href='#unidad_administrativa_catalogo'>unidad_administrativa_catalogo</a></li>
+<li><a href='#viaje'>viaje</a></li>
+<li><a href='#vuelo'>vuelo</a></li>
+</ul>
+<table id='cargo_catalogo'>
+<caption>cargo_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idCargo</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificador del cargo</td>
+</tr>
+<tr>
+    <td>CARGO</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre del cargo</td>
+</tr>
+<table id='comision'>
+<caption>comision</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idComision</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave identificadora de las comisiones</td>
+</tr>
+<tr>
+    <td>idServidor</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al servidor publico al que le pertenece esta comision</td>
+</tr>
+<tr>
+    <td>idMec_origen</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo de mecanismos de originacion</td>
+</tr>
+<tr>
+    <td>idTipo_comision</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo del tipo de comision asignada</td>
+</tr>
+<tr>
+    <td>idRepresentacion</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo de tipos de representacion</td>
+</tr>
+<tr>
+    <td>FECHAINICIO_COM</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la fecha inicio de la comision</td>
+</tr>
+<tr>
+    <td>FECHAFIN_COM</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la fecha fin de la comision</td>
+</tr>
+<tr>
+    <td>INST_GENERA</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Institución que invita, o en su defecto Unidad Responsable que genera la comisión para el servidor público</td>
+</tr>
+<tr>
+    <td>UR</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la unidad responsable en la que se genera la nota de viaje, el oficio relacionado a la comisión a la que se envía al funcionario público, u otra información específica sobre motivo del viaje y resultados</td>
+</tr>
+<tr>
+    <td>CONSECUTIVO</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el número de identificación único asignado por las áreas de control del IFAI para identificar la comisión</td>
+</tr>
+<tr>
+    <td>ACUERDO</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el número de acuerdo o documento oficial mediante el cual se autoriza la comisión del servidor público</td>
+</tr>
+<tr>
+    <td>OFICIO</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el número de oficio a través del cuál se comisiona al servidor público</td>
+</tr>
+<tr>
+    <td>MOTIVO</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el motivo por el cual el funcionario público fue enviado a la comisión en cuestión</td>
+</tr>
+<tr>
+    <td>COMPROBADO_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el monto comprobado total de la comision asignada al servidor publico</td>
+</tr>
+<tr>
+    <td>SIN_COMPROBAR_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que indica el monto sin comprobado total de la comision asignada al servidor publico</td>
+</tr>
+<tr>
+    <td>VIATICO_DEVUELTO_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que indica el monto de viaticos total devuelto por el servidor publico</td>
+</tr>
+<tr>
+    <td>RESULTADO</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que contiene los resultados obtenidos durante la comision</td>
+</tr>
+<tr>
+    <td>OBSERVACIONES</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que contiene las observaciones realizadas durante la comision</td>
+</tr>
+<tr>
+    <td>ESTATUS_COMISION</td>
+    <td>CHAR</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'F'</td>
+    <td>Campo que indica el estatus de la comision, este puede estar con valor de 'F' cuando la comision no ah sido reportada o confirmada aun por el servidor publico con los gastos derivados de la comision a la que asistio, una vez que esta comision es reportada adquiere el valor de 'T'</td>
+</tr>
+<table id='costo'>
+<caption>costo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idCosto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del costo</td>
+</tr>
+<tr>
+    <td>idViaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al identificador del viaje al que pertenece el costo</td>
+</tr>
+<tr>
+    <td>idMoneda</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo de monedas en que esta representado el costo</td>
+</tr>
+<tr>
+    <td>GASTO_PASAJE</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Monto del gasto generado por viáticos, relacionado específicamente con el transporte del funcionario.</td>
+</tr>
+<tr>
+    <td>GASTO_VIATICO</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Monto del gasto generado por viáticos, relacionado rubros diferentes al transporte del funcionario (hospedaje y alimentación principalmente)</td>
+</tr>
+<tr>
+    <td>COSTO_HOTEL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Costo total del hospedaje reportado en el oficio correspondiente</td>
+</tr>
+<tr>
+    <td>COMPROBADO</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el Costo total generado durante el viaje del que se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente</td>
+</tr>
+<tr>
+    <td>SIN_COMPROBAR</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el Costo total generado durante el viaje del que no se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente</td>
+</tr>
+<tr>
+    <td>VIATICO_DEVUELTO</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Monto devuelto por el funcionario a la cuenta del IFAI correspondiente, según lineamientos internos, reportado en el oficio correspondiente</td>
+</tr>
+<tr>
+    <td>TARIFA_DIARIA</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Tarifa de viáticos diaria asignada al funcionario de acuerdo con su perfil y el lugar a donde viaja. </td>
+</tr>
+<table id='detalleViaje'>
+<caption>detalleViaje</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idDetalleViaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del deltalle del viaje</td>
+</tr>
+<tr>
+    <td>EVENTO</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe  el evento o actividad a la que asiste el funcionario en su comisión</td>
+</tr>
+<tr>
+    <td>URL_EVENTO</td>
+    <td>VARCHAR(150)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la liga de internet relacionada con el evento al cual el funcionario asiste como objeto de la comisión, pudiendo ser un micrositio, programa, convocatoria, etc.</td>
+</tr>
+<tr>
+    <td>FECHAINICIO_PART</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Fecha en la que inicia la participación del funcionario en la comisión</td>
+</tr>
+<tr>
+    <td>FECHAFIN_PART</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Fecha en la que finaliza la participación del funcionario en la comisión</td>
+</tr>
+<tr>
+    <td>ANTECEDENTE</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe los antecedentes relacionados con la comisión a la que fue enviado el funcionario y del evento al que asistió</td>
+</tr>
+<tr>
+    <td>ACTIVIDAD</td>
+    <td>VARCHAR(500)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica una breve descripción de las actividades realizadas por el funcionario en la comisión, contemplando el programa y su agenda de trabajo.</td>
+</tr>
+<tr>
+    <td>CONTRIBUCION_IFAI</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica una breve descripción de las contribuciones que la comisión y la participación del funcionario generan para el IFAI</td>
+</tr>
+<tr>
+    <td>URL_COMUNICADO</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la URL que vincula a una nota, blog o comunicado oficial ya sea generada por la institución convocante o por el IFAI para reportar los resultados de la actividad realizada durante la comisión</td>
+</tr>
+<tr>
+    <td>CUBRE_PASAJE</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la institución que cubre el costo del viaje, puede ser el IFAI o la institución que invita al funcionario público</td>
+</tr>
+<tr>
+    <td>idTipo_pasaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo del tipo de pasaje</td>
+</tr>
+<tr>
+    <td>INST_HOSPEDAJE</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la institución que cubre el costo del hospedaje, puede ser el IFAI o la institución que invita al funcionario público</td>
+</tr>
+<tr>
+    <td>HOTEL</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre del hotel o recinto en donde se hospeda el funcionario durante su comisión</td>
+</tr>
+<tr>
+    <td>FECHAINICIO_HOTEL</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Fecha en la que el funcionario se registra en el hotel descrito en el campo anterior</td>
+</tr>
+<tr>
+    <td>FECHAFIN_HOTEL</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la Fecha en la que el funcionario registra su salida del hotel descrito previamente</td>
+</tr>
+<tr>
+    <td>idTema_viaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo de temas de viaje</td>
+</tr>
+<tr>
+    <td>LATITUD_ORIGEN</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la coordenada de latitud del origen del viaje</td>
+</tr>
+<tr>
+    <td>LONGITUD_ORIGEN</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la coordenada de longitud del origen del viaje</td>
+</tr>
+<tr>
+    <td>LATITUD_DESTINO</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la coordenada de latitud del destino del viaje</td>
+</tr>
+<tr>
+    <td>LONGITUD_DESTINO</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la coordenada de longitud del destino del viaje</td>
+</tr>
+<table id='institucion_catalogo'>
+<caption>institucion_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idInstitucion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave identificadora de las instituciones</td>
+</tr>
+<tr>
+    <td>INSTITUCION</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre de la insititucion</td>
+</tr>
+<table id='localidades_catalogo'>
+<caption>localidades_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idLocalidades</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora de la localidad</td>
+</tr>
+<tr>
+    <td>PAIS</td>
+    <td>VARCHAR(150)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el nombre del pais</td>
+</tr>
+<tr>
+    <td>LATITUD_PAIS</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada latitud del pais</td>
+</tr>
+<tr>
+    <td>LONGITUD_PAIS</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada longitud del pais</td>
+</tr>
+<tr>
+    <td>ESTADO</td>
+    <td>VARCHAR(150)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el nombre del estado</td>
+</tr>
+<tr>
+    <td>LATITUD_ESTADO</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada latitud del estado</td>
+</tr>
+<tr>
+    <td>LONGITUD_ESTADO</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada longitud del estado</td>
+</tr>
+<tr>
+    <td>CIUDAD</td>
+    <td>VARCHAR(150)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el nombre de la ciudad</td>
+</tr>
+<tr>
+    <td>LATITUD_CIUDAD</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada latitud de la ciudad</td>
+</tr>
+<tr>
+    <td>LONGITUD_CIUDAD</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la coordenada longitud de la ciudad</td>
+</tr>
+<table id='mecanismo_origen_catalogo'>
+<caption>mecanismo_origen_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idMec_origen</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del catalogo de mecanismos de origen</td>
+</tr>
+<tr>
+    <td>MEC_ORIGEN</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el mecanismo de origen, se genera por una invitación externa o por requerimiento de una Unidades Responsable dentro de la institución.</td>
+</tr>
+<table id='moneda_catalogo'>
+<caption>moneda_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idMoneda</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del catalogo de monedas</td>
+</tr>
+<tr>
+    <td>MONEDA</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica la descripcion de la moneda</td>
+</tr>
+<table id='puesto_catalogo'>
+<caption>puesto_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idPuesto</td>
+    <td>VARCHAR(10)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave identificadora de los puestos</td>
+</tr>
+<tr>
+    <td>PUESTO</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre del puesto</td>
+</tr>
+<table id='representacion_catalogo'>
+<caption>representacion_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idRepresentacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del tipo de representacion</td>
+</tr>
+<tr>
+    <td>TIPO_REP</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el tipo de representacion en función del puesto del funcionario público que viaja</td>
+</tr>
+<table id='servidor_publico'>
+<caption>servidor_publico</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idServidor</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del Servidor Publico</td>
+</tr>
+<tr>
+    <td>idCargo</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al cargo del servidor publico</td>
+</tr>
+<tr>
+    <td>idCargoSuperior</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al cargo superior del servidor publico</td>
+</tr>
+<tr>
+    <td>idPuesto</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al puesto del servidor publico</td>
+</tr>
+<tr>
+    <td>idUnidadAdm</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia a la unidad administrativa del servidor publico</td>
+</tr>
+<tr>
+    <td>idInstitucion</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia a la institucion del servidor publico</td>
+</tr>
+<tr>
+    <td>idTipoPersonal</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al tipo de persona del servidor publico</td>
+</tr>
+<tr>
+    <td>NOMBRE</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre del servidor publico</td>
+</tr>
+<tr>
+    <td>AP_PATERNO</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Apellido paterno del servidor publico</td>
+</tr>
+<tr>
+    <td>AP_MATERNO</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Apellido materno del servidor publico</td>
+</tr>
+<tr>
+    <td>CORREO_ELECTRONICO</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que contiene el correo electronico del servidor publico</td>
+</tr>
+<tr>
+    <td>GASTOS_COMPROBADOS_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que contiene el total o acumulado de los gastos comprobados por el servidor publico en todas las comisiones a las que ah asistido</td>
+</tr>
+<tr>
+    <td>GASTOS_SIN_COMPROBAR_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que contiene el total o acumulado de los gastos sin comprobar por el servidor publico en todas las comisiones a las que ah asistido</td>
+</tr>
+<tr>
+    <td>COSTO_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que contiene el costo total o acumulado, invertido en el servidor publico durante todas sus comisiones</td>
+</tr>
+<tr>
+    <td>VIATICOS_DEVUELTOS_TOTAL</td>
+    <td>DECIMAL(2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td>Campo que contiene el total o acumulador de los viaticos devueltos por el servidor publico a lo largo de todas sus comisiones.</td>
+</tr>
+<table id='tema_de_viaje_catalogo'>
+<caption>tema_de_viaje_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTema_de_viaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del catalogo de temas de viaje</td>
+</tr>
+<tr>
+    <td>TEMA</td>
+    <td>VARCHAR(100)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el tema del viaje</td>
+</tr>
+<table id='tipo_comision_catalogo'>
+<caption>tipo_comision_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTipo_comision</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del tipo de comision</td>
+</tr>
+<tr>
+    <td>TIPO_COM</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el tipo de comision asignada</td>
+</tr>
+<table id='tipo_pasaje_catalogo'>
+<caption>tipo_pasaje_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTipoPasaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del catalogo de tipo de pasajes</td>
+</tr>
+<tr>
+    <td>TIPO_PASAJE</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el tipo de pasaje</td>
+</tr>
+<table id='tipo_personal_catalogo'>
+<caption>tipo_personal_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTipoPersonal</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave identificador del tipo de personal</td>
+</tr>
+<tr>
+    <td>TIPO_PERSONAL</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el tipo de personal al que se refiere el servidor publico</td>
+</tr>
+<table id='tipo_viaje_catalogo'>
+<caption>tipo_viaje_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idTipoViaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave indetificadora del catalogo de tipo de viaje</td>
+</tr>
+<tr>
+    <td>TIPO_VIAJE</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el tipo de viaje</td>
+</tr>
+<table id='unidad_administrativa_catalogo'>
+<caption>unidad_administrativa_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idUnidadAdm</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave identificadora de la unidad administradora</td>
+</tr>
+<tr>
+    <td>UNIDAD_ADM</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre de la unidad administradora</td>
+</tr>
+<table id='viaje'>
+<caption>viaje</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idViaje</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del viaje que realizo el servidor publico</td>
+</tr>
+<tr>
+    <td>idComision</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia a la comision a la que pertenece el viaje</td>
+</tr>
+<tr>
+    <td>idDetalleViaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al detalle del viaje reallizado por el servidor publico</td>
+</tr>
+<tr>
+    <td>LOCALIDAD_ORIGEN</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia a la localidad origen desde donde viajo el servidor publico</td>
+</tr>
+<tr>
+    <td>LOCALIDAD_DESTINO</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia a la localidad destino hasta donde viajo el servidor publico</td>
+</tr>
+<tr>
+    <td>TIPO_VIAJE</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al catalogo con el tipo de viaje que realizo el servidor publico</td>
+</tr>
+<table id='vuelo'>
+<caption>vuelo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idVuelos</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del vuelo</td>
+</tr>
+<tr>
+    <td>idViaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al id del viaje al que pertenecen el o los vuelos</td>
+</tr>
+<tr>
+    <td>VUELO_ORIGEN</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el Número de vuelo. De acuerdo con la asignación dada por la aerolínea en cuestión</td>
+</tr>
+<tr>
+    <td>VUELO_DESTINO</td>
+    <td>VARCHAR(15)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el Número de vuelo. De acuerdo con la asignación dada por la aerolínea en cuestión</td>
+</tr>
+<tr>
+    <td>LINEA_ORIGEN</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el nombre de la aerolinea</td>
+</tr>
+<tr>
+    <td>LINEA_DESTINO</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que indica el nombre de la aerolinea</td>
+</tr>
+</table>
+</body>
+</html>
