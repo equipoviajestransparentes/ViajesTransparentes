@@ -1,3 +1,3 @@
 class PublicOfficer < ActiveRecord::Base
-	has_many :commission_officers
+	has_many :commissions
 end
