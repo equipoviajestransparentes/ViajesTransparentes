@@ -3,11 +3,12 @@ ViajesTransparentesApp::Application.routes.draw do
   resources :commissions
 
   resources :public_officers do
-    resources :commission_officers  
-    resources :trips do
-      resources :expenses
-      resources :details do
-        resources :flights
+    resources :commissions do 
+      resources :trips do
+        resources :expenses
+        resources :details do
+          resources :flights
+        end
       end
     end
   end

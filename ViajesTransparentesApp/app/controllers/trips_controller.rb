@@ -24,7 +24,9 @@ class TripsController < ApplicationController
   # GET /trips/new
   # GET /trips/new.json
   def new
-    @trip = Trip.new
+    @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commission = @public_officer.commissions.find(params[:commission_id])
+    @trip = @commission.trips.new
 
     respond_to do |format|
       format.html # new.html.erb

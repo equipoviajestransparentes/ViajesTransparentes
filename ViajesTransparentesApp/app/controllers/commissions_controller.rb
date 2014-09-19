@@ -24,7 +24,8 @@ class CommissionsController < ApplicationController
   # GET /commissions/new
   # GET /commissions/new.json
   def new
-    @commission = Commission.new
+    @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commission = @public_officer.commissions.new
 
     respond_to do |format|
       format.html # new.html.erb

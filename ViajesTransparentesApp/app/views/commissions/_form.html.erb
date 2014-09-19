@@ -1,4 +1,4 @@
-<%= form_for(@commission) do |f| %>
+<%= form_for [@public_officer, @commission] do |f| %>
   <% if @commission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@commission.errors.count, "error") %> prohibited this commission from being saved:</h2>
@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :public_officer_id %><br />
+    <%= f.number_field :public_officer_id %>
+  </div>
   <div class="field">
     <%= f.label :id_mec_origen %><br />
     <%= f.number_field :id_mec_origen %>
@@ -67,9 +71,13 @@
     <%= f.label :viatico_devuelto_total %><br />
     <%= f.text_field :viatico_devuelto_total %>
   </div>
-  <div class="field">
-    <%= f.label :estatus_comision %><br />
-    <%= f.text_field :estatus_comision %>
+    <div class="field">
+    <%= f.label :resultado %><br />
+    <%= f.text_field :resultado %>
+  </div>
+    <div class="field">
+    <%= f.label :observaciones %><br />
+    <%= f.text_field :observaciones %>
   </div>
   <div class="actions">
     <%= f.submit %>
