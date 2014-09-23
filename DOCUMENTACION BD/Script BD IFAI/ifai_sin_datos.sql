@@ -74,6 +74,8 @@ CREATE TABLE IF NOT EXISTS `ifai`.`servidor_publico` (
   `GASTOS_SIN_COMPROBAR_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el total o acumulado de los gastos sin comprobar por el servidor publico en todas las comisiones a las que ah asistido',
   `COSTO_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el costo total o acumulado, invertido en el servidor publico durante todas sus comisiones',
   `VIATICOS_DEVUELTOS_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el total o acumulador de los viaticos devueltos por el servidor publico a lo largo de todas sus comisiones.',
+  `DATE_CREATED` DATETIME NULL COMMENT 'Campo que establece la fecha de creacion del registros',
+  `DATE_UPDATED` DATETIME NULL,
   PRIMARY KEY (`idServidor`),
   INDEX `fk_servidores_publicos_puesto_idx` (`idCargo` ASC),
   INDEX `fk_servidores_publicos_tipo_personal1_idx` (`idTipoPersonal` ASC),
