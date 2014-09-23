@@ -1,0 +1,22 @@
+/* CSS Document */
+body {
+    background-color:#FFFFFF;/*#99CCFF*/
+    font-family: 'Arial', cursive;
+}
+
+.divprincipal {
+	border:none;
+	width: 80%;
+	height: 80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:5%;
+	margin-bottom:10;
+	background-color:#FFFFFF;
+}
+
+.divlogotitulo{
+	width:100%;
+	height:130px;
+
+}
