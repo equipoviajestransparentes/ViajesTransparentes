@@ -9,6 +9,19 @@ var app = angular.module('ModuloCaptura',['ui.bootstrap'])
 	  };
 	 })
 	 
+	.directive('vtComision', function (){
+		return {
+			restrict: 'E',
+			templateUrl: 'vtComision.html'
+		};
+	})
+
+	.directive('vtViaje', function (){
+		return {
+			restrict: 'E',
+			templateUrl: 'vtViaje.html'
+		};
+	});	
 	 
 	/*Controlador de los calendarios*/
 var DatepickerDemoCtrl = function ($scope) {
