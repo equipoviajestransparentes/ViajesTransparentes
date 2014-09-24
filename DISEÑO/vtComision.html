@@ -1,0 +1,118 @@
+<div>
+	<form class="form-inline" role="form" ng-submit="guardar()">
+		<div class="row" >
+				<div class="form-group col-md-3">
+					<label class="control-label" >Comisión</label>
+					<input type="text" class="form-control input-sm" placeholder="Num. comision">
+				</div>	
+				<div class="form-group col-md-3">
+					<label class="control-label">Mecanismo Origen</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>Invitación</option>
+						  <option>UR</option>
+						</select>
+				</div>	
+				<div class="form-group col-md-3">
+					<label class="control-label">Tipo comisión</label>
+					<select class="form-control input-sm">
+					  <option>Seleccione una opción</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				</div>	
+				<div class="form-group col-md-3">
+					<label class="control-label">Representación</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+				</div>										
+		</div>		
+		<br></br>
+		<div class="row">
+				<div class="form-group col-md-3">
+					<label class="control-label"> Fecha Inicio</label>
+					<div ng-controller="DatepickerDemoCtrl">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="input-group">
+								  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								  <span class="input-group-btn">
+									<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+								  </span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-md-3">
+				<label class="control-label"> Fecha Fin</label>
+					<div ng-controller="DatepickerDemoCtrl">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="input-group">
+								  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								  <span class="input-group-btn">
+									<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+								  </span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-md-3">
+					<label class="control-label"> Instancia</label>
+					<input type="text" class="form-control input-sm" placeholder="Instancia que genera">
+				</div>
+				<div class="form-group col-md-3">
+					<label class="control-label"> Unidad resp.</label>
+					<input type="text" class="form-control input-sm" placeholder="UR">
+				</div>
+		</div>
+		<br></br>
+		<div class="row">
+				<div class="form-group col-md-3">
+					<label class="control-label"> Consecutivo</label>
+					<input type="text" class="form-control input-sm" placeholder="Consecutivo">
+				</div>
+				<div class="form-group col-md-3">
+					<label class="control-label"> Acuerdo</label>
+					<input type="text" class="form-control input-sm" placeholder="Acuerdo">
+				</div>
+				<div class="form-group col-md-3" >
+					<label class="control-label"> Oficio</label>
+					<input type="text" class="form-control input-sm" placeholder="Oficio">
+				</div>
+		</div>	
+		<br></br>
+		<div class="row" >
+				<div class="form-group col-md-4">
+					<label class="control-label">Motivo</label>
+					<textarea class="form-control input-sm">
+					</textarea>
+				</div>	
+				<div class="form-group col-md-4" >
+					<label class="control-label"> Resultado</label>
+					<textarea class="form-control input-sm">
+					</textarea>
+				</div>
+				<div class="form-group col-md-4" >
+					<label class="control-label"> Observaciones</label>
+					<textarea class="form-control input-sm">
+					</textarea>
+				</div>
+		</div>	
+		<br></br>
+		<div class="row">
+			<div class="col-md-offset-10" >
+					<button class='btn btn-primary' >Guardar</button>
+			</div>
+		</div>
+	</form>
+</div>
