@@ -59,7 +59,12 @@
 							<div class="form-group">
 								<label class="control-label">No. Comisión</label>
 								<div>
-									<input type="text" class="form-control" placeholder="Type something." disabled="disabled">
+									<input type="text" class="form-control" placeholder="Comisión a buscar">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-offset-7" >
+									<button class='btn btn-primary btn-sm' >Buscar comisión</button>
 								</div>
 							</div>
 							<div class="form-group">
@@ -112,8 +117,8 @@
 								<td class="info">Destino</td>
 								<td class="info">Evento</td>
 								<td class="info">
-									<button class='btn btn-primary' >Editar</button>
-									<button class='btn btn-danger' >Eliminar</button>
+									<button class='btn btn-primary btn-xs ' >Editar</button>
+									<button class='btn btn-danger btn-xs ' >Eliminar</button>
 								</td>
 							</tr>
 						</table>
@@ -152,68 +157,60 @@
 				</div>	
 				<div class="col-md-9" ng-app="ModuloCaptura">
 					<div class="container-fluid">
-						<div ng-controller="AccordionDemoCtrl">
+						<div ng-controller="AccordionCtrl">
 							<p>
 								<button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
 								<button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
 							</p>
 						<accordion close-others="oneAtATime">
 						<accordion-group heading="Captura de comisión" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-							<div ng-app="ModuloCaptura" ng-controller="FormCtrlComision">
+							<div>
 							<form novalidate class="form-inline" role="form" ng-submit="guardar()">
 								<div class="row" >
 										<div class="form-group col-md-3">
-											<label class="control-label">Comisión</label>
-											<input type="text" class="form-control" placeholder="Num. comision">
+											<label class="control-label" >Comisión</label>
+											<input type="text" class="form-control input-sm" placeholder="Num. comision">
 										</div>	
 										<div class="form-group col-md-3">
 											<label class="control-label">Mecanismo Origen</label>
-												<div class="dropdown">
-													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
-													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
-														<li>
-															<a>Invitación</a>		
-														</li>
-														<li>
-															<a>Req. UR</a>		
-														</li>
-													</ul>
-												</div>
+												<select class="form-control input-sm">
+												  <option>Seleccione una opción</option>
+												  <option>Invitación</option>
+												  <option>UR</option>
+												</select>
 										</div>	
 										<div class="form-group col-md-3">
 											<label class="control-label">Tipo comisión</label>
-												<div class="dropdown">
-													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
-													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
-														<li>
-															<a>Invitación</a>		
-														</li>
-													</ul>
-												</div>
+											<select class="form-control input-sm">
+											  <option>Seleccione una opción</option>
+											  <option>2</option>
+											  <option>3</option>
+											  <option>4</option>
+											  <option>5</option>
+											</select>
 										</div>	
 										<div class="form-group col-md-3">
 											<label class="control-label">Representación</label>
-												<div class="dropdown">
-													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
-													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
-														<li>
-															<a>Invitación</a>		
-														</li>
-													</ul>
-												</div>
+												<select class="form-control input-sm">
+												  <option>Seleccione una opción</option>
+												  <option>2</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+												</select>
 										</div>										
 								</div>		
-								
+								<br></br>
 								<div class="row">
 										<div class="form-group col-md-3">
 											<label class="control-label"> Fecha Inicio</label>
 											<div ng-controller="DatepickerDemoCtrl">
 												<div class="row">
-													<div class="col-md-6">
+													<div class="col-md-12">
 														<p class="input-group">
-														  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+														  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
 														  <span class="input-group-btn">
-															<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+															<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 														  </span>
 														</p>
 													</div>
@@ -224,11 +221,11 @@
 										<label class="control-label"> Fecha Fin</label>
 											<div ng-controller="DatepickerDemoCtrl">
 												<div class="row">
-													<div class="col-md-6">
+													<div class="col-md-12">
 														<p class="input-group">
-														  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+														  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
 														  <span class="input-group-btn">
-															<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+															<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 														  </span>
 														</p>
 													</div>
@@ -237,51 +234,49 @@
 										</div>
 										<div class="form-group col-md-3">
 											<label class="control-label"> Instancia</label>
-											<input type="text" class="form-control" placeholder="Instancia que genera">
+											<input type="text" class="form-control input-sm" placeholder="Instancia que genera">
 										</div>
 										<div class="form-group col-md-3">
 											<label class="control-label"> Unidad resp.</label>
-											<input type="text" class="form-control" placeholder="UR">
+											<input type="text" class="form-control input-sm" placeholder="UR">
 										</div>
 								</div>
+								<br></br>
 								<div class="row">
 										<div class="form-group col-md-3">
 											<label class="control-label"> Consecutivo</label>
-											<input type="text" class="form-control" placeholder="Acuerdo">
+											<input type="text" class="form-control input-sm" placeholder="Acuerdo">
 										</div>
 										<div class="form-group col-md-3">
 											<label class="control-label"> Acuerdo</label>
-											<input type="text" class="form-control" placeholder="Acuerdo">
+											<input type="text" class="form-control input-sm" placeholder="Acuerdo">
 										</div>
 										<div class="form-group col-md-3" >
 											<label class="control-label"> Oficio</label>
-											<input type="text" class="form-control" placeholder="Oficio">
+											<input type="text" class="form-control input-sm" placeholder="Oficio">
 										</div>
 								</div>	
 								<br></br>
-								<div class="row" >	
-
+								<div class="row" >
 										<div class="form-group col-md-4">
 											<label class="control-label">Motivo</label>
-											<textarea class="form-control">
+											<textarea class="form-control input-sm">
 											</textarea>
 										</div>	
-									
 										<div class="form-group col-md-4" >
 											<label class="control-label"> Resultado</label>
-											<textarea class="form-control">
+											<textarea class="form-control input-sm">
 											</textarea>
 										</div>
-								
 										<div class="form-group col-md-4" >
 											<label class="control-label"> Observaciones</label>
-											<textarea class="form-control">
+											<textarea class="form-control input-sm">
 											</textarea>
 										</div>
-										
 								</div>	
+								<br></br>
 								<div class="row">
-									<div class="form-group col-md-3 col-md-offset-8" >
+									<div class="col-md-offset-10" >
 											<button class='btn btn-primary' >Guardar</button>
 									</div>
 								</div>
@@ -289,12 +284,122 @@
 						</div>
 						</accordion-group>
 						<accordion-group heading="Captura de viaje" is-disabled="status.isFirstDisabled">
-						  <p>The body of the accordion group grows to fit the contents</p>
-							<button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
-							<div ng-repeat="item in items">{{item}}</div>
+						<div class="row col-md-12">
+							<div class="panel panel-info col-md-12">
+								<div class="panel-heading" align="center">
+									Origen
+								</div>
+								<div class="panel-body">
+									<div class="form-group col-md-4">
+										<label class="control-label">Pais</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label class="control-label">Estado</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label class="control-label">Ciudad</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>			
+								</div>
+							</div>
+						</div>
+						<br></br>
+						<div class="row col-md-12">
+							<div class="panel panel-info col-md-12">
+								<div class="panel-heading" align="center">
+									Destino
+								</div>
+								<div class="panel-body">
+									<div class="form-group col-md-4">
+										<label class="control-label">Pais</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label class="control-label">Estado</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label class="control-label">Ciudad</label>
+										<select class="form-control input-sm">
+										  <option>Seleccione una opción</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>		
+								</div>
+							</div>
+						</div>
+						<br></br>
+						<div class="row col-md-12">
+							<div class="panel-group" id="accordion2">
+							  <div class="panel panel-default">
+								<div class="panel-heading">
+								  <h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+									  Collapsible Group Item #1
+									</a>
+								  </h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+								  <div class="panel-body">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								  </div>
+								</div>
+							  </div>
+							</div>
+						</div>
 						</accordion-group>
 						<accordion-group heading="Captura de gastos" is-open="status.open">
-							This is just some content to illustrate fancy headings.
+							<form novalidate class="form-inline" role="form" ng-submit="guardar()">
+								<div class="row">
+										<div class="form-group col-md-3">
+											<label class="control-label"> Gasto Pasaje</label>
+											<input type="text" class="form-control input-sm" placeholder="Gasto Pasaje">
+										</div>
+										<div class="form-group col-md-3">
+											<label class="control-label"> Gasto Viático</label>
+											<input type="text" class="form-control input-sm" placeholder="Gasto Viático">
+										</div>
+										<div class="form-group col-md-3" >
+											<label class="control-label"> Costo Hotel</label>
+											<input type="text" class="form-control input-sm" placeholder="Costo Hotel">
+										</div>
+								</div>	
+							</form>
 						</accordion-group>
 						</accordion> 
 						</div>
