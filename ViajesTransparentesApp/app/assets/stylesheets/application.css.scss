@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap.min
- /
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
