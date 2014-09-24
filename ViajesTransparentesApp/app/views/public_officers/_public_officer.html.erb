@@ -3,30 +3,19 @@
 <table>
   <tr>
     <th>Nombre</th>
-    <th>Ap paterno</th>
-    <th>Ap materno</th>
+    <th>Institución</th>
+    <th>Cargo</th>
     <th>Puesto</th>
-    <th>Gastos comprobados total</th>
-    <th>Gastos sin comprobar total</th>
-    <th>Costo total</th>
-    <th>Viaticos devueltos total</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Gastado Total</th>
   </tr>
 
 <% @public_officers.each do |public_officer| %>
   <tr>
-    <td><%= public_officer.nombre %></td>
-    <td><%= public_officer.ap_paterno %></td>
-    <td><%= public_officer.ap_materno %></td>
-    <td><%= public_officer.gastos_comprobados_total %></td>
-    <td><%= public_officer.gastos_sin_comprobar_total %></td>
+    <td><%= link_to public_officer.nombre + ' ' + public_officer.ap_paterno + ' ' + public_officer.ap_materno, public_officer_path(public_officer.id) %> </td>
+    <td><%= public_officer.id_institucion %></td>
+    <td><%= public_officer.id_cargo %></td>
+    <td><%= public_officer.id_puesto %></td>
     <td><%= public_officer.costo_total %></td>
-    <td><%= public_officer.viaticos_devueltos_total %></td>
-    <td><%= link_to 'Show', public_officer %></td>
-    <td><%= link_to 'Edit', edit_public_officer_path(public_officer) %></td>
-    <td><%= link_to 'Destroy', public_officer, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

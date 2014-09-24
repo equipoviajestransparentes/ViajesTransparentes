@@ -14,6 +14,7 @@ class PublicOfficersController < ApplicationController
   # GET /public_officers/1.json
   def show
     @public_officer = PublicOfficer.find(params[:id])
+    @commissions = @public_officer.commissions.all
 
     respond_to do |format|
       format.html # show.html.erb

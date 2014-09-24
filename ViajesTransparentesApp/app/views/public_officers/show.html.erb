@@ -1,45 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nombre:</b>
-  <%= @public_officer.nombre %>
-</p>
+  <div>
+    <b>Nombre:</b>
+    <%= @public_officer.nombre + ' ' + @public_officer.ap_paterno + ' ' + @public_officer.ap_paterno %>
+  </div>
+  <div>
+    <b>Gastos comprobados total:</b>
+    <%= @public_officer.gastos_comprobados_total %>
+  </div>
+  <div>
+    <b>Cargo:</b>
+    <%= @public_officer.desc_cargo %>
+  </div>
+  <div>
+    <b>Cargo del Superior:</b>
+    <%= @public_officer.desc_cargo_superior %>
+  </div>
+  <div>
+    <b>Puesto:</b>
+    <%= @public_officer.id_puesto %>
+  </div>
+  <div>
+    <b>Unidad Administrativa:</b>
+    <%= @public_officer.desc_unidad_adm %>
+  </div>
+  <div>
+    <b>Institución:</b>
+    <%= @public_officer.desc_institucion %>
+  </div>
+  <div>
+    <b>Personal Tipo:</b>
+    <%= @public_officer.desc_tipo_personal %>
+  </div>
+  <div>
+    <b>Correo Electrónico:</b>
+    <%= @public_officer.correo_electronico %>
+  </div>
+  <div>
+    <b>Gastos sin comprobar total:</b>
+    <%= @public_officer.gastos_sin_comprobar_total %>
+  </div>
+  <div>
+    <b>Costo total:</b>
+    <%= @public_officer.costo_total %>
+  </div>
+  <div>
+    <b>Viaticos devueltos total:</b>
+    <%= @public_officer.viaticos_devueltos_total %>
+  </div>
 
-<p>
-  <b>Ap paterno:</b>
-  <%= @public_officer.ap_paterno %>
-</p>
-
-<p>
-  <b>Ap materno:</b>
-  <%= @public_officer.ap_materno %>
-</p>
-
-<p>
-  <b>Puesto:</b>
-  <%= @public_officer.puesto %>
-</p>
-
-<p>
-  <b>Gastos comprobados total:</b>
-  <%= @public_officer.gastos_comprobados_total %>
-</p>
-
-<p>
-  <b>Gastos sin comprobar total:</b>
-  <%= @public_officer.gastos_sin_comprobar_total %>
-</p>
-
-<p>
-  <b>Costo total:</b>
-  <%= @public_officer.costo_total %>
-</p>
-
-<p>
-  <b>Viaticos devueltos total:</b>
-  <%= @public_officer.viaticos_devueltos_total %>
-</p>
-
-
-<%= link_to 'Edit', edit_public_officer_path(@public_officer) %> |
-<%= link_to 'Back', public_officers_path %>
+  <div>
+    
+  </div>

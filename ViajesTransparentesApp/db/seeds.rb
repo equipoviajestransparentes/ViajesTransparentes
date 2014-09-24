@@ -12,19 +12,30 @@
   #sql_institucion_catalogo = File.read('db/Scripts/ifai_institucion_catalogo.sql')
   #statements = sql_institucion_catalogo.split(/;$/)
   #statements.pop
- 
-  #ActiveRecord::Base.transaction do
-  #  statements.each do |statement|
-  #    connection.execute(statement)
-  #  end
-  #end
+# 
+ # ActiveRecord::Base.transaction do
+ #   statements.each do |statement|
+ #     connection.execute(statement)
+ #   end
+ # end
   ############################################
 
+ ################# SERVIDOR ###############
+  sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
+ statements = sql_servidor.split(/;$/)
+  statements.pop
+ 
+  ActiveRecord::Base.transaction do
+    statements.each do |statement|
+      connection.execute(statement)
+    end
+  end
+  ############################################
 
 ####################### PUESTO #####################
- # sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
- # statements = sql_puesto.split(/;$/)
- # statements.pop
+# sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
+# statements = sql_puesto.split(/;$/)
+# statements.pop
 # 
 #  ActiveRecord::Base.transaction do
 #    statements.each do |statement|
@@ -34,15 +45,15 @@
 ###########################################
 
  ########################### TIPO PERSONAL ###########################################
-# sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
-#  statements = sql_tipo_personal.split(/;$/)
-#  statements.pop
-# 
-#  ActiveRecord::Base.transaction do
-##    statements.each do |statement|
-##      connection.execute(statement)
-#    end
-#  end
+ #sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
+ # statements = sql_tipo_personal.split(/;$/)
+ # statements.pop
+ 
+ # ActiveRecord::Base.transaction do
+ #   statements.each do |statement|
+ #     connection.execute(statement)
+ #   end
+ # end
   ####################################################
 
 #################### UNIDAD ADM #######################
@@ -50,7 +61,7 @@
 #  statements = sql_unidad_adm.split(/;$/)
 #  statements.pop
 # 
-##  ActiveRecord::Base.transaction do
+#  ActiveRecord::Base.transaction do
 #    statements.each do |statement|
 #      connection.execute(statement)
 #    end
@@ -58,7 +69,7 @@
   ###############################################################
 
 ########################## CARGOS ##############################
-#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+##  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
 #  statements = sql_cargo.split(/;$/)
 #  statements.pop
 # 
@@ -82,15 +93,15 @@
 ######################################################################
 
 ########################### TIPO COMISION ###########################################
- sql_cargo = File.read('db/Scripts/ifai_tipo_comision_catalogo.sql')
-  statements = sql_cargo.split(/;$/)
-  statements.pop
- 
-  ActiveRecord::Base.transaction do
-    statements.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# sql_cargo = File.read('db/Scripts/ifai_tipo_comision_catalogo.sql')
+#  statements = sql_cargo.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 #######################################################################
 
 ######################################################################
