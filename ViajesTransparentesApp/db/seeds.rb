@@ -58,7 +58,31 @@
   ###############################################################
 
 ########################## CARGOS ##############################
-  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+#  statements = sql_cargo.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+######################################################################
+
+######################### MECANISMO ORIGEN #############################################
+# sql_cargo = File.read('db/Scripts/ifai_mecanismo_origen_catalogo.sql')
+#  statements = sql_cargo.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+######################################################################
+
+########################### TIPO COMISION ###########################################
+ sql_cargo = File.read('db/Scripts/ifai_tipo_comision_catalogo.sql')
   statements = sql_cargo.split(/;$/)
   statements.pop
  
@@ -67,4 +91,16 @@
       connection.execute(statement)
     end
   end
+#######################################################################
+
 ######################################################################
+#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+#  statements = sql_cargo.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+########################################################################
