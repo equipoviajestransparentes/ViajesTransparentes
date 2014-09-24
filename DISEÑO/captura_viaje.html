@@ -157,74 +157,146 @@
 								<button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
 								<button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
 							</p>
-						<label class="checkbox">
-							<input type="checkbox" ng-model="oneAtATime">
-								Open only one at a time
-						</label>
 						<accordion close-others="oneAtATime">
 						<accordion-group heading="Captura de comisión" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-							  <form class="form-inline" role="form">
-									<div class="row" >
-											<div class="form-group col-md-3">
-												<label class="sr-only">Comisión</label>
-												<input type="text" class="form-control" placeholder="Num. comision">
-											</div>	
-										
-											<div class="form-group col-md-3">
-												<label class="sr-only"> Acuerdo</label>
-												<input type="text" class="form-control" placeholder="Acuerdo">
-											</div>
-										
-											<div class="form-group col-md-3">
-												<label class="sr-only"> Unidad resp.</label>
-												<input type="text" class="form-control" placeholder="UR">
-											</div>
-											<div class="form-group col-md-3" >
-												<label class="sr-only"> Oficio</label>
-												<input type="text" class="form-control" placeholder="Oficio">
-											</div>
-									</div>	
-											
-						
-											<div class="form-group">
-												<label class="control-label">Motivo</label>
-												<textarea class="form-control">
-												</textarea>
-											</div>	
-										
-											<div class="form-group" >
-												<label class="control-label"> Resultado</label>
-												<textarea class="form-control">
-												</textarea>
-											</div>
-									
-											<div class="form-group" >
-												<label class="control-label"> Observaciones</label>
-												<textarea class="form-control">
-												</textarea>
-											</div>
-									
-									
-											<button class='btn btn-primary' >Guardar</button>
+							<div ng-app="ModuloCaptura" ng-controller="FormCtrlComision">
+							<form novalidate class="form-inline" role="form" ng-submit="guardar()">
+								<div class="row" >
+										<div class="form-group col-md-3">
+											<label class="control-label">Comisión</label>
+											<input type="text" class="form-control" placeholder="Num. comision">
+										</div>	
+										<div class="form-group col-md-3">
+											<label class="control-label">Mecanismo Origen</label>
+												<div class="dropdown">
+													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+														<li>
+															<a>Invitación</a>		
+														</li>
+														<li>
+															<a>Req. UR</a>		
+														</li>
+													</ul>
+												</div>
+										</div>	
+										<div class="form-group col-md-3">
+											<label class="control-label">Tipo comisión</label>
+												<div class="dropdown">
+													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+														<li>
+															<a>Invitación</a>		
+														</li>
+													</ul>
+												</div>
+										</div>	
+										<div class="form-group col-md-3">
+											<label class="control-label">Representación</label>
+												<div class="dropdown">
+													<a class="btn btn-default" href="#" data-toggle="dropdown">Seleccione una opción<b class="caret"></b></a>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+														<li>
+															<a>Invitación</a>		
+														</li>
+													</ul>
+												</div>
+										</div>										
+								</div>		
 								
+								<div class="row">
+										<div class="form-group col-md-3">
+											<label class="control-label"> Fecha Inicio</label>
+											<div ng-controller="DatepickerDemoCtrl">
+												<div class="row">
+													<div class="col-md-6">
+														<p class="input-group">
+														  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+														  <span class="input-group-btn">
+															<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+														  </span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group col-md-3">
+										<label class="control-label"> Fecha Fin</label>
+											<div ng-controller="DatepickerDemoCtrl">
+												<div class="row">
+													<div class="col-md-6">
+														<p class="input-group">
+														  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+														  <span class="input-group-btn">
+															<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+														  </span>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group col-md-3">
+											<label class="control-label"> Instancia</label>
+											<input type="text" class="form-control" placeholder="Instancia que genera">
+										</div>
+										<div class="form-group col-md-3">
+											<label class="control-label"> Unidad resp.</label>
+											<input type="text" class="form-control" placeholder="UR">
+										</div>
+								</div>
+								<div class="row">
+										<div class="form-group col-md-3">
+											<label class="control-label"> Consecutivo</label>
+											<input type="text" class="form-control" placeholder="Acuerdo">
+										</div>
+										<div class="form-group col-md-3">
+											<label class="control-label"> Acuerdo</label>
+											<input type="text" class="form-control" placeholder="Acuerdo">
+										</div>
+										<div class="form-group col-md-3" >
+											<label class="control-label"> Oficio</label>
+											<input type="text" class="form-control" placeholder="Oficio">
+										</div>
+								</div>	
+								<br></br>
+								<div class="row" >	
+
+										<div class="form-group col-md-4">
+											<label class="control-label">Motivo</label>
+											<textarea class="form-control">
+											</textarea>
+										</div>	
+									
+										<div class="form-group col-md-4" >
+											<label class="control-label"> Resultado</label>
+											<textarea class="form-control">
+											</textarea>
+										</div>
+								
+										<div class="form-group col-md-4" >
+											<label class="control-label"> Observaciones</label>
+											<textarea class="form-control">
+											</textarea>
+										</div>
+										
+								</div>	
+								<div class="row">
+									<div class="form-group col-md-3 col-md-offset-8" >
+											<button class='btn btn-primary' >Guardar</button>
+									</div>
 								</div>
 							</form>
+						</div>
 						</accordion-group>
-						<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-						  {{group.content}}
-						</accordion-group>
-						<accordion-group heading="Dynamic Body Content">
+						<accordion-group heading="Captura de viaje" is-disabled="status.isFirstDisabled">
 						  <p>The body of the accordion group grows to fit the contents</p>
 							<button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
 							<div ng-repeat="item in items">{{item}}</div>
 						</accordion-group>
-						<accordion-group is-open="status.open">
-							<accordion-heading>
-								I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-							</accordion-heading>
+						<accordion-group heading="Captura de gastos" is-open="status.open">
 							This is just some content to illustrate fancy headings.
 						</accordion-group>
-						</accordion>
+						</accordion> 
 						</div>
 					</div>	
 				</div>
