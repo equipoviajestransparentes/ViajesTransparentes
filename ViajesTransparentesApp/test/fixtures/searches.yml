@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  keywords: MyString
+  category_id: 1
+  min_date: 2014-09-23
+  max_date: 2014-09-23
+  min_gasto: 9.99
+  max_gasto: 
+
+two:
+  keywords: MyString
+  category_id: 1
+  min_date: 2014-09-23
+  max_date: 2014-09-23
+  min_gasto: 9.99
+  max_gasto: 

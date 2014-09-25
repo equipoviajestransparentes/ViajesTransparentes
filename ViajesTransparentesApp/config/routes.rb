@@ -1,6 +1,6 @@
 ViajesTransparentesApp::Application.routes.draw do
 
-  resources :commissions
+  resources :searches
 
   resources :public_officers do
     resources :commissions do 

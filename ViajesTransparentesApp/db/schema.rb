@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140924061438) do
+ActiveRecord::Schema.define(:version => 20140924061439) do
 
   create_table "cargo_catalogos", :force => true do |t|
     t.integer "grupo_id"
@@ -129,22 +129,22 @@ ActiveRecord::Schema.define(:version => 20140924061438) do
   end
 
   create_table "public_officers", :force => true do |t|
+    t.integer  "id_cargo"
+    t.integer  "id_cargo_superior"
+    t.integer  "id_puesto"
+    t.integer  "id_unidad_adm"
+    t.integer  "id_institucion"
+    t.integer  "id_tipo_personal"
     t.string   "nombre"
     t.string   "ap_paterno"
     t.string   "ap_materno"
+    t.integer  "correo_electronico"
     t.decimal  "gastos_comprobados_total"
     t.decimal  "gastos_sin_comprobar_total"
     t.decimal  "costo_total"
     t.decimal  "viaticos_devueltos_total"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-    t.integer  "id_puesto"
-    t.integer  "id_cargo"
-    t.integer  "id_cargo_superior"
-    t.integer  "id_unidad_adm"
-    t.integer  "id_institucion"
-    t.integer  "id_tipo_personal"
-    t.string   "correo_electronico"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "puestos", :id => false, :force => true do |t|
@@ -153,6 +153,17 @@ ActiveRecord::Schema.define(:version => 20140924061438) do
   end
 
   add_index "puestos", ["id"], :name => "index_puestos_on_id", :unique => true
+
+  create_table "searches", :force => true do |t|
+    t.string  "nombre"
+    t.string  "primer_ap"
+    t.date    "segundo_ap"
+    t.string  "puesto"
+    t.decimal "min_gasto"
+    t.decimal "max_gasto"
+    t.date    "min_fecha"
+    t.date    "max_fecha"
+  end
 
   create_table "tema_de_viaje_catalogos", :force => true do |t|
     t.string "tema"
