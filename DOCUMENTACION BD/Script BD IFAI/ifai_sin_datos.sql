@@ -130,6 +130,7 @@ CREATE TABLE IF NOT EXISTS `ifai`.`localidades_catalogo` (
   `CIUDAD` VARCHAR(150) NOT NULL COMMENT 'Campo que indica el nombre de la ciudad',
   `LATITUD_CIUDAD` VARCHAR(20) NOT NULL COMMENT 'Campo que indica la coordenada latitud de la ciudad',
   `LONGITUD_CIUDAD` VARCHAR(20) NOT NULL COMMENT 'Campo que indica la coordenada longitud de la ciudad',
+  `ZONA` VARCHAR(20) NOT NULL DEFAULT 'NO APLICA' COMMENT 'Campo que describe la zona a la que pertenece la localidad, esta zona depende de las reglas de negocio del aplicativo que se este implementando.',
   PRIMARY KEY (`idLocalidades`))
 ENGINE = InnoDB;
 
@@ -325,12 +326,12 @@ CREATE TABLE IF NOT EXISTS `ifai`.`viaje` (
   `LOCALIDAD_ORIGEN` INT NOT NULL COMMENT 'Llave foranea que referencia a la localidad origen desde donde viajo el servidor publico',
   `LOCALIDAD_DESTINO` INT NOT NULL COMMENT 'Llave foranea que referencia a la localidad destino hasta donde viajo el servidor publico',
   `TIPO_VIAJE` INT NOT NULL COMMENT 'Llave foranea que referencia al catalogo con el tipo de viaje que realizo el servidor publico',
-  PRIMARY KEY (`idViaje`),
   INDEX `fk_viaje_localidades1_idx` (`LOCALIDAD_ORIGEN` ASC),
   INDEX `fk_viaje_localidades2_idx` (`LOCALIDAD_DESTINO` ASC),
   INDEX `fk_viaje_tipo_viaje1_idx` (`TIPO_VIAJE` ASC),
   INDEX `fk_detalleViaje_viaje_idx` (`idDetalleViaje` ASC),
   INDEX `fk_viaje_comision1_idx` (`idComision` ASC),
+  PRIMARY KEY (`idViaje`),
   CONSTRAINT `fk_viaje_detalleviaje`
     FOREIGN KEY (`idDetalleViaje`)
     REFERENCES `ifai`.`detalleViaje` (`idDetalleViaje`)
@@ -368,11 +369,15 @@ CREATE TABLE IF NOT EXISTS `ifai`.`costo` (
   `idMoneda` INT NOT NULL COMMENT 'Llave foranea que referencia al catalogo de monedas en que esta representado el costo',
   `GASTO_PASAJE` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado específicamente con el transporte del funcionario.',
   `GASTO_VIATICO` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado rubros diferentes al transporte del funcionario (hospedaje y alimentación principalmente)',
+  `GASTO_ALIMENTOS` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, del rubro alimentacion',
+  `GASTO_OTROS` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, con el rubro de otros.',
   `COSTO_HOTEL` DECIMAL(2) NULL COMMENT 'Campo que describe el Costo total del hospedaje reportado en el oficio correspondiente',
   `COMPROBADO` DECIMAL(2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
   `SIN_COMPROBAR` DECIMAL(2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que no se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
   `VIATICO_DEVUELTO` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto devuelto por el funcionario a la cuenta del IFAI correspondiente, según lineamientos internos, reportado en el oficio correspondiente',
   `TARIFA_DIARIA` DECIMAL(2) NULL COMMENT 'Campo que indica la Tarifa de viáticos diaria asignada al funcionario de acuerdo con su perfil y el lugar a donde viaja. ',
+  `VIATICOS_TOTAL` DECIMAL(2) NULL COMMENT 'Campo que describe el total de viaticos otorgados para el viaje, es el calculo de tarifa diaria por la duracion del viaje (dias)',
+  `VIATICOS_FALTANTE` DECIMAL(2) NULL COMMENT 'Campo que describe la diferencia entre el total otorgado menos el viatico devuelto y el viatico gastado.',
   PRIMARY KEY (`idCosto`, `idViaje`),
   INDEX `fk_moneda_gastos_idx` (`idMoneda` ASC),
   INDEX `fk_costo_viaje_idx` (`idViaje` ASC),
@@ -384,6 +389,133 @@ CREATE TABLE IF NOT EXISTS `ifai`.`costo` (
   CONSTRAINT `fk_moneda_costo`
     FOREIGN KEY (`idMoneda`)
     REFERENCES `ifai`.`moneda_catalogo` (`idMoneda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`ciudadano`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`ciudadano` (
+  `idCiudadanoCorreo` VARCHAR(50) NOT NULL COMMENT 'Llave primaria que identifica al ciudadano en este caso sera por su correo electronico',
+  `NOMBRE` VARCHAR(30) NOT NULL COMMENT 'Campo que describe el nombre del ciudadano',
+  `AP_PATERNO` VARCHAR(15) NOT NULL COMMENT 'Campo que describe el apellido paterno del ciudadano',
+  `AP_MATERNO` VARCHAR(15) NOT NULL COMMENT 'Campo que describe el apellido materno del ciudadano',
+  PRIMARY KEY (`idCiudadanoCorreo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`notificacion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`notificacion` (
+  `idNotificacion` INT NOT NULL COMMENT 'Llave primaria identificadora de la notificacion',
+  `idServidor` INT NOT NULL COMMENT 'Llave foranea que referencia al id del servidor',
+  `idCiudadanoCorreo` VARCHAR(50) NOT NULL COMMENT 'Llave foranea que referencia al id del ciudadano que en este caso sera su correo electronico.',
+  PRIMARY KEY (`idNotificacion`),
+  INDEX `fk_notificacion_servidor_publico1_idx` (`idServidor` ASC),
+  INDEX `fk_notificacion_ciudadano1_idx` (`idCiudadanoCorreo` ASC),
+  CONSTRAINT `fk_notificacion_servidor_publico`
+    FOREIGN KEY (`idServidor`)
+    REFERENCES `ifai`.`servidor_publico` (`idServidor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_notificacion_ciudadano`
+    FOREIGN KEY (`idCiudadanoCorreo`)
+    REFERENCES `ifai`.`ciudadano` (`idCiudadanoCorreo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`viatico_catalogo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`viatico_catalogo` (
+  `idViatico` INT NOT NULL,
+  `idPuesto` VARCHAR(10) NOT NULL,
+  `idTipoViaje` INT NOT NULL,
+  `ZONA` VARCHAR(20) NOT NULL,
+  `TARIFA_DIARIA` DECIMAL(2) NOT NULL,
+  `idMoneda` INT NOT NULL,
+  PRIMARY KEY (`idViatico`),
+  INDEX `fk_viatico_puesto_catalogo1_idx` (`idPuesto` ASC),
+  INDEX `fk_viatico_tipo_viaje_catalogo1_idx` (`idTipoViaje` ASC),
+  INDEX `fk_viatico_moneda_catalogo1_idx` (`idMoneda` ASC),
+  CONSTRAINT `fk_viatico_puesto_catalogo`
+    FOREIGN KEY (`idPuesto`)
+    REFERENCES `ifai`.`puesto_catalogo` (`idPuesto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_viatico_tipo_viaje_catalogo`
+    FOREIGN KEY (`idTipoViaje`)
+    REFERENCES `ifai`.`tipo_viaje_catalogo` (`idTipoViaje`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_viatico_moneda_catalogo`
+    FOREIGN KEY (`idMoneda`)
+    REFERENCES `ifai`.`moneda_catalogo` (`idMoneda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`concepto_catalogo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`concepto_catalogo` (
+  `idConcepto` INT NOT NULL COMMENT 'Llave identificadora del concepto',
+  `DESCRIPCION` VARCHAR(50) NOT NULL COMMENT 'Campo que describe el concepto',
+  PRIMARY KEY (`idConcepto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`justificacion_catalogo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`justificacion_catalogo` (
+  `idJustificacion` INT NOT NULL COMMENT 'Llave identificadora de la justificacion',
+  `DESCRIPCION` VARCHAR(200) NOT NULL COMMENT 'Campo que describe la justificacion',
+  PRIMARY KEY (`idJustificacion`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `ifai`.`gasto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ifai`.`gasto` (
+  `idGasto` INT NOT NULL COMMENT 'Llave identificadora del gasto',
+  `idViaje` INT NOT NULL COMMENT 'Llave foranea que referencia al id del viaje',
+  `FECHA_COMPROBANTE` DATETIME NOT NULL COMMENT 'Campo que describe la fecha en que se expidio el comprobante',
+  `idConcepto` INT NOT NULL COMMENT 'Llav foranea que referencia al id del concepto',
+  `IMPORTE_COMPROBANTE` INT NOT NULL COMMENT 'Campo que describe el importe del gasto',
+  `idMoneda` INT NOT NULL COMMENT 'Llave foranea que referencia al tipo de moneda con que se exipide el importe del comprobante',
+  `EXISTE_COMPROBANTE` CHAR NOT NULL DEFAULT 'N' COMMENT 'Campo que describe si existe un comprobante se usara el valor \'S\' cuando si exista y \'N\' cuando no exista',
+  `idJustificacion` INT NULL COMMENT 'Llave foranea que refrencia al id de la justificacion en caso de NO exista comprobante',
+  PRIMARY KEY (`idGasto`),
+  INDEX `fk_comprobante_concepto1_idx` (`idConcepto` ASC),
+  INDEX `fk_comprobante_viaje1_idx` (`idViaje` ASC),
+  INDEX `fk_comprobante_moneda_catalogo1_idx` (`idMoneda` ASC),
+  INDEX `fk_gasto_clave_justificacion1_idx` (`idJustificacion` ASC),
+  CONSTRAINT `fk_comprobante_concepto`
+    FOREIGN KEY (`idConcepto`)
+    REFERENCES `ifai`.`concepto_catalogo` (`idConcepto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_comprobante_viaje`
+    FOREIGN KEY (`idViaje`)
+    REFERENCES `ifai`.`viaje` (`idViaje`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_comprobante_moneda_catalogo`
+    FOREIGN KEY (`idMoneda`)
+    REFERENCES `ifai`.`moneda_catalogo` (`idMoneda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_gasto_clave_justificacion`
+    FOREIGN KEY (`idJustificacion`)
+    REFERENCES `ifai`.`justificacion_catalogo` (`idJustificacion`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
