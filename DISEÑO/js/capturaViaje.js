@@ -1,6 +1,9 @@
+var temp;
+
 var app = angular.module('ModuloCaptura',['ui.bootstrap'])
 	/*Controlador del acordion*/
 	.controller('AccordionCtrl', function($scope){
+		temp = $scope;
 	  $scope.oneAtATime = true;
 
 	  $scope.status = {
@@ -20,6 +23,13 @@ var app = angular.module('ModuloCaptura',['ui.bootstrap'])
 		return {
 			restrict: 'E',
 			templateUrl: 'vtViaje.html'
+		};
+	})
+	
+	.directive('vtGasto', function (){
+		return {
+			restrict: 'E',
+			templateUrl: 'vtGasto.html'
 		};
 	});	
 	 

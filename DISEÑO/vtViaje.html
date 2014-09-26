@@ -1,163 +1,67 @@
-<div class="row panel-info col-md-12">
-	<div class="panel panel-info col-md-9">
-		<h5>Origen</h5>
-		<div class="panel-body">
-			<div class="form-group col-md-4">
-				<label class="control-label">Pais</label>
-				<select class="form-control input-sm">
-				  <option>Seleccione una opción</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="panel panel-info col-md-12">
+				<h5>Origen</h5>
+				<div class="panel-body">
+					<div class="form-group col-md-4">
+						<label class="control-label">Pais</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					</div>
+					<div class="form-group col-md-4">
+						<label class="control-label">Estado</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					</div>
+					<div class="form-group col-md-4">
+						<label class="control-label">Ciudad</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+					</div>			
+				</div>
 			</div>
-			<div class="form-group col-md-4">
-				<label class="control-label">Estado</label>
-				<select class="form-control input-sm">
-				  <option>Seleccione una opción</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
-			</div>
-			<div class="form-group col-md-4">
-				<label class="control-label">Ciudad</label>
-				<select class="form-control input-sm">
-				  <option>Seleccione una opción</option>
-				  <option>2</option>
-				  <option>3</option>
-				  <option>4</option>
-				  <option>5</option>
-				</select>
-			</div>			
-		</div>
-	</div>
-	<div class="form-group col-md-3">
-		<label class="control-label">Tipo Viaje</label>
-		<select class="form-control input-sm">
-		  <option>Seleccione una opción</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		</select>
-	</div>
-</div>
-<br></br>
-<div class="panel panel-info col-md-9">
-	<h5>Destino</h5>
-	<div class="panel-body">
-		<div class="form-group col-md-4">
-			<label class="control-label">Pais</label>
-			<select class="form-control input-sm">
-			  <option>Seleccione una opción</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
-			</select>
-		</div>
-		<div class="form-group col-md-4">
-			<label class="control-label">Estado</label>
-			<select class="form-control input-sm">
-			  <option>Seleccione una opción</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
-			</select>
-		</div>
-		<div class="form-group col-md-4">
-			<label class="control-label">Ciudad</label>
-			<select class="form-control input-sm">
-			  <option>Seleccione una opción</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5</option>
-			</select>
-		</div>		
-	</div>
-</div>
-<br></br>
-<br></br>
-<div class="row col-md-12">
-	<div class="col-md-6" ng-controller="AccordionCtrl">
-		<accordion close-others="oneAtATime">
-			<accordion-group is-disabled="status.isFirstDisabled" is-open="status.open">
-				<accordion-heading>
-						Captura evento <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-chevron-up': status.open, 'glyphicon glyphicon-chevron-down': !status.open}"></i>
-				</accordion-heading>
-				<form class="form" role="form" ng-submit="guardar()">
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label class="control-label" >Evento</label>
-						<input type="text" class="form-control input-sm" placeholder="Evento">
+			<br></br>
+			<div class="panel panel-info col-md-12">
+				<h5>Destino</h5>
+				<div class="panel-body">
+					<div class="form-group col-md-4">
+						<label class="control-label">Pais</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
-					<div class="form-group col-md-6">
-						<label class="control-label" >URL Evento</label>
-						<input type="text" class="form-control input-sm" placeholder="URL Evento">
-					</div>	
-				</div>
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label class="control-label"> Inicio Evento</label>
-						<div ng-controller="DatepickerDemoCtrl">
-							<div class="row">
-								<div class="col-md-12">
-									<p class="input-group">
-									  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-									  <span class="input-group-btn">
-										<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-									  </span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>	
-					<div class="form-group col-md-6">
-						<label class="control-label"> Fin Evento</label>
-						<div ng-controller="DatepickerDemoCtrl">
-							<div class="row">
-								<div class="col-md-12">
-									<p class="input-group">
-									  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-									  <span class="input-group-btn">
-										<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-									  </span>
-									</p>
-								</div>
-							</div>
-						</div>
+					<div class="form-group col-md-4">
+						<label class="control-label">Estado</label>
+						<select class="form-control input-sm">
+						  <option>Seleccione una opción</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-md-11">
-						<label class="control-label">Actividad</label>
-						<textarea class="form-control input-sm">
-						</textarea>
-					</div>	
-				</div>
-				</form>
-			</accordion-group>
-		</accordion>
-	</div>
-	<div class="col-md-6" ng-controller="AccordionCtrl">
-		<accordion close-others="oneAtATime">
-			<accordion-group is-disabled="status.isFirstDisabled" is-open="status.open">
-				<accordion-heading>
-						Captura pasaje y hospedaje <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-chevron-up': status.open, 'glyphicon glyphicon-chevron-down': !status.open}"></i>
-				</accordion-heading>
-				<form class="form" role="form" ng-submit="guardar()">
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label class="control-label" >Inst. cubre pasaje</label>
-						<input type="text" class="form-control input-sm" placeholder="Instancia">
-					</div>
-					<div class="form-group col-md-6">
-						<label class="control-label">Tipo Pasaje</label>
+					<div class="form-group col-md-4">
+						<label class="control-label">Ciudad</label>
 						<select class="form-control input-sm">
 						  <option>Seleccione una opción</option>
 						  <option>2</option>
@@ -167,50 +71,179 @@
 						</select>
 					</div>		
 				</div>
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label class="control-label" >Inst. cubre hospedaje</label>
-						<input type="text" class="form-control input-sm" placeholder="Instancia">
-					</div>
-					<div class="form-group col-md-6">
-						<label class="control-label" >Hotel</label>
-						<input type="text" class="form-control input-sm" placeholder="Hotel">
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-md-6">
-						<label class="control-label"> Inicio hospedaje</label>
-						<div ng-controller="DatepickerDemoCtrl">
-							<div class="row">
-								<div class="col-md-12">
-									<p class="input-group">
-									  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-									  <span class="input-group-btn">
-										<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-									  </span>
-									</p>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group col-md-12">
+				<label class="control-label">Tipo Viaje</label>
+				<select class="form-control input-sm">
+				  <option>Seleccione una opción</option>
+				  <option>Nacional</option>
+				  <option>Internacional</option>
+				</select>
+			</div>
+			<div class="form-group col-md-12">
+				<label class="control-label">Antecedente</label>
+				<input type="text" class="form-control input-sm" placeholder="Antecedente">
+			</div>
+			<div class="form-group col-md-12">
+				<label class="control-label">Contribución IFAI</label>
+				<input type="text" class="form-control input-sm" placeholder="Contribución IFAI">
+			</div>
+			<div class="form-group col-md-12">
+				<label class="control-label">Tema</label>
+				<select class="form-control input-sm">
+				  <option>Seleccione una opción</option>
+				  <option>1</option>
+				  <option>2</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<br></br>
+	<div class="row col-md-12">
+		<div class="col-md-6" ng-controller="AccordionCtrl">
+			<accordion close-others="oneAtATime">
+				<accordion-group is-disabled="status.isFirstDisabled" is-open="status.open">
+					<accordion-heading>
+							Captura evento <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-chevron-up': status.open, 'glyphicon glyphicon-chevron-down': !status.open}"></i>
+					</accordion-heading>
+					<form class="form" role="form">
+						<div class="row">
+							<div class="form-group col-md-11">
+								<label class="control-label" >Evento</label>
+								<input type="text" class="form-control input-sm" placeholder="Evento">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-11">
+								<label class="control-label" >URL Evento</label>
+								<input type="text" class="form-control input-sm" placeholder="URL Evento">
+							</div>	
+						</div>
+						<div class="row">
+							<div class="form-group col-md-11">
+								<label class="control-label"> Inicio Evento</label>
+								<div ng-controller="DatepickerDemoCtrl">
+									<div class="row">
+										<div class="col-md-12">
+											<p class="input-group">
+											  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+											  <span class="input-group-btn">
+												<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+											  </span>
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="form-group col-md-6">
-						<label class="control-label"> Fin hospedaje</label>
-						<div ng-controller="DatepickerDemoCtrl">
-							<div class="row">
-								<div class="col-md-12">
-									<p class="input-group">
-									  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-									  <span class="input-group-btn">
-										<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-									  </span>
-									</p>
+						<div class="row">
+							<div class="form-group col-md-11">
+								<label class="control-label"> Fin Evento</label>
+								<div ng-controller="DatepickerDemoCtrl">
+									<div class="row">
+										<div class="col-md-12">
+											<p class="input-group">
+											  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+											  <span class="input-group-btn">
+												<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+											  </span>
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				</form>
-			</accordion-group>
-		</accordion>
+						<div class="row">
+							<div class="form-group col-md-11">
+								<label class="control-label">Actividad</label>
+								<textarea class="form-control input-sm">
+								</textarea>
+							</div>	
+						</div>
+						</form>
+					</accordion-group>
+				</accordion>
+			</div>
+			<div class="col-md-6" ng-controller="AccordionCtrl">
+				<accordion close-others="oneAtATime">
+					<accordion-group is-disabled="status.isFirstDisabled" is-open="status.open">
+						<accordion-heading>
+								Captura pasaje y hospedaje <i class="pull-right glyphicon" ng-class="{'glyphicon glyphicon-chevron-up': status.open, 'glyphicon glyphicon-chevron-down': !status.open}"></i>
+						</accordion-heading>
+						<form class="form" role="form" ng-submit="guardar()">
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label" >Inst. cubre pasaje</label>
+								<input type="text" class="form-control input-sm" placeholder="Instancia">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label">Tipo Pasaje</label>
+								<select class="form-control input-sm">
+								  <option>Seleccione una opción</option>
+								  <option>Terrestre</option>
+								  <option>Aéreo</option>
+								</select>
+							</div>		
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label" >Inst. cubre hospedaje</label>
+								<input type="text" class="form-control input-sm" placeholder="Instancia">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label" >Hotel</label>
+								<input type="text" class="form-control input-sm" placeholder="Hotel">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label"> Inicio hospedaje</label>
+								<div ng-controller="DatepickerDemoCtrl">
+									<div class="row">
+										<div class="col-md-12">
+											<p class="input-group">
+											  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+											  <span class="input-group-btn">
+												<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+											  </span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12">
+								<label class="control-label"> Fin hospedaje</label>
+								<div ng-controller="DatepickerDemoCtrl">
+									<div class="row">
+										<div class="col-md-12">
+											<p class="input-group">
+											  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+											  <span class="input-group-btn">
+												<button type="button" class="btn btn-default input-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+											  </span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</accordion-group>
+				</accordion>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-10" >
+				<button class='btn btn-primary' >Guardar</button>
+		</div>
 	</div>
 </div>

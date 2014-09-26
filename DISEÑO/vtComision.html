@@ -1,11 +1,11 @@
-<div>
-	<form class="form-inline" role="form" ng-submit="guardar()">
+<div >
+	<form name="frmComision" class="form-inline">
 		<div class="row" >
-				<div class="form-group col-md-3">
-					<label class="control-label" >Comisión</label>
-					<input type="text" class="form-control input-sm" placeholder="Num. comision">
+				<div class="form-group col-md-3" ng-class="{ has-error: frmComision.nuComision.$invalid }">
+					<label class="control-label">Comisión</label>
+					<input type="text" class="form-control input-sm" name="nuComision" placeholder="Num. comision" ng-required="true">
 				</div>	
-				<div class="form-group col-md-3">
+				<div class="form-group col-md-3" ng-class="{ 'has-error': formComision.nuComision.$invalid }">
 					<label class="control-label">Mecanismo Origen</label>
 						<select class="form-control input-sm">
 						  <option>Seleccione una opción</option>
@@ -39,7 +39,7 @@
 				<div class="form-group col-md-3">
 					<label class="control-label"> Fecha Inicio</label>
 					<div ng-controller="DatepickerDemoCtrl">
-						<div class="row">
+					<div class="row">
 							<div class="col-md-12">
 								<p class="input-group">
 								  <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />

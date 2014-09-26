@@ -1,0 +1,77 @@
+<div class="container-fluid col-md-12">
+	<div class="row">
+		<form class="form-inline" role="form">
+			<div class="row">
+				<div class="form-group col-md-3">
+					<label class="control-label"> Monto</label>
+					<input type="text" class="form-control input-sm" placeholder="Monto gastado">
+				</div>
+				<div class="form-group col-md-3">
+					<label class="control-label">Tipo Moneda</label>
+					<select class="form-control input-sm">
+					  <option>Seleccione una opción</option>
+					  <option>MXP</option>
+					  <option>USD</option>
+					</select>
+				</div>
+				<div class="form-group col-md-3" >
+					<label class="control-label">Concepto</label>
+					<select class="form-control input-sm">
+					  <option>Seleccione una opción</option>
+					  <option>Alimento</option>
+					  <option>Transporte</option>
+					  <option>Hospedaje</option>
+					</select>
+				</div>
+				<div class="form-group col-md-2" >
+					<label class="control-label">Comprobante</label>
+					<select class="form-control input-sm">
+					  <option>Seleccione una opción</option>
+					  <option>Si</option>
+					  <option>No</option>
+					</select>
+				</div>
+			</div>
+			<br></br>
+			<div class="row">
+				<div class="form-group col-md-6">
+					<label for="exampleInputFile">Elige un archivo</label>
+					<input type="file" id="exampleInputFile">
+				</div>
+				<div class="form-group col-md-3" >
+					<label class="control-label input-sm">Justificación</label>
+					<select class="form-control input-sm">
+					  <option>Seleccione una opción</option>
+					  <option>1</option>
+					  <option>2</option>
+					</select>
+				</div>
+				<div class="col-md-3 col-md-offset-10" >
+					<label class="control-label">Agregar</label>
+					<button class='btn btn-info' data-toggle="tooltip" data-placement="right" title="Agregar más gastos" ><span class="glyphicon glyphicon-plus"></span></button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">Gastos</div>
+					<table class="table table-striped">
+						<tr>
+							<td><strong>#</strong></td>
+							<td><strong>Monto</strong></td>
+							<td><strong>Moneda</strong></td>
+							<td><strong>Concepto</strong></td>
+							<td><strong>Èxiste comprobante</strong></td>
+							<td><strong>Justificación</strong></td>							
+						</tr>
+					</table>
+				</div>
+			</div>
+			<br></br>
+			<div class="row">
+				<div class="col-md-offset-10" >
+					<button class='btn btn-primary' >Guardar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
