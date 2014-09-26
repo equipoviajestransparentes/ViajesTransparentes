@@ -42,7 +42,9 @@ class TripsController < ApplicationController
   # POST /trips
   # POST /trips.json
   def create
-    @trip = Trip.new(params[:trip])
+    @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commission = @public_officer.commissions.find(params[:commission_id])
+    @trip = @commission.trips.new(params[:trip])
 
     respond_to do |format|
       if @trip.save

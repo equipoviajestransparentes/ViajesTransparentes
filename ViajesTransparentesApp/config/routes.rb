@@ -1,5 +1,9 @@
 ViajesTransparentesApp::Application.routes.draw do
 
+  get "viajes_inicial/show"
+
+  resources :viajes_inicial
+
   resources :searches
 
   resources :public_officers do

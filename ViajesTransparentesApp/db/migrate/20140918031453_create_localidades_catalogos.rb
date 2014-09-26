@@ -10,8 +10,6 @@ class CreateLocalidadesCatalogos < ActiveRecord::Migration
       t.string :ciudad
       t.string :latitud_ciudad
       t.string :longitud_ciudad
-
-      t.timestamps
     end
   end
 end

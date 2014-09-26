@@ -21,15 +21,15 @@
   ############################################
 
  ################# SERVIDOR ###############
-  sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
- statements = sql_servidor.split(/;$/)
-  statements.pop
- 
-  ActiveRecord::Base.transaction do
-    statements.each do |statement|
-      connection.execute(statement)
-    end
-  end
+#  sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
+# statements = sql_servidor.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
   ############################################
 
 ####################### PUESTO #####################
@@ -114,4 +114,16 @@
 #      connection.execute(statement)
 #    end
 #  end
-########################################################################
+#########################################################################
+
+ ################# SERVIDOR ###############
+  sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+ statements = sql_localidades.split(/;$/)
+  statements.pop
+ 
+  ActiveRecord::Base.transaction do
+    statements.each do |statement|
+      connection.execute(statement)
+    end
+  end
+  ############################################

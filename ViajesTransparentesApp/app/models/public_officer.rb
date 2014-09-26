@@ -20,4 +20,8 @@ class PublicOfficer < ActiveRecord::Base
 	def desc_tipo_personal
 		TipoPersonal.find(id_tipo_personal).tipo_personal
 	end
+
+	def full_name
+		nombre + ' ' + ap_paterno + ' ' + ap_materno
+	end
 end

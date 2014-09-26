@@ -1,0 +1,2 @@
+module ViajesInicialHelper
+end
