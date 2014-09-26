@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `ifai` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ifai`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: ifai
 -- ------------------------------------------------------
@@ -18,29 +18,13 @@ USE `ifai`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tipo_viaje_catalogo`
---
-
-DROP TABLE IF EXISTS `tipo_viaje_catalogo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tipo_viaje_catalogo` (
-  `idTipoViaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Llave indetificadora del catalogo de tipo de viaje',
-  `TIPO_VIAJE` varchar(20) NOT NULL COMMENT 'Campo que describe el tipo de viaje',
-  PRIMARY KEY (`idTipoViaje`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `tipo_viaje_catalogo`
 --
 
-LOCK TABLES `tipo_viaje_catalogo` WRITE;
 /*!40000 ALTER TABLE `tipo_viaje_catalogo` DISABLE KEYS */;
 INSERT INTO `tipo_viaje_catalogo` VALUES (1,'NACIONAL\r');
 INSERT INTO `tipo_viaje_catalogo` VALUES (2,'INTERNACIONAL\r');
 /*!40000 ALTER TABLE `tipo_viaje_catalogo` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -51,4 +35,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-23 20:17:05
+-- Dump completed on 2014-09-26  9:01:01
