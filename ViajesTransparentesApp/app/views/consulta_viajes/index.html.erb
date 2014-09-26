@@ -1,0 +1,35 @@
+<h1>Listing consulta_viajes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th>Public officer</th>
+      <th>Min precio</th>
+      <th>Max precio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consulta_viajes.each do |consulta_viaje| %>
+      <tr>
+        <td><%= consulta_viaje.fecha_inicio %></td>
+        <td><%= consulta_viaje.fecha_fin %></td>
+        <td><%= consulta_viaje.public_officer_id %></td>
+        <td><%= consulta_viaje.min_precio %></td>
+        <td><%= consulta_viaje.max_precio %></td>
+        <td><%= link_to 'Show', consulta_viaje %></td>
+        <td><%= link_to 'Edit', edit_consulta_viaje_path(consulta_viaje) %></td>
+        <td><%= link_to 'Destroy', consulta_viaje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consulta viaje', new_consulta_viaje_path %>

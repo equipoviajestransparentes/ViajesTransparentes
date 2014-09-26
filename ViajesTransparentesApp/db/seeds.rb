@@ -6,8 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  connection = ActiveRecord::Base.connection
- 
+
+  
+  
+
+
   ################# INSTITUCION ###############
   #sql_institucion_catalogo = File.read('db/Scripts/ifai_institucion_catalogo.sql')
   #statements = sql_institucion_catalogo.split(/;$/)
@@ -21,16 +24,23 @@
   ############################################
 
  ################# SERVIDOR ###############
-#  sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
-# statements = sql_servidor.split(/;$/)
-#  statements.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    statements.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
+ puts "success1"
+sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
+puts "success2"
+statements = sql_servidor.split(/;/)
+puts "AA"
+puts statements
+puts "BB"
+statements.pop
+ puts "success4"
+    statements.each do |statement|
+      puts "success6"
+      ActiveRecord::Base.connection.execute(statement)
+      puts "success7"
+    end
+    puts "success8"
   ############################################
+
 
 ####################### PUESTO #####################
 # sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
@@ -116,14 +126,14 @@
 #  end
 #########################################################################
 
- ################# SERVIDOR ###############
-  sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
- statements = sql_localidades.split(/;$/)
-  statements.pop
- 
-  ActiveRecord::Base.transaction do
-    statements.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# ################# SERVIDOR ###############
+#  sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+# statements = sql_localidades.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
   ############################################
