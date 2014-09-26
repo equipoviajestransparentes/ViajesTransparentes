@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `ifai` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ifai`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: ifai
 -- ------------------------------------------------------
@@ -18,34 +18,9 @@ USE `ifai`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `viatico_catalogo`
---
-
-DROP TABLE IF EXISTS `viatico_catalogo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `viatico_catalogo` (
-  `idViatico` int(11) NOT NULL AUTO_INCREMENT,
-  `idPuesto` varchar(10) NOT NULL,
-  `idTipoViaje` int(11) NOT NULL,
-  `ZONA` varchar(20) NOT NULL,
-  `TARIFA_DIARIA` decimal(8,2) NOT NULL DEFAULT '0.00',
-  `idMoneda` int(11) NOT NULL,
-  PRIMARY KEY (`idViatico`),
-  KEY `fk_viatico_puesto_catalogo1_idx` (`idPuesto`),
-  KEY `fk_viatico_tipo_viaje_catalogo1_idx` (`idTipoViaje`),
-  KEY `fk_viatico_moneda_catalogo1_idx` (`idMoneda`),
-  CONSTRAINT `fk_viatico_puesto_catalogo` FOREIGN KEY (`idPuesto`) REFERENCES `puesto_catalogo` (`idPuesto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_viatico_tipo_viaje_catalogo` FOREIGN KEY (`idTipoViaje`) REFERENCES `tipo_viaje_catalogo` (`idTipoViaje`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_viatico_moneda_catalogo` FOREIGN KEY (`idMoneda`) REFERENCES `moneda_catalogo` (`idMoneda`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `viatico_catalogo`
 --
 
-LOCK TABLES `viatico_catalogo` WRITE;
 /*!40000 ALTER TABLE `viatico_catalogo` DISABLE KEYS */;
 INSERT INTO `viatico_catalogo` VALUES (1,'HB1',1,'A',1650.00,1);
 INSERT INTO `viatico_catalogo` VALUES (2,'KA02',1,'A',1650.00,1);
@@ -132,7 +107,6 @@ INSERT INTO `viatico_catalogo` VALUES (82,'PC1',2,'NO APLICA',450.00,2);
 INSERT INTO `viatico_catalogo` VALUES (83,'PC2',2,'NO APLICA',450.00,2);
 INSERT INTO `viatico_catalogo` VALUES (84,'PC3',2,'NO APLICA',450.00,2);
 /*!40000 ALTER TABLE `viatico_catalogo` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -143,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-25 20:20:36
+-- Dump completed on 2014-09-26  9:01:00

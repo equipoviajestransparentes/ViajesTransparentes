@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `ifai` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `ifai`;
--- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: ifai
 -- ------------------------------------------------------
@@ -18,24 +18,9 @@ USE `ifai`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cargo_catalogo`
---
-
-DROP TABLE IF EXISTS `cargo_catalogo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cargo_catalogo` (
-  `idCargo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Llave identificador del cargo',
-  `CARGO` varchar(200) DEFAULT NULL COMMENT 'Campo que describe el nombre del cargo',
-  PRIMARY KEY (`idCargo`)
-) ENGINE=InnoDB AUTO_INCREMENT=304 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `cargo_catalogo`
 --
 
-LOCK TABLES `cargo_catalogo` WRITE;
 /*!40000 ALTER TABLE `cargo_catalogo` DISABLE KEYS */;
 INSERT INTO `cargo_catalogo` VALUES (1,'AUXILIAR DE COORDINACION\r');
 INSERT INTO `cargo_catalogo` VALUES (2,'AUXILIAR DE COORDINACION INTERNA\r');
@@ -96,7 +81,7 @@ INSERT INTO `cargo_catalogo` VALUES (56,'DEPARTAMENTO DE DESARROLLO DE CAPACITAC
 INSERT INTO `cargo_catalogo` VALUES (57,'DEPARTAMENTO DE DESARROLLO DE SERVICIOS A LOS PARTICULARES\r');
 INSERT INTO `cargo_catalogo` VALUES (58,'DEPARTAMENTO DE DESARROLLO DE SISTEMAS\r');
 INSERT INTO `cargo_catalogo` VALUES (59,'DEPARTAMENTO DE DESARROLLO DE SISTEMAS DE PROTECCION DE DATOS PERSONALES\r');
-INSERT INTO `cargo_catalogo` VALUES (60,'DEPARTAMENTO DE DISE');
+INSERT INTO `cargo_catalogo` VALUES (60,'DEPARTAMENTO DE DISEÑO GRAFICO\r');
 INSERT INTO `cargo_catalogo` VALUES (61,'DEPARTAMENTO DE ENLACE\r');
 INSERT INTO `cargo_catalogo` VALUES (62,'DEPARTAMENTO DE ESTUDIOS\r');
 INSERT INTO `cargo_catalogo` VALUES (63,'DEPARTAMENTO DE ESTUDIOS NORMATIVOS\r');
@@ -338,10 +323,9 @@ INSERT INTO `cargo_catalogo` VALUES (298,'SUBDIRECTOR AUDITOR\r');
 INSERT INTO `cargo_catalogo` VALUES (299,'SUBDIRECTOR CONSULTOR\r');
 INSERT INTO `cargo_catalogo` VALUES (300,'SUBDIRECTOR DE QUEJAS ABOGADO\r');
 INSERT INTO `cargo_catalogo` VALUES (301,'SUBDIRECTOR DE RESPONSABILIDADES ABOGADO\r');
-INSERT INTO `cargo_catalogo` VALUES (302,'TITULAR DE AUDITORIA INTERNA Y TITULAR DEL A');
+INSERT INTO `cargo_catalogo` VALUES (302,'TITULAR DE AUDITORIA INTERNA Y TITULAR DEL AREA DE AUDITORIA PARA EL DESARROLLO Y MEJORA DE LA GESTION PUBLICA\r');
 INSERT INTO `cargo_catalogo` VALUES (303,'TITULAR RESPONSABILIDADES Y QUEJAS\r');
 /*!40000 ALTER TABLE `cargo_catalogo` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -352,4 +336,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-23 20:17:04
+-- Dump completed on 2014-09-26  9:01:01
