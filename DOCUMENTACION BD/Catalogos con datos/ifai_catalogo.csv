@@ -1,524 +1,524 @@
-﻿idServidor,ID_CARGO,ID_CARGO_SUPERIOR,Clave del Puesto/Remuneración Salarial,UNIDAD ADMINISTRATIVA,ID INSTITUCION,ID TIPO CONFIANZA,NOMBRE,PRIMER APELLIDO,SEGUNDO APELLIDO,Correo Electrónico,gastos comprobados,gastos sin comprobar,costo total,viaticos devueltos
-1,214,7,MC03,1,1,1,LILIANA , HERRERA , MARTIN, liliana.herrera@ifai.org.mx,,,,
-2,41,228,OC1,6,1,1,ADRIAN ISRAEL, MANILLA, AGUIRRE, adrian.manilla@ifai.org.mx,,,,
-3,228,148,NC1,6,1,1,JUAN ARMANDO, BECERRA, GUTIERREZ, armando.becerra@ifai.org.mx,,,,
-4,148,182,MC2,6,1,1,MELISSA, HIGUERA, PEREZ, melissa.higuera@ifai.org.mx,,,,
-5,52,232,OC1,6,1,1,AGUSTIN, GRANADOS, TZINTZUN, agustin.granados@ifai.org.mx,,,,
-6,232,150,NC1,6,1,1,MARIA TERESA, LAGUNES, MENDOZA, teresa.lagunes@ifai.org.mx,,,,
-7,82,263,OC1,6,1,1,OMAR, MARTINEZ, COSAIN, omar.martinez@ifai.org.mx,,,,
-8,263,150,NC2,6,1,1,NOEMI KARINA, GONZALEZ, VERGARA, noemi.gonzalez@ifai.org.mx,,,,
-9,150,182,MC1,6,1,1,MIRIAM, CABALLERO, VARGAS, miriam.caballero@ifai.org.mx,,,,
-10,196,190,PC2,6,1,1,GUILLERMO, TELLEZ, GUERRERO, no aplica ,,,,
-11,196,182,PC3,14,1,1,ERWIN FRANCISCO, BAUTISTA, GAYTAN, erwin.bautista@ifai.org.mx,,,,
-12,182,212,KB1,6,1,1,MARIA ADRIANA, BAEZ, RICARDEZ, adriana.baez@ifai.org.mx,,,,
-13,131,292,OC1,15,1,1,SERGIO, MARTINEZ, MENDOZA, sergio.martinez@ifai.org.mx,,,,
-14,130,292,OC1,15,1,1,JULIO CESAR, ANGELES, REYES, julio.angeles@ifai.org.mx,,,,
-15,292,175,NC1,15,1,1,ADRIANA, FRANCO, GONZALEZ, adriana.franco@ifai.org.mx,,,,
-16,128,291,OC1,15,1,1,RICARDO, RAYA, ARANDA, ricardo.raya@ifai.org.mx,,,,
-17,129,291,OC1,15,1,1,ELIHU, SAAVEDRA, CRESPI, elihu.saavedra@ifai.org.mx,,,,
-18,291,175,NC1,15,1,1,MARGARITO, FLORES, JUAREZ, margarito.flores@ifai.org.mx,,,,
-19,43,256,OC1,3,1,1,MIRIAM FANNY ARIADNA, CASTRO, VAZQUEZ, miriam.castro@ifai.org.mx,,,,
-20,15,256,OC1,3,1,1,JUAN ANGEL, ARROYO, KALIS, juan.arroyo@ifai.org.mx,,,,
-21,63,256,OC1,3,1,1,ITZEL MONSERRAT, GARCIA, HERNANDEZ, itzel.garcia@ifai.org.mx,,,,
-22,256,159,NC3,3,1,1,JUAN MANUEL , SERVIN , DOMINGUEZ, juan.servin@ifai.org.mx,,,,
-23,159,179,MC2,3,1,1,MARIA DEL CARMEN, FERNANDEZ, FUENTES, carmen.fernandez@ifai.org.mx,,,,
-24,99,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-25,92,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-26,91,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-27,270,174,NC1,3,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-28,127,286,OC1,3,1,1,JULIETA DANIELA, ROA, LOPEZ, julieta.roa@ifai.org.mx,,,,
-29,126,286,OC2,3,1,1,ADRIANA, GARCIA, ARIAS, adriana.garcia@ifai.org.mx,,,,
-30,77,286,OC2,3,1,1,SERGIO, HERNANDEZ, RAMIREZ, sergio.hernandez@ifai.org.mx,,,,
-31,286,174,NC3,3,1,1,ALEJANDRA, MARTINEZ, MORALES, alejandra.martinez@ifai.org.mx,,,,
-32,174,179,MC1,3,1,1,MARCELA, VALDERRAMA, CABRERA, marcela.valderrama@ifai.org.mx,,,,
-33,196,179,PC1,3,1,1,DANIELA, PONCE, DIAZ GONZALEZ, daniela.ponce@ifai.org.mx,,,,
-34,196,179,PC1,3,1,1,ROBERTO, CEDEÑO, TIZCAREÑO, roberto.cedeno@ifai.org.mx,,,,
-35,196,179,PA3,3,1,1,ADRIANA YADIRA, CARDENAS, TAGLE, adriana.cardenas@ifai.org.mx,,,,
-36,196,179,PC1,3,1,1,ULISES BARUCH, CRUZ, FLORES, ulises.cruz@ifai.org.mx,,,,
-37,196,179,PA3,3,1,1,SERGIO ALFONSO, POZOS, CERVANTES, sergio.pozos@ifai.org.mx,,,,
-38,22,233,OC3,17,1,1,JUAN ALEJANDRO, RAMIREZ, SANCHEZ, alejandro.ramirez@ifai.org.mx,,,,
-39,61,233,OC1,17,1,1,VICTOR DANIEL, DIAZ, BERMUDEZ, victor.diaz@ifai.org.mx,,,,
-40,233,144,NC1,17,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-41,196,209,PA3,17,1,1,MARCOS ALBERTO, GONZALEZ, PIÑA, marco.gonzalez@ifai.org.mx,,,,
-42,27,221,OC1,4,1,1,MAURICIO IVAN, ZAPATA, ZALDIVAR, mauricio.zapata@ifai.org.mx,,,,
-43,26,221,OC1,4,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-44,221,139,NC1,4,1,1,MIGUEL CRISTOPHE, MOLINA, ALCANTARA, miguel.molina@ifai.org.mx,,,,
-45,279,168,NC1,10,1,1,VERONICA, SANTIAGO, MARTINEZ, veronica.santiago@ifai.org.mx,,,,
-46,104,280,OC3,10,1,1,MIRIETTE JULIETA, ARAIZA, TREJO, julieta.araiza@ifai.org.mx,,,,
-47,103,280,OC1,10,1,1,OSVALDO PAUL, SUAREZ, COLIN, osvaldo.suarez@ifai.org.mx,,,,
-48,102,280,OC2,10,1,1,JUAN TADEO, RAMIREZ, CERVANTES, juan.ramirez@ifai.org.mx,,,,
-49,280,168,NC1,10,1,1,LETICIA, ZAMUDIO, CORTES, leticia.zamudio@ifai.org.mx ,,,,
-50,168,186,MC2,10,1,1,LOURDES MARIA, MONTOYA, DE LA ISLA, lourdes.montoya@ifai.org.mx ,,,,
-51,49,296,OC2,10,1,1,LAURA, MARTIN , MARTINEZ, laura.martin@ifai.org.mx,,,,
-52,296,176,NC1,10,1,1,JASMIN EUGENIA, SABAGH, MORLOTTE, jasmin.sabagh@ifai.org.mx,,,,
-53,176,186,MC2,10,1,1,JUSTINO JOSE, NUÑEZ, QUIROZ, justino.nunez@ifai.org.mx ,,,,
-54,25,234,OC1,10,1,1,BETZABE, FLORES, TERAN, betzabe.flores@ifai.org.mx,,,,
-55,24,234,OC1,10,1,1,EDGAR OCTAVIO, GOMEZ, INCLAN, edgar.gomez@ifai.org.mx,,,,
-56,234,143,NC1,10,1,1,ELIZABETH, ARZATE, MONDRAGON, elizabeth.arzate@ifai.org.mx,,,,
-57,119,247,OC1,10,1,1,CLAUDIA IVONNE, AÑORVE, LASSO, claudia.anorve@ifai.org.mx,,,,
-58,118,247,OC1,10,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-59,117,247,OC1,10,1,1,MARIA ANGELICA, VALDEZ, ISLAS, angelica.valdez@ifai.org.mx,,,,
-60,116,247,OC1,10,1,1,ANDREA PAULINA, ANGELINI, ZARZOSA, andrea.angelini@ifai.org.mx,,,,
-61,115,247,OC1,10,1,1,LORENA, RAMIREZ, GARCIA, lorena.ramirez@ifai.org.mx,,,,
-62,114,247,OC1,10,1,1,MARIA TERESA, CARRILLO, MADRID, teresa.carrillo@ifai.org.mx,,,,
-63,113,247,OC3,10,1,1,EDMUNDO FERNANDO, VAZQUEZ, SERRALDE, edmundo.vazquez@ifai.org.mx,,,,
-64,247,143,NC3,10,1,1,LAURA CELIA, LOPEZ, GUTIERREZ, laura.lopez@ifai.org.mx ,,,,
-65,143,186,MC2,10,1,1,DINORAH ATLANTIDA, UGALDE, REZA, dinorah.ugalde@ifai.org.mx,,,,
-66,196,186,PC3,10,1,1,PATRICIA, CORRES, SOTO, patricia.corres@ifai.org.mx ,,,,
-67,196,186,PC3,10,1,1,MARIBEL, MIRANDA, GUTIERREZ, maribel.miranda@ifai.org.mx ,,,,
-68,98,245,OC1,11,1,1,ANA JULIA, JERONIMO, GOMEZ, ana.jeronimo@ifai.org.mx,,,,
-69,62,245,OC1,11,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-70,245,149,NC1,11,1,1,ISAAK, PACHECO, IZQUIERDO, isaak.pacheco@ifai.org.mx,,,,
-71,149,187,MC2,11,1,1,BELEM IRASEMA, CONTRERAS, ARELLANO, belem.contreras@ifai.org.mx ,,,,
-72,66,249,OC1,11,1,1,JOSE MANUEL, BUCIO, VAZQUEZ, jose.bucio@ifai.org.mx,,,,
-73,65,249,OC1,11,1,1,ROSA MARIA, RIVAS, RANGEL, rosa.rivas@ifai.org.mx,,,,
-74,249,152,NC1,11,1,1,MAYRA GABRIELA, TELLEZ, CAMPOS, mayra.tellez@ifai.org.mx,,,,
-75,152,187,MC2,11,1,1,ALMA ZULEMA, TOVAR, FIGUEROA, zulema.tovar@ifai.org.mx,,,,
-76,196,187,PA3,11,1,1,THANIA, LARA, RANGEL, thania.lara@ifai.org.mx,,,,
-77,196,187,PA3,11,1,1,MAYRA, IBAÑEZ, GOMEZ, mayra.ibanez@ifai.org.mx,,,,
-78,42,246,OC1,3,1,1,PABLO ALBERTO, SANCHEZ, GALVAN, pablo.sanchez@ifai.org.mx,,,,
-79,246,162,NC1,3,1,1,JAVIER, JIMENEZ, SUAREZ, javier.jimenez@ifai.org.mx,,,,
-80,80,258,OC1,3,1,1,IVAN, VASQUEZ, MENDEZ, ivan.vasquez@ifai.org.mx,,,,
-81,79,258,OC1,3,1,1,ANGEL RAMON, CELIS, CAMARGO, angel.celis@ifai.org.mx,,,,
-82,258,162,NC2,3,1,1,TANIA, DE LA PAZ PEREZ, FARCA, tania.delapazperez@ifai.org.mx,,,,
-83,162,179,MC2,3,1,1,UBALDO IRVIN, LEON, FUENTES, ubaldo.leon@ifai.org.mx,,,,
-84,88,241,OC1,7,1,1,GUILLERMO, PEREZ, MARTINEZ, guillermo.perez@ifai.org.mx,,,,
-85,87,241,OC1,7,1,1,ANGELICA, GAY, ARELLANO, angelica.gay@ifai.org.mx,,,,
-86,241,177,NC1,7,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-87,177,183,MC2,7,1,1,LORENA, DE LA CANAL, RIOSECO, lorena.delacanal@ifai.org.mx,,,,
-88,89,267,OC1,7,1,1,MARIA GUADALUPE, BETANCOURT, PARRA, maria.betancourt@ifai.org.mx,,,,
-89,267,163,NC3,7,1,1,SALVADOR, VAZQUEZ, CAUDILLO, salvador.vazquez@ifai.org.mx,,,,
-90,163,183,MC2,7,1,1,EDMUNDO, GONZALEZ, LLACA, edmundo.gonzalez@ifai.org.mx,,,,
-91,56,237,OC1,7,1,1,RICARDO, GOMEZ, ORTEGA, ricardo.gomez@ifai.org.mx,,,,
-92,164,178,MC2,2,1,1,MARGARITA, MONTERO, ROJAS, margarita.montero@ifai.org.mx ,,,,
-93,50,283,OC1,2,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-94,74,283,OC1,2,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-95,283,165,NC3,2,1,1,FERNANDO, HERNANDEZ, FLORES, fernando.hernandez@ifai.org.mx,,,,
-96,55,237,OC1,7,1,1,JANETH, GUZMAN, AGUILAR, janeth.guzman@ifai.org.mx,,,,
-97,237,142,NC2,7,1,1,MARTHA IVONNE, GUERRERO, GONZALEZ, ivonne.guerrero@ifai.org.mx ,,,,
-98,86,265,OC1,7,1,1,CLAUDIA, TELLEZ, AGUILAR, claudia.tellez@ifai.org.mx,,,,
-99,265,142,NC1,7,1,1,DULCE MARIA, JARA , REYES, dulce.jara@ifai.org.mx,,,,
-100,54,236,OC1,7,1,1,OLIVIA, NOLASCO, NOLASCO, olivia.nolasco@ifai.org.mx,,,,
-101,236,142,NC3,7,1,1,SONIA, BARRERA, GARCIA, sonia.barrera@ifai.org.mx,,,,
-102,142,183,MC2,7,1,1,MA. DE LOS ANGELES, HERNANDEZ, SANCHEZ, maangeles.hernandez@ifai.org.mx,,,,
-103,196,183,PA3,7,1,1,JORGE ARTURO, FERNANDEZ, JIMENEZ, jorge.fernandez@ifai.org.mx,,,,
-104,196,183,PA3,7,1,1,ARACELI, VALENCIA, VAZQUEZ, araceli.valencia@ifai.org.mx,,,,
-105,4,183,PC3,7,1,1,JAIME, QUINTERO, GARCIA, jaime.quintero@ifai.org.mx,,,,
-106,109,281,OC1,14,1,1,MANUEL, SANCHEZ, MEZA, manuel.sanchez@ifai.org.mx,,,,
-107,281,171,NC1,14,1,1,CESAR, HERNANDEZ, TUFIÑO, cesar.hernandez@ifai.org.mx,,,,
-108,40,227,OC1,14,1,1,TERESA, VILLEGAS, CASAS, teresa.villegas@ifai.org.mx,,,,
-109,227,171,NC3,14,1,1,CARINA GUADALUPE, SARABIA, DELGADO, carina.sarabia@ifai.org.mx ,,,,
-110,112,257,OC1,14,1,1,ANGELICA JULIETA, SOLIS, OLIVARES, angelica.solis@ifai.org.mx,,,,
-111,78,257,OC1,14,1,1,SANTIAGO, COVARRUBIAS, ORTIZ, santiago.covarrubias@ifai.org.mx,,,,
-112,122,257,OC1,14,1,1,CESAR ANTONIO, MARTINEZ, OLIVARES, cesar.martinez@ifai.org.mx,,,,
-113,257,171,NC3,14,1,1,JOSE ANDRES, FRANCO , BEJARANO, andres.franco@ifai.org.mx,,,,
-114,139,180,MC1,4,1,1,MARIA DEL ROSARIO, VASQUEZ, ROSALES, rosario.vasquez@ifai.org.mx,,,,
-115,23,223,OC3,7,1,1,MIGUEL ANGEL, GUZMAN, SANCHEZ, miguel.guzman@ifai.org.mx,,,,
-116,29,222,OC1,4,1,1,JOSE JOEL, PEÑA, LLANES, jose.pena@ifai.org.mx,,,,
-117,28,222,OC3,4,1,1,JESUS JAVIER, SANCHEZ, GARCIA, jesus.sanchez@ifai.org.mx,,,,
-118,222,140,NC3,4,1,1,GABRIELA, ARCHUNDIA, MORA, gabriela.archundia@ifai.org.mx,,,,
-119,140,180,MC1,4,1,1,EDUARDO, VELASQUILLO, HERRERA, eduardo.velasquillo@ifai.org.mx,,,,
-120,196,180,PA3,4,1,1,SERGIO, ORTEGA, ARCHUNDIA, sergio.ortega@ifai.org.mx,,,,
-121,223,161,NC2,7,1,1,SERGIO ARTURO, CACERES, YAM, sergio.caceres@ifai.org.mx,,,,
-122,196,180,PC1,4,1,1,DELTA BEATRIZ, ITURRALDE, FLISSER, delta.iturralde@ifai.org.mx,,,,
-123,180,213,KB1,4,1,1,TANIA, SANCHEZ, ANDRADE, tania.sanchez@ifai.org.mx,,,,
-124,57,223,OC1,7,1,1,JACQUELINE, CASTILLO, POSADA, jacqueline.castillo@ifai.org.mx,,,,
-125,161,183,MC1,7,1,1,LIBERTAD, GARCIA, SANABRIA, libertad.garcia@ifai.org.mx,,,,
-126,196,190,PA3,14,1,1,FELIPE ERNESTO, QUINTERO, PULIDO, felipe.quintero@ifai.org.mx,,,,
-127,3,190,PC2,14,1,1,MARIA DE LOURDES, MIRANDA, GUTIERREZ, lourdes.miranda@ifai.org.mx,,,,
-128,64,264,OB2,2,1,1,ANA LAURA, MARTINEZ, MARTINEZ, ana.martinez@ifai.org.mx,,,,
-129,264,169,NC1,2,1,1,DIEGO RICARDO, VELAZQUEZ, ROMERO, diego.velazquez@ifai.org.mx,,,,
-130,81,261,OB2,2,1,1,BITHIA, CASTILLO, SIERRA, bithia.castillo@ifai.org.mx,,,,
-131,266,164,NC3,2,1,1,ARTURO, BAÑUELAS , GALLARDO, arturo.banuelas@ifai.org.mx,,,,
-132,261,169,NC3,2,1,1,GLORIA, BRAVO, REYNA, gloria.bravo@ifai.org.mx,,,,
-133,47,220,OC1,2,1,1,MARGARITA, GASCA, CARDENAS, margarita.gasca@ifai.org.mx,,,,
-134,46,220,OC1,2,1,1,RAQUEL, AGUIRRE, GUERRA, raquel.aguirre@ifai.org.mx,,,,
-135,188,212,KB2,12,1,1,EDGARDO, MARTINEZ, ROJAS, edgardo.martinez@ifai.org.mx,,,,
-136,22,233,OC3,18,1,1,LUISA JACQUELINE, FARAH, GEBARA, jacqueline.farah@ifai.org.mx,,,,
-137,61,233,OC1,18,1,1,CLAUDIA, DIAZ, ROSALES, claudia.diaz@ifai.org.mx,,,,
-138,233,144,NC3,18,1,1,NASHYELI, LOZANO, MERINO, nashyeli.lozano@ifai.org.mx,,,,
-139,220,169,NC2,2,1,1,CLAUDIA ALIN, ESCOTO, VELAZQUEZ, claudia.escoto@ifai.org.mx,,,,
-140,125,290,OC1,2,1,1,LUISA, ARELLANO, REYES, luisa.arellano@ifai.org.mx,,,,
-141,44,290,OC3,2,1,1,CESAR, PINEDA, ROJAS, cesar.pineda@ifai.org.mx ,,,,
-142,290,164,NC3,2,1,1,MARIA DE LOURDES, CARLOS, MANUEL, lourdes.carlos@ifai.org.mx ,,,,
-143,51,266,OC1,2,1,1,YESICA YAZMIN, SEVERIANO, GUTIERREZ, yesica.severiano@ifai.org.mx,,,,
-144,175,191,MC1,15,1,1,ROBERTO, OROZCO, MARTINEZ, roberto.orozco@ifai.org.mx,,,,
-145,97,271,OC1,6,1,1,DANIELA, TIRADO, RUBIO, daniela.tirado@ifai.org.mx,,,,
-146,271,148,NC1,6,1,1,MARIANA, GOMEZ, RODRIGUEZ, mariana.gomez@ifai.org.mx,,,,
-147,144,212,MC2,18,1,1,RUBEN, CARBAJAL, ZARATE, ruben.carbajal@ifai.org.mx,,,,
-148,37,226,OC1,18,1,1,PEDRO, DE LOS SANTOS, OTERO, pedro.delossantos@ifai.org.mx,,,,
-149,36,226,OC1,18,1,1,DAVID ANTONIO, MORALES, MORALES, david.morales@ifai.org.mx,,,,
-150,226,141,NC1,18,1,1,JULIO ALBERTO, HUERTA, ANGUIANO, julio.huerta@ifai.org.mx,,,,
-151,33,224,OC2,18,1,1,SALVADOR, PEREZ DE LEON, VARGAS, salvador.perez@ifai.org.mx,,,,
-152,32,224,OC1,18,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-153,224,141,NC1,18,1,1,ANA CRISTINA, LEVY, COVARRUBIAS, anacristina.levy@ifai.org.mx,,,,
-154,35,225,OC2,18,1,1,MARIANA, CAMPOS, CASTILLO, mariana.campos@ifai.org.mx,,,,
-155,34,225,OC1,18,1,1,JESUS EULISES, GONZALEZ, MEJIA, jesus.gonzalez@ifai.org.mx,,,,
-156,225,141,NC1,18,1,1,DIANA BERENICE, AGUILAR, PEREZ, diana.aguilar@ifai.org.mx,,,,
-157,196,141,PA3,18,1,1,LUZ MARIA, BECERRA, PEREZ, luz.becerra@ifai.org.mx,,,,
-158,196,141,PA3,18,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-159,196,141,PA1,18,1,1,ALBERTO, IBARRA, PERALTA, alberto.ibarra@ifai.org.mx,,,,
-160,141,188,MC2,18,1,1,SAMANTHA, ALCALDE, URBINA, samantha.alcalde@ifai.org.mx,,,,
-161,196,212,PC1,18,1,1,JOSE LUIS, PINEDA, RANGEL, jose.pineda@ifai.org.mx,,,,
-162,212,201,KA2,18,1,1,LUIS GUSTAVO, PARRA, NORIEGA, gustavo.parra@ifai.org.mx,,,,
-163,299,195,NC1,16,1,1,CHRISTIAN RODRIGO, CUBOS, ALQUICIRA, christian.cubos@ifai.org.mx,,,,
-164,301,195,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-165,195,303,NC3,16,1,1,CINTIA GUADALUPE, BLANDO, RUIZ, cintia.blando@ifai.org.mx,,,,
-166,100,279,OC1,10,1,1,LETICIA, PEREZ, CALDERON, leticia.perez@ifai.org.mx,,,,
-167,299,194,NC1,16,1,1,EVA, CONTRERAS, MARTINEZ, eva.contreras@ifai.org.mx,,,,
-168,300,194,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-169,194,303,NC3,16,1,1,YESSICA ANAHI, TORRES, CARCAÑO, yessica.torres@ifai.org.mx,,,,
-170,299,193,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-171,299,193,NA1,16,1,1,JORGE ARTURO, LOPEZ, FIGUEROA, jorgearturo.lopez@ifai.org.mx,,,,
-172,193,302,NC3,16,1,1,ARTURO, PONCE, NECOECHEA, arturo.ponce@ifai.org.mx,,,,
-173,298,192,NA1,16,1,1,NANCY KARINA, MUÑOZ, SANTANA, nancy.munoz@ifai.org.mx,,,,
-174,298,192,NA1,16,1,1,CLAUDIA ROSALVA, DOMINGUEZ, DUBON, rosalva.dominguez@ifai.org.mx,,,,
-175,298,192,NA1,16,1,1,VACANTE, VACANTE, VACANTE, luisgabriel.cacho@ifai.org.mx,,,,
-176,192,302,NC3,16,1,1,LILIA JOSEFINA, PAGAZA, ARROYO, lilia.pagaza@ifai.org.mx,,,,
-177,196,8,PA3,16,1,1,EVA SURISADAY, SAMPERIO, FRAGOSO, eva.samperio@ifai.org.mx,,,,
-178,21,248,OC1,9,1,1,CHRISTIAN PENELOPE, PEÑA, GUERRERO, christian.pena@ifai.org.mx,,,,
-179,61,248,OC1,9,1,1,ALEJANDRO, NOGUEZ, IBARRA, alejandro.noguez@ifai.org.mx,,,,
-180,248,151,NC1,9,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-181,151,185,MC2,9,1,1,MARIA LAURA, CASTELAZO, DIAZ LEAL, laura.castelazo@ifai.org.mx,,,,
-182,21,235,OC1,9,1,1,CLAUDIA, ZARATE, JALOMA, claudia.zarate@ifai.org.mx,,,,
-183,61,235,OC1,9,1,1,CLAUDIA ARACELI, CORDERO, CALLEJA, claudia.cordero@ifai.org.mx,,,,
-184,235,145,NC1,9,1,1,LEON ALEJANDRO, TRUJILLO, COVARRUBIAS, leon.trujillo@ifai.org.mx,,,,
-185,145,185,MC2,9,1,1,ANA EUGENIA, VIÑAS, BUSTOS, ana.vinas@ifai.org.mx,,,,
-186,196,185,PA3,9,1,1,MARIO SAID, VERGARA, HUESCA, mario.vergara@ifai.org.mx,,,,
-187,196,185,PC2,9,1,1,YOLANDA, TOLENTINO, DELGADILLO, yolanda.tolentino@ifai.org.mx,,,,
-188,196,185,PC1,9,1,1,RAMON EZEQUIEL, NAVARRO, GONZALEZ, ramon.navarro@ifai.org.mx,,,,
-189,196,185,PC1,9,1,1,LILIAN, ANAYA, CARDENAS, lilian.anaya@ifai.org.mx,,,,
-190,185,209,KB2,9,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-191,101,279,OC1,10,1,1,ALICIA, MONDRAGON, MORA, alicia.mondragon@ifai.org.mx,,,,
-192,108,260,OC1,7,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-193,260,166,NC3,7,1,1,MARIO ERNESTO, MEJIA , PACHON, mario.mejia@ifai.org.mx ,,,,
-194,20,244,OC1,7,1,1,JESUS SANTIAGO, MATHEUS, PEÑA, jesus.matheus@ifai.org.mx,,,,
-195,107,244,OC2,7,1,1,JORGE SAUL, LIMAS, CASTRO, saul.limas@ifai.org.mx,,,,
-196,244,166,NC3,7,1,1,ANTOLIN, SOTELO, SANCHEZ, antolin.sotelo@ifai.org.mx,,,,
-197,166,183,MC2,7,1,1,CHRISTIAN, LARIS, CUTIÑO, christian.laris@ifai.org.mx,,,,
-198,200,259,OC1,7,1,1,MARIA SOLEDAD, RODRIGO, , maria.soledad@ifai.org.mx,,,,
-199,259,177,NC1,7,1,1,FERNANDO, MONTOYA, VARGAS, fernando.montoya@ifai.org.mx,,,,
-200,88,242,OC1,7,1,1,SEBASTIAN, PERLIN-VITAL, AYALA, sebastian.perlin@ifai.org.mx,,,,
-201,87,242,OC1,7,1,1,JUAN MANUEL, PEREZ, AMEZCUA, juan.perez@ifai.org.mx,,,,
-202,242,177,NC2,7,1,1,IXCHEL, CRUZ, CISNEROS, ixchel.cruz@ifai.org.mx,,,,
-203,68,251,OC1,15,1,1,ERIKA REBEKA, VILLEGAS, VELAZQUEZ, erika.villegas@ifai.org.mx,,,,
-204,251,154,NC1,15,1,1,SERGIO RUBEN, IBARRA, CASAS, sergio.ibarra@ifai.org.mx,,,,
-205,67,250,OC1,15,1,1,GUSTAVO ALEJANDRO, MIRANDA, VALDEZ, gustavo.miranda@ifai.org.mx,,,,
-206,250,154,NC1,15,1,1,FLOR, MAGDALENO, ALTAMIRANO, flor.magdaleno@ifai.org.mx,,,,
-207,154,191,MC1,15,1,1,JOSE JUAN, ALONSO, RAMIREZ, jose.alonso@ifai.org.mx,,,,
-208,135,295,OC1,15,1,1,ANA PAULINA, GONZALEZ, GONZALEZ, anapaulina.gonzalez@ifai.org.mx,,,,
-209,295,153,NC1,15,1,1,EDGAR DAVID, HERNANDEZ, GARCIA, edgar.hernandez@ifai.org.mx,,,,
-210,134,294,OC1,15,1,1,SUSANA, ALONSO, SALINAS, susana.alonso@ifai.org.mx,,,,
-211,294,153,NC1,15,1,1,MANUEL, ESPINOSA, HERNANDEZ, manuel.espinosa@ifai.org.mx,,,,
-212,133,293,OC1,15,1,1,ROSA MARIA, ANGELES, NUÑEZ, rosa.angeles@ifai.org.mx,,,,
-213,132,293,OC1,15,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-214,293,153,NC1,15,1,1,JUAN RAFAEL, REYES   , MURILLO, juan.reyes@ifai.org.mx,,,,
-215,153,191,MC1,15,1,1,EDUARDO, SAN MIGUEL, AGUIRRE, eduardo.sanmiguel@ifai.org.mx,,,,
-216,196,191,PC1,15,1,1,VICTOR JAVIER, QUINTERO, RUIZ, victor.quintero@ifai.org.mx,,,,
-217,191,212,KB2,15,1,1,ANDRES, CALERO, AGUILAR, andres.calero@ifai.org.mx,,,,
-218,121,278,OC1,13,1,1,MIGUEL ELADIO, OLIVARES, GUZMAN, miguel.olivares@ifai.org.mx,,,,
-219,278,167,NC1,13,1,1,MARIA ELENA, OJEDA, CRUZ, elena.ojeda@ifai.org.mx,,,,
-220,120,277,OC1,13,1,1,MIRIAM, HERNANDEZ, FAJARDO, miriam@hernandez@ifai.org.mx,,,,
-221,277,167,NC1,13,1,1,GUADALUPE, SANTIAGO, JUAREZ, guadalupe.santiago@ifai.org.mx,,,,
-222,167,189,MC1,13,1,1,CLAUDIO, ROMERO, VELASCO, claudio.romero@ifai.org.mx,,,,
-223,94,273,OC1,13,1,1,MIGUEL ANGEL, YONEMOTO, HERNANDEZ, miguel.yonemoto@ifai.org.mx,,,,
-224,273,173,NC3,13,1,1,JESUS, MEDINA, FRANCO, jesus.medina@ifai.org.mx,,,,
-225,196,188,PC1,12,1,1,JOSE LUIS, GONZALEZ, PEREZ, joseluis.gonzalez@ifai.org.mx,,,,
-226,31,288,OC1,13,1,1,GRACIELA, MORALES, ELIAS, graciela.morales@ifai.org.mx,,,,
-227,288,173,NC1,13,1,1,JAVIER, VEGA, RODRIGUEZ, javier.vega@ifai.org.mx,,,,
-228,39,229,OC1,13,1,1,AIDE, LOVERA, RAMIREZ, aide.lovera@ifai.org.mx,,,,
-229,229,173,NC1,13,1,1,CLAUDIA GRACIELA, DOMINGUEZ, ALVAREZ, claudia.dominguez@ifai.org.mx,,,,
-230,173,189,MC1,13,1,1,HUMBERTO MIGUEL, LEAL, LOPEZ, humberto.leal@ifai.org.mx,,,,
-231,93,272,OC1,13,1,1,SONIA ERENDIRA MAGDALENA, REYES   , GODINEZ, sonia.reyes@ifai.org.mx,,,,
-232,272,172,NC2,13,1,1,GERARDO SALVADOR, CASTILLO, VELASCO, gerardo.castillo@ifai.org.mx,,,,
-233,30,287,OC1,13,1,1,EDGAR, BRUST, VITE, edgar.brust@ifai.org.mx,,,,
-234,287,172,NC2,13,1,1,JOSE MANUEL, ALCALA, HERNANDEZ, jose.alcala@ifai.org.mx,,,,
-235,38,230,OC1,13,1,1,REBECA, HERNANDEZ, ZAMORA, rebeca.hernandez@ifai.org.mx,,,,
-236,230,172,NC1,13,1,1,LUIS, BAZAN, BERAUD, luis.bazan@ifai.org.mx,,,,
-237,172,189,MC1,13,1,1,BRUNO NOE, VITE, ANGELES, bruno.vite@ifai.org.mx,,,,
-238,196,189,PA3,13,1,1,ANELIZ, VARGAS, PAZ, aneliz.vargas@ifai.org.mx,,,,
-239,196,189,PA3,13,1,1,LETICIA, MARTINEZ, BENITEZ, leticia.martinez@ifai.org.mx,,,,
-240,196,189,PC1,13,1,1,JOSE RAFAEL, GUTIERREZ, ESTRADA, no aplica ,,,,
-241,189,212,KB2,13,1,1,RAUL, GARCIA MORENO, ELIZONDO, raul.garciamoreno@ifai.org.mx,,,,
-242,10,217,OC1,12,1,1,PAULINA, RIVERA, REYES, paulina.rivera@ifai.org.mx,,,,
-243,217,160,NC1,12,1,1,KARINA, HERNANDEZ, CRUZ, karina.hernandez@ifai.org.mx ,,,,
-244,62,245,OC1,12,1,1,EDITH ERIKA, CUELLAR, CRUZ, edith.cuellar@ifai.org.mx,,,,
-245,245,160,NC3,12,1,1,CYNTHIA RAQUEL, VALDIVIA, TIRADO, cynthia.valdivia@ifai.org.mx,,,,
-246,76,256,OC1,12,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-247,256,160,NC3,12,1,1,MIRIAM, SOTO, DOMINGUEZ, miriam.soto@ifai.org.mx,,,,
-248,90,268,OC1,12,1,1,CARLOS, RETANA, SANTAMARIA, carlos.retana@ifai.org.mx,,,,
-249,268,160,NC1,12,1,1,MARIA GUADALUPE, MANJARREZ, SEGURA, guadalupe.manjarrez@ifai.org.mx,,,,
-250,160,188,MC1,12,1,1,JULIAN GUSTAVO, SEGURA, SEGURA, gustavo.segura@ifai.org.mx,,,,
-251,171,190,MC2,14,1,1,JOSE GUILLERMO, PRECIADO, LOPEZ, guillermo.preciado@ifai.org.mx ,,,,
-252,19,219,OC1,14,1,1,NAYELLY, SANCHEZ, JARDON, nayelly.sanchez@ifai.org.mx,,,,
-253,18,219,OC1,14,1,1,JUAN CARLOS, LOPEZ, RIVERA, juan.lopez@ifai.org.mx,,,,
-254,219,170,NC1,14,1,1,ANEL, MORALES, REGALADO, anel.morales@ifai.org.mx,,,,
-255,59,285,OC1,14,1,1,LUIS IGNACIO, RESENDIZ, SANCHEZ, luis.resendiz@ifai.org.mx,,,,
-256,285,170,NC3,14,1,1,OSCAR ENRIQUE, VILALTA, MORON, oscar.vilalta@ifai.org.mx ,,,,
-257,58,284,OC3,14,1,1,RAFAEL, GONZALEZ, GARCIA, rafael.gonzalez@ifai.org.mx,,,,
-258,111,284,OC3,14,1,1,JUAN CARLOS, CHAVEZ, GARCIA, juancarlos.chavez@ifai.org.mx,,,,
-259,284,170,NC3,14,1,1,HIRIAM EDUARDO, PEREZ, VIDAL, hiriam.perez@ifai.org.mx,,,,
-260,170,190,MC2,14,1,1,ARTURO, URIBE, MENDOZA, arturo.uribe@ifai.org.mx,,,,
-261,196,190,PA3,14,1,1,ALEJANDRO, CASTILLO, LUGARDO, alejandro.castillo@ifai.org.mx,,,,
-262,196,190,PA1,14,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-263,269,213,NC3,19,1,1,LAURA , OROZCO , DOMINGUEZ, laura.orozco@ifai.org.mx,,,,
-264,239,213,NC2,19,1,1,SONIA, QUINTANA, MARTINEZ, sonia.quintana@ifai.org.mx,,,,
-265,303,8,MC2,16,1,1,LUIS JESUS, MORENO, VELAZQUEZ, luis.moreno@ifai.org.mx,,,,
-266,302,8,MC2,16,1,1,EDUARDO REFUGIO, CONTLA, BALLESTEROS, eduardo.contla@ifai.org.mx,,,,
-267,8,201,KA02,16,1,1,SALOMON, DIAZ, ALFARO, salomon.diaz@ifai.org.mx,,,,
-268,45,216,OC1,2,1,1,MIRIAM SULAMITA, SALDIVAR, MARQUEZ, miriam.saldivar@ifai.org.mx,,,,
-269,216,165,NC1,2,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-270,165,178,MC2,2,1,1,ANICETO, ALVARADO, GONZALEZ, aniceto.alvarado@ifai.org.mx,,,,
-271,84,238,OC1,2,1,1,ITZEL ALICIA, POBLANO, MELENDEZ, itzel.poblano@ifai.org.mx,,,,
-272,238,146,NC3,2,1,1,VANESSA, ROSAS, GONZALEZ, vanessa.rosas@ifai.org.mx,,,,
-273,110,282,OC2,2,1,1,CARLOS ALBERTO, FLORES, HERNANDEZ, carlos.flores@ifai.org.mx,,,,
-274,282,146,NC3,2,1,1,JULIA LEONOR, RODRIGUEZ, LOPEZ, julia.rodriguez@ifai.org.mx ,,,,
-275,48,231,OC1,2,1,1,KARLA LIZETH, GRANILLO, SALCIDO, karla.granillo@ifai.org.mx,,,,
-276,83,231,OC1,2,1,1,ALBERTO, JIMENEZ, MORALES, alberto.jimenez@ifai.org.mx,,,,
-277,231,146,NC3,2,1,1,PABLO RICARDO, GAMA, ORTIZ, pablo.gama@ifai.org.mx,,,,
-278,146,178,MC2,2,1,1,MARIA JOSE, DE ALBORNOZ, BUENO, mariajose.albornoz@ifai.org.mx ,,,,
-279,53,178,OC1,2,1,1,ANA CAROLINA, SANCHEZ, ROLDAN, ana.sanchez@ifai.org.mx,,,,
-280,7,201,HB1,1,1,1,XIMENA, PUENTE, DE LA MORA, ximena.puente@ifai.org.mx,,,,
-281,7,201,HB1,1,1,1,ARELI, CANO, GUADIANA, areli.cano@ifai.org.mx,,,,
-282,7,201,HB1,1,1,1,FRANCISCO JAVIER, ACUÑA, LLAMAS, francisco.acuna@ifai.org.mx,,,,
-283,179,209,KB2,3,1,1,ROSA MARIA, BARCENA, CANUAS, rosa.barcena@ifai.org.mx,,,,
-284,190,213,KB2,14,1,1,ALFREDO, MENDEZ, CALATAYUD, alfredo.mendez@ifai.org.mx ,,,,
-285,169,178,MC2,2,1,1,EDUARDO, BONILLA, MAGAÑA, eduardo.bonilla@ifai.org.mx,,,,
-286,9,297,OC1,20,1,1,MARLENE, MARTINEZ, SANTIAGO, marlene.martinez@ifai.org.mx,,,,
-287,196,215,PC1,20,1,1,TIARA GETHSEMANNI, MIRANDA, FUENTES, tiara.miranda@ifai.org.mx,,,,
-288,215,201,MC2,20,1,1,SALWA, BALUT, PELAEZ, salwa.balut@ifai.org.mx,,,,
-289,297,215,NC1,20,1,1,SANDRA LILIANA, BALCAZAR, LOMELI, sandra.balcazar@ifai.org.mx,,,,
-290,1,178,PA3,2,1,1,OMAR JAVIER, CORDOVA, CASTAÑEDA, omar.cordova@ifai.org.mx,,,,
-291,6,178,PC1,2,1,1,CARLOS ROBERTO, SANCHEZ, TREJO, carlos.sanchez@ifai.org.mx,,,,
-292,196,178,PA3,2,1,1,MARIA DEL CARMEN, MARTINEZ, CASASOLA, maria.martinez@ifai.org.mx,,,,
-293,136,240,OC1,8,1,1,RAFAEL, GONZALEZ, NICACIO, rafael.gonzalezn@ifai.org.mx,,,,
-294,196,178,PA3,2,1,1,ALFREDO ELIAS, LIMON, ORTIZ, alfredo.limon@ifai.org.mx,,,,
-295,196,178,PA1,2,1,1,ELISEO, DIAZ, HERRERA, eliseo.diaz@ifai.org.mx,,,,
-296,196,178,PA3,2,1,1,JORGE ENRIQUE, SANCHEZ , ELIZALDE, jorge.sanchez@ifai.org.mx,,,,
-297,196,178,PC3,2,1,1,ANSELMO, FLORES, BALDERAS, anselmo.flores@ifai.org.mx,,,,
-298,196,178,PC3,2,1,1,MARIA FERNANDA, GUTIERREZ, VELAZQUEZ, fernanda.gutierrez@ifai.org.mx,,,,
-299,22,233,OC1,19,1,1,GUADALUPE XIMENA, GOMEZ, GUTIERREZ, ximena.gomez@ifai.org.mx,,,,
-300,61,233,OC1,19,1,1,NANCY, RAMOS, HERRERA, nancy.ramos@ifai.org.mx,,,,
-301,196,213,PA3,19,1,1,ROGELIO, GONZALEZ, LOPEZ, rogelio.gonzalez@ifai.org.mx,,,,
-302,183,213,KB2,7,1,1,IRMA PIA, GONZALEZ LUNA, CORVERA, irmapia.gonzalez@ifai.org.mx,,,,
-303,106,243,OC1,8,1,1,MARTHA BETZABE, SOLANO, ANAYA, martha.solano@ifai.org.mx,,,,
-304,105,243,OC1,8,1,1,JORGE LUIS, VAZQUEZ, ESCOBAR, jorge.vazquez@ifai.org.mx,,,,
-305,243,158,NC2,8,1,1,MISAEL, MARTINEZ, SOTO, misael.martinez@ifai.org.mx,,,,
-306,124,289,OC1,8,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-307,123,289,OC1,8,1,1,SINVERGH, VERDUSCO, QUIROZ, sinvergh.verdusco@ifai.org.mx,,,,
-308,289,158,NC2,8,1,1,GUALBERTO, YERVES, NAVA, gualberto.yerves@ifai.org.mx,,,,
-309,96,255,OC1,8,1,1,VALENTIN, GRANADOS, FLORES, valentin.granados@ifai.org.mx,,,,
-310,95,255,OC2,8,1,1,JOSE LUIS, ARMENTA, AVILA, jose.armenta@ifai.org.mx,,,,
-311,75,255,OC1,8,1,1,MAYRA LILY, SANTANDER, ESPINOZA, mayra.santander@ifai.org.mx,,,,
-312,255,158,NC3,8,1,1,OLGA LIDIA, ARELLANO, , olga.arellano@ifai.org.mx ,,,,
-313,158,184,MC2,8,1,1,ISMAEL, ROMERO, SILVA, ismael.romero@ifai.org.mx,,,,
-314,137,240,OC1,8,1,1,MARIA DE LOS ANGELES, REGUERO, GONZALEZ, angeles.reguero@ifai.org.mx,,,,
-315,147,184,MC1,8,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-316,184,201,KB2,8,1,1,JOSE GUILLERMO , LOPEZ , FIGUEROA, guillermo.lopez@ifai.org.mx,,,,
-317,213,201,KA2,19,1,1,JOSE DE JESUS , RAMIREZ , SANCHEZ, josedejesus.ramirez@ifai.org.mx,,,,
-318,7,201,HB1,1,1,1,JOEL, SALAS, SUAREZ, joel.salas@ifai.org.mx,,,,
-319,7,201,HB1,1,1,1,ROSENDOEVGUENI, MONTERREY, CHEPOV, eugenio.monterrey@ifai.org.mx,,,,
-320,7,201,HB1,1,1,1,OSCAR MAURICIO, GUERRA, FORD, oscar.guerra@ifai.org.mx,,,,
-321,7,201,HB1,1,1,1,MARIA PATRICIA, KURCZYN, VILLALOBOS, mpatricia.kurczynv@ifai.org.mx,,,,
-322,186,209,KB2,10,1,1,JOSE LUIS, MARZAL, RUIZ, jl.marzal@ifai.org.mx ,,,,
-323,187,209,KB1,11,1,1,DAVID , PALOMINO, HERNANDEZ, david.palomino@ifai.org.mx,,,,
-324,240,147,NC1,8,1,1,ALFREDO, CHAVEZ, GUTIERREZ, alfredo.chavez@ifai.org.mx,,,,
-325,196,181,PC2,5,1,1,ALEJANDRO, BOUQUET, ROJAS, no aplica ,,,,
-326,60,262,OC1,8,1,1,MARIA ELENA, VARGAS, ZENTENO, maria.vargas@ifai.org.mx,,,,
-327,85,262,OC1,8,1,1,SAUL, GALLEGOS, SALGADO, saul.gallegos@ifai.org.mx,,,,
-328,262,147,NC3,8,1,1,JOSE ANTONIO, BARRERA, LOPEZ, joseantonio.barrera@ifai.org.mx ,,,,
-329,196,184,PA3,8,1,1,SALVADOR, CAMPA, SALGADO, salvador.campa@ifai.org.mx,,,,
-330,71,253,OC1,5,1,1,MONICA, MORALES, GONZALEZ, monica.morales@ifai.org.mx,,,,
-331,253,156,NC2,5,1,1,ULISES, ANGELES, BOJORQUEZ, ulises.angeles@ifai.org.mx,,,,
-332,156,181,MC2,5,1,1,SANDRA MARIANA, MIRAMONTES, FIGUEROA, sandra.miramontes@ifai.org.mx,,,,
-333,181,201,KB3,5,1,1,RICARDO, SALGADO, PERRILLIAT, ricardo.salgado@ifai.org.mx,,,,
-334,73,254,OC1,5,1,1,LIZETH GABRIELA, RODRIGUEZ, GARCIA, lizeth.rodriguez@ifai.org.mx,,,,
-335,72,254,OC1,5,1,1,ALEJANDRA, MENDOZA, VILLEGAS, alejandra.mendoza@ifai.org.mx,,,,
-336,254,157,NC1,5,1,1,MARTIN, TORRES, CONTRERAS, martin.torres@ifai.org.mx,,,,
-337,144,209,MC2,17,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-338,157,181,MC2,5,1,1,RIGOBERTO, MARTINEZ, BECERRIL, rigoberto.martinez@ifai.org.mx,,,,
-339,209,201,KA2,17,1,1,ADRIAN , ALCALA , MENDEZ, adrian.alcala@ifai.org.mx,,,,
-340,70,252,OC1,5,1,1,MARIA GUADALUPE, LOBERA, DURAN, guadalupe.lobera@ifai.org.mx,,,,
-341,69,252,OC3,5,1,1,OMAR, CRUZ, IBINARRIAGA, omar.cruz@ifai.org.mx,,,,
-342,252,155,NC3,5,1,1,ERICK, MONTIEL , GAMBOA, erick.montiel@ifai.org.mx,,,,
-343,155,181,MC2,5,1,1,MARIA DEL CONSUELO, BAUTISTA, BALTAZAR, consuelo.bautista@ifai.org.mx ,,,,
-344,196,181,PA3,5,1,1,ERIKA, GILES, LOPEZ, erika.giles@ifai.org.mx ,,,,
-345,178,213,KB3,2,1,1,EDUARDO FELIPE, FERNANDEZ, SANCHEZ, eduardo.fernandez@ifai.org.mx ,,,,
-346,233,144,NC1,19,1,1,ERIKA, REYES   , MENESES, erika.reyes@ifai.org.mx,,,,
-347,144,213,MC2,19,1,1,JOSE DE JESUS ROMAN, PEREZ, GARCIA, roman.perez@ifai.org.mx,,,,
-348,203,11,OC02,16,1,1,IVAN EMMANUEL , SANCHEZ , MORALES, ivan.sanchez@ifai.org.mx,,,,
-349,202,11,OC02,16,1,1,LORENA , MARTINEZ , GONZALEZ, lorena.martinez@ifai.org.mx,,,,
-350,11,274,NB3,16,1,1,IVAN , SANTOS , VAZQUEZ, ivan.santos@ifai.org.mx,,,,
-351,274,210,MB2,16,1,1,NANCY , PEREZ , GUZMAN, nancy.perez@ifai.org.mx,,,,
-352,210,7,MC3,16,1,1,JONATHAN , MENDOZA , ISERTE, jonathan.mendoza@ifai.org.mx,,,,
-353,5,7,OB02,16,1,1,CARLOS JOSUE , OCHOA , MEDINA, carlos.ochoa@ifai.org.mx,,,,
-354,208,7,OC002,16,1,1,AZUCENA , FERNANDEZ , SANTILLAN, azucena.fernandez@ifai.org.mx,,,,
-355,214,7,MC03,16,1,1,ULISES , RAMIREZ , GALLARDO, ulises.ramirez@ifai.org.mx,,,,
-356,199,17,OC02,16,1,1,ADRIANA ELIZABETH, HERNANDEZ, GARCIA, adriana.hernandez@ifai.org.mx,,,,
-357,17,218,NB3,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-358,198,16,OC02,16,1,1,ANA LUISA , LARA , BAUTISTA, ana.lara@ifai.org.mx,,,,
-359,197,16,OC02,16,1,1,MARCO ANTONIO , SOTO , CABALLERO, marco.soto@ifai.org.mx,,,,
-360,16,218,NB3,16,1,1,ADRIAN ISRAEL, OCAMPO, JIMENEZ, adrian.ocampo@ifai.org.mx,,,,
-361,218,138,MB2,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-362,138,7,MC3,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-363,207,14,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-364,14,276,NB3,16,1,1,MARIA DEL PILAR , BENITEZ , LOPEZ, pilar.benitez@ifai.org.mx,,,,
-365,206,13,OC02,16,1,1,DAISY GLORIA , SANTIAGO , DURAN, daisy.santiago@ifai.org.mx,,,,
-366,13,276,NB3,16,1,1,BERENICE , FUENTES , BAEZ, berenice.fuentes@ifai.org.mx,,,,
-367,276,211,MB2,16,1,1,MARIA DE LOS ANGELES , GUZMAN , GARCIA, angeles.guzman@ifai.org.mx,,,,
-368,211,7,MC3,16,1,1,ERIKA DANIELA , MONTIEL , MONSALVO, daniela.montiel@ifai.org.mx,,,,
-369,205,12,OC02,16,1,1,MARICARMEN, PEREZ, LOPEZ, maricarmen.perez@ifai.org.mx,,,,
-370,204,12,OC02,16,1,1,JAIME JAVIER , BEJARANO , ROMERO, jaime.bejarano@ifai.org.mx,,,,
-371,12,275,NB3,16,1,1,LUIS , HERRERA , LEOS, luis.herrera@ifai.org.mx,,,,
-372,275,210,MB2,16,1,1,SERAFIN ADRIAN , LOPEZ , REYES, serafin.lopez@ifai.org.mx,,,,
-373,203,11,OC02,16,1,1,FERNANDO, FALCONI, MUZQUIZ, fernando.falconi@ifai.org.mx,,,,
-374,202,11,OC02,16,1,1,JUANA LAURY , TREJO , MONROY, laury.trejo@ifai.org.mx,,,,
-375,11,274,NB3,16,1,1,ADRIANA , SALAZAR , GONZALEZ, adriana.salazar@ifai.org.mx,,,,
-376,274,210,MB2,16,1,1,CARLOS ALBERTO , CHORA , LAGARDE, carlos.chora@ifai.org.mx,,,,
-377,210,7,MC3,16,1,1,PEDRO , GONZALEZ , MANRIQUEZ, pedro.gonzalez@ifai.org.mx,,,,
-378,5,7,OB02,16,1,1,NOEL , CAMACHO , SANCHEZ, No aplica ,,,,
-379,208,7,OC002,16,1,1,ROSALINDA , CORIA , MOSQUEDA, rosalinda.coria@ifai.org.mx,,,,
-380,214,7,MC03,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-381,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-382,17,218,NB3,1,1,1,OMAR ENRIQUE , MENDEZ , ARIAS, omar.mendez@ifai.org.mx,,,,
-383,198,218,OC02,1,1,1,LIBIA ARIANNA , SANTIAGO , RAMIREZ, libia.santiago@ifai.org.mx,,,,
-384,197,218,OC02,1,1,1,CLAUDIA , HUERTA , CHAGOYA, claudia.huerta@ifai.org.mx,,,,
-385,16,218,NB3,1,1,1,RICARDO DAVID , CASTAÑEDA , OROZCO, ricardo.castaneda@ifai.org.mx,,,,
-386,218,138,MB2,1,1,1,JOSE ANTONIO , GARCIA , MORALES, jose.garcia@ifai.org.mx,,,,
-387,138,7,MC3,1,1,1,FRANCISCO RAUL , ALVAREZ , CORDOBA, francisco.alvarez@ifai.org.mx,,,,
-388,207,14,OC02,1,1,1,STEPHANIE ALEXIS, ARREGOYTIA, GUTIERREZ, stephanie.arregoytia@ifai.org.mx,,,,
-389,14,276,NB3,1,1,1,MARTHA PATRICIA, GARCIA, MEDINA, martha.garcia@ifai.org.mx,,,,
-390,206,13,OC02,1,1,1,HUGO , DIAZ , BETANCOURT, hugo.diaz@ifai.org.mx,,,,
-391,13,276,NB3,1,1,1,FELIX RODRIGO , SILVA , MORENO, felix.silva@ifai.org.mx,,,,
-392,276,211,MB2,1,1,1,SALVADOR , ESPINOSA , CORTES, salvador.espinosa@ifai.org.mx,,,,
-393,211,7,MC2,1,1,1,RAFAEL , VASQUEZ , MARTINEZ, rafael.vasquez@ifai.org.mx,,,,
-394,205,12,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-395,204,12,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-396,12,275,NB3,1,1,1,MAXIN MAGALI , SANCHEZ , CARREÑO, maxin.sanchez@ifai.org.mx,,,,
-397,275,210,MB2,1,1,1,JESUS LEONARDO , LARIOS , MENESES, jesus.larios@ifai.org.mx,,,,
-398,203,11,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-399,202,11,OC02,1,1,1,ALEJANDRA DONAJI, NUÑEZ, ESCOBAR, alejandra.nunez@ifai.org.mx,,,,
-400,11,274,OC1,1,1,1,NESTOR DANIEL , MEJIA , SOTO, nestor.mejia@ifai.org.mx,,,,
-401,274,210,NC3,1,1,1,JULIO CESAR , MARTINEZ , SANABRIA, julio.martinez@ifai.org.mx,,,,
-402,210,7,MC3,1,1,1,YURI , ZUCKERMANN , PEREZ, yuri.zuckermann@ifai.org.mx,,,,
-403,5,7,OB02,1,1,1,MIGUEL ANGEL , RANGEL , LIMA, miguel.rangel@ifai.org.mx,,,,
-404,208,7,OC002,1,1,1,ARACELI ROSENDA , PALMER , MORALES, araceli.palmer@ifai.org.mx,,,,
-405,214,7,MC03,1,1,1,ISMAEL , CAMARGO , MATA, ismael.camargo@ifai.org.mx,,,,
-406,199,17,PC3,1,1,1,MARTHA LORENA , MENDIZABAL , LOPEZ, martha.mendizabal@ifai.org.mx,,,,
-407,17,218,NB3,1,1,1,EDGAR , LOAEZA , SALMERON, edgar.loaeza@ifai.org.mx,,,,
-408,198,16,OC02,1,1,1,TANIA YADIRA, CARRASCO, GUTIERREZ, tania.carrasco@ifai.org.mx,,,,
-409,197,16,OB2,1,1,1,SERGIO RAFAEL , CORTES , ALPIZAR, sergio.cortes@ifai.org.mx,,,,
-410,16,218,NB3,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-411,218,138,MB2,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-412,16,218,NB3,1,1,1,ALEJANDRO ANTONIO , PEREZ , MARTINEZ, ,,,,
-413,138,7,MC3,1,1,1,CARLOS ALBERTO , PACHECO , CABAÑAS, carlos.pacheco@ifai.org.mx,,,,
-414,207,14,OC02,1,1,1,VANIA , MOCTEZUMA , HERNANDEZ, vania.moctezuma@ifai.org.mx,,,,
-415,14,276,NB3,1,1,1,CESAR , FERNANDEZ , GONZALEZ , cesar.fernandez@ifai.org.mx,,,,
-416,206,13,OC02,1,1,1,JUAN ALBERTO , ALVA , ALVAREZ, juanalberto.alva@ifai.org.mx,,,,
-417,13,276,NB3,1,1,1,ANA PAULA , VASQUEZ , GALVAN , ana.vasquez@ifai.org.mx,,,,
-418,276,211,MB2,1,1,1,CESAR MANUEL , VALLARTA , PAREDES, cesar.vallarta@ifai.org.mx,,,,
-419,211,7,MC3,1,1,1,JUAN CARLOS , CARRASCO , GUTIERREZ, juancarlos.carrasco@ifai.org.mx,,,,
-420,205,12,OB2,1,1,1,EDGAR MICHEL , LOAEZA , MARTINEZ, edgarm.loaeza@ifai.org.mx,,,,
-421,204,12,OB2,1,1,1,LUDWING  , SALAS  , CISNEROS, ludwing.salas@ifai.org.mx,,,,
-422,12,275,NB3,1,1,1,MARIA ELENA, VAZQUEZ, REYES, elena.vazquez@ifai.org.mx,,,,
-423,275,210,NC3,16,1,1,ESTRELLA , DOMINGUEZ , ORTIZ, estrella.dominguez@ifai.org.mx,,,,
-424,203,11,PC3,1,1,1,ANGELA SOFIA , GONZALEZ , VALENCIA, angela.gonzalez@ifai.org.mx,,,,
-425,202,11,OC02,1,1,1,JUAN CARLOS , GONZALEZ , ESTRADA, juancarlos.gonzalez@ifai.org.mx,,,,
-426,11,274,NB3,1,1,1,CUAUHTEMOC , GUERRERO , JIMENEZ, cuauhtemoc.guerrero@ifai.org.mx,,,,
-427,274,210,MB2,1,1,1,LUIS ENRIQUE , RIVERO , CARRERA, luis.rivero@ifai.org.mx,,,,
-428,210,7,MC3,1,1,1,YOLANDA VICTORIA , VICENCIO , GOMEZ, yolanda.vicencio@ifai.org.mx,,,,
-429,5,7,OB02,1,1,1,MIGUEL , ORTIZ , HERNANDEZ, no aplica ,,,,
-430,208,7,OC002,1,1,1,BEATRIZ , CARREON , OLVERA, beatriz.carreon@ifai.org.mx,,,,
-431,214,7,MC03,1,1,1,IRLAENE ALACIEL  , GALVAN  , PONCE, irlaene.galvan@ifai.org.mx,,,,
-432,199,17,OC02,1,1,1,ANA LAURA , GOLDNER , MARTINEZ, ana.goldner@ifai.org.mx,,,,
-433,17,218,NB3,1,1,1,JOSE ENRIQUE , RIVERA , RODRIGUEZ, enrique.rivera@ifai.org.mx,,,,
-434,198,16,OC02,1,1,1,VIRIDIANA, FELIX, MARTINEZ, viridiana.felix@ifai.org.mx,,,,
-435,197,16,OC02,1,1,1,OCTAVIO , PIÑA , ROSAS, octavio.pina@ifai.org.mx,,,,
-436,2,165,PC2,2,1,1,ALAN ALFREDO, SANCHEZ, REYES, alan.sanchez@ifai.org.mx,,,,
-437,2,165,PC3,2,1,1,MIGUEL ANGEL, HERRERA, RODRIGUEZ, miguel.herrera@ifai.org.mx,,,,
-438,199,17,OC02,16,1,1,SERGIO , ROMO , MEDINA, sergio.romo@ifai.org.mx,,,,
-439,17,218,NB3,16,1,1,JOSE , MENDIOLA , ESQUIVEL, jose.mendiola@ifai.org.mx,,,,
-440,198,16,OC02,16,1,1,MANUEL DE JESUS , MEDINA , GOMEZ, manuel.medina@ifai.org.mx,,,,
-441,197,16,OC02,16,1,1,SUSANA , FLORES , COLMENERO, susana.flores@ifai.org.mx,,,,
-442,16,218,NB3,16,1,1,JUANA , DE JESUS , SANTIAGO, juana.dejesus@ifai.org.mx,,,,
-443,218,138,MB2,16,1,1,CARLOS ANTONIO, MORALES, ZEBADUA, carlos.morales@ifai.org.mx,,,,
-444,138,7,MC3,16,1,1,CARLOS ALBERTO, GARCIA, ROBLEDO, carlos.garcia@ifai.org.mx,,,,
-445,207,14,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-446,14,276,NB3,16,1,1,SOFIA DANAE , ORTIZ , MARTINEZ, sofia.ortiz@ifai.org.mx,,,,
-447,206,13,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-448,13,276,NB3,16,1,1,JOSE ALFREDO , FERNANDEZ , GARCIA, jose.fernandez@ifai.org.mx,,,,
-449,276,211,MB2,16,1,1,MONICA, BELTRAN, GAOS, monica.beltran@ifai.org.mx,,,,
-450,211,7,MC3,16,1,1,JOSE LUIS , GALARZA , ESPARZA, joseluis.galarza@ifai.org.mx,,,,
-451,205,12,OC02,16,1,1,ALEPH JULIAN , ESCOBEDO , MARTINEZ, julian.escobedo@ifai.org.mx,,,,
-452,204,12,OC02,16,1,1,LEONARDO , VARGAS , CELIS, leonardo.vargas@ifai.org.mx,,,,
-453,12,275,NB3,16,1,1,ARMANDO , PENAGOS , ROBLES, armando.penagos@ifai.org.mx,,,,
-454,275,210,MB2,16,1,1,ARMANDO , ORTIZ , GONZALEZ, armando.ortiz@ifai.org.mx,,,,
-455,218,138,MB2,1,1,1,DIEGO ERNESTO , DIAZ , ITURBE, diego.diaz@ifai.org.mx,,,,
-456,138,7,MC3,1,1,1,DANIEL ATALO , NAVARRO , RAMIREZ, daniel.navarro@ifai.org.mx,,,,
-457,207,14,OC02,1,1,1,SANDRA , ROBLES , CARRASCO, sandra.robles@ifai.org.mx,,,,
-458,14,276,NB3,1,1,1,JOSE FERMIN , AGUILAR , MANDUJANO, fermin.aguilar@ifai.org.mx,,,,
-459,206,13,OC02,1,1,1,OLGA GUADALUPE , CRISTINO , SICAIROS, olga.cristino@ifai.org.mx,,,,
-460,13,276,NB3,1,1,1,MARIA GUADALUPE , RODRIGUEZ , MORALES, guadalupe.rodriguez@ifai.org.mx,,,,
-461,276,211,MB2,1,1,1,MARIA FERNANDA , GARCIAZARCO , SANCHEZ , maria.garciazarco@ifai.org.mx,,,,
-462,211,7,MC3,1,1,1,GABRIELA INES , MONTES , MARQUEZ, gabriela.montes@ifai.org.mx,,,,
-463,205,12,OC02,1,1,1,SERGIO , ESCOTO , PRADO, sergio.escoto@ifai.org.mx,,,,
-464,204,12,OC02,1,1,1,SALVADOR , GUERRERO , NAVARRO, salvador.guerrero@ifai.org.mx,,,,
-465,12,275,NB3,1,1,1,CARLOS , APOLINEO , JUAREZ, carlos.apolineo@ifai.org.mx,,,,
-466,275,210,MB2,1,1,1,XUNAHXI VINIZA , PINEDA , CRUZ, xunahxi.pineda@ifai.org.mx,,,,
-467,203,11,OC02,1,1,1,MARIBEL , RUIZ , LOPEZ, maribel.ruiz@ifai.org.mx,,,,
-468,202,11,OC02,1,1,1,ERIKA PRISCYLA , CASAS , CARVALLO, erika.casas@ifai.org.mx,,,,
-469,11,274,NB3,1,1,1,ROGELIO , GARCIA , ALVAREZ, rogelio.garcia@ifai.org.mx,,,,
-470,274,210,MB2,1,1,1,JULIO , CHINCOYA , ZAMBRANO, julio.chincoya@ifai.org.mx,,,,
-471,210,7,MC3,1,1,1,OMAR , CORTES , ROJAS, omar.cortes@ifai.org.mx,,,,
-472,5,7,OB02,1,1,1,EDUARDO , RAMIREZ, ITURBE, eduardo.ramirez@ifai.org.mx,,,,
-473,208,7,OC002,1,1,1,TERESA , MARTINEZ , MONTOYA, teresa.martinez@ifai.org.mx,,,,
-474,214,7,MC03,1,1,1,JORGE , BARRERA , REYES, jorge.barrera@ifai.org.mx,,,,
-475,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-476,17,218,NB3,1,1,1,YOATZIN , ALVAREZ , RODRIGUEZ, yoatzin.alvarez@ifai.org.mx,,,,
-477,198,16,OC02,1,1,1,YAHIZINY , PEREZ , RODRIGUEZ, yahiziny.perez@ifai.org.mx,,,,
-478,197,16,OC02,1,1,1,MONTSERRAT , SANCHEZ , MURILLO, montserrat.sanchez@ifai.org.mx,,,,
-479,16,218,NB3,1,1,1,FRANCISCO JAVIER, ESQUINCA, CUEVAS, francisco.esquinca@ifai.org.mx,,,,
-480,218,138,MB2,1,1,1,AMALIA BERENICE, HERNANDEZ, BRACHO, amalia.hernandez@ifai.org.mx,,,,
-481,138,7,MC3,1,1,1,YURI EMILIANO , CINTA , DOMINGUEZ, yuri.cinta@ifai.org.mx,,,,
-482,207,14,OC02,1,1,1,ANA GABRIELA , ROSALES , TOLENTINO, ana.rosales@ifai.org.mx,,,,
-483,14,276,NB3,1,1,1,DANIELA , BALDERAS , MARTINEZ, daniela.balderas@ifai.org.mx,,,,
-484,206,13,OC02,1,1,1,GLORIA DEL MAR , CILIA , LUNA, gloria.cilia@ifai.org.mx,,,,
-485,13,276,NB3,1,1,1,LILIAN IRAZU , HERNANDEZ , OJEDA, lilian.hernandez@ifai.org.mx,,,,
-486,276,211,MB2,1,1,1,GEOVANNI , GUZMAN , DE ANDA, geovanni.guzman@ifai.org.mx,,,,
-487,211,7,MC3,1,1,1,JOANA VERENICE , PAEZ , PATRON, joana.paez@ifai.org.mx,,,,
-488,205,12,OC02,1,1,1,MAYRA ELSA , PEREZ SANDI , Y CUEN, mayra.perez@ifai.org.mx,,,,
-489,204,12,OC02,1,1,1,AXEL IRVING , SOSA , CUELLAR, axel.sosa@ifai.org.mx,,,,
-490,12,275,NB3,1,1,1,MARIA LUISA , JIMENEZ , PAOLETTI, marialuisa.jimenez@ifai.org.mx,,,,
-491,275,210,MB2,1,1,1,PAULINA , OJESTO MARTINEZ , MANZUR, paulina.ojesto@ifai.org.mx,,,,
-492,203,11,OC02,1,1,1,VIOLETA , POZOS , JUAREZ, violeta.pozos@ifai.org.mx,,,,
-493,202,11,OC02,1,1,1,YOLOXOCHITL , DIAZ , MALDONADO, yoloxochitl.diaz@ifai.org.mx,,,,
-494,11,274,NB3,1,1,1,NANCY EDITH , GOMEZ , CISNEROS, nancy.gomez@ifai.org.mx ,,,,
-495,274,210,MB2,1,1,1,GUSTAVO , MONTAÑO , ALVAREZ, gustavo.montano@ifai.org.mx,,,,
-496,210,7,MC3,1,1,1,NAYELI , AGUAYO , GARCIA, nayeli.aguayo@ifai.org.mx,,,,
-497,5,7,OB02,1,1,1,JOSE LUIS , OSORIO , ALVAREZ, joseluis.osorio@ifai.org.mx,,,,
-498,208,7,OC002,1,1,1,MARIA VIRGINIA , RIVERA , VAZQUEZ, virginia.rivera@ifai.org.mx,,,,
-499,214,7,MC03,1,1,1,OSCAR JOVANNY , ZAVALA , GAMBOA, oscar.zavala@ifai.org.mx,,,,
-500,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-501,17,218,NB3,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-502,198,16,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-503,197,16,OC02,1,1,1,VICTOR MANUEL , MADRUEÑO , IBARRA, no aplica ,,,,
-504,16,218,OC3,1,1,1,ELISE ARELY , AGUILAR , GRANADOS, elise.aguilar@ifai.org.mx,,,,
-505,218,138,MB2,1,1,1,ALVARO RAFAEL , CABRERA , MONROY, alvaro.cabrera@ifai.org.mx,,,,
-506,138,7,MC3,1,1,1,GERARDO ROBERTO , PIGEON , SOLORZANO, gerardo.pigeon@ifai.org.mx,,,,
-507,207,14,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-508,14,276,OC3,16,1,1,GREGORIO , GONZALEZ , NAVA, gregorio.gonzalez@ifai.org.mx,,,,
-509,206,13,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,,,,
-510,13,276,OC3,16,1,1,EDNA TERESA , GUZMAN , GARCIA, edna.guzman@ifai.org.mx,,,,
-511,276,211,NC3,16,1,1,MARTHA JUDITH , SANCHEZ , ALVAREZ, martha.sanchez@ifai.org.mx,,,,
-512,211,7,MC2,1,1,1,HAYDEE SAMANTHA , GARCIA  , CAMARENA, haydee.garcia@ifai.org.mx,,,,
-513,205,12,OC02,1,1,1,EDGAR YAIR, MARTINEZ , MADRIGAL, edgar.martinez@ifai.org.mx,,,,
-514,204,12,OC02,1,1,1,MARIA GUADALUPE , GOMEZ , RODRIGUEZ, guadalupe.gomez@ifai.org.mx,,,,
-515,12,275,OC3,16,1,1,ELBA MARGARITA , PARAMO , VAZQUEZ, elba.paramo@ifai.org.mx,,,,
-516,275,210,MB2,1,1,1,AMANDA JUDITH , MONTER , GAMIÑO, amanda.monter@ifai.org.mx,,,,
-517,203,11,OC02,1,1,1,PABLO , BERTHELY , ARAIZA, pablo.berthely@ifai.org.mx,,,,
-518,202,11,OC02,1,1,1,GISELDA , BACA , MEDINA, giselda.baca@ifai.org.mx,,,,
-519,11,274,OC3,16,1,1,CLAUDIA NALLELI , CRUZ , GALVAN, claudia.cruz@ifai.org.mx,,,,
-520,274,210,MB2,1,1,1,ELIZABETH , VICENTE , GONZALEZ, elizabeth.vicente@ifai.org.mx,,,,
-521,210,7,MC3,1,1,1,MARINA ALICIA , SAN MARTIN , REBOLLOSO, marina.sanmartin@ifai.org.mx,,,,
-522,5,7,OB02,1,1,1,GLADYS , BAQUEIRO , TREJO, gladys.baqueiro@ifai.org.mx,,,,
-523,208,7,OC002,1,1,1,MARIBEL, HERNANDEZ, RAMIREZ, maribel.hernandez@ifai.org.mx,,,,
+﻿idServidor,ID_CARGO,ID_CARGO_SUPERIOR,Clave del Puesto/Remuneraci�n Salarial,UNIDAD ADMINISTRATIVA,ID INSTITUCION,ID TIPO CONFIANZA,NOMBRE,PRIMER APELLIDO,SEGUNDO APELLIDO,Correo Electr�nico,gastos comprobados,gastos sin comprobar,costo total,viaticos devueltos
+1,214,7,MC03,1,1,1,LILIANA , HERRERA , MARTIN, liliana.herrera@ifai.org.mx,0,0,0,0
+2,41,228,OC1,6,1,1,ADRIAN ISRAEL, MANILLA, AGUIRRE, adrian.manilla@ifai.org.mx,0,0,0,0
+3,228,148,NC1,6,1,1,JUAN ARMANDO, BECERRA, GUTIERREZ, armando.becerra@ifai.org.mx,0,0,0,0
+4,148,182,MC2,6,1,1,MELISSA, HIGUERA, PEREZ, melissa.higuera@ifai.org.mx,0,0,0,0
+5,52,232,OC1,6,1,1,AGUSTIN, GRANADOS, TZINTZUN, agustin.granados@ifai.org.mx,0,0,0,0
+6,232,150,NC1,6,1,1,MARIA TERESA, LAGUNES, MENDOZA, teresa.lagunes@ifai.org.mx,0,0,0,0
+7,82,263,OC1,6,1,1,OMAR, MARTINEZ, COSAIN, omar.martinez@ifai.org.mx,0,0,0,0
+8,263,150,NC2,6,1,1,NOEMI KARINA, GONZALEZ, VERGARA, noemi.gonzalez@ifai.org.mx,0,0,0,0
+9,150,182,MC1,6,1,1,MIRIAM, CABALLERO, VARGAS, miriam.caballero@ifai.org.mx,0,0,0,0
+10,196,190,PC2,6,1,1,GUILLERMO, TELLEZ, GUERRERO, no aplica ,0,0,0,0
+11,196,182,PC3,14,1,1,ERWIN FRANCISCO, BAUTISTA, GAYTAN, erwin.bautista@ifai.org.mx,0,0,0,0
+12,182,212,KB1,6,1,1,MARIA ADRIANA, BAEZ, RICARDEZ, adriana.baez@ifai.org.mx,0,0,0,0
+13,131,292,OC1,15,1,1,SERGIO, MARTINEZ, MENDOZA, sergio.martinez@ifai.org.mx,0,0,0,0
+14,130,292,OC1,15,1,1,JULIO CESAR, A�NGELES, REYES, julio.angeles@ifai.org.mx,0,0,0,0
+15,292,175,NC1,15,1,1,ADRIANA, FRANCO, GONZALEZ, adriana.franco@ifai.org.mx,0,0,0,0
+16,128,291,OC1,15,1,1,RICARDO, RAYA, ARANDA, ricardo.raya@ifai.org.mx,0,0,0,0
+17,129,291,OC1,15,1,1,ELIHU, SAAVEDRA, CRESPI, elihu.saavedra@ifai.org.mx,0,0,0,0
+18,291,175,NC1,15,1,1,MARGARITO, FLORES, JUAREZ, margarito.flores@ifai.org.mx,0,0,0,0
+19,43,256,OC1,3,1,1,MIRIAM FANNY ARIADNA, CASTRO, VAZQUEZ, miriam.castro@ifai.org.mx,0,0,0,0
+20,15,256,OC1,3,1,1,JUAN A�NGEL, ARROYO, KALIS, juan.arroyo@ifai.org.mx,0,0,0,0
+21,63,256,OC1,3,1,1,ITZEL MONSERRAT, GARCIA, HERNANDEZ, itzel.garcia@ifai.org.mx,0,0,0,0
+22,256,159,NC3,3,1,1,JUAN MANUEL , SERVIN , DOMINGUEZ, juan.servin@ifai.org.mx,0,0,0,0
+23,159,179,MC2,3,1,1,MARIA DEL CARMEN, FERNANDEZ, FUENTES, carmen.fernandez@ifai.org.mx,0,0,0,0
+24,99,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+25,92,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+26,91,270,OC1,3,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+27,270,174,NC1,3,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+28,127,286,OC1,3,1,1,JULIETA DANIELA, ROA, LOPEZ, julieta.roa@ifai.org.mx,0,0,0,0
+29,126,286,OC2,3,1,1,ADRIANA, GARCIA, ARIAS, adriana.garcia@ifai.org.mx,0,0,0,0
+30,77,286,OC2,3,1,1,SERGIO, HERNANDEZ, RAMIREZ, sergio.hernandez@ifai.org.mx,0,0,0,0
+31,286,174,NC3,3,1,1,ALEJANDRA, MARTINEZ, MORALES, alejandra.martinez@ifai.org.mx,0,0,0,0
+32,174,179,MC1,3,1,1,MARCELA, VALDERRAMA, CABRERA, marcela.valderrama@ifai.org.mx,0,0,0,0
+33,196,179,PC1,3,1,1,DANIELA, PONCE, DIAZ GONZALEZ, daniela.ponce@ifai.org.mx,0,0,0,0
+34,196,179,PC1,3,1,1,ROBERTO, CEDE�O, TIZCARE�O, roberto.cedeno@ifai.org.mx,0,0,0,0
+35,196,179,PA3,3,1,1,ADRIANA YADIRA, CARDENAS, TAGLE, adriana.cardenas@ifai.org.mx,0,0,0,0
+36,196,179,PC1,3,1,1,ULISES BARUCH, CRUZ, FLORES, ulises.cruz@ifai.org.mx,0,0,0,0
+37,196,179,PA3,3,1,1,SERGIO ALFONSO, POZOS, CERVANTES, sergio.pozos@ifai.org.mx,0,0,0,0
+38,22,233,OC3,17,1,1,JUAN ALEJANDRO, RAMIREZ, SANCHEZ, alejandro.ramirez@ifai.org.mx,0,0,0,0
+39,61,233,OC1,17,1,1,VICTOR DANIEL, DIAZ, BERMUDEZ, victor.diaz@ifai.org.mx,0,0,0,0
+40,233,144,NC1,17,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+41,196,209,PA3,17,1,1,MARCOS ALBERTO, GONZALEZ, PI�A, marco.gonzalez@ifai.org.mx,0,0,0,0
+42,27,221,OC1,4,1,1,MAURICIO IVAN, ZAPATA, ZALDIVAR, mauricio.zapata@ifai.org.mx,0,0,0,0
+43,26,221,OC1,4,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+44,221,139,NC1,4,1,1,MIGUEL CRISTOPHE, MOLINA, ALCANTARA, miguel.molina@ifai.org.mx,0,0,0,0
+45,279,168,NC1,10,1,1,VERONICA, SANTIAGO, MARTINEZ, veronica.santiago@ifai.org.mx,0,0,0,0
+46,104,280,OC3,10,1,1,MIRIETTE JULIETA, ARAIZA, TREJO, julieta.araiza@ifai.org.mx,0,0,0,0
+47,103,280,OC1,10,1,1,OSVALDO PAUL, SUAREZ, COLIN, osvaldo.suarez@ifai.org.mx,0,0,0,0
+48,102,280,OC2,10,1,1,JUAN TADEO, RAMIREZ, CERVANTES, juan.ramirez@ifai.org.mx,0,0,0,0
+49,280,168,NC1,10,1,1,LETICIA, ZAMUDIO, CORTES, leticia.zamudio@ifai.org.mx ,0,0,0,0
+50,168,186,MC2,10,1,1,LOURDES MARIA, MONTOYA, DE LA ISLA, lourdes.montoya@ifai.org.mx ,0,0,0,0
+51,49,296,OC2,10,1,1,LAURA, MARTIN , MARTINEZ, laura.martin@ifai.org.mx,0,0,0,0
+52,296,176,NC1,10,1,1,JASMIN EUGENIA, SABAGH, MORLOTTE, jasmin.sabagh@ifai.org.mx,0,0,0,0
+53,176,186,MC2,10,1,1,JUSTINO JOSE, NU�EZ, QUIROZ, justino.nunez@ifai.org.mx ,0,0,0,0
+54,25,234,OC1,10,1,1,BETZABE, FLORES, TERAN, betzabe.flores@ifai.org.mx,0,0,0,0
+55,24,234,OC1,10,1,1,EDGAR OCTAVIO, GOMEZ, INCLAN, edgar.gomez@ifai.org.mx,0,0,0,0
+56,234,143,NC1,10,1,1,ELIZABETH, ARZATE, MONDRAGON, elizabeth.arzate@ifai.org.mx,0,0,0,0
+57,119,247,OC1,10,1,1,CLAUDIA IVONNE, A�ORVE, LASSO, claudia.anorve@ifai.org.mx,0,0,0,0
+58,118,247,OC1,10,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+59,117,247,OC1,10,1,1,MARIA ANGELICA, VALDEZ, ISLAS, angelica.valdez@ifai.org.mx,0,0,0,0
+60,116,247,OC1,10,1,1,ANDREA PAULINA, ANGELINI, ZARZOSA, andrea.angelini@ifai.org.mx,0,0,0,0
+61,115,247,OC1,10,1,1,LORENA, RAMIREZ, GARCIA, lorena.ramirez@ifai.org.mx,0,0,0,0
+62,114,247,OC1,10,1,1,MARIA TERESA, CARRILLO, MADRID, teresa.carrillo@ifai.org.mx,0,0,0,0
+63,113,247,OC3,10,1,1,EDMUNDO FERNANDO, VAZQUEZ, SERRALDE, edmundo.vazquez@ifai.org.mx,0,0,0,0
+64,247,143,NC3,10,1,1,LAURA CELIA, LOPEZ, GUTIERREZ, laura.lopez@ifai.org.mx ,0,0,0,0
+65,143,186,MC2,10,1,1,DINORAH ATLANTIDA, UGALDE, REZA, dinorah.ugalde@ifai.org.mx,0,0,0,0
+66,196,186,PC3,10,1,1,PATRICIA, CORRES, SOTO, patricia.corres@ifai.org.mx ,0,0,0,0
+67,196,186,PC3,10,1,1,MARIBEL, MIRANDA, GUTIERREZ, maribel.miranda@ifai.org.mx ,0,0,0,0
+68,98,245,OC1,11,1,1,ANA JULIA, JERONIMO, GOMEZ, ana.jeronimo@ifai.org.mx,0,0,0,0
+69,62,245,OC1,11,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+70,245,149,NC1,11,1,1,ISAAK, PACHECO, IZQUIERDO, isaak.pacheco@ifai.org.mx,0,0,0,0
+71,149,187,MC2,11,1,1,BELEM IRASEMA, CONTRERAS, ARELLANO, belem.contreras@ifai.org.mx ,0,0,0,0
+72,66,249,OC1,11,1,1,JOSE MANUEL, BUCIO, VAZQUEZ, jose.bucio@ifai.org.mx,0,0,0,0
+73,65,249,OC1,11,1,1,ROSA MARIA, RIVAS, RANGEL, rosa.rivas@ifai.org.mx,0,0,0,0
+74,249,152,NC1,11,1,1,MAYRA GABRIELA, TELLEZ, CAMPOS, mayra.tellez@ifai.org.mx,0,0,0,0
+75,152,187,MC2,11,1,1,ALMA ZULEMA, TOVAR, FIGUEROA, zulema.tovar@ifai.org.mx,0,0,0,0
+76,196,187,PA3,11,1,1,THANIA, LARA, RANGEL, thania.lara@ifai.org.mx,0,0,0,0
+77,196,187,PA3,11,1,1,MAYRA, IBA�EZ, GOMEZ, mayra.ibanez@ifai.org.mx,0,0,0,0
+78,42,246,OC1,3,1,1,PABLO ALBERTO, SANCHEZ, GALVAN, pablo.sanchez@ifai.org.mx,0,0,0,0
+79,246,162,NC1,3,1,1,JAVIER, JIMENEZ, SUAREZ, javier.jimenez@ifai.org.mx,0,0,0,0
+80,80,258,OC1,3,1,1,IVAN, VASQUEZ, MENDEZ, ivan.vasquez@ifai.org.mx,0,0,0,0
+81,79,258,OC1,3,1,1,A�NGEL RAMON, CELIS, CAMARGO, angel.celis@ifai.org.mx,0,0,0,0
+82,258,162,NC2,3,1,1,TANIA, DE LA PAZ PEREZ, FARCA, tania.delapazperez@ifai.org.mx,0,0,0,0
+83,162,179,MC2,3,1,1,UBALDO IRVIN, LEON, FUENTES, ubaldo.leon@ifai.org.mx,0,0,0,0
+84,88,241,OC1,7,1,1,GUILLERMO, PEREZ, MARTINEZ, guillermo.perez@ifai.org.mx,0,0,0,0
+85,87,241,OC1,7,1,1,ANGELICA, GAY, ARELLANO, angelica.gay@ifai.org.mx,0,0,0,0
+86,241,177,NC1,7,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+87,177,183,MC2,7,1,1,LORENA, DE LA CANAL, RIOSECO, lorena.delacanal@ifai.org.mx,0,0,0,0
+88,89,267,OC1,7,1,1,MARIA GUADALUPE, BETANCOURT, PARRA, maria.betancourt@ifai.org.mx,0,0,0,0
+89,267,163,NC3,7,1,1,SALVADOR, VAZQUEZ, CAUDILLO, salvador.vazquez@ifai.org.mx,0,0,0,0
+90,163,183,MC2,7,1,1,EDMUNDO, GONZALEZ, LLACA, edmundo.gonzalez@ifai.org.mx,0,0,0,0
+91,56,237,OC1,7,1,1,RICARDO, GOMEZ, ORTEGA, ricardo.gomez@ifai.org.mx,0,0,0,0
+92,164,178,MC2,2,1,1,MARGARITA, MONTERO, ROJAS, margarita.montero@ifai.org.mx ,0,0,0,0
+93,50,283,OC1,2,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+94,74,283,OC1,2,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+95,283,165,NC3,2,1,1,FERNANDO, HERNANDEZ, FLORES, fernando.hernandez@ifai.org.mx,0,0,0,0
+96,55,237,OC1,7,1,1,JANETH, GUZMAN, AGUILAR, janeth.guzman@ifai.org.mx,0,0,0,0
+97,237,142,NC2,7,1,1,MARTHA IVONNE, GUERRERO, GONZALEZ, ivonne.guerrero@ifai.org.mx ,0,0,0,0
+98,86,265,OC1,7,1,1,CLAUDIA, TELLEZ, AGUILAR, claudia.tellez@ifai.org.mx,0,0,0,0
+99,265,142,NC1,7,1,1,DULCE MARIA, JARA , REYES, dulce.jara@ifai.org.mx,0,0,0,0
+100,54,236,OC1,7,1,1,OLIVIA, NOLASCO, NOLASCO, olivia.nolasco@ifai.org.mx,0,0,0,0
+101,236,142,NC3,7,1,1,SONIA, BARRERA, GARCIA, sonia.barrera@ifai.org.mx,0,0,0,0
+102,142,183,MC2,7,1,1,MA. DE LOS A�NGELES, HERNANDEZ, SANCHEZ, maangeles.hernandez@ifai.org.mx,0,0,0,0
+103,196,183,PA3,7,1,1,JORGE ARTURO, FERNANDEZ, JIMENEZ, jorge.fernandez@ifai.org.mx,0,0,0,0
+104,196,183,PA3,7,1,1,ARACELI, VALENCIA, VAZQUEZ, araceli.valencia@ifai.org.mx,0,0,0,0
+105,4,183,PC3,7,1,1,JAIME, QUINTERO, GARCIA, jaime.quintero@ifai.org.mx,0,0,0,0
+106,109,281,OC1,14,1,1,MANUEL, SANCHEZ, MEZA, manuel.sanchez@ifai.org.mx,0,0,0,0
+107,281,171,NC1,14,1,1,CESAR, HERNANDEZ, TUFI�O, cesar.hernandez@ifai.org.mx,0,0,0,0
+108,40,227,OC1,14,1,1,TERESA, VILLEGAS, CASAS, teresa.villegas@ifai.org.mx,0,0,0,0
+109,227,171,NC3,14,1,1,CARINA GUADALUPE, SARABIA, DELGADO, carina.sarabia@ifai.org.mx ,0,0,0,0
+110,112,257,OC1,14,1,1,ANGELICA JULIETA, SOLIS, OLIVARES, angelica.solis@ifai.org.mx,0,0,0,0
+111,78,257,OC1,14,1,1,SANTIAGO, COVARRUBIAS, ORTIZ, santiago.covarrubias@ifai.org.mx,0,0,0,0
+112,122,257,OC1,14,1,1,CESAR ANTONIO, MARTINEZ, OLIVARES, cesar.martinez@ifai.org.mx,0,0,0,0
+113,257,171,NC3,14,1,1,JOSE ANDRES, FRANCO , BEJARANO, andres.franco@ifai.org.mx,0,0,0,0
+114,139,180,MC1,4,1,1,MARIA DEL ROSARIO, VASQUEZ, ROSALES, rosario.vasquez@ifai.org.mx,0,0,0,0
+115,23,223,OC3,7,1,1,MIGUEL A�NGEL, GUZMAN, SANCHEZ, miguel.guzman@ifai.org.mx,0,0,0,0
+116,29,222,OC1,4,1,1,JOSE JOEL, PE�A, LLANES, jose.pena@ifai.org.mx,0,0,0,0
+117,28,222,OC3,4,1,1,JESUS JAVIER, SANCHEZ, GARCIA, jesus.sanchez@ifai.org.mx,0,0,0,0
+118,222,140,NC3,4,1,1,GABRIELA, ARCHUNDIA, MORA, gabriela.archundia@ifai.org.mx,0,0,0,0
+119,140,180,MC1,4,1,1,EDUARDO, VELASQUILLO, HERRERA, eduardo.velasquillo@ifai.org.mx,0,0,0,0
+120,196,180,PA3,4,1,1,SERGIO, ORTEGA, ARCHUNDIA, sergio.ortega@ifai.org.mx,0,0,0,0
+121,223,161,NC2,7,1,1,SERGIO ARTURO, CACERES, YAM, sergio.caceres@ifai.org.mx,0,0,0,0
+122,196,180,PC1,4,1,1,DELTA BEATRIZ, ITURRALDE, FLISSER, delta.iturralde@ifai.org.mx,0,0,0,0
+123,180,213,KB1,4,1,1,TANIA, SANCHEZ, ANDRADE, tania.sanchez@ifai.org.mx,0,0,0,0
+124,57,223,OC1,7,1,1,JACQUELINE, CASTILLO, POSADA, jacqueline.castillo@ifai.org.mx,0,0,0,0
+125,161,183,MC1,7,1,1,LIBERTAD, GARCIA, SANABRIA, libertad.garcia@ifai.org.mx,0,0,0,0
+126,196,190,PA3,14,1,1,FELIPE ERNESTO, QUINTERO, PULIDO, felipe.quintero@ifai.org.mx,0,0,0,0
+127,3,190,PC2,14,1,1,MARIA DE LOURDES, MIRANDA, GUTIERREZ, lourdes.miranda@ifai.org.mx,0,0,0,0
+128,64,264,OB2,2,1,1,ANA LAURA, MARTINEZ, MARTINEZ, ana.martinez@ifai.org.mx,0,0,0,0
+129,264,169,NC1,2,1,1,DIEGO RICARDO, VELAZQUEZ, ROMERO, diego.velazquez@ifai.org.mx,0,0,0,0
+130,81,261,OB2,2,1,1,BITHIA, CASTILLO, SIERRA, bithia.castillo@ifai.org.mx,0,0,0,0
+131,266,164,NC3,2,1,1,ARTURO, BA�UELAS , GALLARDO, arturo.banuelas@ifai.org.mx,0,0,0,0
+132,261,169,NC3,2,1,1,GLORIA, BRAVO, REYNA, gloria.bravo@ifai.org.mx,0,0,0,0
+133,47,220,OC1,2,1,1,MARGARITA, GASCA, CARDENAS, margarita.gasca@ifai.org.mx,0,0,0,0
+134,46,220,OC1,2,1,1,RAQUEL, AGUIRRE, GUERRA, raquel.aguirre@ifai.org.mx,0,0,0,0
+135,188,212,KB2,12,1,1,EDGARDO, MARTINEZ, ROJAS, edgardo.martinez@ifai.org.mx,0,0,0,0
+136,22,233,OC3,18,1,1,LUISA JACQUELINE, FARAH, GEBARA, jacqueline.farah@ifai.org.mx,0,0,0,0
+137,61,233,OC1,18,1,1,CLAUDIA, DIAZ, ROSALES, claudia.diaz@ifai.org.mx,0,0,0,0
+138,233,144,NC3,18,1,1,NASHYELI, LOZANO, MERINO, nashyeli.lozano@ifai.org.mx,0,0,0,0
+139,220,169,NC2,2,1,1,CLAUDIA ALIN, ESCOTO, VELAZQUEZ, claudia.escoto@ifai.org.mx,0,0,0,0
+140,125,290,OC1,2,1,1,LUISA, ARELLANO, REYES, luisa.arellano@ifai.org.mx,0,0,0,0
+141,44,290,OC3,2,1,1,CESAR, PINEDA, ROJAS, cesar.pineda@ifai.org.mx ,0,0,0,0
+142,290,164,NC3,2,1,1,MARIA DE LOURDES, CARLOS, MANUEL, lourdes.carlos@ifai.org.mx ,0,0,0,0
+143,51,266,OC1,2,1,1,YESICA YAZMIN, SEVERIANO, GUTIERREZ, yesica.severiano@ifai.org.mx,0,0,0,0
+144,175,191,MC1,15,1,1,ROBERTO, OROZCO, MARTINEZ, roberto.orozco@ifai.org.mx,0,0,0,0
+145,97,271,OC1,6,1,1,DANIELA, TIRADO, RUBIO, daniela.tirado@ifai.org.mx,0,0,0,0
+146,271,148,NC1,6,1,1,MARIANA, GOMEZ, RODRIGUEZ, mariana.gomez@ifai.org.mx,0,0,0,0
+147,144,212,MC2,18,1,1,RUBEN, CARBAJAL, ZARATE, ruben.carbajal@ifai.org.mx,0,0,0,0
+148,37,226,OC1,18,1,1,PEDRO, DE LOS SANTOS, OTERO, pedro.delossantos@ifai.org.mx,0,0,0,0
+149,36,226,OC1,18,1,1,DAVID ANTONIO, MORALES, MORALES, david.morales@ifai.org.mx,0,0,0,0
+150,226,141,NC1,18,1,1,JULIO ALBERTO, HUERTA, ANGUIANO, julio.huerta@ifai.org.mx,0,0,0,0
+151,33,224,OC2,18,1,1,SALVADOR, PEREZ DE LEON, VARGAS, salvador.perez@ifai.org.mx,0,0,0,0
+152,32,224,OC1,18,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+153,224,141,NC1,18,1,1,ANA CRISTINA, LEVY, COVARRUBIAS, anacristina.levy@ifai.org.mx,0,0,0,0
+154,35,225,OC2,18,1,1,MARIANA, CAMPOS, CASTILLO, mariana.campos@ifai.org.mx,0,0,0,0
+155,34,225,OC1,18,1,1,JESUS EULISES, GONZALEZ, MEJIA, jesus.gonzalez@ifai.org.mx,0,0,0,0
+156,225,141,NC1,18,1,1,DIANA BERENICE, AGUILAR, PEREZ, diana.aguilar@ifai.org.mx,0,0,0,0
+157,196,141,PA3,18,1,1,LUZ MARIA, BECERRA, PEREZ, luz.becerra@ifai.org.mx,0,0,0,0
+158,196,141,PA3,18,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+159,196,141,PA1,18,1,1,ALBERTO, IBARRA, PERALTA, alberto.ibarra@ifai.org.mx,0,0,0,0
+160,141,188,MC2,18,1,1,SAMANTHA, ALCALDE, URBINA, samantha.alcalde@ifai.org.mx,0,0,0,0
+161,196,212,PC1,18,1,1,JOSE LUIS, PINEDA, RANGEL, jose.pineda@ifai.org.mx,0,0,0,0
+162,212,201,KA2,18,1,1,LUIS GUSTAVO, PARRA, NORIEGA, gustavo.parra@ifai.org.mx,0,0,0,0
+163,299,195,NC1,16,1,1,CHRISTIAN RODRIGO, CUBOS, ALQUICIRA, christian.cubos@ifai.org.mx,0,0,0,0
+164,301,195,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+165,195,303,NC3,16,1,1,CINTIA GUADALUPE, BLANDO, RUIZ, cintia.blando@ifai.org.mx,0,0,0,0
+166,100,279,OC1,10,1,1,LETICIA, PEREZ, CALDERON, leticia.perez@ifai.org.mx,0,0,0,0
+167,299,194,NC1,16,1,1,EVA, CONTRERAS, MARTINEZ, eva.contreras@ifai.org.mx,0,0,0,0
+168,300,194,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+169,194,303,NC3,16,1,1,YESSICA ANAHI, TORRES, CARCA�O, yessica.torres@ifai.org.mx,0,0,0,0
+170,299,193,NA1,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+171,299,193,NA1,16,1,1,JORGE ARTURO, LOPEZ, FIGUEROA, jorgearturo.lopez@ifai.org.mx,0,0,0,0
+172,193,302,NC3,16,1,1,ARTURO, PONCE, NECOECHEA, arturo.ponce@ifai.org.mx,0,0,0,0
+173,298,192,NA1,16,1,1,NANCY KARINA, MU�OZ, SANTANA, nancy.munoz@ifai.org.mx,0,0,0,0
+174,298,192,NA1,16,1,1,CLAUDIA ROSALVA, DOMINGUEZ, DUBON, rosalva.dominguez@ifai.org.mx,0,0,0,0
+175,298,192,NA1,16,1,1,VACANTE, VACANTE, VACANTE, luisgabriel.cacho@ifai.org.mx,0,0,0,0
+176,192,302,NC3,16,1,1,LILIA JOSEFINA, PAGAZA, ARROYO, lilia.pagaza@ifai.org.mx,0,0,0,0
+177,196,8,PA3,16,1,1,EVA SURISADAY, SAMPERIO, FRAGOSO, eva.samperio@ifai.org.mx,0,0,0,0
+178,21,248,OC1,9,1,1,CHRISTIAN PENELOPE, PE�A, GUERRERO, christian.pena@ifai.org.mx,0,0,0,0
+179,61,248,OC1,9,1,1,ALEJANDRO, NOGUEZ, IBARRA, alejandro.noguez@ifai.org.mx,0,0,0,0
+180,248,151,NC1,9,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+181,151,185,MC2,9,1,1,MARIA LAURA, CASTELAZO, DIAZ LEAL, laura.castelazo@ifai.org.mx,0,0,0,0
+182,21,235,OC1,9,1,1,CLAUDIA, ZARATE, JALOMA, claudia.zarate@ifai.org.mx,0,0,0,0
+183,61,235,OC1,9,1,1,CLAUDIA ARACELI, CORDERO, CALLEJA, claudia.cordero@ifai.org.mx,0,0,0,0
+184,235,145,NC1,9,1,1,LEON ALEJANDRO, TRUJILLO, COVARRUBIAS, leon.trujillo@ifai.org.mx,0,0,0,0
+185,145,185,MC2,9,1,1,ANA EUGENIA, VI�AS, BUSTOS, ana.vinas@ifai.org.mx,0,0,0,0
+186,196,185,PA3,9,1,1,MARIO SAID, VERGARA, HUESCA, mario.vergara@ifai.org.mx,0,0,0,0
+187,196,185,PC2,9,1,1,YOLANDA, TOLENTINO, DELGADILLO, yolanda.tolentino@ifai.org.mx,0,0,0,0
+188,196,185,PC1,9,1,1,RAMON EZEQUIEL, NAVARRO, GONZALEZ, ramon.navarro@ifai.org.mx,0,0,0,0
+189,196,185,PC1,9,1,1,LILIAN, ANAYA, CARDENAS, lilian.anaya@ifai.org.mx,0,0,0,0
+190,185,209,KB2,9,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+191,101,279,OC1,10,1,1,ALICIA, MONDRAGON, MORA, alicia.mondragon@ifai.org.mx,0,0,0,0
+192,108,260,OC1,7,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+193,260,166,NC3,7,1,1,MARIO ERNESTO, MEJIA , PACHON, mario.mejia@ifai.org.mx ,0,0,0,0
+194,20,244,OC1,7,1,1,JESUS SANTIAGO, MATHEUS, PE�A, jesus.matheus@ifai.org.mx,0,0,0,0
+195,107,244,OC2,7,1,1,JORGE SAUL, LIMAS, CASTRO, saul.limas@ifai.org.mx,0,0,0,0
+196,244,166,NC3,7,1,1,ANTOLIN, SOTELO, SANCHEZ, antolin.sotelo@ifai.org.mx,0,0,0,0
+197,166,183,MC2,7,1,1,CHRISTIAN, LARIS, CUTI�O, christian.laris@ifai.org.mx,0,0,0,0
+198,200,259,OC1,7,1,1,MARIA SOLEDAD, RODRIGO, , maria.soledad@ifai.org.mx,0,0,0,0
+199,259,177,NC1,7,1,1,FERNANDO, MONTOYA, VARGAS, fernando.montoya@ifai.org.mx,0,0,0,0
+200,88,242,OC1,7,1,1,SEBASTIAN, PERLIN-VITAL, AYALA, sebastian.perlin@ifai.org.mx,0,0,0,0
+201,87,242,OC1,7,1,1,JUAN MANUEL, PEREZ, AMEZCUA, juan.perez@ifai.org.mx,0,0,0,0
+202,242,177,NC2,7,1,1,IXCHEL, CRUZ, CISNEROS, ixchel.cruz@ifai.org.mx,0,0,0,0
+203,68,251,OC1,15,1,1,ERIKA REBEKA, VILLEGAS, VELAZQUEZ, erika.villegas@ifai.org.mx,0,0,0,0
+204,251,154,NC1,15,1,1,SERGIO RUBEN, IBARRA, CASAS, sergio.ibarra@ifai.org.mx,0,0,0,0
+205,67,250,OC1,15,1,1,GUSTAVO ALEJANDRO, MIRANDA, VALDEZ, gustavo.miranda@ifai.org.mx,0,0,0,0
+206,250,154,NC1,15,1,1,FLOR, MAGDALENO, ALTAMIRANO, flor.magdaleno@ifai.org.mx,0,0,0,0
+207,154,191,MC1,15,1,1,JOSE JUAN, ALONSO, RAMIREZ, jose.alonso@ifai.org.mx,0,0,0,0
+208,135,295,OC1,15,1,1,ANA PAULINA, GONZALEZ, GONZALEZ, anapaulina.gonzalez@ifai.org.mx,0,0,0,0
+209,295,153,NC1,15,1,1,EDGAR DAVID, HERNANDEZ, GARCIA, edgar.hernandez@ifai.org.mx,0,0,0,0
+210,134,294,OC1,15,1,1,SUSANA, ALONSO, SALINAS, susana.alonso@ifai.org.mx,0,0,0,0
+211,294,153,NC1,15,1,1,MANUEL, ESPINOSA, HERNANDEZ, manuel.espinosa@ifai.org.mx,0,0,0,0
+212,133,293,OC1,15,1,1,ROSA MARIA, A�NGELES, NU�EZ, rosa.angeles@ifai.org.mx,0,0,0,0
+213,132,293,OC1,15,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+214,293,153,NC1,15,1,1,JUAN RAFAEL, REYES   , MURILLO, juan.reyes@ifai.org.mx,0,0,0,0
+215,153,191,MC1,15,1,1,EDUARDO, SAN MIGUEL, AGUIRRE, eduardo.sanmiguel@ifai.org.mx,0,0,0,0
+216,196,191,PC1,15,1,1,VICTOR JAVIER, QUINTERO, RUIZ, victor.quintero@ifai.org.mx,0,0,0,0
+217,191,212,KB2,15,1,1,ANDRES, CALERO, AGUILAR, andres.calero@ifai.org.mx,0,0,0,0
+218,121,278,OC1,13,1,1,MIGUEL ELADIO, OLIVARES, GUZMAN, miguel.olivares@ifai.org.mx,0,0,0,0
+219,278,167,NC1,13,1,1,MARIA ELENA, OJEDA, CRUZ, elena.ojeda@ifai.org.mx,0,0,0,0
+220,120,277,OC1,13,1,1,MIRIAM, HERNANDEZ, FAJARDO, miriam@hernandez@ifai.org.mx,0,0,0,0
+221,277,167,NC1,13,1,1,GUADALUPE, SANTIAGO, JUAREZ, guadalupe.santiago@ifai.org.mx,0,0,0,0
+222,167,189,MC1,13,1,1,CLAUDIO, ROMERO, VELASCO, claudio.romero@ifai.org.mx,0,0,0,0
+223,94,273,OC1,13,1,1,MIGUEL A�NGEL, YONEMOTO, HERNANDEZ, miguel.yonemoto@ifai.org.mx,0,0,0,0
+224,273,173,NC3,13,1,1,JESUS, MEDINA, FRANCO, jesus.medina@ifai.org.mx,0,0,0,0
+225,196,188,PC1,12,1,1,JOSE LUIS, GONZALEZ, PEREZ, joseluis.gonzalez@ifai.org.mx,0,0,0,0
+226,31,288,OC1,13,1,1,GRACIELA, MORALES, ELIAS, graciela.morales@ifai.org.mx,0,0,0,0
+227,288,173,NC1,13,1,1,JAVIER, VEGA, RODRIGUEZ, javier.vega@ifai.org.mx,0,0,0,0
+228,39,229,OC1,13,1,1,AIDE, LOVERA, RAMIREZ, aide.lovera@ifai.org.mx,0,0,0,0
+229,229,173,NC1,13,1,1,CLAUDIA GRACIELA, DOMINGUEZ, A�LVAREZ, claudia.dominguez@ifai.org.mx,0,0,0,0
+230,173,189,MC1,13,1,1,HUMBERTO MIGUEL, LEAL, LOPEZ, humberto.leal@ifai.org.mx,0,0,0,0
+231,93,272,OC1,13,1,1,SONIA ERENDIRA MAGDALENA, REYES   , GODINEZ, sonia.reyes@ifai.org.mx,0,0,0,0
+232,272,172,NC2,13,1,1,GERARDO SALVADOR, CASTILLO, VELASCO, gerardo.castillo@ifai.org.mx,0,0,0,0
+233,30,287,OC1,13,1,1,EDGAR, BRUST, VITE, edgar.brust@ifai.org.mx,0,0,0,0
+234,287,172,NC2,13,1,1,JOSE MANUEL, ALCALA, HERNANDEZ, jose.alcala@ifai.org.mx,0,0,0,0
+235,38,230,OC1,13,1,1,REBECA, HERNANDEZ, ZAMORA, rebeca.hernandez@ifai.org.mx,0,0,0,0
+236,230,172,NC1,13,1,1,LUIS, BAZAN, BERAUD, luis.bazan@ifai.org.mx,0,0,0,0
+237,172,189,MC1,13,1,1,BRUNO NOE, VITE, A�NGELES, bruno.vite@ifai.org.mx,0,0,0,0
+238,196,189,PA3,13,1,1,ANELIZ, VARGAS, PAZ, aneliz.vargas@ifai.org.mx,0,0,0,0
+239,196,189,PA3,13,1,1,LETICIA, MARTINEZ, BENITEZ, leticia.martinez@ifai.org.mx,0,0,0,0
+240,196,189,PC1,13,1,1,JOSE RAFAEL, GUTIERREZ, ESTRADA, no aplica ,0,0,0,0
+241,189,212,KB2,13,1,1,RAUL, GARCIA MORENO, ELIZONDO, raul.garciamoreno@ifai.org.mx,0,0,0,0
+242,10,217,OC1,12,1,1,PAULINA, RIVERA, REYES, paulina.rivera@ifai.org.mx,0,0,0,0
+243,217,160,NC1,12,1,1,KARINA, HERNANDEZ, CRUZ, karina.hernandez@ifai.org.mx ,0,0,0,0
+244,62,245,OC1,12,1,1,EDITH ERIKA, CUELLAR, CRUZ, edith.cuellar@ifai.org.mx,0,0,0,0
+245,245,160,NC3,12,1,1,CYNTHIA RAQUEL, VALDIVIA, TIRADO, cynthia.valdivia@ifai.org.mx,0,0,0,0
+246,76,256,OC1,12,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+247,256,160,NC3,12,1,1,MIRIAM, SOTO, DOMINGUEZ, miriam.soto@ifai.org.mx,0,0,0,0
+248,90,268,OC1,12,1,1,CARLOS, RETANA, SANTAMARIA, carlos.retana@ifai.org.mx,0,0,0,0
+249,268,160,NC1,12,1,1,MARIA GUADALUPE, MANJARREZ, SEGURA, guadalupe.manjarrez@ifai.org.mx,0,0,0,0
+250,160,188,MC1,12,1,1,JULIAN GUSTAVO, SEGURA, SEGURA, gustavo.segura@ifai.org.mx,0,0,0,0
+251,171,190,MC2,14,1,1,JOSE GUILLERMO, PRECIADO, LOPEZ, guillermo.preciado@ifai.org.mx ,0,0,0,0
+252,19,219,OC1,14,1,1,NAYELLY, SANCHEZ, JARDON, nayelly.sanchez@ifai.org.mx,0,0,0,0
+253,18,219,OC1,14,1,1,JUAN CARLOS, LOPEZ, RIVERA, juan.lopez@ifai.org.mx,0,0,0,0
+254,219,170,NC1,14,1,1,ANEL, MORALES, REGALADO, anel.morales@ifai.org.mx,0,0,0,0
+255,59,285,OC1,14,1,1,LUIS IGNACIO, RESENDIZ, SANCHEZ, luis.resendiz@ifai.org.mx,0,0,0,0
+256,285,170,NC3,14,1,1,OSCAR ENRIQUE, VILALTA, MORON, oscar.vilalta@ifai.org.mx ,0,0,0,0
+257,58,284,OC3,14,1,1,RAFAEL, GONZALEZ, GARCIA, rafael.gonzalez@ifai.org.mx,0,0,0,0
+258,111,284,OC3,14,1,1,JUAN CARLOS, CHAVEZ, GARCIA, juancarlos.chavez@ifai.org.mx,0,0,0,0
+259,284,170,NC3,14,1,1,HIRIAM EDUARDO, PEREZ, VIDAL, hiriam.perez@ifai.org.mx,0,0,0,0
+260,170,190,MC2,14,1,1,ARTURO, URIBE, MENDOZA, arturo.uribe@ifai.org.mx,0,0,0,0
+261,196,190,PA3,14,1,1,ALEJANDRO, CASTILLO, LUGARDO, alejandro.castillo@ifai.org.mx,0,0,0,0
+262,196,190,PA1,14,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+263,269,213,NC3,19,1,1,LAURA , OROZCO , DOMINGUEZ, laura.orozco@ifai.org.mx,0,0,0,0
+264,239,213,NC2,19,1,1,SONIA, QUINTANA, MARTINEZ, sonia.quintana@ifai.org.mx,0,0,0,0
+265,303,8,MC2,16,1,1,LUIS JESUS, MORENO, VELAZQUEZ, luis.moreno@ifai.org.mx,0,0,0,0
+266,302,8,MC2,16,1,1,EDUARDO REFUGIO, CONTLA, BALLESTEROS, eduardo.contla@ifai.org.mx,0,0,0,0
+267,8,201,KA02,16,1,1,SALOMON, DIAZ, ALFARO, salomon.diaz@ifai.org.mx,0,0,0,0
+268,45,216,OC1,2,1,1,MIRIAM SULAMITA, SALDIVAR, MARQUEZ, miriam.saldivar@ifai.org.mx,0,0,0,0
+269,216,165,NC1,2,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+270,165,178,MC2,2,1,1,ANICETO, ALVARADO, GONZALEZ, aniceto.alvarado@ifai.org.mx,0,0,0,0
+271,84,238,OC1,2,1,1,ITZEL ALICIA, POBLANO, MELENDEZ, itzel.poblano@ifai.org.mx,0,0,0,0
+272,238,146,NC3,2,1,1,VANESSA, ROSAS, GONZALEZ, vanessa.rosas@ifai.org.mx,0,0,0,0
+273,110,282,OC2,2,1,1,CARLOS ALBERTO, FLORES, HERNANDEZ, carlos.flores@ifai.org.mx,0,0,0,0
+274,282,146,NC3,2,1,1,JULIA LEONOR, RODRIGUEZ, LOPEZ, julia.rodriguez@ifai.org.mx ,0,0,0,0
+275,48,231,OC1,2,1,1,KARLA LIZETH, GRANILLO, SALCIDO, karla.granillo@ifai.org.mx,0,0,0,0
+276,83,231,OC1,2,1,1,ALBERTO, JIMENEZ, MORALES, alberto.jimenez@ifai.org.mx,0,0,0,0
+277,231,146,NC3,2,1,1,PABLO RICARDO, GAMA, ORTIZ, pablo.gama@ifai.org.mx,0,0,0,0
+278,146,178,MC2,2,1,1,MARIA JOSE, DE ALBORNOZ, BUENO, mariajose.albornoz@ifai.org.mx ,0,0,0,0
+279,53,178,OC1,2,1,1,ANA CAROLINA, SANCHEZ, ROLDAN, ana.sanchez@ifai.org.mx,0,0,0,0
+280,7,201,HB1,1,1,1,XIMENA, PUENTE, DE LA MORA, ximena.puente@ifai.org.mx,0,0,0,0
+281,7,201,HB1,1,1,1,ARELI, CANO, GUADIANA, areli.cano@ifai.org.mx,0,0,0,0
+282,7,201,HB1,1,1,1,FRANCISCO JAVIER, ACU�A, LLAMAS, francisco.acuna@ifai.org.mx,0,0,0,0
+283,179,209,KB2,3,1,1,ROSA MARIA, BARCENA, CANUAS, rosa.barcena@ifai.org.mx,0,0,0,0
+284,190,213,KB2,14,1,1,ALFREDO, MENDEZ, CALATAYUD, alfredo.mendez@ifai.org.mx ,0,0,0,0
+285,169,178,MC2,2,1,1,EDUARDO, BONILLA, MAGA�A, eduardo.bonilla@ifai.org.mx,0,0,0,0
+286,9,297,OC1,20,1,1,MARLENE, MARTINEZ, SANTIAGO, marlene.martinez@ifai.org.mx,0,0,0,0
+287,196,215,PC1,20,1,1,TIARA GETHSEMANNI, MIRANDA, FUENTES, tiara.miranda@ifai.org.mx,0,0,0,0
+288,215,201,MC2,20,1,1,SALWA, BALUT, PELAEZ, salwa.balut@ifai.org.mx,0,0,0,0
+289,297,215,NC1,20,1,1,SANDRA LILIANA, BALCAZAR, LOMELI, sandra.balcazar@ifai.org.mx,0,0,0,0
+290,1,178,PA3,2,1,1,OMAR JAVIER, CORDOVA, CASTA�EDA, omar.cordova@ifai.org.mx,0,0,0,0
+291,6,178,PC1,2,1,1,CARLOS ROBERTO, SANCHEZ, TREJO, carlos.sanchez@ifai.org.mx,0,0,0,0
+292,196,178,PA3,2,1,1,MARIA DEL CARMEN, MARTINEZ, CASASOLA, maria.martinez@ifai.org.mx,0,0,0,0
+293,136,240,OC1,8,1,1,RAFAEL, GONZALEZ, NICACIO, rafael.gonzalezn@ifai.org.mx,0,0,0,0
+294,196,178,PA3,2,1,1,ALFREDO ELIAS, LIMON, ORTIZ, alfredo.limon@ifai.org.mx,0,0,0,0
+295,196,178,PA1,2,1,1,ELISEO, DIAZ, HERRERA, eliseo.diaz@ifai.org.mx,0,0,0,0
+296,196,178,PA3,2,1,1,JORGE ENRIQUE, SANCHEZ , ELIZALDE, jorge.sanchez@ifai.org.mx,0,0,0,0
+297,196,178,PC3,2,1,1,ANSELMO, FLORES, BALDERAS, anselmo.flores@ifai.org.mx,0,0,0,0
+298,196,178,PC3,2,1,1,MARIA FERNANDA, GUTIERREZ, VELAZQUEZ, fernanda.gutierrez@ifai.org.mx,0,0,0,0
+299,22,233,OC1,19,1,1,GUADALUPE XIMENA, GOMEZ, GUTIERREZ, ximena.gomez@ifai.org.mx,0,0,0,0
+300,61,233,OC1,19,1,1,NANCY, RAMOS, HERRERA, nancy.ramos@ifai.org.mx,0,0,0,0
+301,196,213,PA3,19,1,1,ROGELIO, GONZALEZ, LOPEZ, rogelio.gonzalez@ifai.org.mx,0,0,0,0
+302,183,213,KB2,7,1,1,IRMA PIA, GONZALEZ LUNA, CORVERA, irmapia.gonzalez@ifai.org.mx,0,0,0,0
+303,106,243,OC1,8,1,1,MARTHA BETZABE, SOLANO, ANAYA, martha.solano@ifai.org.mx,0,0,0,0
+304,105,243,OC1,8,1,1,JORGE LUIS, VAZQUEZ, ESCOBAR, jorge.vazquez@ifai.org.mx,0,0,0,0
+305,243,158,NC2,8,1,1,MISAEL, MARTINEZ, SOTO, misael.martinez@ifai.org.mx,0,0,0,0
+306,124,289,OC1,8,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+307,123,289,OC1,8,1,1,SINVERGH, VERDUSCO, QUIROZ, sinvergh.verdusco@ifai.org.mx,0,0,0,0
+308,289,158,NC2,8,1,1,GUALBERTO, YERVES, NAVA, gualberto.yerves@ifai.org.mx,0,0,0,0
+309,96,255,OC1,8,1,1,VALENTIN, GRANADOS, FLORES, valentin.granados@ifai.org.mx,0,0,0,0
+310,95,255,OC2,8,1,1,JOSE LUIS, ARMENTA, A�VILA, jose.armenta@ifai.org.mx,0,0,0,0
+311,75,255,OC1,8,1,1,MAYRA LILY, SANTANDER, ESPINOZA, mayra.santander@ifai.org.mx,0,0,0,0
+312,255,158,NC3,8,1,1,OLGA LIDIA, ARELLANO, , olga.arellano@ifai.org.mx ,0,0,0,0
+313,158,184,MC2,8,1,1,ISMAEL, ROMERO, SILVA, ismael.romero@ifai.org.mx,0,0,0,0
+314,137,240,OC1,8,1,1,MARIA DE LOS ANGELES, REGUERO, GONZALEZ, angeles.reguero@ifai.org.mx,0,0,0,0
+315,147,184,MC1,8,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+316,184,201,KB2,8,1,1,JOSE GUILLERMO , LOPEZ , FIGUEROA, guillermo.lopez@ifai.org.mx,0,0,0,0
+317,213,201,KA2,19,1,1,JOSE DE JESUS , RAMIREZ , SANCHEZ, josedejesus.ramirez@ifai.org.mx,0,0,0,0
+318,7,201,HB1,1,1,1,JOEL, SALAS, SUAREZ, joel.salas@ifai.org.mx,0,0,0,0
+319,7,201,HB1,1,1,1,ROSENDOEVGUENI, MONTERREY, CHEPOV, eugenio.monterrey@ifai.org.mx,0,0,0,0
+320,7,201,HB1,1,1,1,OSCAR MAURICIO, GUERRA, FORD, oscar.guerra@ifai.org.mx,0,0,0,0
+321,7,201,HB1,1,1,1,MARIA PATRICIA, KURCZYN, VILLALOBOS, mpatricia.kurczynv@ifai.org.mx,0,0,0,0
+322,186,209,KB2,10,1,1,JOSE LUIS, MARZAL, RUIZ, jl.marzal@ifai.org.mx ,0,0,0,0
+323,187,209,KB1,11,1,1,DAVID , PALOMINO, HERNANDEZ, david.palomino@ifai.org.mx,0,0,0,0
+324,240,147,NC1,8,1,1,ALFREDO, CHAVEZ, GUTIERREZ, alfredo.chavez@ifai.org.mx,0,0,0,0
+325,196,181,PC2,5,1,1,ALEJANDRO, BOUQUET, ROJAS, no aplica ,0,0,0,0
+326,60,262,OC1,8,1,1,MARIA ELENA, VARGAS, ZENTENO, maria.vargas@ifai.org.mx,0,0,0,0
+327,85,262,OC1,8,1,1,SAUL, GALLEGOS, SALGADO, saul.gallegos@ifai.org.mx,0,0,0,0
+328,262,147,NC3,8,1,1,JOSE ANTONIO, BARRERA, LOPEZ, joseantonio.barrera@ifai.org.mx ,0,0,0,0
+329,196,184,PA3,8,1,1,SALVADOR, CAMPA, SALGADO, salvador.campa@ifai.org.mx,0,0,0,0
+330,71,253,OC1,5,1,1,MONICA, MORALES, GONZALEZ, monica.morales@ifai.org.mx,0,0,0,0
+331,253,156,NC2,5,1,1,ULISES, A�NGELES, BOJORQUEZ, ulises.angeles@ifai.org.mx,0,0,0,0
+332,156,181,MC2,5,1,1,SANDRA MARIANA, MIRAMONTES, FIGUEROA, sandra.miramontes@ifai.org.mx,0,0,0,0
+333,181,201,KB3,5,1,1,RICARDO, SALGADO, PERRILLIAT, ricardo.salgado@ifai.org.mx,0,0,0,0
+334,73,254,OC1,5,1,1,LIZETH GABRIELA, RODRIGUEZ, GARCIA, lizeth.rodriguez@ifai.org.mx,0,0,0,0
+335,72,254,OC1,5,1,1,ALEJANDRA, MENDOZA, VILLEGAS, alejandra.mendoza@ifai.org.mx,0,0,0,0
+336,254,157,NC1,5,1,1,MARTIN, TORRES, CONTRERAS, martin.torres@ifai.org.mx,0,0,0,0
+337,144,209,MC2,17,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+338,157,181,MC2,5,1,1,RIGOBERTO, MARTINEZ, BECERRIL, rigoberto.martinez@ifai.org.mx,0,0,0,0
+339,209,201,KA2,17,1,1,ADRIAN , ALCALA , MENDEZ, adrian.alcala@ifai.org.mx,0,0,0,0
+340,70,252,OC1,5,1,1,MARIA GUADALUPE, LOBERA, DURAN, guadalupe.lobera@ifai.org.mx,0,0,0,0
+341,69,252,OC3,5,1,1,OMAR, CRUZ, IBINARRIAGA, omar.cruz@ifai.org.mx,0,0,0,0
+342,252,155,NC3,5,1,1,ERICK, MONTIEL , GAMBOA, erick.montiel@ifai.org.mx,0,0,0,0
+343,155,181,MC2,5,1,1,MARIA DEL CONSUELO, BAUTISTA, BALTAZAR, consuelo.bautista@ifai.org.mx ,0,0,0,0
+344,196,181,PA3,5,1,1,ERIKA, GILES, LOPEZ, erika.giles@ifai.org.mx ,0,0,0,0
+345,178,213,KB3,2,1,1,EDUARDO FELIPE, FERNANDEZ, SANCHEZ, eduardo.fernandez@ifai.org.mx ,0,0,0,0
+346,233,144,NC1,19,1,1,ERIKA, REYES   , MENESES, erika.reyes@ifai.org.mx,0,0,0,0
+347,144,213,MC2,19,1,1,JOSE DE JESUS ROMAN, PEREZ, GARCIA, roman.perez@ifai.org.mx,0,0,0,0
+348,203,11,OC02,16,1,1,IVAN EMMANUEL , SANCHEZ , MORALES, ivan.sanchez@ifai.org.mx,0,0,0,0
+349,202,11,OC02,16,1,1,LORENA , MARTINEZ , GONZALEZ, lorena.martinez@ifai.org.mx,0,0,0,0
+350,11,274,NB3,16,1,1,IVAN , SANTOS , VAZQUEZ, ivan.santos@ifai.org.mx,0,0,0,0
+351,274,210,MB2,16,1,1,NANCY , PEREZ , GUZMAN, nancy.perez@ifai.org.mx,0,0,0,0
+352,210,7,MC3,16,1,1,JONATHAN , MENDOZA , ISERTE, jonathan.mendoza@ifai.org.mx,0,0,0,0
+353,5,7,OB02,16,1,1,CARLOS JOSUE , OCHOA , MEDINA, carlos.ochoa@ifai.org.mx,0,0,0,0
+354,208,7,OC002,16,1,1,AZUCENA , FERNANDEZ , SANTILLAN, azucena.fernandez@ifai.org.mx,0,0,0,0
+355,214,7,MC03,16,1,1,ULISES , RAMIREZ , GALLARDO, ulises.ramirez@ifai.org.mx,0,0,0,0
+356,199,17,OC02,16,1,1,ADRIANA ELIZABETH, HERNANDEZ, GARCIA, adriana.hernandez@ifai.org.mx,0,0,0,0
+357,17,218,NB3,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+358,198,16,OC02,16,1,1,ANA LUISA , LARA , BAUTISTA, ana.lara@ifai.org.mx,0,0,0,0
+359,197,16,OC02,16,1,1,MARCO ANTONIO , SOTO , CABALLERO, marco.soto@ifai.org.mx,0,0,0,0
+360,16,218,NB3,16,1,1,ADRIAN ISRAEL, OCAMPO, JIMENEZ, adrian.ocampo@ifai.org.mx,0,0,0,0
+361,218,138,MB2,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+362,138,7,MC3,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+363,207,14,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+364,14,276,NB3,16,1,1,MARIA DEL PILAR , BENITEZ , LOPEZ, pilar.benitez@ifai.org.mx,0,0,0,0
+365,206,13,OC02,16,1,1,DAISY GLORIA , SANTIAGO , DURAN, daisy.santiago@ifai.org.mx,0,0,0,0
+366,13,276,NB3,16,1,1,BERENICE , FUENTES , BAEZ, berenice.fuentes@ifai.org.mx,0,0,0,0
+367,276,211,MB2,16,1,1,MARIA DE LOS A�NGELES , GUZMAN , GARCIA, angeles.guzman@ifai.org.mx,0,0,0,0
+368,211,7,MC3,16,1,1,ERIKA DANIELA , MONTIEL , MONSALVO, daniela.montiel@ifai.org.mx,0,0,0,0
+369,205,12,OC02,16,1,1,MARICARMEN, PEREZ, LOPEZ, maricarmen.perez@ifai.org.mx,0,0,0,0
+370,204,12,OC02,16,1,1,JAIME JAVIER , BEJARANO , ROMERO, jaime.bejarano@ifai.org.mx,0,0,0,0
+371,12,275,NB3,16,1,1,LUIS , HERRERA , LEOS, luis.herrera@ifai.org.mx,0,0,0,0
+372,275,210,MB2,16,1,1,SERAFIN ADRIAN , LOPEZ , REYES, serafin.lopez@ifai.org.mx,0,0,0,0
+373,203,11,OC02,16,1,1,FERNANDO, FALCONI, MUZQUIZ, fernando.falconi@ifai.org.mx,0,0,0,0
+374,202,11,OC02,16,1,1,JUANA LAURY , TREJO , MONROY, laury.trejo@ifai.org.mx,0,0,0,0
+375,11,274,NB3,16,1,1,ADRIANA , SALAZAR , GONZALEZ, adriana.salazar@ifai.org.mx,0,0,0,0
+376,274,210,MB2,16,1,1,CARLOS ALBERTO , CHORA , LAGARDE, carlos.chora@ifai.org.mx,0,0,0,0
+377,210,7,MC3,16,1,1,PEDRO , GONZALEZ , MANRIQUEZ, pedro.gonzalez@ifai.org.mx,0,0,0,0
+378,5,7,OB02,16,1,1,NOEL , CAMACHO , SANCHEZ, No aplica ,0,0,0,0
+379,208,7,OC002,16,1,1,ROSALINDA , CORIA , MOSQUEDA, rosalinda.coria@ifai.org.mx,0,0,0,0
+380,214,7,MC03,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+381,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+382,17,218,NB3,1,1,1,OMAR ENRIQUE , MENDEZ , ARIAS, omar.mendez@ifai.org.mx,0,0,0,0
+383,198,218,OC02,1,1,1,LIBIA ARIANNA , SANTIAGO , RAMIREZ, libia.santiago@ifai.org.mx,0,0,0,0
+384,197,218,OC02,1,1,1,CLAUDIA , HUERTA , CHAGOYA, claudia.huerta@ifai.org.mx,0,0,0,0
+385,16,218,NB3,1,1,1,RICARDO DAVID , CASTA�EDA , OROZCO, ricardo.castaneda@ifai.org.mx,0,0,0,0
+386,218,138,MB2,1,1,1,JOSE ANTONIO , GARCIA , MORALES, jose.garcia@ifai.org.mx,0,0,0,0
+387,138,7,MC3,1,1,1,FRANCISCO RAUL , A�LVAREZ , CORDOBA, francisco.alvarez@ifai.org.mx,0,0,0,0
+388,207,14,OC02,1,1,1,STEPHANIE ALEXIS, ARREGOYTIA, GUTIERREZ, stephanie.arregoytia@ifai.org.mx,0,0,0,0
+389,14,276,NB3,1,1,1,MARTHA PATRICIA, GARCIA, MEDINA, martha.garcia@ifai.org.mx,0,0,0,0
+390,206,13,OC02,1,1,1,HUGO , DIAZ , BETANCOURT, hugo.diaz@ifai.org.mx,0,0,0,0
+391,13,276,NB3,1,1,1,FELIX RODRIGO , SILVA , MORENO, felix.silva@ifai.org.mx,0,0,0,0
+392,276,211,MB2,1,1,1,SALVADOR , ESPINOSA , CORTES, salvador.espinosa@ifai.org.mx,0,0,0,0
+393,211,7,MC2,1,1,1,RAFAEL , VASQUEZ , MARTINEZ, rafael.vasquez@ifai.org.mx,0,0,0,0
+394,205,12,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+395,204,12,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+396,12,275,NB3,1,1,1,MAXIN MAGALI , SANCHEZ , CARRE�O, maxin.sanchez@ifai.org.mx,0,0,0,0
+397,275,210,MB2,1,1,1,JESUS LEONARDO , LARIOS , MENESES, jesus.larios@ifai.org.mx,0,0,0,0
+398,203,11,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+399,202,11,OC02,1,1,1,ALEJANDRA DONAJI, NU�EZ, ESCOBAR, alejandra.nunez@ifai.org.mx,0,0,0,0
+400,11,274,OC1,1,1,1,NESTOR DANIEL , MEJIA , SOTO, nestor.mejia@ifai.org.mx,0,0,0,0
+401,274,210,NC3,1,1,1,JULIO CESAR , MARTINEZ , SANABRIA, julio.martinez@ifai.org.mx,0,0,0,0
+402,210,7,MC3,1,1,1,YURI , ZUCKERMANN , PEREZ, yuri.zuckermann@ifai.org.mx,0,0,0,0
+403,5,7,OB02,1,1,1,MIGUEL A�NGEL , RANGEL , LIMA, miguel.rangel@ifai.org.mx,0,0,0,0
+404,208,7,OC002,1,1,1,ARACELI ROSENDA , PALMER , MORALES, araceli.palmer@ifai.org.mx,0,0,0,0
+405,214,7,MC03,1,1,1,ISMAEL , CAMARGO , MATA, ismael.camargo@ifai.org.mx,0,0,0,0
+406,199,17,PC3,1,1,1,MARTHA LORENA , MENDIZABAL , LOPEZ, martha.mendizabal@ifai.org.mx,0,0,0,0
+407,17,218,NB3,1,1,1,EDGAR , LOAEZA , SALMERON, edgar.loaeza@ifai.org.mx,0,0,0,0
+408,198,16,OC02,1,1,1,TANIA YADIRA, CARRASCO, GUTIERREZ, tania.carrasco@ifai.org.mx,0,0,0,0
+409,197,16,OB2,1,1,1,SERGIO RAFAEL , CORTES , ALPIZAR, sergio.cortes@ifai.org.mx,0,0,0,0
+410,16,218,NB3,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+411,218,138,MB2,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+412,16,218,NB3,1,1,1,ALEJANDRO ANTONIO , PEREZ , MARTINEZ, ,0,0,0,0
+413,138,7,MC3,1,1,1,CARLOS ALBERTO , PACHECO , CABA�AS, carlos.pacheco@ifai.org.mx,0,0,0,0
+414,207,14,OC02,1,1,1,VANIA , MOCTEZUMA , HERNANDEZ, vania.moctezuma@ifai.org.mx,0,0,0,0
+415,14,276,NB3,1,1,1,CESAR , FERNANDEZ , GONZALEZ , cesar.fernandez@ifai.org.mx,0,0,0,0
+416,206,13,OC02,1,1,1,JUAN ALBERTO , ALVA , A�LVAREZ, juanalberto.alva@ifai.org.mx,0,0,0,0
+417,13,276,NB3,1,1,1,ANA PAULA , VASQUEZ , GALVAN , ana.vasquez@ifai.org.mx,0,0,0,0
+418,276,211,MB2,1,1,1,CESAR MANUEL , VALLARTA , PAREDES, cesar.vallarta@ifai.org.mx,0,0,0,0
+419,211,7,MC3,1,1,1,JUAN CARLOS , CARRASCO , GUTIERREZ, juancarlos.carrasco@ifai.org.mx,0,0,0,0
+420,205,12,OB2,1,1,1,EDGAR MICHEL , LOAEZA , MARTINEZ, edgarm.loaeza@ifai.org.mx,0,0,0,0
+421,204,12,OB2,1,1,1,LUDWING  , SALAS  , CISNEROS, ludwing.salas@ifai.org.mx,0,0,0,0
+422,12,275,NB3,1,1,1,MARIA ELENA, VAZQUEZ, REYES, elena.vazquez@ifai.org.mx,0,0,0,0
+423,275,210,NC3,16,1,1,ESTRELLA , DOMINGUEZ , ORTIZ, estrella.dominguez@ifai.org.mx,0,0,0,0
+424,203,11,PC3,1,1,1,A�NGELA SOFIA , GONZALEZ , VALENCIA, angela.gonzalez@ifai.org.mx,0,0,0,0
+425,202,11,OC02,1,1,1,JUAN CARLOS , GONZALEZ , ESTRADA, juancarlos.gonzalez@ifai.org.mx,0,0,0,0
+426,11,274,NB3,1,1,1,CUAUHTEMOC , GUERRERO , JIMENEZ, cuauhtemoc.guerrero@ifai.org.mx,0,0,0,0
+427,274,210,MB2,1,1,1,LUIS ENRIQUE , RIVERO , CARRERA, luis.rivero@ifai.org.mx,0,0,0,0
+428,210,7,MC3,1,1,1,YOLANDA VICTORIA , VICENCIO , GOMEZ, yolanda.vicencio@ifai.org.mx,0,0,0,0
+429,5,7,OB02,1,1,1,MIGUEL , ORTIZ , HERNANDEZ, no aplica ,0,0,0,0
+430,208,7,OC002,1,1,1,BEATRIZ , CARREON , OLVERA, beatriz.carreon@ifai.org.mx,0,0,0,0
+431,214,7,MC03,1,1,1,IRLAENE ALACIEL  , GALVAN  , PONCE, irlaene.galvan@ifai.org.mx,0,0,0,0
+432,199,17,OC02,1,1,1,ANA LAURA , GOLDNER , MARTINEZ, ana.goldner@ifai.org.mx,0,0,0,0
+433,17,218,NB3,1,1,1,JOSE ENRIQUE , RIVERA , RODRIGUEZ, enrique.rivera@ifai.org.mx,0,0,0,0
+434,198,16,OC02,1,1,1,VIRIDIANA, FELIX, MARTINEZ, viridiana.felix@ifai.org.mx,0,0,0,0
+435,197,16,OC02,1,1,1,OCTAVIO , PI�A , ROSAS, octavio.pina@ifai.org.mx,0,0,0,0
+436,2,165,PC2,2,1,1,ALAN ALFREDO, SANCHEZ, REYES, alan.sanchez@ifai.org.mx,0,0,0,0
+437,2,165,PC3,2,1,1,MIGUEL A�NGEL, HERRERA, RODRIGUEZ, miguel.herrera@ifai.org.mx,0,0,0,0
+438,199,17,OC02,16,1,1,SERGIO , ROMO , MEDINA, sergio.romo@ifai.org.mx,0,0,0,0
+439,17,218,NB3,16,1,1,JOSE , MENDIOLA , ESQUIVEL, jose.mendiola@ifai.org.mx,0,0,0,0
+440,198,16,OC02,16,1,1,MANUEL DE JESUS , MEDINA , GOMEZ, manuel.medina@ifai.org.mx,0,0,0,0
+441,197,16,OC02,16,1,1,SUSANA , FLORES , COLMENERO, susana.flores@ifai.org.mx,0,0,0,0
+442,16,218,NB3,16,1,1,JUANA , DE JESUS , SANTIAGO, juana.dejesus@ifai.org.mx,0,0,0,0
+443,218,138,MB2,16,1,1,CARLOS ANTONIO, MORALES, ZEBADUA, carlos.morales@ifai.org.mx,0,0,0,0
+444,138,7,MC3,16,1,1,CARLOS ALBERTO, GARCIA, ROBLEDO, carlos.garcia@ifai.org.mx,0,0,0,0
+445,207,14,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+446,14,276,NB3,16,1,1,SOFIA DANAE , ORTIZ , MARTINEZ, sofia.ortiz@ifai.org.mx,0,0,0,0
+447,206,13,OC02,16,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+448,13,276,NB3,16,1,1,JOSE ALFREDO , FERNANDEZ , GARCIA, jose.fernandez@ifai.org.mx,0,0,0,0
+449,276,211,MB2,16,1,1,MONICA, BELTRAN, GAOS, monica.beltran@ifai.org.mx,0,0,0,0
+450,211,7,MC3,16,1,1,JOSE LUIS , GALARZA , ESPARZA, joseluis.galarza@ifai.org.mx,0,0,0,0
+451,205,12,OC02,16,1,1,ALEPH JULIAN , ESCOBEDO , MARTINEZ, julian.escobedo@ifai.org.mx,0,0,0,0
+452,204,12,OC02,16,1,1,LEONARDO , VARGAS , CELIS, leonardo.vargas@ifai.org.mx,0,0,0,0
+453,12,275,NB3,16,1,1,ARMANDO , PENAGOS , ROBLES, armando.penagos@ifai.org.mx,0,0,0,0
+454,275,210,MB2,16,1,1,ARMANDO , ORTIZ , GONZALEZ, armando.ortiz@ifai.org.mx,0,0,0,0
+455,218,138,MB2,1,1,1,DIEGO ERNESTO , DIAZ , ITURBE, diego.diaz@ifai.org.mx,0,0,0,0
+456,138,7,MC3,1,1,1,DANIEL ATALO , NAVARRO , RAMIREZ, daniel.navarro@ifai.org.mx,0,0,0,0
+457,207,14,OC02,1,1,1,SANDRA , ROBLES , CARRASCO, sandra.robles@ifai.org.mx,0,0,0,0
+458,14,276,NB3,1,1,1,JOSE FERMIN , AGUILAR , MANDUJANO, fermin.aguilar@ifai.org.mx,0,0,0,0
+459,206,13,OC02,1,1,1,OLGA GUADALUPE , CRISTINO , SICAIROS, olga.cristino@ifai.org.mx,0,0,0,0
+460,13,276,NB3,1,1,1,MARIA GUADALUPE , RODRIGUEZ , MORALES, guadalupe.rodriguez@ifai.org.mx,0,0,0,0
+461,276,211,MB2,1,1,1,MARIA FERNANDA , GARCIAZARCO , SANCHEZ , maria.garciazarco@ifai.org.mx,0,0,0,0
+462,211,7,MC3,1,1,1,GABRIELA INES , MONTES , MARQUEZ, gabriela.montes@ifai.org.mx,0,0,0,0
+463,205,12,OC02,1,1,1,SERGIO , ESCOTO , PRADO, sergio.escoto@ifai.org.mx,0,0,0,0
+464,204,12,OC02,1,1,1,SALVADOR , GUERRERO , NAVARRO, salvador.guerrero@ifai.org.mx,0,0,0,0
+465,12,275,NB3,1,1,1,CARLOS , APOLINEO , JUAREZ, carlos.apolineo@ifai.org.mx,0,0,0,0
+466,275,210,MB2,1,1,1,XUNAHXI VINIZA , PINEDA , CRUZ, xunahxi.pineda@ifai.org.mx,0,0,0,0
+467,203,11,OC02,1,1,1,MARIBEL , RUIZ , LOPEZ, maribel.ruiz@ifai.org.mx,0,0,0,0
+468,202,11,OC02,1,1,1,ERIKA PRISCYLA , CASAS , CARVALLO, erika.casas@ifai.org.mx,0,0,0,0
+469,11,274,NB3,1,1,1,ROGELIO , GARCIA , A�LVAREZ, rogelio.garcia@ifai.org.mx,0,0,0,0
+470,274,210,MB2,1,1,1,JULIO , CHINCOYA , ZAMBRANO, julio.chincoya@ifai.org.mx,0,0,0,0
+471,210,7,MC3,1,1,1,OMAR , CORTES , ROJAS, omar.cortes@ifai.org.mx,0,0,0,0
+472,5,7,OB02,1,1,1,EDUARDO , RAMIREZ, ITURBE, eduardo.ramirez@ifai.org.mx,0,0,0,0
+473,208,7,OC002,1,1,1,TERESA , MARTINEZ , MONTOYA, teresa.martinez@ifai.org.mx,0,0,0,0
+474,214,7,MC03,1,1,1,JORGE , BARRERA , REYES, jorge.barrera@ifai.org.mx,0,0,0,0
+475,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+476,17,218,NB3,1,1,1,YOATZIN , A�LVAREZ , RODRIGUEZ, yoatzin.alvarez@ifai.org.mx,0,0,0,0
+477,198,16,OC02,1,1,1,YAHIZINY , PEREZ , RODRIGUEZ, yahiziny.perez@ifai.org.mx,0,0,0,0
+478,197,16,OC02,1,1,1,MONTSERRAT , SANCHEZ , MURILLO, montserrat.sanchez@ifai.org.mx,0,0,0,0
+479,16,218,NB3,1,1,1,FRANCISCO JAVIER, ESQUINCA, CUEVAS, francisco.esquinca@ifai.org.mx,0,0,0,0
+480,218,138,MB2,1,1,1,AMALIA BERENICE, HERNANDEZ, BRACHO, amalia.hernandez@ifai.org.mx,0,0,0,0
+481,138,7,MC3,1,1,1,YURI EMILIANO , CINTA , DOMINGUEZ, yuri.cinta@ifai.org.mx,0,0,0,0
+482,207,14,OC02,1,1,1,ANA GABRIELA , ROSALES , TOLENTINO, ana.rosales@ifai.org.mx,0,0,0,0
+483,14,276,NB3,1,1,1,DANIELA , BALDERAS , MARTINEZ, daniela.balderas@ifai.org.mx,0,0,0,0
+484,206,13,OC02,1,1,1,GLORIA DEL MAR , CILIA , LUNA, gloria.cilia@ifai.org.mx,0,0,0,0
+485,13,276,NB3,1,1,1,LILIAN IRAZU , HERNANDEZ , OJEDA, lilian.hernandez@ifai.org.mx,0,0,0,0
+486,276,211,MB2,1,1,1,GEOVANNI , GUZMAN , DE ANDA, geovanni.guzman@ifai.org.mx,0,0,0,0
+487,211,7,MC3,1,1,1,JOANA VERENICE , PAEZ , PATRON, joana.paez@ifai.org.mx,0,0,0,0
+488,205,12,OC02,1,1,1,MAYRA ELSA , PEREZ SANDI , Y CUEN, mayra.perez@ifai.org.mx,0,0,0,0
+489,204,12,OC02,1,1,1,AXEL IRVING , SOSA , CUELLAR, axel.sosa@ifai.org.mx,0,0,0,0
+490,12,275,NB3,1,1,1,MARIA LUISA , JIMENEZ , PAOLETTI, marialuisa.jimenez@ifai.org.mx,0,0,0,0
+491,275,210,MB2,1,1,1,PAULINA , OJESTO MARTINEZ , MANZUR, paulina.ojesto@ifai.org.mx,0,0,0,0
+492,203,11,OC02,1,1,1,VIOLETA , POZOS , JUAREZ, violeta.pozos@ifai.org.mx,0,0,0,0
+493,202,11,OC02,1,1,1,YOLOXOCHITL , DIAZ , MALDONADO, yoloxochitl.diaz@ifai.org.mx,0,0,0,0
+494,11,274,NB3,1,1,1,NANCY EDITH , GOMEZ , CISNEROS, nancy.gomez@ifai.org.mx ,0,0,0,0
+495,274,210,MB2,1,1,1,GUSTAVO , MONTA�O , A�LVAREZ, gustavo.montano@ifai.org.mx,0,0,0,0
+496,210,7,MC3,1,1,1,NAYELI , AGUAYO , GARCIA, nayeli.aguayo@ifai.org.mx,0,0,0,0
+497,5,7,OB02,1,1,1,JOSE LUIS , OSORIO , A�LVAREZ, joseluis.osorio@ifai.org.mx,0,0,0,0
+498,208,7,OC002,1,1,1,MARIA VIRGINIA , RIVERA , VAZQUEZ, virginia.rivera@ifai.org.mx,0,0,0,0
+499,214,7,MC03,1,1,1,OSCAR JOVANNY , ZAVALA , GAMBOA, oscar.zavala@ifai.org.mx,0,0,0,0
+500,199,17,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+501,17,218,NB3,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+502,198,16,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+503,197,16,OC02,1,1,1,VICTOR MANUEL , MADRUE�O , IBARRA, no aplica ,0,0,0,0
+504,16,218,OC3,1,1,1,ELISE ARELY , AGUILAR , GRANADOS, elise.aguilar@ifai.org.mx,0,0,0,0
+505,218,138,MB2,1,1,1,A�LVARO RAFAEL , CABRERA , MONROY, alvaro.cabrera@ifai.org.mx,0,0,0,0
+506,138,7,MC3,1,1,1,GERARDO ROBERTO , PIGEON , SOLORZANO, gerardo.pigeon@ifai.org.mx,0,0,0,0
+507,207,14,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+508,14,276,OC3,16,1,1,GREGORIO , GONZALEZ , NAVA, gregorio.gonzalez@ifai.org.mx,0,0,0,0
+509,206,13,OC02,1,1,1,VACANTE, VACANTE, VACANTE, ,0,0,0,0
+510,13,276,OC3,16,1,1,EDNA TERESA , GUZMAN , GARCIA, edna.guzman@ifai.org.mx,0,0,0,0
+511,276,211,NC3,16,1,1,MARTHA JUDITH , SANCHEZ , A�LVAREZ, martha.sanchez@ifai.org.mx,0,0,0,0
+512,211,7,MC2,1,1,1,HAYDEE SAMANTHA , GARCIA  , CAMARENA, haydee.garcia@ifai.org.mx,0,0,0,0
+513,205,12,OC02,1,1,1,EDGAR YAIR, MARTINEZ , MADRIGAL, edgar.martinez@ifai.org.mx,0,0,0,0
+514,204,12,OC02,1,1,1,MARIA GUADALUPE , GOMEZ , RODRIGUEZ, guadalupe.gomez@ifai.org.mx,0,0,0,0
+515,12,275,OC3,16,1,1,ELBA MARGARITA , PARAMO , VAZQUEZ, elba.paramo@ifai.org.mx,0,0,0,0
+516,275,210,MB2,1,1,1,AMANDA JUDITH , MONTER , GAMI�O, amanda.monter@ifai.org.mx,0,0,0,0
+517,203,11,OC02,1,1,1,PABLO , BERTHELY , ARAIZA, pablo.berthely@ifai.org.mx,0,0,0,0
+518,202,11,OC02,1,1,1,GISELDA , BACA , MEDINA, giselda.baca@ifai.org.mx,0,0,0,0
+519,11,274,OC3,16,1,1,CLAUDIA NALLELI , CRUZ , GALVAN, claudia.cruz@ifai.org.mx,0,0,0,0
+520,274,210,MB2,1,1,1,ELIZABETH , VICENTE , GONZALEZ, elizabeth.vicente@ifai.org.mx,0,0,0,0
+521,210,7,MC3,1,1,1,MARINA ALICIA , SAN MARTIN , REBOLLOSO, marina.sanmartin@ifai.org.mx,0,0,0,0
+522,5,7,OB02,1,1,1,GLADYS , BAQUEIRO , TREJO, gladys.baqueiro@ifai.org.mx,0,0,0,0
+523,208,7,OC002,1,1,1,MARIBEL, HERNANDEZ, RAMIREZ, maribel.hernandez@ifai.org.mx,0,0,0,0

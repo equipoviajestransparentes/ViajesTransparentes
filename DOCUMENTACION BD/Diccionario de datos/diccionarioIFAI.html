@@ -53,7 +53,7 @@
 <div id="title-sect">
 <h1>ifai<br> Data Dictionay</h1>
 <p>
-<em>2014-09-19</em>
+<em>2014-09-25</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -62,13 +62,18 @@
 <h2>Alphabetic Index</h2>
 <ul>
 <li><a href='#cargo_catalogo'>cargo_catalogo</a></li>
+<li><a href='#ciudadano'>ciudadano</a></li>
 <li><a href='#comision'>comision</a></li>
+<li><a href='#concepto_catalogo'>concepto_catalogo</a></li>
 <li><a href='#costo'>costo</a></li>
 <li><a href='#detalleViaje'>detalleViaje</a></li>
+<li><a href='#gasto'>gasto</a></li>
 <li><a href='#institucion_catalogo'>institucion_catalogo</a></li>
+<li><a href='#justificacion_catalogo'>justificacion_catalogo</a></li>
 <li><a href='#localidades_catalogo'>localidades_catalogo</a></li>
 <li><a href='#mecanismo_origen_catalogo'>mecanismo_origen_catalogo</a></li>
 <li><a href='#moneda_catalogo'>moneda_catalogo</a></li>
+<li><a href='#notificacion'>notificacion</a></li>
 <li><a href='#puesto_catalogo'>puesto_catalogo</a></li>
 <li><a href='#representacion_catalogo'>representacion_catalogo</a></li>
 <li><a href='#servidor_publico'>servidor_publico</a></li>
@@ -79,6 +84,7 @@
 <li><a href='#tipo_viaje_catalogo'>tipo_viaje_catalogo</a></li>
 <li><a href='#unidad_administrativa_catalogo'>unidad_administrativa_catalogo</a></li>
 <li><a href='#viaje'>viaje</a></li>
+<li><a href='#viatico_catalogo'>viatico_catalogo</a></li>
 <li><a href='#vuelo'>vuelo</a></li>
 </ul>
 <table id='cargo_catalogo'>
@@ -122,6 +128,74 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Campo que describe el nombre del cargo</td>
+</tr>
+<table id='ciudadano'>
+<caption>ciudadano</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idCiudadanoCorreo</td>
+    <td>VARCHAR(50)</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave primaria que identifica al ciudadano en este caso sera por su correo electronico</td>
+</tr>
+<tr>
+    <td>NOMBRE</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el nombre del ciudadano</td>
+</tr>
+<tr>
+    <td>AP_PATERNO</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el apellido paterno del ciudadano</td>
+</tr>
+<tr>
+    <td>AP_MATERNO</td>
+    <td>VARCHAR(30)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el apellido materno del ciudadano</td>
 </tr>
 <table id='comision'>
 <caption>comision</caption>
@@ -310,7 +384,7 @@
 </tr>
 <tr>
     <td>COMPROBADO_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -323,7 +397,7 @@
 </tr>
 <tr>
     <td>SIN_COMPROBAR_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -336,7 +410,7 @@
 </tr>
 <tr>
     <td>VIATICO_DEVUELTO_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -385,6 +459,48 @@
     <td class='attr'>&nbsp;</td>
     <td>'F'</td>
     <td>Campo que indica el estatus de la comision, este puede estar con valor de 'F' cuando la comision no ah sido reportada o confirmada aun por el servidor publico con los gastos derivados de la comision a la que asistio, una vez que esta comision es reportada adquiere el valor de 'T'</td>
+</tr>
+<table id='concepto_catalogo'>
+<caption>concepto_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idConcepto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del concepto</td>
+</tr>
+<tr>
+    <td>CONCEPTO</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el concepto</td>
 </tr>
 <table id='costo'>
 <caption>costo</caption>
@@ -443,7 +559,7 @@
 </tr>
 <tr>
     <td>GASTO_PASAJE</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -456,7 +572,7 @@
 </tr>
 <tr>
     <td>GASTO_VIATICO</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -468,8 +584,34 @@
     <td>Campo que describe el Monto del gasto generado por viáticos, relacionado rubros diferentes al transporte del funcionario (hospedaje y alimentación principalmente)</td>
 </tr>
 <tr>
+    <td>GASTO_ALIMENTOS</td>
+    <td>DECIMAL(12,2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Monto del gasto generado por viáticos, del rubro alimentacion</td>
+</tr>
+<tr>
+    <td>GASTO_OTROS</td>
+    <td>DECIMAL(12,2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el Monto del gasto generado por viáticos, con el rubro de otros.</td>
+</tr>
+<tr>
     <td>COSTO_HOTEL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -482,7 +624,7 @@
 </tr>
 <tr>
     <td>COMPROBADO</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -495,7 +637,7 @@
 </tr>
 <tr>
     <td>SIN_COMPROBAR</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -508,7 +650,7 @@
 </tr>
 <tr>
     <td>VIATICO_DEVUELTO</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -521,7 +663,7 @@
 </tr>
 <tr>
     <td>TARIFA_DIARIA</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -531,6 +673,32 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Campo que indica la Tarifa de viáticos diaria asignada al funcionario de acuerdo con su perfil y el lugar a donde viaja. </td>
+</tr>
+<tr>
+    <td>VIATICOS_TOTAL</td>
+    <td>DECIMAL(12,2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el total de viaticos otorgados para el viaje, es el calculo de tarifa diaria por la duracion del viaje (dias)</td>
+</tr>
+<tr>
+    <td>VIATICOS_FALTANTE</td>
+    <td>DECIMAL(12,2)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la diferencia entre el total otorgado menos el viatico devuelto y el viatico gastado.</td>
 </tr>
 <table id='detalleViaje'>
 <caption>detalleViaje</caption>
@@ -808,6 +976,126 @@
     <td></td>
     <td>Campo que describe la coordenada de longitud del destino del viaje</td>
 </tr>
+<table id='gasto'>
+<caption>gasto</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idGasto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora del gasto</td>
+</tr>
+<tr>
+    <td>idViaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al id del viaje</td>
+</tr>
+<tr>
+    <td>FECHA_COMPROBANTE</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la fecha en que se expidio el comprobante</td>
+</tr>
+<tr>
+    <td>idConcepto</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llav foranea que referencia al id del concepto</td>
+</tr>
+<tr>
+    <td>IMPORTE_COMPROBANTE</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe el importe del gasto</td>
+</tr>
+<tr>
+    <td>idMoneda</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al tipo de moneda con que se exipide el importe del comprobante</td>
+</tr>
+<tr>
+    <td>EXISTE_COMPROBANTE</td>
+    <td>CHAR</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'N'</td>
+    <td>Campo que describe si existe un comprobante se usara el valor 'S' cuando si exista y 'N' cuando no exista</td>
+</tr>
+<tr>
+    <td>idJustificacion</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que refrencia al id de la justificacion en caso de NO exista comprobante</td>
+</tr>
 <table id='institucion_catalogo'>
 <caption>institucion_catalogo</caption>
 <tr><td colspan='11'></td></tr>
@@ -849,6 +1137,48 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Campo que describe el nombre de la insititucion</td>
+</tr>
+<table id='justificacion_catalogo'>
+<caption>justificacion_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idJustificacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave identificadora de la justificacion</td>
+</tr>
+<tr>
+    <td>JUSTIFICACION</td>
+    <td>VARCHAR(200)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Campo que describe la justificacion</td>
 </tr>
 <table id='localidades_catalogo'>
 <caption>localidades_catalogo</caption>
@@ -996,6 +1326,19 @@
     <td></td>
     <td>Campo que indica la coordenada longitud de la ciudad</td>
 </tr>
+<tr>
+    <td>ZONA</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'NO APLICA'</td>
+    <td>Campo que describe la zona a la que pertenece la localidad, esta zona depende de las reglas de negocio del aplicativo que se este implementando.</td>
+</tr>
 <table id='mecanismo_origen_catalogo'>
 <caption>mecanismo_origen_catalogo</caption>
 <tr><td colspan='11'></td></tr>
@@ -1079,6 +1422,61 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Campo que indica la descripcion de la moneda</td>
+</tr>
+<table id='notificacion'>
+<caption>notificacion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idNotificacion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave primaria identificadora de la notificacion</td>
+</tr>
+<tr>
+    <td>idServidor</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al id del servidor</td>
+</tr>
+<tr>
+    <td>idCiudadanoCorreo</td>
+    <td>VARCHAR(50)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foranea que referencia al id del ciudadano que en este caso sera su correo electronico.</td>
 </tr>
 <table id='puesto_catalogo'>
 <caption>puesto_catalogo</caption>
@@ -1286,7 +1684,7 @@
 </tr>
 <tr>
     <td>AP_PATERNO</td>
-    <td>VARCHAR(15)</td>
+    <td>VARCHAR(30)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -1299,7 +1697,7 @@
 </tr>
 <tr>
     <td>AP_MATERNO</td>
-    <td>VARCHAR(15)</td>
+    <td>VARCHAR(30)</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -1325,7 +1723,7 @@
 </tr>
 <tr>
     <td>GASTOS_COMPROBADOS_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1333,12 +1731,12 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
-    <td>0.0</td>
+    <td>0.00</td>
     <td>Campo que contiene el total o acumulado de los gastos comprobados por el servidor publico en todas las comisiones a las que ah asistido</td>
 </tr>
 <tr>
     <td>GASTOS_SIN_COMPROBAR_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1346,12 +1744,12 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
-    <td>0.0</td>
+    <td>0.00</td>
     <td>Campo que contiene el total o acumulado de los gastos sin comprobar por el servidor publico en todas las comisiones a las que ah asistido</td>
 </tr>
 <tr>
     <td>COSTO_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1359,12 +1757,12 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
-    <td>0.0</td>
+    <td>0.00</td>
     <td>Campo que contiene el costo total o acumulado, invertido en el servidor publico durante todas sus comisiones</td>
 </tr>
 <tr>
     <td>VIATICOS_DEVUELTOS_TOTAL</td>
-    <td>DECIMAL(2)</td>
+    <td>DECIMAL(12,2)</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -1372,8 +1770,34 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
-    <td>0.0</td>
+    <td>0.00</td>
     <td>Campo que contiene el total o acumulador de los viaticos devueltos por el servidor publico a lo largo de todas sus comisiones.</td>
+</tr>
+<tr>
+    <td>CREATED_AT</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'2014-01-01 00:00:00'</td>
+    <td>Campo que establece la fecha de creacion del registros</td>
+</tr>
+<tr>
+    <td>UPDATED_AT</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>'2014-01-01 00:00:00'</td>
+    <td>Campo que establece la fecha de ultima modificacion al registro</td>
 </tr>
 <table id='tema_de_viaje_catalogo'>
 <caption>tema_de_viaje_catalogo</caption>
@@ -1720,6 +2144,100 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Llave foranea que referencia al catalogo con el tipo de viaje que realizo el servidor publico</td>
+</tr>
+<table id='viatico_catalogo'>
+<caption>viatico_catalogo</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idViatico</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>idPuesto</td>
+    <td>VARCHAR(10)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>idTipoViaje</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>ZONA</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td>TARIFA_DIARIA</td>
+    <td>DECIMAL(8,2)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td>0.0</td>
+    <td></td>
+</tr>
+<tr>
+    <td>idMoneda</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
 </tr>
 <table id='vuelo'>
 <caption>vuelo</caption>
