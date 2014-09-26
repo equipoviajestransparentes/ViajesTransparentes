@@ -9,20 +9,20 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140924061439) do
+ActiveRecord::Schema.define(version: 20140924061439) do
 
-  create_table "cargo_catalogos", :force => true do |t|
+  create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
     t.string  "cargo"
   end
 
-  create_table "cargos", :force => true do |t|
+  create_table "cargos", force: true do |t|
     t.string "cargo"
   end
 
-  create_table "commissions", :force => true do |t|
+  create_table "commissions", force: true do |t|
     t.integer  "id_mec_origen"
     t.integer  "id_tipo_comision"
     t.integer  "id_representacion"
@@ -38,14 +38,14 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.decimal  "sin_comprobar_total"
     t.decimal  "viatico_devuelto_total"
     t.string   "estatus_comision"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "public_officer_id"
     t.text     "resultado"
     t.text     "observaciones"
   end
 
-  create_table "details", :force => true do |t|
+  create_table "details", force: true do |t|
     t.integer  "trip_id"
     t.string   "evento"
     t.string   "url_evento"
@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.string   "hotel"
     t.date     "fechainicio_hotel"
     t.date     "fechafin_hotel"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "id_tema_viaje"
     t.string   "latitud_origen"
     t.string   "longitud_origen"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.string   "longitud_destino"
   end
 
-  create_table "expenses", :force => true do |t|
+  create_table "expenses", force: true do |t|
     t.integer  "trip_id"
     t.integer  "id_moneda"
     t.decimal  "gasto_pasaje"
@@ -80,35 +80,35 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.decimal  "sin_comprobar"
     t.decimal  "viatico_devuelto"
     t.decimal  "tarifa_diaria"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "flights", :force => true do |t|
+  create_table "flights", force: true do |t|
     t.integer  "detail_id"
     t.integer  "vuelo_origen"
     t.integer  "vuelo_regreso"
     t.integer  "linea_origen"
     t.integer  "linea_regreso"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "grupo_catalogos", :force => true do |t|
+  create_table "grupo_catalogos", force: true do |t|
     t.string "grupo"
   end
 
-  create_table "grupos", :force => true do |t|
+  create_table "grupos", force: true do |t|
     t.string   "grupo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "institucions", :force => true do |t|
+  create_table "institucions", force: true do |t|
     t.string "institucion"
   end
 
-  create_table "localidades_catalogos", :force => true do |t|
+  create_table "localidades_catalogos", force: true do |t|
     t.string "pais"
     t.string "latitud_pais"
     t.string "longitud_pais"
@@ -120,15 +120,15 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.string "longitud_ciudad"
   end
 
-  create_table "mecanismo_origen_catalogos", :force => true do |t|
+  create_table "mecanismo_origen_catalogos", force: true do |t|
     t.string "mec_origen"
   end
 
-  create_table "moneda_catalogos", :force => true do |t|
+  create_table "moneda_catalogos", force: true do |t|
     t.string "moneda"
   end
 
-  create_table "public_officers", :force => true do |t|
+  create_table "public_officers", force: true do |t|
     t.integer  "id_cargo"
     t.integer  "id_cargo_superior"
     t.string   "id_puesto"
@@ -147,14 +147,14 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.datetime "updated_at"
   end
 
-  create_table "puestos", :id => false, :force => true do |t|
-    t.string "id",     :null => false
+  create_table "puestos", id: false, force: true do |t|
+    t.string "id",     null: false
     t.string "puesto"
   end
 
-  add_index "puestos", ["id"], :name => "index_puestos_on_id", :unique => true
+  add_index "puestos", ["id"], name: "index_puestos_on_id", unique: true
 
-  create_table "searches", :force => true do |t|
+  create_table "searches", force: true do |t|
     t.string  "nombre"
     t.string  "primer_ap"
     t.date    "segundo_ap"
@@ -165,36 +165,36 @@ ActiveRecord::Schema.define(:version => 20140924061439) do
     t.date    "max_fecha"
   end
 
-  create_table "tema_de_viaje_catalogos", :force => true do |t|
+  create_table "tema_de_viaje_catalogos", force: true do |t|
     t.string "tema"
   end
 
-  create_table "tipo_comisions", :force => true do |t|
+  create_table "tipo_comisions", force: true do |t|
     t.string "tipo_com"
   end
 
-  create_table "tipo_pasaje_catalogos", :force => true do |t|
+  create_table "tipo_pasaje_catalogos", force: true do |t|
     t.string "tipo_pasaje"
   end
 
-  create_table "tipo_personals", :force => true do |t|
+  create_table "tipo_personals", force: true do |t|
     t.string "tipo_personal"
   end
 
-  create_table "tipo_viaje_catalogos", :force => true do |t|
+  create_table "tipo_viaje_catalogos", force: true do |t|
     t.string "tipo_viaje"
   end
 
-  create_table "trips", :force => true do |t|
+  create_table "trips", force: true do |t|
     t.integer  "localidad_origen"
     t.integer  "localidad_destino"
     t.integer  "tipo_viaje"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "commission_id"
   end
 
-  create_table "unidad_adms", :force => true do |t|
+  create_table "unidad_adms", force: true do |t|
     t.string "unidad_adm"
   end
 
