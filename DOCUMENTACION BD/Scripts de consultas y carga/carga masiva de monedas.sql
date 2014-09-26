@@ -5,4 +5,5 @@ LOAD DATA LOCAL INFILE 'C:/Users/ALAN7/Documents/GitHub/ViajesTransparentes/DOCU
 INTO TABLE moneda_catalogo
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
+IGNORE 1 LINES
 (idMoneda,MONEDA);
