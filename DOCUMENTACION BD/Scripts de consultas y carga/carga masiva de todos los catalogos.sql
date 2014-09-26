@@ -1,4 +1,26 @@
 --
+-- Carga masiva de justificacion_catalogo
+-- Reemplazar por la ruta correcta del archivo
+--
+LOAD DATA LOCAL INFILE 'C:/Users/ALAN7/Documents/GitHub/ViajesTransparentes/DOCUMENTACION BD/Catalogos con datos/justificacion_catalogo.csv'
+INTO TABLE justificacion_catalogo
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(JUSTIFICACION);
+
+--
+-- Carga masiva de concepto_catalogo
+-- Reemplazar por la ruta correcta del archivo
+--
+LOAD DATA LOCAL INFILE 'C:/Users/ALAN7/Documents/GitHub/ViajesTransparentes/DOCUMENTACION BD/Catalogos con datos/conceptos_catalogo.csv'
+INTO TABLE concepto_catalogo
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(idConcepto,CONCEPTO);
+
+--
 -- Carga masiva de cargo_catalogo
 -- Reemplazar por la ruta correcta del archivo
 --
@@ -61,6 +83,7 @@ LOAD DATA LOCAL INFILE 'C:/Users/ALAN7/Documents/GitHub/ViajesTransparentes/DOCU
 INTO TABLE moneda_catalogo
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
+IGNORE 1 LINES
 (idMoneda,MONEDA);
 
 --
@@ -139,6 +162,15 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (idServidor,idCargo,idCargoSuperior,idPuesto,idUnidadAdm,idInstitucion,idTipoPersonal,NOMBRE,AP_PATERNO,AP_MATERNO,CORREO_ELECTRONICO,GASTOS_COMPROBADOS_TOTAL,GASTOS_SIN_COMPROBAR_TOTAL,COSTO_TOTAL,VIATICOS_DEVUELTOS_TOTAL);
 
+--
+-- Reemplazar por la ruta correcta del archivo
+--
+LOAD DATA LOCAL INFILE 'C:/Users/ALAN7/Documents/GitHub/ViajesTransparentes/DOCUMENTACION BD/Catalogos con datos/viaticos_catalogo.csv'
+INTO TABLE viatico_catalogo
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(idPuesto,idTipoViaje,ZONA,TARIFA_DIARIA,idMoneda);
 --
 -- Carga masiva de localidades_catalogo
 -- Reemplazar por la ruta correcta del archivo

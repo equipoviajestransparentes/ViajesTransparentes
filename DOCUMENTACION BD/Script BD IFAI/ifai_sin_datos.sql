@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `ifai`.`servidor_publico` (
   `idInstitucion` INT NOT NULL COMMENT 'Llave foranea que referencia a la institucion del servidor publico',
   `idTipoPersonal` INT NOT NULL COMMENT 'Llave foranea que referencia al tipo de persona del servidor publico',
   `NOMBRE` VARCHAR(30) NOT NULL COMMENT 'Nombre del servidor publico',
-  `AP_PATERNO` VARCHAR(15) NOT NULL COMMENT 'Apellido paterno del servidor publico',
-  `AP_MATERNO` VARCHAR(15) NOT NULL COMMENT 'Apellido materno del servidor publico',
+  `AP_PATERNO` VARCHAR(30) NOT NULL COMMENT 'Apellido paterno del servidor publico',
+  `AP_MATERNO` VARCHAR(30) NOT NULL COMMENT 'Apellido materno del servidor publico',
   `CORREO_ELECTRONICO` VARCHAR(50) NULL COMMENT 'Campo que contiene el correo electronico del servidor publico',
-  `GASTOS_COMPROBADOS_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el total o acumulado de los gastos comprobados por el servidor publico en todas las comisiones a las que ah asistido',
-  `GASTOS_SIN_COMPROBAR_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el total o acumulado de los gastos sin comprobar por el servidor publico en todas las comisiones a las que ah asistido',
-  `COSTO_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el costo total o acumulado, invertido en el servidor publico durante todas sus comisiones',
-  `VIATICOS_DEVUELTOS_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que contiene el total o acumulador de los viaticos devueltos por el servidor publico a lo largo de todas sus comisiones.',
+  `GASTOS_COMPROBADOS_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.00 COMMENT 'Campo que contiene el total o acumulado de los gastos comprobados por el servidor publico en todas las comisiones a las que ah asistido',
+  `GASTOS_SIN_COMPROBAR_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.00 COMMENT 'Campo que contiene el total o acumulado de los gastos sin comprobar por el servidor publico en todas las comisiones a las que ah asistido',
+  `COSTO_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.00 COMMENT 'Campo que contiene el costo total o acumulado, invertido en el servidor publico durante todas sus comisiones',
+  `VIATICOS_DEVUELTOS_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.00 COMMENT 'Campo que contiene el total o acumulador de los viaticos devueltos por el servidor publico a lo largo de todas sus comisiones.',
   `CREATED_AT` DATETIME NULL DEFAULT '2014-01-01 00:00:00' COMMENT 'Campo que establece la fecha de creacion del registros',
   `UPDATED_AT` DATETIME NULL DEFAULT '2014-01-01 00:00:00' COMMENT 'Campo que establece la fecha de ultima modificacion al registro',
   PRIMARY KEY (`idServidor`),
@@ -282,12 +282,12 @@ CREATE TABLE IF NOT EXISTS `ifai`.`comision` (
   `ACUERDO` VARCHAR(45) NOT NULL COMMENT 'Campo que indica el número de acuerdo o documento oficial mediante el cual se autoriza la comisión del servidor público',
   `OFICIO` VARCHAR(45) NOT NULL COMMENT 'Campo que indica el número de oficio a través del cuál se comisiona al servidor público',
   `MOTIVO` VARCHAR(200) NOT NULL COMMENT 'Campo que indica el motivo por el cual el funcionario público fue enviado a la comisión en cuestión',
-  `COMPROBADO_TOTAL` DECIMAL(2) NULL COMMENT 'Campo que indica el monto comprobado total de la comision asignada al servidor publico',
-  `SIN_COMPROBAR_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que indica el monto sin comprobado total de la comision asignada al servidor publico',
-  `VIATICO_DEVUELTO_TOTAL` DECIMAL(2) NULL DEFAULT 0.0 COMMENT 'Campo que indica el monto de viaticos total devuelto por el servidor publico',
+  `COMPROBADO_TOTAL` DECIMAL(12,2) NULL COMMENT 'Campo que indica el monto comprobado total de la comision asignada al servidor publico',
+  `SIN_COMPROBAR_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.0 COMMENT 'Campo que indica el monto sin comprobado total de la comision asignada al servidor publico',
+  `VIATICO_DEVUELTO_TOTAL` DECIMAL(12,2) NULL DEFAULT 0.0 COMMENT 'Campo que indica el monto de viaticos total devuelto por el servidor publico',
   `RESULTADO` VARCHAR(200) NULL COMMENT 'Campo que contiene los resultados obtenidos durante la comision',
   `OBSERVACIONES` VARCHAR(100) NULL COMMENT 'Campo que contiene las observaciones realizadas durante la comision',
-  `ESTATUS_COMISION` CHAR NOT NULL DEFAULT 'F' COMMENT 'Campo que indica el estatus de la comision, este puede estar con valor de \'F\' cuando la comision no ah sido reportada o confirmada aun por el servidor publico con los gastos derivados de la comision a la que asistio, una vez que esta comision es reportada comment truncated */ /* adquiere el valor de \'T\'',
+  `ESTATUS_COMISION` CHAR NOT NULL DEFAULT 'F' COMMENT 'Campo que indica el estatus de la comision, este puede estar con valor de \'F\' cuando la comision no ah sido reportada o confirmada aun por el servidor publico con los gastos derivados de la comision a la que asistio, una vez que esta comision es reportada adquiere el valor de \'T\'',
   PRIMARY KEY (`idComision`),
   INDEX `fk_comision_mecanismo_origen_catalogo1_idx` (`idMec_origen` ASC),
   INDEX `fk_comision_representacion_catalogo1_idx` (`idRepresentacion` ASC),
@@ -367,17 +367,17 @@ CREATE TABLE IF NOT EXISTS `ifai`.`costo` (
   `idCosto` INT NOT NULL AUTO_INCREMENT COMMENT 'Llave identificadora del costo',
   `idViaje` INT NOT NULL COMMENT 'Llave foranea que referencia al identificador del viaje al que pertenece el costo',
   `idMoneda` INT NOT NULL COMMENT 'Llave foranea que referencia al catalogo de monedas en que esta representado el costo',
-  `GASTO_PASAJE` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado específicamente con el transporte del funcionario.',
-  `GASTO_VIATICO` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado rubros diferentes al transporte del funcionario (hospedaje y alimentación principalmente)',
-  `GASTO_ALIMENTOS` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, del rubro alimentacion',
-  `GASTO_OTROS` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, con el rubro de otros.',
-  `COSTO_HOTEL` DECIMAL(2) NULL COMMENT 'Campo que describe el Costo total del hospedaje reportado en el oficio correspondiente',
-  `COMPROBADO` DECIMAL(2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
-  `SIN_COMPROBAR` DECIMAL(2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que no se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
-  `VIATICO_DEVUELTO` DECIMAL(2) NULL COMMENT 'Campo que describe el Monto devuelto por el funcionario a la cuenta del IFAI correspondiente, según lineamientos internos, reportado en el oficio correspondiente',
-  `TARIFA_DIARIA` DECIMAL(2) NULL COMMENT 'Campo que indica la Tarifa de viáticos diaria asignada al funcionario de acuerdo con su perfil y el lugar a donde viaja. ',
-  `VIATICOS_TOTAL` DECIMAL(2) NULL COMMENT 'Campo que describe el total de viaticos otorgados para el viaje, es el calculo de tarifa diaria por la duracion del viaje (dias)',
-  `VIATICOS_FALTANTE` DECIMAL(2) NULL COMMENT 'Campo que describe la diferencia entre el total otorgado menos el viatico devuelto y el viatico gastado.',
+  `GASTO_PASAJE` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado específicamente con el transporte del funcionario.',
+  `GASTO_VIATICO` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, relacionado rubros diferentes al transporte del funcionario (hospedaje y alimentación principalmente)',
+  `GASTO_ALIMENTOS` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, del rubro alimentacion',
+  `GASTO_OTROS` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Monto del gasto generado por viáticos, con el rubro de otros.',
+  `COSTO_HOTEL` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Costo total del hospedaje reportado en el oficio correspondiente',
+  `COMPROBADO` DECIMAL(12,2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
+  `SIN_COMPROBAR` DECIMAL(12,2) NULL COMMENT 'Campo que indica el Costo total generado durante el viaje del que no se cuenta con comprobantes oficialmente aceptados por el IFAI, según lo reportado por el funcionario en el oficio correspondiente',
+  `VIATICO_DEVUELTO` DECIMAL(12,2) NULL COMMENT 'Campo que describe el Monto devuelto por el funcionario a la cuenta del IFAI correspondiente, según lineamientos internos, reportado en el oficio correspondiente',
+  `TARIFA_DIARIA` DECIMAL(12,2) NULL COMMENT 'Campo que indica la Tarifa de viáticos diaria asignada al funcionario de acuerdo con su perfil y el lugar a donde viaja. ',
+  `VIATICOS_TOTAL` DECIMAL(12,2) NULL COMMENT 'Campo que describe el total de viaticos otorgados para el viaje, es el calculo de tarifa diaria por la duracion del viaje (dias)',
+  `VIATICOS_FALTANTE` DECIMAL(12,2) NULL COMMENT 'Campo que describe la diferencia entre el total otorgado menos el viatico devuelto y el viatico gastado.',
   PRIMARY KEY (`idCosto`, `idViaje`),
   INDEX `fk_moneda_gastos_idx` (`idMoneda` ASC),
   INDEX `fk_costo_viaje_idx` (`idViaje` ASC),
@@ -400,8 +400,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `ifai`.`ciudadano` (
   `idCiudadanoCorreo` VARCHAR(50) NOT NULL COMMENT 'Llave primaria que identifica al ciudadano en este caso sera por su correo electronico',
   `NOMBRE` VARCHAR(30) NOT NULL COMMENT 'Campo que describe el nombre del ciudadano',
-  `AP_PATERNO` VARCHAR(15) NOT NULL COMMENT 'Campo que describe el apellido paterno del ciudadano',
-  `AP_MATERNO` VARCHAR(15) NOT NULL COMMENT 'Campo que describe el apellido materno del ciudadano',
+  `AP_PATERNO` VARCHAR(30) NOT NULL COMMENT 'Campo que describe el apellido paterno del ciudadano',
+  `AP_MATERNO` VARCHAR(30) NOT NULL COMMENT 'Campo que describe el apellido materno del ciudadano',
   PRIMARY KEY (`idCiudadanoCorreo`))
 ENGINE = InnoDB;
 
@@ -433,11 +433,11 @@ ENGINE = InnoDB;
 -- Table `ifai`.`viatico_catalogo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ifai`.`viatico_catalogo` (
-  `idViatico` INT NOT NULL,
+  `idViatico` INT NOT NULL AUTO_INCREMENT,
   `idPuesto` VARCHAR(10) NOT NULL,
   `idTipoViaje` INT NOT NULL,
   `ZONA` VARCHAR(20) NOT NULL,
-  `TARIFA_DIARIA` DECIMAL(2) NOT NULL,
+  `TARIFA_DIARIA` DECIMAL(8,2) NOT NULL DEFAULT 0.0,
   `idMoneda` INT NOT NULL,
   PRIMARY KEY (`idViatico`),
   INDEX `fk_viatico_puesto_catalogo1_idx` (`idPuesto` ASC),
@@ -465,8 +465,8 @@ ENGINE = InnoDB;
 -- Table `ifai`.`concepto_catalogo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ifai`.`concepto_catalogo` (
-  `idConcepto` INT NOT NULL COMMENT 'Llave identificadora del concepto',
-  `DESCRIPCION` VARCHAR(50) NOT NULL COMMENT 'Campo que describe el concepto',
+  `idConcepto` INT NOT NULL AUTO_INCREMENT COMMENT 'Llave identificadora del concepto',
+  `CONCEPTO` VARCHAR(50) NOT NULL COMMENT 'Campo que describe el concepto',
   PRIMARY KEY (`idConcepto`))
 ENGINE = InnoDB;
 
@@ -475,8 +475,8 @@ ENGINE = InnoDB;
 -- Table `ifai`.`justificacion_catalogo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ifai`.`justificacion_catalogo` (
-  `idJustificacion` INT NOT NULL COMMENT 'Llave identificadora de la justificacion',
-  `DESCRIPCION` VARCHAR(200) NOT NULL COMMENT 'Campo que describe la justificacion',
+  `idJustificacion` INT NOT NULL AUTO_INCREMENT COMMENT 'Llave identificadora de la justificacion',
+  `JUSTIFICACION` VARCHAR(200) NOT NULL COMMENT 'Campo que describe la justificacion',
   PRIMARY KEY (`idJustificacion`))
 ENGINE = InnoDB;
 
@@ -485,7 +485,7 @@ ENGINE = InnoDB;
 -- Table `ifai`.`gasto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ifai`.`gasto` (
-  `idGasto` INT NOT NULL COMMENT 'Llave identificadora del gasto',
+  `idGasto` INT NOT NULL AUTO_INCREMENT COMMENT 'Llave identificadora del gasto',
   `idViaje` INT NOT NULL COMMENT 'Llave foranea que referencia al id del viaje',
   `FECHA_COMPROBANTE` DATETIME NOT NULL COMMENT 'Campo que describe la fecha en que se expidio el comprobante',
   `idConcepto` INT NOT NULL COMMENT 'Llav foranea que referencia al id del concepto',
