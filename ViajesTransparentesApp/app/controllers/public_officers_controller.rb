@@ -1,5 +1,4 @@
 class PublicOfficersController < ApplicationController
-  before_action :set_public_officer, only: [:show, :edit, :update, :destroy]
   # GET /public_officers
   # GET /public_officers.json
   def index
@@ -15,12 +14,6 @@ class PublicOfficersController < ApplicationController
   # GET /public_officers/1.json
   def show
     @public_officer = PublicOfficer.find(params[:id])
-    @commissions = @public_officer.commissions.all
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @public_officer }
-    end
   end
 
   # GET /public_officers/new

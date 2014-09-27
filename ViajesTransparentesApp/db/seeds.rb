@@ -45,15 +45,15 @@
 ###########################################
 #
 ########################## TIPO PERSONAL ###########################################
-#sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
-# stat_tipo_personal = sql_tipo_personal.split(/;/)
-# stat_tipo_personal.pop
-#
-# ActiveRecord::Base.transaction do
-#   stat_tipo_personal.each do |statement|
-#     connection.execute(statement)
-#   end
-# end
+sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
+ stat_tipo_personal = sql_tipo_personal.split(/;/)
+ stat_tipo_personal.pop
+
+ ActiveRecord::Base.transaction do
+   stat_tipo_personal.each do |statement|
+     connection.execute(statement)
+   end
+ end
 ####################################################
 
 ######################### CARGOS ##############################
@@ -105,15 +105,15 @@
  ###############################################################
 #
 ################## LOCALIDAD ###############
- sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
-  stat_localidades = sql_localidades.split(/;/)
-  stat_localidades.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_localidades.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+#  stat_localidades = sql_localidades.split(/;/)
+#  stat_localidades.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_localidades.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 ###############################################
 ##
 ################### JUSTIFICACION ###############
