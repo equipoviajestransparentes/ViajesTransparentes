@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
 INSERT INTO `public_officers` VALUES (1,214,7,'MC03',1,1,1,'LILIANA ',' HERRERA ',' MARTIN',' liliana.herrera@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (2,41,228,'OC1',6,1,1,'ADRIAN ISRAEL',' MANILLA',' AGUIRRE',' adrian.manilla@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (3,228,148,'NC1',6,1,1,'JUAN ARMANDO',' BECERRA',' GUTIERREZ',' armando.becerra@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
@@ -524,9 +520,6 @@ INSERT INTO `public_officers` VALUES (519,11,274,'OC3',16,1,1,'CLAUDIA NALLELI '
 INSERT INTO `public_officers` VALUES (520,274,210,'MB2',1,1,1,'ELIZABETH ',' VICENTE ',' GONZALEZ',' elizabeth.vicente@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (521,210,7,'MC3',1,1,1,'MARINA ALICIA ',' SAN MARTIN ',' REBOLLOSO',' marina.sanmartin@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (522,5,7,'OB02',1,1,1,'GLADYS ',' BAQUEIRO ',' TREJO',' gladys.baqueiro@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
-<<<<<<< HEAD
 INSERT INTO `public_officers` VALUES (523,208,7,'OC002',1,1,1,'MARIBEL',' HERNANDEZ',' RAMIREZ',' maribel.hernandez@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 
-=======
-INSERT INTO `public_officers` VALUES (523,208,7,'OC002',1,1,1,'MARIBEL',' HERNANDEZ',' RAMIREZ',' maribel.hernandez@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
->>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
+

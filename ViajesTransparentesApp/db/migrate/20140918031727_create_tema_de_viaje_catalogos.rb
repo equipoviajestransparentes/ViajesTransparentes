@@ -1,9 +1,7 @@
 class CreateTemaDeViajeCatalogos < ActiveRecord::Migration
   def change
-    create_table :tema_de_viaje_catalogos do |t|
+    create_table :tema_viaje_cats do |t|
       t.string :tema
-
-      t.timestamps
     end
   end
 end

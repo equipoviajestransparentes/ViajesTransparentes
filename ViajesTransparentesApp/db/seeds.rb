@@ -24,7 +24,6 @@
   ############################################
 
  ################# SERVIDOR ###############
-<<<<<<< HEAD
  #sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
  #stat_servidor = sql_servidor.split(/;/)
  #stat_servidor.pop
@@ -35,112 +34,92 @@
  #  end
  #end
  #############################################
-#
-=======
- puts "success1"
-sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
-puts "success2"
-statements = sql_servidor.split(/;/)
-puts "AA"
-puts statements
-puts "BB"
-statements.pop
- puts "success4"
-    statements.each do |statement|
-      puts "success6"
-      ActiveRecord::Base.connection.execute(statement)
-      puts "success7"
-    end
-    puts "success8"
-  ############################################
-
-
->>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
-####################### PUESTO #####################
- sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
- stat_puesto = sql_puesto.split(/;/)
- stat_puesto.pop
  
-  ActiveRecord::Base.transaction do
-    stat_puesto.each do |statement|
-      connection.execute(statement)
-    end
-  end
+####################### PUESTO #####################
+# sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
+# stat_puesto = sql_puesto.split(/;/)
+# stat_puesto.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_puesto.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 ###########################################
 #
 ########################## TIPO PERSONAL ###########################################
-sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
- stat_tipo_personal = sql_tipo_personal.split(/;/)
- stat_tipo_personal.pop
-
- ActiveRecord::Base.transaction do
-   stat_tipo_personal.each do |statement|
-     connection.execute(statement)
-   end
- end
-####################################################
+#sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
+# stat_tipo_personal = sql_tipo_personal.split(/;/)
+# stat_tipo_personal.pop
 #
+# ActiveRecord::Base.transaction do
+#   stat_tipo_personal.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
+####################################################
+
+######################### CARGOS ##############################
+#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+#  stat_cargo = sql_cargo.split(/;/)
+#  stat_cargo.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_cargo.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#####################################################################
+
+######################## MECANISMO ORIGEN #############################################
+# sql_mec_orig = File.read('db/Scripts/ifai_mecanismo_origen_catalogo.sql')
+#  stat_mec_orig = sql_mec_orig.split(/;/)
+#  stat_mec_orig.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_mec_orig.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#####################################################################
+
+########################### TIPO COMISION ###########################################
+# sql_tp_com = File.read('db/Scripts/ifai_tipo_comision_catalogo.sql')
+#  stat_tp_com = sql_tp_com.split(/;/)
+#  stat_tp_com.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_tp_com.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#######################################################################
+
 ################### UNIDAD ADM #######################
- sql_unidad_adm = File.read('db/Scripts/ifai_unidad_administrativa_catalogo.sql')
-  stat_unidad_adm = sql_unidad_adm.split(/;/)
-  stat_unidad_adm.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_unidad_adm.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# sql_unidad_adm = File.read('db/Scripts/ifai_unidad_administrativa_catalogo.sql')
+#  stat_unidad_adm = sql_unidad_adm.split(/;/)
+#  stat_unidad_adm.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_unidad_adm.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
  ###############################################################
 #
-######################### CARGOS ##############################
-  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
-  stat_cargo = sql_cargo.split(/;/)
-  stat_cargo.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_cargo.each do |statement|
-      connection.execute(statement)
-    end
-  end
-#####################################################################
-#
-######################## MECANISMO ORIGEN #############################################
- sql_mec_orig = File.read('db/Scripts/ifai_mecanismo_origen_catalogo.sql')
-  stat_mec_orig = sql_mec_orig.split(/;/)
-  stat_mec_orig.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_mec_orig.each do |statement|
-      connection.execute(statement)
-    end
-  end
-#####################################################################
-#
-########################### TIPO COMISION ###########################################
- sql_tp_com = File.read('db/Scripts/ifai_tipo_comision_catalogo.sql')
-  stat_tp_com = sql_tp_com.split(/;/)
-  stat_tp_com.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_tp_com.each do |statement|
-      connection.execute(statement)
-    end
-  end
-#######################################################################
-#
 ################## LOCALIDAD ###############
- sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
-  stat_localidades = sql_localidades.split(/;/)
-  stat_localidades.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_localidades.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## JUSTIFICACION ###############
+# sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+#  stat_localidades = sql_localidades.split(/;/)
+#  stat_localidades.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_localidades.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### JUSTIFICACION ###############
  sql_justificacion = File.read('db/Scripts/ifai_justificacion_catalogo.sql')
   stat_justificacion = sql_justificacion.split(/;/)
   stat_justificacion.pop
@@ -150,106 +129,104 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
       connection.execute(statement)
     end
   end
-##############################################
+###############################################
+##
+################### CONCEPTO ###############
+# sql_concepto = File.read('db/Scripts/ifai_concepto_catalogo.sql')
+#  stat_concepto = sql_concepto.split(/;/)
+#  stat_concepto.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_concepto.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### MONEDA ###############
+# sql_moneda = File.read('db/Scripts/ifai_moneda_catalogo.sql')
+#  stat_moneda = sql_moneda.split(/;/)
+#  stat_moneda.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_moneda.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### REPRESENTACION ###############
+# sql_representacion = File.read('db/Scripts/ifai_representacion_catalogo.sql')
+#  stat_representacion = sql_representacion.split(/;/)
+#  stat_representacion.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_representacion.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### Tipo pasaje ###############
+# sql_tp_pasaje = File.read('db/Scripts/ifai_tipo_pasaje_catalogo.sql')
+#  stat_tp_pasaje = sql_tp_pasaje.split(/;/)
+#  stat_tp_pasaje.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_tp_pasaje.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### Tipo personal ###############
+##sql_tp_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
+## stat_tp_personal = sql_tp_personal.split(/;/)
+## stat_tp_personal.pop
+##
+## ActiveRecord::Base.transaction do
+##   stat_tp_personal.each do |statement|
+##     connection.execute(statement)
+##   end
+## end
+###############################################
+##
+################### Tipo viaje ###############
+# sql_tp_viaje = File.read('db/Scripts/ifai_tipo_viaje_catalogo.sql')
+#  stat_tp_viaje = sql_tp_viaje.split(/;/)
+#  stat_tp_viaje.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_tp_viaje.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+############################################
 #
-################## CONCEPTO ###############
- sql_concepto = File.read('db/Scripts/ifai_concepto_catalogo.sql')
-  stat_concepto = sql_concepto.split(/;/)
-  stat_concepto.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_concepto.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## MONEDA ###############
- sql_moneda = File.read('db/Scripts/ifai_moneda_catalogo.sql')
-  stat_moneda = sql_moneda.split(/;/)
-  stat_moneda.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_moneda.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## REPRESENTACION ###############
- sql_representacion = File.read('db/Scripts/ifai_representacion_catalogo.sql')
-  stat_representacion = sql_representacion.split(/;/)
-  stat_representacion.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_representacion.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## Tipo pasaje ###############
- sql_tp_pasaje = File.read('db/Scripts/ifai_tipo_pasaje_catalogo.sql')
-  stat_tp_pasaje = sql_tp_pasaje.split(/;/)
-  stat_tp_pasaje.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_tp_pasaje.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## Tipo personal ###############
- sql_tp_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
-  stat_tp_personal = sql_tp_personal.split(/;/)
-  stat_tp_personal.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_tp_personal.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## Tipo viaje ###############
- sql_tp_viaje = File.read('db/Scripts/ifai_tipo_viaje_catalogo.sql')
-  stat_tp_viaje = sql_tp_viaje.split(/;/)
-  stat_tp_viaje.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_tp_viaje.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
+################### Tema viaje ###############
+# sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
+#  stat_tema_viaje = sql_tema_viaje.split(/;/)
+#  stat_tema_viaje.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_tema_viaje.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
+##
+################### viatico ###############
+# sql_viatico = File.read('db/Scripts/ifai_viatico_catalogo.sql')
+#  stat_viatico = sql_viatico.split(/;/)
+#  stat_viatico.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_viatico.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+###############################################
 
-<<<<<<< HEAD
-################## Tema viaje ###############
- sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
-  stat_tema_viaje = sql_tema_viaje.split(/;/)
-  stat_tema_viaje.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_tema_viaje.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-#
-################## viatico ###############
- sql_viatico = File.read('db/Scripts/ifai_viatico_catalogo.sql')
-  stat_viatico = sql_viatico.split(/;/)
-  stat_viatico.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_viatico.each do |statement|
-      connection.execute(statement)
-    end
-  end
-##############################################
-
-=======
 ######################################################################
 #  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
 #  statements = sql_cargo.split(/;$/)
@@ -273,4 +250,3 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
 #    end
 #  end
   ############################################
->>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
