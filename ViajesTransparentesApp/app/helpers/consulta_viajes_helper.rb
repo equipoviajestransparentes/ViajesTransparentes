@@ -1,0 +1,2 @@
+module ConsultaViajesHelper
+end

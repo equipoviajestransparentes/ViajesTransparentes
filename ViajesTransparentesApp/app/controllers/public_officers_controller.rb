@@ -1,4 +1,5 @@
 class PublicOfficersController < ApplicationController
+  before_action :set_public_officer, only: [:show, :edit, :update, :destroy]
   # GET /public_officers
   # GET /public_officers.json
   def index
@@ -80,5 +81,11 @@ class PublicOfficersController < ApplicationController
       format.html { redirect_to public_officers_url }
       format.json { head :no_content }
     end
+  end
+
+  def public_officer_params
+    params.require(:public_officer).permit( :id_cargo, :id_cargo_superior, :id_puesto, :id_unidad_adm, :id_institucion, :id_tipo_personal,
+                                            :nombre, :ap_paterno, :ap_materno, :correo_electronico, :gastos_comprobados_total, :gastos_sin_comprobar_total,
+                                            :costo_total, :viaticos_devueltos_total, :created_at, :updated_at)
   end
 end

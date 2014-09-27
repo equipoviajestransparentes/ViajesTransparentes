@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_action :set_trip, only: [:show, :edit, :update, :destroy]
   # GET /trips
   # GET /trips.json
   def index
@@ -83,5 +84,9 @@ class TripsController < ApplicationController
       format.html { redirect_to trips_url }
       format.json { head :no_content }
     end
+  end
+
+  def trip_params
+    params.require(:trip).permit(:localidad_origen, :localidad_destino, :tipo_viaje, :created_at, :updated_at, :commission_id)
   end
 end

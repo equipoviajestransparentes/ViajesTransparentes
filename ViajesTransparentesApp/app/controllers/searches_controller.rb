@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+  before_action :set_search, only: [:show, :edit, :update, :destroy]
   # GET /searches
   # GET /searches.json
   def index
@@ -81,5 +82,9 @@ class SearchesController < ApplicationController
       format.html { redirect_to searches_url }
       format.json { head :no_content }
     end
+  end
+
+  def search_params
+    params.require(:search).permit(:nombre, :primer_ap, :segundo_ap, :puesto, :min_gasto, :max_gasto, :min_fecha, :max_fecha)
   end
 end
