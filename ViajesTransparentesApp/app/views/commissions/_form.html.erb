@@ -1,4 +1,4 @@
-<%= form_for [@public_officer, @commission] do |f| %>
+<%= form_for [@public_officer, @commission], :html => {:class => "form-inline"} do |f| %>
   <% if @commission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@commission.errors.count, "error") %> prohibited this commission from being saved:</h2>
@@ -10,82 +10,121 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :public_officer_id %><br />
-    <%= f.number_field :public_officer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :id_mec_origen %><br />
-    <%= f.number_field :id_mec_origen %>
-  </div>
-  <div class="field">
-    <%= f.label :id_tipo_comision %><br />
-    <%= f.number_field :id_tipo_comision %>
-  </div>
-  <div class="field">
-    <%= f.label :id_representacion %><br />
-    <%= f.number_field :id_representacion %>
-  </div>
-  <div class="field">
-    <%= f.label :fechainicio_com %><br />
-    <%= f.date_select :fechainicio_com %>
-  </div>
-  <div class="field">
-    <%= f.label :fechafin_com %><br />
-    <%= f.date_select :fechafin_com %>
-  </div>
-  <div class="field">
-    <%= f.label :inst_genera %><br />
-    <%= f.text_field :inst_genera %>
-  </div>
-  <div class="field">
-    <%= f.label :consecutivo %><br />
-    <%= f.number_field :consecutivo %>
-  </div>
-  <div class="field">
-    <%= f.label :acuerdo %><br />
-    <%= f.text_field :acuerdo %>
-  </div>
-  <div class="field">
-    <%= f.label :ur %><br />
-    <%= f.text_field :ur %>
-  </div>
-  <div class="field">
-    <%= f.label :oficio %><br />
-    <%= f.text_field :oficio %>
-  </div>
-  <div class="field">
-    <%= f.label :motivo %><br />
-    <%= f.text_area :motivo %>
-  </div>
-  <div class="field">
-    <%= f.label :comprobado_total %><br />
-    <%= f.text_field :comprobado_total %>
-  </div>
-  <div class="field">
-    <%= f.label :sin_comprobar_total %><br />
-    <%= f.text_field :sin_comprobar_total %>
-  </div>
-  <div class="field">
-    <%= f.label :viatico_devuelto_total %><br />
-    <%= f.text_field :viatico_devuelto_total %>
-  </div>
-    <div class="field">
-    <%= f.label :resultado %><br />
-    <%= f.text_field :resultado %>
-  </div>
-    <div class="field">
-    <%= f.label :observaciones %><br />
-    <%= f.text_field :observaciones %>
-  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
       <div class="field">
-    <%= f.label :estatus_comision %><br />
-    <%= f.text_field :estatus_comision %>
+        <%= f.label :num_comision, "Comisión", :class => "control-label" %><br />
+        <%= f.text_field :num_comision, :placeholder => "Num. comision", :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :id_mec_origen, "Mecanismo Origen", :class => "control-label" %><br />
+        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :id_tipo_comision, "Tipo comisión", :class => "control-label" %><br />
+        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-small'} %>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
+        <%= f.number_field :id_representacion, :class => "form-control input-sm" %>
+      </div>
+    </div>
   </div>
- 
+  <div class="row">
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :fechainicio_com, "Fecha Inicio", :class => "control-label" %><br />
+        <div class="input-group date">
+          <%= f.text_field :fechainicio_com, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+        <script type="text/javascript">
+          $('.input-group.date').datepicker({
+              format: "yyyy-mm-dd",
+              language: "es",
+              autoclose: true,
+              todayHighlight: true
+          });
+        </script>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :fechafin_com, "Fecha Fin", :class => "control-label" %><br />
+                <div class="input-group date">
+          <%= f.text_field :fechafin_com, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+        </div>
+        <script type="text/javascript">
+          $('.input-group.date').datepicker({
+              format: "yyyy-mm-dd",
+              language: "es",
+              autoclose: true,
+              todayHighlight: true
+          });
+        </script>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :inst_genera, "Instancia", :class => "control-label" %><br />
+        <%= f.text_field :inst_genera, :placeholder => "Instancia que genera", :class => "form-control" %>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
+        <%= f.label :ur, "Unidad resp.", :class => "control-label" %><br />
+        <%= f.text_field :ur, :placeholder => "UR", :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :consecutivo, :class => "control-label" %><br />
+        <%= f.number_field :consecutivo, :placeholder => "Consecutivo", :class => "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :acuerdo, :class => "control-label" %><br />
+        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :oficio, :class => "control-label" %><br />
+        <%= f.text_field :oficio, :placeholder => "Oficio", :class => "form-control" %>
+      </div>
+    </div>
+  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :motivo, :class => "control-label" %><br />
+        <%= f.text_area :motivo, :class => "form-control input-sm" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :resultado, :class => "control-label" %><br />
+        <%= f.text_area :resultado, :class => "form-control input-sm" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :observaciones, :class => "control-label" %><br />
+        <%= f.text_area :observaciones, :class => "form-control input-sm" %>
+      </div>
+    </div>
   </div>
+    <div class="actions">
+      <%= f.submit "Guardar", :class => 'btn btn-primary' %>
+    </div>
 <% end %>

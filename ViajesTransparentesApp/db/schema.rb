@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140927015628) do
   add_index "ciudadanos", ["id_correo"], name: "index_ciudadanos_on_id_correo", unique: true
 
   create_table "commissions", force: true do |t|
+    t.integer  "num_comision"
     t.integer  "id_mec_origen"
     t.integer  "id_tipo_comision"
     t.integer  "id_representacion"
@@ -147,7 +148,6 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.string "ciudad"
     t.string "latitud_ciudad"
     t.string "longitud_ciudad"
-    t.string "zona"
   end
 
   create_table "mecanismo_origen_catalogos", force: true do |t|
@@ -199,7 +199,7 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.date    "max_fecha"
   end
 
-  create_table "tema_viaje_cats", force: true do |t|
+  create_table "tema_de_viaje_catalogos", force: true do |t|
     t.string "tema"
   end
 

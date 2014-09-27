@@ -42,11 +42,12 @@ class CommissionsController < ApplicationController
   # POST /commissions
   # POST /commissions.json
   def create
-    @commission = Commission.new(params[:commission])
+    @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commission = @public_officer.commissions.new(commission_params)
 
     respond_to do |format|
       if @commission.save
-        format.html { redirect_to @commission, notice: 'Commission was successfully created.' }
+        format.html { redirect_to new_public_officer_commission_trip_path(@public_officer, @commission), notice: 'Commission was successfully created.' }
         format.json { render json: @commission, status: :created, location: @commission }
       else
         format.html { render action: "new" }
