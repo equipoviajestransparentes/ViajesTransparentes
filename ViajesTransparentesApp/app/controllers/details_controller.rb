@@ -1,4 +1,5 @@
 class DetailsController < ApplicationController
+  before_action :set_detail, only: [:show, :edit, :update, :destroy]
   # GET /details
   # GET /details.json
   def index
@@ -79,5 +80,12 @@ class DetailsController < ApplicationController
       format.html { redirect_to details_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def detail_params
+    params.require(:detail).permit( :trip_id, :evento, :url_evento, :fechainicio_part, :fechafin_part, :antecedente, :actividad, :contribucion_ifai, 
+                                    :url_comunicado, :cubre_pasaje, :tipo_pasaje, :inst_hospedaje, :hotel, :fechainicio_hotel, :fechafin_hotel, :created_at,
+                                    :updated_at, :id_tema_viaje, :latitud_origen, :longitud_origen, :latitud_destino, :longitud_destino)
   end
 end

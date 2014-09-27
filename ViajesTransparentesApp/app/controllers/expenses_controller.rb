@@ -1,4 +1,5 @@
 class ExpensesController < ApplicationController
+  before_action :set_expense, only: [:show, :edit, :update, :destroy]
   # GET /expenses
   # GET /expenses.json
   def index
@@ -79,5 +80,11 @@ class ExpensesController < ApplicationController
       format.html { redirect_to expenses_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def expense_params
+    params.require(:expense).permit(:trip_id, :id_moneda, :gasto_pasaje, :gasto_viatico, :costo_hotel, :comprobado, :sin_comprobar, :viatico_devuelto
+                                    , :tarifa_diaria, :created_at, :updated_at)
   end
 end

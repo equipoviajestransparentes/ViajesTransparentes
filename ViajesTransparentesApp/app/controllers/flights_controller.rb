@@ -1,4 +1,5 @@
 class FlightsController < ApplicationController
+  before_action :set_flight, only: [:show, :edit, :update, :destroy]
   # GET /flights
   # GET /flights.json
   def index
@@ -79,5 +80,9 @@ class FlightsController < ApplicationController
       format.html { redirect_to flights_url }
       format.json { head :no_content }
     end
+  end
+
+  def flight_params
+    params.require(:flight).permit(:detail_id, :vuelo_origen, :vuelo_regreso, :linea_origen, :linea_regreso, :created_at, :updated_at)
   end
 end

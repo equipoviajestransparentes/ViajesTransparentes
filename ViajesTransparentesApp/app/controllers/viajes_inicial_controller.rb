@@ -1,4 +1,5 @@
 class ViajesInicialController < ApplicationController
+	before_action :set_viaje_inicial, only: [:show, :edit, :update, :destroy]
   def index
   	@mes_antes = Date.today - 1.month
   	@estatus_liberado = "L"

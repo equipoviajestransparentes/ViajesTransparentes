@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140927015628) do
+=======
+ActiveRecord::Schema.define(version: 20140926141051) do
+>>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -56,8 +60,19 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.text     "observaciones"
   end
 
+<<<<<<< HEAD
   create_table "concepto_catalogos", force: true do |t|
     t.string "concepto"
+=======
+  create_table "consulta_viajes", force: true do |t|
+    t.date     "fecha_inicio"
+    t.date     "fecha_fin"
+    t.integer  "public_officer_id"
+    t.decimal  "min_precio"
+    t.decimal  "max_precio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
   end
 
   create_table "details", force: true do |t|

@@ -1,4 +1,5 @@
 class CommissionsController < ApplicationController
+  before_action :set_comission, only: [:show, :edit, :update, :destroy]
   # GET /commissions
   # GET /commissions.json
   def index
@@ -81,4 +82,11 @@ class CommissionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def commission_params
+    params.require(:commission).permit(:id_mec_origen, :id_tipo_comision, :id_representacion, :fechainicio_com, :fechafin_com, :inst_genera,
+                                       :ur, :consecutivo, :acuerdo, :oficio, :motivo, :comprobado_total, :sin_comprobar_total, :viatico_devuelto_total,
+                                       :estatus_comision, :created_at, :updated_at, :public_officer_id, :resultado, :observaciones)
+  end
+
 end

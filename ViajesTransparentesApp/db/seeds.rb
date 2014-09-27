@@ -6,8 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  connection = ActiveRecord::Base.connection
- 
+
+  
+  
+
+
   ################# INSTITUCION ###############
 #	sql_institucion_catalogo = File.read('db/Scripts/ifai_institucion_catalogo.sql')
 #	statements = sql_institucion_catalogo.split(/;/)
@@ -21,6 +24,7 @@
   ############################################
 
  ################# SERVIDOR ###############
+<<<<<<< HEAD
  #sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
  #stat_servidor = sql_servidor.split(/;/)
  #stat_servidor.pop
@@ -32,6 +36,26 @@
  #end
  #############################################
 #
+=======
+ puts "success1"
+sql_servidor = File.read('db/Scripts/ifai_servidor_publico.sql')
+puts "success2"
+statements = sql_servidor.split(/;/)
+puts "AA"
+puts statements
+puts "BB"
+statements.pop
+ puts "success4"
+    statements.each do |statement|
+      puts "success6"
+      ActiveRecord::Base.connection.execute(statement)
+      puts "success7"
+    end
+    puts "success8"
+  ############################################
+
+
+>>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e
 ####################### PUESTO #####################
  sql_puesto = File.read('db/Scripts/ifai_puesto_catalogo.sql')
  stat_puesto = sql_puesto.split(/;/)
@@ -200,6 +224,7 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
   end
 ##############################################
 
+<<<<<<< HEAD
 ################## Tema viaje ###############
  sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
   stat_tema_viaje = sql_tema_viaje.split(/;/)
@@ -224,3 +249,28 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
   end
 ##############################################
 
+=======
+######################################################################
+#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
+#  statements = sql_cargo.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#########################################################################
+
+# ################# SERVIDOR ###############
+#  sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+# statements = sql_localidades.split(/;$/)
+#  statements.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    statements.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+  ############################################
+>>>>>>> 4207c6a6351bb37238d72e344c05eecb28692b8e

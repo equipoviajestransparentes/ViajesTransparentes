@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @consulta_viaje.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Fecha fin:</strong>
+  <%= @consulta_viaje.fecha_fin %>
+</p>
+
+<p>
+  <strong>Public officer:</strong>
+  <%= @consulta_viaje.public_officer_id %>
+</p>
+
+<p>
+  <strong>Min precio:</strong>
+  <%= @consulta_viaje.min_precio %>
+</p>
+
+<p>
+  <strong>Max precio:</strong>
+  <%= @consulta_viaje.max_precio %>
+</p>
+
+<%= link_to 'Edit', edit_consulta_viaje_path(@consulta_viaje) %> |
+<%= link_to 'Back', consulta_viajes_path %>

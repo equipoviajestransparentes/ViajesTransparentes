@@ -1,11 +1,17 @@
 ViajesTransparentesApp::Application.routes.draw do
 
+  resources :consulta_viajes
+
   get "viajes_inicial/show"
+
 
   resources :viajes_inicial
 
   resources :searches
 
+  resources :public_officers
+  root :to => 'public_officers#index'
+  
   resources :public_officers do
     resources :commissions do 
       resources :trips do
