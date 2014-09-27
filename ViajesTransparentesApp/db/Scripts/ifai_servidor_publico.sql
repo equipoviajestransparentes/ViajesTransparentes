@@ -521,3 +521,5 @@ INSERT INTO `public_officers` VALUES (520,274,210,'MB2',1,1,1,'ELIZABETH ',' VIC
 INSERT INTO `public_officers` VALUES (521,210,7,'MC3',1,1,1,'MARINA ALICIA ',' SAN MARTIN ',' REBOLLOSO',' marina.sanmartin@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (522,5,7,'OB02',1,1,1,'GLADYS ',' BAQUEIRO ',' TREJO',' gladys.baqueiro@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
 INSERT INTO `public_officers` VALUES (523,208,7,'OC002',1,1,1,'MARIBEL',' HERNANDEZ',' RAMIREZ',' maribel.hernandez@ifai.org.mx',0.00,0.00,0.00,0.00,'2014-01-01 00:00:00','2014-01-01 00:00:00');
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926141051) do
+ActiveRecord::Schema.define(version: 20140927015628) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20140926141051) do
   create_table "cargos", force: true do |t|
     t.string "cargo"
   end
+
+  create_table "ciudadanos", id: false, force: true do |t|
+    t.string   "id_correo",  null: false
+    t.string   "nombre"
+    t.string   "ap_paterno"
+    t.string   "ap_materno"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ciudadanos", ["id_correo"], name: "index_ciudadanos_on_id_correo", unique: true
 
   create_table "commissions", force: true do |t|
     t.integer  "id_mec_origen"
@@ -43,6 +54,10 @@ ActiveRecord::Schema.define(version: 20140926141051) do
     t.integer  "public_officer_id"
     t.text     "resultado"
     t.text     "observaciones"
+  end
+
+  create_table "concepto_catalogos", force: true do |t|
+    t.string "concepto"
   end
 
   create_table "consulta_viajes", force: true do |t|
@@ -118,6 +133,10 @@ ActiveRecord::Schema.define(version: 20140926141051) do
     t.string "institucion"
   end
 
+  create_table "justificacion_catalogos", force: true do |t|
+    t.string "justificacion"
+  end
+
   create_table "localidades_catalogos", force: true do |t|
     t.string "pais"
     t.string "latitud_pais"
@@ -128,6 +147,7 @@ ActiveRecord::Schema.define(version: 20140926141051) do
     t.string "ciudad"
     t.string "latitud_ciudad"
     t.string "longitud_ciudad"
+    t.string "zona"
   end
 
   create_table "mecanismo_origen_catalogos", force: true do |t|
@@ -164,6 +184,10 @@ ActiveRecord::Schema.define(version: 20140926141051) do
 
   add_index "puestos", ["id"], name: "index_puestos_on_id", unique: true
 
+  create_table "representacion_catalogos", force: true do |t|
+    t.string "tp_representacion"
+  end
+
   create_table "searches", force: true do |t|
     t.string  "nombre"
     t.string  "primer_ap"
@@ -175,7 +199,7 @@ ActiveRecord::Schema.define(version: 20140926141051) do
     t.date    "max_fecha"
   end
 
-  create_table "tema_de_viaje_catalogos", force: true do |t|
+  create_table "tema_viaje_cats", force: true do |t|
     t.string "tema"
   end
 
@@ -206,6 +230,14 @@ ActiveRecord::Schema.define(version: 20140926141051) do
 
   create_table "unidad_adms", force: true do |t|
     t.string "unidad_adm"
+  end
+
+  create_table "viatico_catalogos", force: true do |t|
+    t.string  "id_puesto"
+    t.integer "id_tpviaje"
+    t.string  "zona"
+    t.decimal "tarifa_diaria"
+    t.integer "id_moneda"
   end
 
 end

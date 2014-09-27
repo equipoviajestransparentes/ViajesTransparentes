@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_puesto: MyString
+  id_tpviaje: 1
+  zona: MyString
+  tarifa_diaria: 9.99
+  id_moneda: 1
+
+two:
+  id_puesto: MyString
+  id_tpviaje: 1
+  zona: MyString
+  tarifa_diaria: 9.99
+  id_moneda: 1
