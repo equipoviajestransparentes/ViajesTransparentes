@@ -1,7 +1,0 @@
-INSERT INTO `public_officers` VALUES (1,214,7,'MC03',1,1,1,'LILIANA ',' HERRERA ',' MARTIN',' liliana.herrera@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (2,41,228,'OC1',6,1,1,'ADRIAN ISRAEL',' MANILLA',' AGUIRRE',' adrian.manilla@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (3,228,148,'NC1',6,1,1,'JUAN ARMANDO',' BECERRA',' GUTIERREZ',' armando.becerra@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (4,148,182,'MC2',6,1,1,'MELISSA',' HIGUERA',' PEREZ',' melissa.higuera@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (5,52,232,'OC1',6,1,1,'AGUSTIN',' GRANADOS',' TZINTZUN',' agustin.granados@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (6,232,150,'NC1',6,1,1,'MARIA TERESA',' LAGUNES',' MENDOZA',' teresa.lagunes@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");
-INSERT INTO `public_officers` VALUES (7,82,263,'OC1',6,1,1,'OMAR',' MARTINEZ',' COSAIN',' omar.martinez@ifai.org.mx',0,0,0,0,"2014-09-09 16:16:16","2014-09-09 16:16:16");

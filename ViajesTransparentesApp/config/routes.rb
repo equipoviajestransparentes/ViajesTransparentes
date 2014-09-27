@@ -2,7 +2,7 @@ ViajesTransparentesApp::Application.routes.draw do
 
   resources :consulta_viajes
 
-  get "viajes_inicial/show"
+  get "static_pages/consulta_viajes_ifai"
 
 
   resources :viajes_inicial
