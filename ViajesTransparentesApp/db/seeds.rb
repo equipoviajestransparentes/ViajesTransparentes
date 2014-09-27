@@ -6,11 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+  connection = ActiveRecord::Base.connection
   
-  
-
-
   ################# INSTITUCION ###############
 #	sql_institucion_catalogo = File.read('db/Scripts/ifai_institucion_catalogo.sql')
 #	statements = sql_institucion_catalogo.split(/;/)
@@ -108,27 +105,27 @@
  ###############################################################
 #
 ################## LOCALIDAD ###############
-# sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
-#  stat_localidades = sql_localidades.split(/;/)
-#  stat_localidades.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    stat_localidades.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
-###############################################
-##
-################### JUSTIFICACION ###############
- sql_justificacion = File.read('db/Scripts/ifai_justificacion_catalogo.sql')
-  stat_justificacion = sql_justificacion.split(/;/)
-  stat_justificacion.pop
+ sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+  stat_localidades = sql_localidades.split(/;/)
+  stat_localidades.pop
  
   ActiveRecord::Base.transaction do
-    stat_justificacion.each do |statement|
+    stat_localidades.each do |statement|
       connection.execute(statement)
     end
   end
+###############################################
+##
+################### JUSTIFICACION ###############
+# sql_justificacion = File.read('db/Scripts/ifai_justificacion_catalogo.sql')
+#  stat_justificacion = sql_justificacion.split(/;/)
+#  stat_justificacion.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_justificacion.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 ###############################################
 ##
 ################### CONCEPTO ###############
@@ -144,15 +141,15 @@
 ###############################################
 ##
 ################### MONEDA ###############
-# sql_moneda = File.read('db/Scripts/ifai_moneda_catalogo.sql')
-#  stat_moneda = sql_moneda.split(/;/)
-#  stat_moneda.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    stat_moneda.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
+#sql_moneda = File.read('db/Scripts/ifai_moneda_catalogo.sql')
+# stat_moneda = sql_moneda.split(/;/)
+# stat_moneda.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_moneda.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
 ###############################################
 ##
 ################### REPRESENTACION ###############
@@ -177,18 +174,6 @@
 #      connection.execute(statement)
 #    end
 #  end
-###############################################
-##
-################### Tipo personal ###############
-##sql_tp_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
-## stat_tp_personal = sql_tp_personal.split(/;/)
-## stat_tp_personal.pop
-##
-## ActiveRecord::Base.transaction do
-##   stat_tp_personal.each do |statement|
-##     connection.execute(statement)
-##   end
-## end
 ###############################################
 ##
 ################### Tipo viaje ###############
@@ -226,27 +211,3 @@
 #    end
 #  end
 ###############################################
-
-######################################################################
-#  sql_cargo = File.read('db/Scripts/ifai_cargo_catalogo.sql')
-#  statements = sql_cargo.split(/;$/)
-#  statements.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    statements.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
-#########################################################################
-
-# ################# SERVIDOR ###############
-#  sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
-# statements = sql_localidades.split(/;$/)
-#  statements.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    statements.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
-  ############################################
