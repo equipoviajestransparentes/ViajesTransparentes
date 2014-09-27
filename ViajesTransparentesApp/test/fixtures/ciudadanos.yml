@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_correo: MyString
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
+
+two:
+  id_correo: MyString
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
