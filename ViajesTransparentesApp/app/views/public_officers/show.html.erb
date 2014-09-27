@@ -2,11 +2,7 @@
 
   <div>
     <b>Nombre:</b>
-    <%= @public_officer.nombre + ' ' + @public_officer.ap_paterno + ' ' + @public_officer.ap_paterno %>
-  </div>
-  <div>
-    <b>Gastos comprobados total:</b>
-    <%= @public_officer.gastos_comprobados_total %>
+    <%= @public_officer.full_name %>
   </div>
   <div>
     <b>Cargo:</b>
@@ -47,8 +43,4 @@
   <div>
     <b>Viaticos devueltos total:</b>
     <%= @public_officer.viaticos_devueltos_total %>
-  </div>
-
-  <div>
-    
   </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927015628) do
+ActiveRecord::Schema.define(version: 20140927235258) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140927015628) do
   add_index "ciudadanos", ["id_correo"], name: "index_ciudadanos_on_id_correo", unique: true
 
   create_table "commissions", force: true do |t|
-    t.integer  "num_comision"
     t.integer  "id_mec_origen"
     t.integer  "id_tipo_comision"
     t.integer  "id_representacion"
@@ -148,6 +147,7 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.string "ciudad"
     t.string "latitud_ciudad"
     t.string "longitud_ciudad"
+    t.string "zona"
   end
 
   create_table "mecanismo_origen_catalogos", force: true do |t|
@@ -199,10 +199,6 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.date    "max_fecha"
   end
 
-  create_table "tema_de_viaje_catalogos", force: true do |t|
-    t.string "tema"
-  end
-
   create_table "tipo_comisions", force: true do |t|
     t.string "tipo_com"
   end
@@ -226,6 +222,10 @@ ActiveRecord::Schema.define(version: 20140927015628) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "commission_id"
+  end
+
+  create_table "tviaje_cats", force: true do |t|
+    t.string "tema"
   end
 
   create_table "unidad_adms", force: true do |t|

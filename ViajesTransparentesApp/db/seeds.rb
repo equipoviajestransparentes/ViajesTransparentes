@@ -102,18 +102,18 @@
 #      connection.execute(statement)
 #    end
 #  end
- ###############################################################
+# ###############################################################
 #
 ################## LOCALIDAD ###############
- sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
-  stat_localidades = sql_localidades.split(/;/)
-  stat_localidades.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_localidades.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
+#  stat_localidades = sql_localidades.split(/;/)
+#  stat_localidades.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_localidades.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 ###############################################
 ##
 ################### JUSTIFICACION ###############
@@ -189,15 +189,15 @@
 ############################################
 #
 ################### Tema viaje ###############
-# sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
-#  stat_tema_viaje = sql_tema_viaje.split(/;/)
-#  stat_tema_viaje.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    stat_tema_viaje.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
+#sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
+# stat_tema_viaje = sql_tema_viaje.split(/;/)
+# stat_tema_viaje.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_tema_viaje.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
 ###############################################
 ##
 ################### viatico ###############
@@ -211,3 +211,6 @@
 #    end
 #  end
 ###############################################
+
+#Despues de cargar los catalogos se deben cargar los registros
+###############################################Comision, detalle viaje, viaje, vuelo, costo, gasto#########################
