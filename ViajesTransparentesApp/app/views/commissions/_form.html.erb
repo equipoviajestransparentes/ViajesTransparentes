@@ -26,12 +26,13 @@
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_tipo_comision, "Tipo comisión", :class => "control-label" %><br />
-        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-small'} %>
+        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
       </div>
     </div>
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
+        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
         <%= f.number_field :id_representacion, :class => "form-control input-sm" %>
       </div>
     </div>
