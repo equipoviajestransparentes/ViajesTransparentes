@@ -22,7 +22,7 @@ USE `ifai`;
 --
 
 /*!40000 ALTER TABLE `institucion_catalogo` DISABLE KEYS */;
-INSERT INTO `institucion_catalogo` VALUES (1,' INSTITUTO FEDERAL DE ACCESO A LA INFORMACION Y PROTECCION DE DATOS ORGANISMO AUTONOMO en proceso de reestructuraciOn\r');
+INSERT INTO `institucion_catalogo` VALUES (1,' INSTITUTO FEDERAL DE ACCESO A LA INFORMACION Y PROTECCION DE DATOS ORGANISMO AUTONOMO en proceso de reestructuraciOn');
 /*!40000 ALTER TABLE `institucion_catalogo` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

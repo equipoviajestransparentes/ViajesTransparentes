@@ -22,9 +22,9 @@ USE `ifai`;
 --
 
 /*!40000 ALTER TABLE `concepto_catalogo` DISABLE KEYS */;
-INSERT INTO `concepto_catalogo` VALUES (1,'HOSPEDAJE\r');
-INSERT INTO `concepto_catalogo` VALUES (2,'ALIMENTACION\r');
-INSERT INTO `concepto_catalogo` VALUES (3,'TRANSPORTE LOCAL\r');
+INSERT INTO `concepto_catalogo` VALUES (1,'HOSPEDAJE');
+INSERT INTO `concepto_catalogo` VALUES (2,'ALIMENTACION');
+INSERT INTO `concepto_catalogo` VALUES (3,'TRANSPORTE LOCAL');
 /*!40000 ALTER TABLE `concepto_catalogo` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
