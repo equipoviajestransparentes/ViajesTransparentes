@@ -214,3 +214,87 @@
 
 #Despues de cargar los catalogos se deben cargar los registros
 ###############################################Comision, detalle viaje, viaje, vuelo, costo, gasto#########################
+# sql_comision = File.read('db/Scripts/comision.sql')
+#  stat_comision = sql_comision.split(/;/)
+#  stat_comision.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_comision.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+  #############Viaje######
+# sql_Viaje = File.read('db/Scripts/viaje.sql')
+#  stat_Viaje = sql_Viaje.split(/;/)
+#  stat_Viaje.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_Viaje.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+  ###################################################
+  
+  ##################Detalle Viaje###################
+# sql_detViaje = File.read('db/Scripts/detalleviaje.sql')
+# stat_detViaje = sql_detViaje.split(/;/)
+# stat_detViaje.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_detViaje.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
+######################################################
+
+#######################Vuelo##########################
+# sql_vuelo = File.read('db/Scripts/vuelo.sql')
+#  stat_vuelo = sql_vuelo.split(/;/)
+#  stat_vuelo.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_vuelo.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#####################################################
+  
+########################Costo##########################
+# sql_costo = File.read('db/Scripts/costo.sql')
+#  stat_costo = sql_costo.split(/;/)
+#  stat_costo.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_costo.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+######################################################
+
+#########################Gasto########################
+# sql_gasto = File.read('db/Scripts/gasto.sql')
+#  stat_gasto = sql_gasto.split(/;/)
+#  stat_gasto.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_gasto.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+ ##################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

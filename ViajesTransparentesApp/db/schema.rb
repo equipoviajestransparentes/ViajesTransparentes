@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927235258) do
+ActiveRecord::Schema.define(version: 20140928022047) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -70,6 +70,10 @@ ActiveRecord::Schema.define(version: 20140927235258) do
     t.datetime "updated_at"
   end
 
+  create_table "creacion_tviaje_cats", force: true do |t|
+    t.string "tema"
+  end
+
   create_table "details", force: true do |t|
     t.integer  "trip_id"
     t.string   "evento"
@@ -107,6 +111,10 @@ ActiveRecord::Schema.define(version: 20140927235258) do
     t.decimal  "tarifa_diaria"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "gasto_alimento"
+    t.string   "gasto_otro"
+    t.string   "viaticos_total"
+    t.string   "viaticos_faltante"
   end
 
   create_table "flights", force: true do |t|
@@ -115,6 +123,18 @@ ActiveRecord::Schema.define(version: 20140927235258) do
     t.integer  "vuelo_regreso"
     t.integer  "linea_origen"
     t.integer  "linea_regreso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gastos", force: true do |t|
+    t.integer  "trip_id"
+    t.date     "fh_comprobante"
+    t.integer  "id_concepto"
+    t.decimal  "importe"
+    t.integer  "id_moneda"
+    t.string   "existe_comprobante"
+    t.integer  "id_justificacion"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trip_id: 1
+  fh_comprobante: 2014-09-27
+  id_concepto: 1
+  importe: 9.99
+  id_moneda: 1
+  existe_comprobante: 
+  id_justificacion: 1
+
+two:
+  trip_id: 1
+  fh_comprobante: 2014-09-27
+  id_concepto: 1
+  importe: 9.99
+  id_moneda: 1
+  existe_comprobante: 
+  id_justificacion: 1
