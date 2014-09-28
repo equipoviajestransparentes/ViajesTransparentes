@@ -26,6 +26,7 @@ class CommissionsController < ApplicationController
   # GET /commissions/new.json
   def new
     @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commissions = @public_officer.commissions.all
     @commission = @public_officer.commissions.new
 
     respond_to do |format|
@@ -44,6 +45,7 @@ class CommissionsController < ApplicationController
   def create
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.new(commission_params)
+    @commission.estatus_comision = "L"
 
     respond_to do |format|
       if @commission.save

@@ -1,0 +1,17 @@
+<h4>Comisiones Creadas</h4>
+
+<table>
+  <tr>
+    <th>Comisión</th>
+    <th>Inicio</th>
+    <th>Fin</th>
+  </tr>
+
+<% @commissions.each do |commission| %>
+  <tr>
+    <td><%= commission.num_comision %></td>
+    <td><%= commission.fechainicio_com %></td>
+    <td><%= commission.fechafin_com %></td>
+  </tr>
+<% end %>
+</table>

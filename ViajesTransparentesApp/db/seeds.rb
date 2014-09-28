@@ -45,15 +45,15 @@
 ###########################################
 #
 ########################## TIPO PERSONAL ###########################################
-sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
- stat_tipo_personal = sql_tipo_personal.split(/;/)
- stat_tipo_personal.pop
-
- ActiveRecord::Base.transaction do
-   stat_tipo_personal.each do |statement|
-     connection.execute(statement)
-   end
- end
+#sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
+# stat_tipo_personal = sql_tipo_personal.split(/;/)
+# stat_tipo_personal.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_tipo_personal.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
 ####################################################
 
 ######################### CARGOS ##############################
@@ -102,7 +102,7 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
 #      connection.execute(statement)
 #    end
 #  end
- ###############################################################
+# ###############################################################
 #
 ################## LOCALIDAD ###############
 # sql_localidades = File.read('db/Scripts/ifai_localidades_catalogo.sql')
@@ -189,15 +189,15 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
 ############################################
 #
 ################### Tema viaje ###############
-# sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
-#  stat_tema_viaje = sql_tema_viaje.split(/;/)
-#  stat_tema_viaje.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    stat_tema_viaje.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
+#sql_tema_viaje = File.read('db/Scripts/ifai_tema_de_viaje_catalogo.sql')
+# stat_tema_viaje = sql_tema_viaje.split(/;/)
+# stat_tema_viaje.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_tema_viaje.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
 ###############################################
 ##
 ################### viatico ###############
@@ -211,3 +211,90 @@ sql_tipo_personal = File.read('db/Scripts/ifai_tipo_personal_catalogo.sql')
 #    end
 #  end
 ###############################################
+
+#Despues de cargar los catalogos se deben cargar los registros
+###############################################Comision, detalle viaje, viaje, vuelo, costo, gasto#########################
+# sql_comision = File.read('db/Scripts/comision.sql')
+#  stat_comision = sql_comision.split(/;/)
+#  stat_comision.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_comision.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+  #############Viaje######
+# sql_Viaje = File.read('db/Scripts/viaje.sql')
+#  stat_Viaje = sql_Viaje.split(/;/)
+#  stat_Viaje.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_Viaje.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+  ###################################################
+  
+  ##################Detalle Viaje###################
+# sql_detViaje = File.read('db/Scripts/detalleviaje.sql')
+# stat_detViaje = sql_detViaje.split(/;/)
+# stat_detViaje.pop
+#
+# ActiveRecord::Base.transaction do
+#   stat_detViaje.each do |statement|
+#     connection.execute(statement)
+#   end
+# end
+######################################################
+
+#######################Vuelo##########################
+# sql_vuelo = File.read('db/Scripts/vuelo.sql')
+#  stat_vuelo = sql_vuelo.split(/;/)
+#  stat_vuelo.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_vuelo.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+#####################################################
+  
+########################Costo##########################
+# sql_costo = File.read('db/Scripts/costo.sql')
+#  stat_costo = sql_costo.split(/;/)
+#  stat_costo.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_costo.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+######################################################
+
+#########################Gasto########################
+# sql_gasto = File.read('db/Scripts/gasto.sql')
+#  stat_gasto = sql_gasto.split(/;/)
+#  stat_gasto.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_gasto.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
+ ##################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

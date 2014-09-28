@@ -1,0 +1,21 @@
+<h1>Listing public_officers</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Institución</th>
+    <th>Cargo</th>
+    <th>Puesto</th>
+    <th>Gastado Total</th>
+  </tr>
+
+<% @public_officers.each do |public_officer| %>
+  <tr>
+    <td><%= link_to public_officer.nombre + ' ' + public_officer.ap_paterno + ' ' + public_officer.ap_materno, public_officer_path(public_officer.id) %> </td>
+    <td><%= public_officer.id_institucion %></td>
+    <td><%= public_officer.id_cargo %></td>
+    <td><%= public_officer.id_puesto %></td>
+    <td><%= public_officer.costo_total %></td>
+  </tr>
+<% end %>
+</table>

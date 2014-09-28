@@ -22,6 +22,7 @@ class ViajesInicialController < ApplicationController
 		@list_slides ||=  []
 		@list_slides << hash_overview 
 
+
 	  	@commissions.each do |commission|
 			@trips = commission.trips.all
 			@public_officer = PublicOfficer.find(commission.public_officer_id)
@@ -51,8 +52,10 @@ class ViajesInicialController < ApplicationController
 			'storymap' => { 
 				'slides' => @list_slides
 			},
-			'width' => 900
+			'width' => 100, 'height' => 300
 		}
+		
+		puts hash_storymap.to_json		
 
   		render :json => hash_storymap
   	end

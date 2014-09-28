@@ -26,6 +26,7 @@ class TripsController < ApplicationController
   # GET /trips/new.json
   def new
     @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commissions = @public_officer.commissions.all
     @commission = @public_officer.commissions.find(params[:commission_id])
     @trip = @commission.trips.new
 
