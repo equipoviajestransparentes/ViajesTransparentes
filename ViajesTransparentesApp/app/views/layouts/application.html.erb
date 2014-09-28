@@ -5,27 +5,14 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="http://localhost:3000/">Viajes Transparentes</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">          
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Administrar Cuenta</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Cerrar Sesión</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+	<div class="row-fluid" align="center">
+		<div class=".col-md-9">
+			<%= image_tag 'IFAI_logo.png' %><%= image_tag "cabecera.png", width: "60%", height: "90px"  %>
 		</div>
-	</nav>
+	</div>
 	<div class="container">
 		<%= yield %>
 	</div>
