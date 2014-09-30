@@ -13,35 +13,35 @@
   <div class="row">
     <div class="form-group col-md-3">
       <div class="field">
-        <%= f.label :num_comision, "Comisión", :class => "control-label" %><br />
-        <%= f.text_field :num_comision, :placeholder => "Num. comision", :class => "form-control" %>
+        <%= f.label :consecutivo, "Comisión", :class => "control-label" %><br />
+        <%= f.text_field :consecutivo, :placeholder => "Num. comision", :class => "form-control input-sm" %>
       </div>
     </div>
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_mec_origen, "Mecanismo Origen", :class => "control-label" %><br />
-        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
       </div>
     </div>
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_tipo_comision, "Tipo comisión", :class => "control-label" %><br />
-        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
-        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-3">
       <div class="field">
+        <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
+        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <div class="field">
         <%= f.label :fechainicio_com, "Fecha Inicio", :class => "control-label" %><br />
         <div class="input-group date">
-          <%= f.text_field :fechainicio_com, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <%= f.text_field :fechainicio_com, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
         </div>
         <script type="text/javascript">
           $('.input-group.date').datepicker({
@@ -57,7 +57,7 @@
       <div class="field">
         <%= f.label :fechafin_com, "Fecha Fin", :class => "control-label" %><br />
                 <div class="input-group date">
-          <%= f.text_field :fechafin_com, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          <%= f.text_field :fechafin_com, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
         </div>
         <script type="text/javascript">
           $('.input-group.date').datepicker({
@@ -69,41 +69,41 @@
         </script>
       </div>
     </div>
-    <div class="form-group col-md-3">
+  </div>
+  <div class="row">
+	 <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :inst_genera, "Instancia", :class => "control-label" %><br />
-        <%= f.text_field :inst_genera, :placeholder => "Instancia que genera", :class => "form-control" %>
+        <%= f.text_field :inst_genera, :placeholder => "Instancia que genera", :class => "form-control input-sm" %>
       </div>
     </div>
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :ur, "Unidad resp.", :class => "control-label" %><br />
-        <%= f.text_field :ur, :placeholder => "UR", :class => "form-control" %>
+        <%= f.text_field :ur, :placeholder => "UR", :class => "form-control input-sm" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="field">
+        <%= f.label :consecutivo, :class => "control-label" %><br />
+        <%= f.number_field :consecutivo, :placeholder => "Consecutivo", :class => "form-control input-sm" %>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :consecutivo, :class => "control-label" %><br />
-        <%= f.number_field :consecutivo, :placeholder => "Consecutivo", :class => "form-control" %>
-      </div>
-    </div>
-    <div class="col-md-4">
+   <div class="col-md-4">
       <div class="field">
         <%= f.label :acuerdo, :class => "control-label" %><br />
-        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control" %>
+        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control input-sm" %>
       </div>
     </div>
     <div class="col-md-4">
       <div class="field">
         <%= f.label :oficio, :class => "control-label" %><br />
-        <%= f.text_field :oficio, :placeholder => "Oficio", :class => "form-control" %>
+        <%= f.text_field :oficio, :placeholder => "Oficio", :class => "form-control input-sm" %>
       </div>
     </div>
   </div>
-
-
   <div class="row">
     <div class="col-md-4">
       <div class="field">
@@ -124,7 +124,7 @@
       </div>
     </div>
   </div>
-    <div class="actions">
+    <div class="actions col-md-offset-10">
       <%= f.submit "Guardar", :class => 'btn btn-primary' %>
     </div>
 <% end %>
