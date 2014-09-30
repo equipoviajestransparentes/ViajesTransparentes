@@ -1,21 +1,40 @@
-<h1>Listing public_officers</h1>
 
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Institución</th>
-    <th>Cargo</th>
-    <th>Puesto</th>
-    <th>Gastado Total</th>
-  </tr>
-
-<% @public_officers.each do |public_officer| %>
-  <tr>
-    <td><%= link_to public_officer.nombre + ' ' + public_officer.ap_paterno + ' ' + public_officer.ap_materno, public_officer_path(public_officer.id) %> </td>
-    <td><%= public_officer.id_institucion %></td>
-    <td><%= public_officer.id_cargo %></td>
-    <td><%= public_officer.id_puesto %></td>
-    <td><%= public_officer.costo_total %></td>
-  </tr>
+<% i = 1 %>
+<% @public_officers.each do |public_officer| 
+	if i%3 ==0 %>
+	<div class="row">
 <% end %>
-</table>
+	<div class="panel panel-info col-md-4">
+		<div class="panel-heading" align="center">
+			<%= link_to public_officer.nombre + ' ' + public_officer.ap_paterno + ' ' + public_officer.ap_materno, public_officer_path(public_officer.id) %> 
+		</div>
+		<div class="panel-body">
+			<%= image_tag "defaultServidor.png", width: "150px", height: "150px"  %>
+			<div class="row-fluid">
+				<label class="control-label">Institucion</label>
+				<span class="row"><%= public_officer.desc_institucion %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label">Cargo</label>
+				<span class="row"><%= public_officer.desc_cargo %></span>
+
+			</div>
+			<div class="row-fluid" >
+
+				<label class="control-label">Puesto</label>
+				<span class="row"><%= Puesto.where(:id => public_officer.id_puesto).first.puesto %></span>
+
+			</div>
+			<div class="row-fluid" >
+
+				<label class="control-label">Gastos Totales</label>
+				<span class="row"> <%= public_officer.costo_total %></span>
+
+			</div>
+		</div>
+	</div>
+<% 	if i%3 ==0 %>
+	</div>
+<% end %>
+<% i = i +1 %>
+<% end %>

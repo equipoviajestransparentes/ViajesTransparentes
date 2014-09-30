@@ -14,13 +14,13 @@
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :consecutivo, "Comisión", :class => "control-label" %><br />
-        <%= f.text_field :consecutivo, :placeholder => "Num. comision", :class => "form-control input-sm" %>
+        <%= f.text_field :consecutivo, :placeholder => "Num. comision", :class => "form-control input-sm", :id=>"comision" %>
       </div>
     </div>
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_mec_origen, "Mecanismo Origen", :class => "control-label" %><br />
-        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
       </div>
     </div>
     <div class="form-group col-md-3">
@@ -34,7 +34,7 @@
     <div class="form-group col-md-3">
       <div class="field">
         <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
-        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
       </div>
     </div>
     <div class="form-group col-md-3">
@@ -83,20 +83,15 @@
         <%= f.text_field :ur, :placeholder => "UR", :class => "form-control input-sm" %>
       </div>
     </div>
-    <div class="col-md-4">
+       <div class="col-md-4">
       <div class="field">
-        <%= f.label :consecutivo, :class => "control-label" %><br />
-        <%= f.number_field :consecutivo, :placeholder => "Consecutivo", :class => "form-control input-sm" %>
+        <%= f.label :acuerdo, :class => "control-label" %><br />
+        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control input-sm"%>
       </div>
     </div>
   </div>
   <div class="row">
-   <div class="col-md-4">
-      <div class="field">
-        <%= f.label :acuerdo, :class => "control-label" %><br />
-        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control input-sm" %>
-      </div>
-    </div>
+
     <div class="col-md-4">
       <div class="field">
         <%= f.label :oficio, :class => "control-label" %><br />
@@ -114,13 +109,13 @@
     <div class="col-md-4">
       <div class="field">
         <%= f.label :resultado, :class => "control-label" %><br />
-        <%= f.text_area :resultado, :class => "form-control input-sm" %>
+        <%= f.text_area :resultado, :class => "form-control input-sm"%>
       </div>
     </div>
     <div class="col-md-4">
       <div class="field">
         <%= f.label :observaciones, :class => "control-label" %><br />
-        <%= f.text_area :observaciones, :class => "form-control input-sm" %>
+        <%= f.text_area :observaciones, :class => "form-control input-sm"%>
       </div>
     </div>
   </div>

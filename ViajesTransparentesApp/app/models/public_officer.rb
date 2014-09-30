@@ -24,4 +24,5 @@ class PublicOfficer < ActiveRecord::Base
 	def full_name
 		nombre + ' ' + ap_paterno + ' ' + ap_materno
 	end
+	
 end
