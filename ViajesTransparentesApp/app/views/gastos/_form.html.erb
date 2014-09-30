@@ -1,0 +1,41 @@
+<%= form_for [@public_officer, @commission, @trip, @gasto] do |f| %>
+	<% if @gasto.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@gasto.errors.count, "error") %> prohibited this gasto from being saved:</h2>
+
+			<ul>
+			<% @gasto.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="field">
+		<%= f.label :importe %><br />
+		<%= f.text_field :importe %>
+	</div>
+	<div class="field">
+		<%= f.label :id_moneda, "Moneda", :class => "control-label" %><br />
+		<%= f.collection_select :id_moneda, MonedaCatalogo.all, :id, :moneda, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+	</div>
+	<div class="field">
+		<%= f.label :id_concepto, "Concepto", :class => "control-label" %><br />
+		<%= f.collection_select :id_concepto, ConceptoCatalogo.all, :id, :concepto, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+	</div>
+	<div class="field">
+		<%= f.label :existe_comprobante %><br />
+		<%= f.text_field :existe_comprobante %>
+	</div>
+	<div class="field">
+		<%= f.label :id_justificacion, "Justificación", :class => "control-label" %><br />
+		<%= f.collection_select :id_justificacion, JustificacionCatalogo.all, :id, :justificacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
+	</div>
+	<div class="field">
+		<%= f.label :fh_comprobante %><br />
+		<%= f.text_field :fh_comprobante %>
+	</div>
+	
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

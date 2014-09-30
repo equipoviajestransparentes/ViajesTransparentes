@@ -1,57 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  trip_id: 1
-  id_mec_origen: 1
-  inst_genera: MyText
-  ur: MyString
-  tipo_rep: MyString
-  integer: MyString
-  consecutivo: 1
-  acuerdo: MyString
-  oficio: MyString
-  tipo_com: 
-  evento: MyText
-  url_evento: MyText
-  fechainicio_part: 2014-09-12
-  fechafin_part: 2014-09-12
-  antecedente: MyText
-  actividad: MyText
-  contribucion_ifai: MyText
-  url_comunicado: MyText
-  cubre_pasaje: MyString
-  tipo_pasaje: 1
-  inst_hospedaje: MyString
-  hotel: MyString
-  fechainicio_hotel: 2014-09-12
-  fechafin_hotel: 2014-09-12
-  observaciones: MyText
-  detalle_viaje_col: MyString
-
-two:
-  trip_id: 1
-  id_mec_origen: 1
-  inst_genera: MyText
-  ur: MyString
-  tipo_rep: MyString
-  integer: MyString
-  consecutivo: 1
-  acuerdo: MyString
-  oficio: MyString
-  tipo_com: 
-  evento: MyText
-  url_evento: MyText
-  fechainicio_part: 2014-09-12
-  fechafin_part: 2014-09-12
-  antecedente: MyText
-  actividad: MyText
-  contribucion_ifai: MyText
-  url_comunicado: MyText
-  cubre_pasaje: MyString
-  tipo_pasaje: 1
-  inst_hospedaje: MyString
-  hotel: MyString
-  fechainicio_hotel: 2014-09-12
-  fechafin_hotel: 2014-09-12
-  observaciones: MyText
-  detalle_viaje_col: MyString
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value
