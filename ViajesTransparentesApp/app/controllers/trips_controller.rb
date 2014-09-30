@@ -46,11 +46,12 @@ class TripsController < ApplicationController
   def create
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
-    @trip = @commission.trips.new(params[:trip])
+    @trip = @commission.trips.create(params[:trip_params])
+    @trip.expense = Expense.create
 
     respond_to do |format|
       if @trip.save
-        format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
+        format.html { redirect_to new_public_officer_commission_trip_detail_path(@public_officer, @commission, @trip), notice: 'Trip was successfully created.' }
         format.json { render json: @trip, status: :created, location: @trip }
       else
         format.html { render action: "new" }
