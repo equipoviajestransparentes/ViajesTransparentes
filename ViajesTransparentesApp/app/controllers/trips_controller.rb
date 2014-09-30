@@ -29,12 +29,22 @@ class TripsController < ApplicationController
     @commissions = @public_officer.commissions.all
     @commission = @public_officer.commissions.find(params[:commission_id])
     @trip = @commission.trips.new
+    @paises_array = LocalidadesCatalogo.select(:pais).map(&:pais).uniq
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @trip }
     end
   end
+
+  def update_estado
+		@estados_array = LocalidadesCatalogo.where(:pais => params[:pais_id]).map(&:estado).uniq
+  end
+
+  def update_ciudad
+		@ciudades_array = LocalidadesCatalogo.where(:estado => params[:estado_id]).map(&:ciudad).uniq
+  end
+
 
   # GET /trips/1/edit
   def edit
