@@ -21,9 +21,6 @@ class QuitarTimestampDeCatalogos < ActiveRecord::Migration
   	remove_column :moneda_catalogos, :created_at
   	remove_column :moneda_catalogos, :updated_at
 
-  	remove_column :tema_de_viaje_catalogos, :created_at
-  	remove_column :tema_de_viaje_catalogos, :updated_at
-
   	remove_column :tipo_pasaje_catalogos, :created_at
   	remove_column :tipo_pasaje_catalogos, :updated_at
 

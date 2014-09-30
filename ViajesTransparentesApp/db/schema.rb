@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20140928022047) do
     t.integer  "public_officer_id"
     t.text     "resultado"
     t.text     "observaciones"
-    t.string   "num_comision"
   end
 
   create_table "concepto_catalogos", force: true do |t|
@@ -214,10 +213,6 @@ ActiveRecord::Schema.define(version: 20140928022047) do
     t.decimal "max_gasto"
     t.date    "min_fecha"
     t.date    "max_fecha"
-  end
-
-  create_table "tema_viaje_cats", force: true do |t|
-    t.string "tema"
   end
 
   create_table "tipo_comisions", force: true do |t|
