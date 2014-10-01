@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id correo:</strong>
+  <%= @ciudadano.id_correo %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ciudadano.nombre %>
+</p>
+
+<p>
+  <strong>Ap paterno:</strong>
+  <%= @ciudadano.ap_paterno %>
+</p>
+
+<p>
+  <strong>Ap materno:</strong>
+  <%= @ciudadano.ap_materno %>
+</p>
+
+<%= link_to 'Edit', edit_ciudadano_path(@ciudadano) %> |
+<%= link_to 'Back', ciudadanos_path %>

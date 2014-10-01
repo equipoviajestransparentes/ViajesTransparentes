@@ -1,0 +1,33 @@
+<h1>Listing ciudadanos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id correo</th>
+      <th>Nombre</th>
+      <th>Ap paterno</th>
+      <th>Ap materno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ciudadanos.each do |ciudadano| %>
+      <tr>
+        <td><%= ciudadano.id_correo %></td>
+        <td><%= ciudadano.nombre %></td>
+        <td><%= ciudadano.ap_paterno %></td>
+        <td><%= ciudadano.ap_materno %></td>
+        <td><%= link_to 'Show', ciudadano %></td>
+        <td><%= link_to 'Edit', edit_ciudadano_path(ciudadano) %></td>
+        <td><%= link_to 'Destroy', ciudadano, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ciudadano', new_ciudadano_path %>

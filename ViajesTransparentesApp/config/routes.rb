@@ -12,6 +12,7 @@ ViajesTransparentesApp::Application.routes.draw do
   root :to => 'public_officers#index'
   
   resources :public_officers do
+    resources :ciudadanos
     resources :commissions do 
       resources :trips do
         resources :details do
