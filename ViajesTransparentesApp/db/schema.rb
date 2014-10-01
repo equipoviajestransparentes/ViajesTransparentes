@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140928022047) do
+ActiveRecord::Schema.define(version: 20140930082341) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20140928022047) do
     t.integer  "public_officer_id"
     t.text     "resultado"
     t.text     "observaciones"
-    t.string   "num_comision"
   end
 
   create_table "concepto_catalogos", force: true do |t|
@@ -216,10 +215,6 @@ ActiveRecord::Schema.define(version: 20140928022047) do
     t.date    "max_fecha"
   end
 
-  create_table "tema_viaje_cats", force: true do |t|
-    t.string "tema"
-  end
-
   create_table "tipo_comisions", force: true do |t|
     t.string "tipo_com"
   end
@@ -243,6 +238,12 @@ ActiveRecord::Schema.define(version: 20140928022047) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "commission_id"
+    t.string   "pais"
+    t.string   "estado"
+    t.string   "ciudad"
+    t.string   "pais_d"
+    t.string   "estado_d"
+    t.string   "ciudad_d"
   end
 
   create_table "tviaje_cats", force: true do |t|

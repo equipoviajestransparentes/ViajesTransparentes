@@ -1,0 +1,1 @@
+$("#trip_estado").empty().append("<%= escape_javascript(render "estado") %>");
