@@ -42,9 +42,12 @@ class TripsController < ApplicationController
   end
 
   def update_ciudad
-		@ciudades_array = LocalidadesCatalogo.where(:estado => params[:estado_id]).map(&:ciudad).uniq
+		@ciudades_array = LocalidadesCatalogo.where(:estado => "Distrito Federal").pluck(:id, :ciudad).uniq
   end
 
+  def update_localidad
+    @localidad_origen = params[:localidad_id]
+  end
 
   # GET /trips/1/edit
   def edit
@@ -56,7 +59,7 @@ class TripsController < ApplicationController
   def create
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
-    @trip = @commission.trips.create(params[:trip_params])
+    @trip = @commission.trips.create(params[:trip])
     @trip.expense = Expense.create
 
     respond_to do |format|

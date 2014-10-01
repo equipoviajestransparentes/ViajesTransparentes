@@ -25,6 +25,7 @@ ViajesTransparentesApp::Application.routes.draw do
 
   get "/update_estado" => "trips#update_estado"
   get "/update_ciudad" => "trips#update_ciudad"
+  get "/update_localidad" => "trips#update_localidad"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

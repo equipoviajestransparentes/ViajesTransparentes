@@ -1,0 +1,1 @@
+$("#localidad_origen").val(<%= @localidad_origen %>);
