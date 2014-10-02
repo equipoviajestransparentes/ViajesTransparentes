@@ -1,3 +1,4 @@
+<% disabled ||= false %>
 <%= form_for [@public_officer, @commission, @trip, @detail] do |f| %>
 	<% if @detail.errors.any? %>
 		<div id="error_explanation">
@@ -11,7 +12,7 @@
 		</div>
 	<% end %>
 
-	<div class="col-md-12">
+	<div class="col-md-12" style="padding: 15px">
 		<div class="panel panel-info">
 			<div class="panel-heading" align="center">
 				Evento
@@ -19,16 +20,16 @@
 			<div class="panel-body">
 				<div class="field col-md-5">
 					<%= f.label :evento, :class => "control-label" %><br />
-					<%= f.text_field :evento, :class => "form-control input-sm"%>
+					<%= f.text_field :evento, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field field col-md-7">
 					<%= f.label :id_tema_viaje, "Tema de Viaje", :class => "control-label" %><br />
-					<%= f.collection_select :id_tema_viaje, TviajeCat.all, :id, :tema, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+					<%= f.collection_select :id_tema_viaje, TviajeCat.all, :id, :tema, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm', disabled: disabled} %>
 				</div>
 				<div class="field col-md-6">
 					<%= f.label :fechainicio_part, "Inicio Participación", :class => "control-label" %><br />
 					<div class="input-group date">
-						<%= f.text_field :fechainicio_part, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<%= f.text_field :fechainicio_part, :class => "form-control input-sm", disabled: disabled %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 					</div>
 					<script type="text/javascript">
 						$('.input-group.date').datepicker({
@@ -42,7 +43,7 @@
 				<div class="field col-md-6">
 					<%= f.label :fechafin_part, "Fin Participación", :class => "control-label" %><br />
 					<div class="input-group date">
-						<%= f.text_field :fechafin_part, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<%= f.text_field :fechafin_part, :class => "form-control input-sm", disabled: disabled %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 					</div>
 					<script type="text/javascript">
 						$('.input-group.date').datepicker({
@@ -55,39 +56,28 @@
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :antecedente , :class => "control-label"%><br />
-					<%= f.text_area :antecedente, :class => "form-control input-sm" %>
+					<%= f.text_area :antecedente, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :actividad , :class => "control-label"%><br />
-					<%= f.text_area :actividad, :class => "form-control input-sm" %>
+					<%= f.text_area :actividad, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :contribucion_ifai, :class => "control-label"%><br />
-					<%= f.text_area :contribucion_ifai, :class => "form-control input-sm" %>
+					<%= f.text_area :contribucion_ifai, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field col-md-6">
 					<%= f.label :url_evento, :class => "control-label" %><br />
-					<%= f.text_field :url_evento, :placeholder => "URL Evento", :class => "form-control input-sm" %>
+					<%= f.text_field :url_evento, :placeholder => "URL Evento", :class => "form-control input-sm", disabled: disabled %>
 				</div>	
 				<div class="field col-md-6">
 					<%= f.label :url_comunicado, :class => "control-label" %><br />
-					<%= f.text_field :url_comunicado, :placeholder => "URL Comunicado", :class => "form-control input-sm" %>
+					<%= f.text_field :url_comunicado, :placeholder => "URL Comunicado", :class => "form-control input-sm", disabled: disabled %>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-
-
-
-
-
-
-
-
-
-
-	<div class="col-md-12">
+	<div class="col-md-12" style="padding: 15px">
 		<div class="panel panel-info">
 			<div class="panel-heading" align="center">
 				Pasaje y Hospedaje
@@ -95,20 +85,20 @@
 			<div class="panel-body">
 				<div class="field col-md-4">
 					<%= f.label :tipo_pasaje, "Tipo Pasaje", :class => "control-label" %><br />
-					<%= f.collection_select :tipo_pasaje, TipoPasajeCatalogo.all, :id, :tipo_pasaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+					<%= f.collection_select :tipo_pasaje, TipoPasajeCatalogo.all, :id, :tipo_pasaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm', disabled: disabled} %>
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :cubre_pasaje%><br />
-					<%= f.text_field :cubre_pasaje, :class => "form-control input-sm" %>
+					<%= f.text_field :cubre_pasaje, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :hotel %><br />
-					<%= f.text_field :hotel, :class => "form-control input-sm" %>
+					<%= f.text_field :hotel, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :fechainicio_hotel, "Inicio de Hospedaje", :class => "control-label" %><br />
 					<div class="input-group date">
-						<%= f.text_field :fechainicio_hotel, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<%= f.text_field :fechainicio_hotel, :class => "form-control input-sm", disabled: disabled %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 					</div>
 					<script type="text/javascript">
 						$('.input-group.date').datepicker({
@@ -122,7 +112,7 @@
 				<div class="field col-md-4">
 					<%= f.label :fechafin_hotel, "Fin de Hospedaje", :class => "control-label" %><br />
 					<div class="input-group date">
-						<%= f.text_field :fechafin_hotel, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<%= f.text_field :fechafin_hotel, :class => "form-control input-sm", disabled: disabled %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 					</div>
 					<script type="text/javascript">
 						$('.input-group.date').datepicker({
@@ -135,12 +125,13 @@
 				</div>
 				<div class="field col-md-4">
 					<%= f.label :inst_hospedaje %><br />
-					<%= f.text_field :inst_hospedaje, :class => "form-control input-sm" %>
+					<%= f.text_field :inst_hospedaje, :class => "form-control input-sm", disabled: disabled %>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-12">
-		<%= f.submit "Guardar Detalle", :class => 'btn btn-primary' %>
+	
+	<div class="actions col-md-12">
+		<%= f.submit "Guardar Detalle", :class => 'btn btn-primary', disabled: disabled %>
 	</div>
 <% end %>

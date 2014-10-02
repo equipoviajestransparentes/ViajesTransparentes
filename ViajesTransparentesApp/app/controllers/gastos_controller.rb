@@ -17,6 +17,8 @@ class GastosController < ApplicationController
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
     @trip = @commission.trips.find(params[:trip_id])
+    @detail = @trip.detail
+    @gastos = @trip.gastos.all
     @gasto = @trip.gastos.new
   end
 

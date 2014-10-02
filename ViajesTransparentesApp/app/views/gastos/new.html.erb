@@ -1,4 +1,72 @@
+<div class="col-md-3"></div>
+<div class="col-md-9">
+	<div class="panel-group" id="accordion2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						<span class="glyphicon glyphicon-briefcase"></span> Captura de comisión
+					</a>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse">
+				<div class="panel-body">
+					<%= render 'commissions/form', :disabled => true %>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						<span class="glyphicon glyphicon-plane"></span> Captura de viaje
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse">
+				<div class="panel-body">
+					<%= render 'trips/form', :disabled => true %>
+				</div>
+			</div>
+		</div>	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTree">
+						<span class="glyphicon glyphicon-tasks"></span> Captura Detalle de Viaje
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTree" class="panel-collapse collapse">
+				<div class="panel-body">
+					<%= render 'details/form', :disabled => true %>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+						<span class="glyphicon glyphicon-usd"></span> Captura de Gastos
+					</a>
+				</h4>
+			</div>
+			<div id="collapseFive" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<%= render 'form' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form' %>
+
+
+
+
+
+
+
+
 
 <%= link_to 'Agregar Vuelo', new_public_officer_commission_trip_detail_flight_path(@public_officer, @commission, @trip, @trip.detail) %>

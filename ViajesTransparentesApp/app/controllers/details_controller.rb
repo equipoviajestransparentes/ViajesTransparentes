@@ -31,7 +31,7 @@ class DetailsController < ApplicationController
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
     @trip = @commission.trips.find(params[:trip_id])
-    @detail = Detail.create(params[:detail_params])
+    @detail = Detail.create(params[:detail])
     @trip.detail = @detail
 
     respond_to do |format|

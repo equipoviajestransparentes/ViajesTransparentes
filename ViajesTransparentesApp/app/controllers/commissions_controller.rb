@@ -45,7 +45,7 @@ class CommissionsController < ApplicationController
   def create
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.new(commission_params)
-    @commission.estatus_comision = "L"
+    @commission.estatus_comision = "T"
 
     respond_to do |format|
       if @commission.save
