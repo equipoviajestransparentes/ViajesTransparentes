@@ -13,8 +13,8 @@ class ViajesInicialController < ApplicationController
 
 		hash_overview = {
 			'text' => {
-				'headline' => "<span class=\"vco-test\">MENSAJE DE BIENVENIDA</span>",
-				'text' => "<center><span>Continuaci&oacute;n del mensaje de bienvenida</span></center>"
+				'headline' => "<span class=\"vco-test\">BIENVENIDO</span>",
+				'text' => "<center><span>Página de consulta de los viajes de los servidores públicos</span></center>"
 			},
 			'type' => "overview"
 		}
@@ -30,17 +30,24 @@ class ViajesInicialController < ApplicationController
 			@fecha_ini_com = commission.fechainicio_com
 			@fecha_fin_com = commission.fechafin_com
 			@trips.each do |trip|
+				@evento = trip.detail.evento
 				@id_localidad_destino = trip.localidad_destino
 				@latitud = LocalidadesCatalogo.find(@id_localidad_destino).latitud_ciudad
 				@longitud = LocalidadesCatalogo.find(@id_localidad_destino).longitud_ciudad
+				@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
+				@estado = LocalidadesCatalogo.find(@id_localidad_destino).estado
+				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
+				@gastoTot = trip.expense.gasto_viatico
+				@idMoneda = trip.expense.id_moneda
+				@moneda = MonedaCatalogo.find(@idMoneda).moneda
 				hash_slide = {
 					'location' => {
 						'lat' => @latitud,
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + ">" + @public_officer_nombre + "</a><br><small>Evento</small>",
-						'text' => "<span class=\"map-ini-fecha\">Fecha: <br>" + @fecha_ini_com.to_s + " - " + @fecha_fin_com.to_s + "</span><br><span clas=\"map-ini-destino\">DESTINO : <br>DESTINO</span><br><span clas=\"map-ini-gasto\">GASTO TOTAL : <br>GASTO-TOTAL</span>"
+						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + ">" + @public_officer_nombre + "</a><br><small>"+@evento+"</small>",
+						'text' => "<span class=\"map-ini-fecha\">Fecha: <br>" + @fecha_ini_com.to_s + " - " + @fecha_fin_com.to_s + "</span><br><span clas=\"map-ini-destino\">DESTINO : <br>"+ @pais +" - "+ @estado +" - "+ @ciudad + "</span><br><span clas=\"map-ini-gasto\">GASTO TOTAL : <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}
 				@list_slides << hash_slide
