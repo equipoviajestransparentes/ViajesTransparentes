@@ -46,7 +46,6 @@ $ ->
 
 
 #Evento AJAX OnChange del combo País Destino
-$ ->
   $(document).on 'change', '#trip_pais_d', (evt) ->
     $.ajax '/update_estado_d',
       type: 'GET'
@@ -58,3 +57,31 @@ $ ->
         console.log("AJAX Error: #{textStatus}")
       success: (data, textStatus, jqXHR) ->
         console.log("Seleccion Dinamica Pais OK")
+
+
+#Evento AJAX OnChange del combo Estado Origen
+  $(document).on 'change', '#trip_estado_d', (evt) ->
+    $.ajax '/update_ciudad_d',
+      type: 'GET'
+      dataType: 'script'
+      data: {
+        estado_id: $("#trip_estado_d option:selected").val()
+      }
+      error: (jqXHR, textStatus, errorThrown) ->
+        console.log("AJAX Error: #{textStatus}")
+      success: (data, textStatus, jqXHR) ->
+        console.log("Seleccion Dinamica Estado OK")
+
+
+#Evento AJAX OnChange del combo Ciudad Origen
+   $(document).on 'change', '#trip_ciudad_d', (evt) ->
+    $.ajax '/update_localidad_d',
+      type: 'GET'
+      dataType: 'script'
+      data: {
+        localidad_id: $("#trip_ciudad_d option:selected").val()
+      }
+      error: (jqXHR, textStatus, errorThrown) ->
+        console.log("AJAX Error: #{textStatus}")
+      success: (data, textStatus, jqXHR) ->
+        console.log("Seleccion Dinamica Ciudad OK")

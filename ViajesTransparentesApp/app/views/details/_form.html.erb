@@ -11,107 +11,136 @@
 		</div>
 	<% end %>
 
-	<div class="field">
-		<%= f.label :evento %><br />
-		<%= f.text_field :evento %>
-	</div>
-	<div class="field">
-		<%= f.label :url_evento %><br />
-		<%= f.text_field :url_evento %>
-	</div>
-	<div class="field">
-		<%= f.label :fechainicio_part, "Inicio Participación", :class => "control-label" %><br />
-		<div class="input-group date">
-			<%= f.text_field :fechainicio_part, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	<div class="col-md-12">
+		<div class="panel panel-info">
+			<div class="panel-heading" align="center">
+				Evento
+			</div>
+			<div class="panel-body">
+				<div class="field col-md-5">
+					<%= f.label :evento, :class => "control-label" %><br />
+					<%= f.text_field :evento, :class => "form-control input-sm"%>
+				</div>
+				<div class="field field col-md-7">
+					<%= f.label :id_tema_viaje, "Tema de Viaje", :class => "control-label" %><br />
+					<%= f.collection_select :id_tema_viaje, TviajeCat.all, :id, :tema, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+				</div>
+				<div class="field col-md-6">
+					<%= f.label :fechainicio_part, "Inicio Participación", :class => "control-label" %><br />
+					<div class="input-group date">
+						<%= f.text_field :fechainicio_part, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+					<script type="text/javascript">
+						$('.input-group.date').datepicker({
+							format: "yyyy-mm-dd",
+							language: "es",
+							autoclose: true,
+							todayHighlight: true
+						});
+					</script>
+				</div>
+				<div class="field col-md-6">
+					<%= f.label :fechafin_part, "Fin Participación", :class => "control-label" %><br />
+					<div class="input-group date">
+						<%= f.text_field :fechafin_part, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+					<script type="text/javascript">
+						$('.input-group.date').datepicker({
+							format: "yyyy-mm-dd",
+							language: "es",
+							autoclose: true,
+							todayHighlight: true
+						});
+					</script>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :antecedente , :class => "control-label"%><br />
+					<%= f.text_area :antecedente, :class => "form-control input-sm" %>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :actividad , :class => "control-label"%><br />
+					<%= f.text_area :actividad, :class => "form-control input-sm" %>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :contribucion_ifai, :class => "control-label"%><br />
+					<%= f.text_area :contribucion_ifai, :class => "form-control input-sm" %>
+				</div>
+				<div class="field col-md-6">
+					<%= f.label :url_evento, :class => "control-label" %><br />
+					<%= f.text_field :url_evento, :placeholder => "URL Evento", :class => "form-control input-sm" %>
+				</div>	
+				<div class="field col-md-6">
+					<%= f.label :url_comunicado, :class => "control-label" %><br />
+					<%= f.text_field :url_comunicado, :placeholder => "URL Comunicado", :class => "form-control input-sm" %>
+				</div>
+			</div>
 		</div>
-		<script type="text/javascript">
-			$('.input-group.date').datepicker({
-				format: "yyyy-mm-dd",
-				language: "es",
-				autoclose: true,
-				todayHighlight: true
-			});
-		</script>
 	</div>
-	<div class="field">
-		<%= f.label :fechafin_part, "Fin Participación", :class => "control-label" %><br />
-		<div class="input-group date">
-			<%= f.text_field :fechafin_part, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	
+
+
+
+
+
+
+
+
+
+
+	<div class="col-md-12">
+		<div class="panel panel-info">
+			<div class="panel-heading" align="center">
+				Pasaje y Hospedaje
+			</div>
+			<div class="panel-body">
+				<div class="field col-md-4">
+					<%= f.label :tipo_pasaje, "Tipo Pasaje", :class => "control-label" %><br />
+					<%= f.collection_select :tipo_pasaje, TipoPasajeCatalogo.all, :id, :tipo_pasaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :cubre_pasaje%><br />
+					<%= f.text_field :cubre_pasaje, :class => "form-control input-sm" %>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :hotel %><br />
+					<%= f.text_field :hotel, :class => "form-control input-sm" %>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :fechainicio_hotel, "Inicio de Hospedaje", :class => "control-label" %><br />
+					<div class="input-group date">
+						<%= f.text_field :fechainicio_hotel, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+					<script type="text/javascript">
+						$('.input-group.date').datepicker({
+							format: "yyyy-mm-dd",
+							language: "es",
+							autoclose: true,
+							todayHighlight: true
+						});
+					</script>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :fechafin_hotel, "Fin de Hospedaje", :class => "control-label" %><br />
+					<div class="input-group date">
+						<%= f.text_field :fechafin_hotel, :class => "form-control input-sm" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+					<script type="text/javascript">
+						$('.input-group.date').datepicker({
+							format: "yyyy-mm-dd",
+							language: "es",
+							autoclose: true,
+							todayHighlight: true
+						});
+					</script>
+				</div>
+				<div class="field col-md-4">
+					<%= f.label :inst_hospedaje %><br />
+					<%= f.text_field :inst_hospedaje, :class => "form-control input-sm" %>
+				</div>
+			</div>
 		</div>
-		<script type="text/javascript">
-			$('.input-group.date').datepicker({
-				format: "yyyy-mm-dd",
-				language: "es",
-				autoclose: true,
-				todayHighlight: true
-			});
-		</script>
 	</div>
-	<div class="field">
-		<%= f.label :antecedente %><br />
-		<%= f.text_area :antecedente %>
-	</div>
-	<div class="field">
-		<%= f.label :actividad %><br />
-		<%= f.text_area :actividad %>
-	</div>
-	<div class="field">
-		<%= f.label :contribucion_ifai %><br />
-		<%= f.text_field :contribucion_ifai %>
-	</div>
-	<div class="field">
-		<%= f.label :url_comunicado %><br />
-		<%= f.text_field :url_comunicado %>
-	</div>
-	<div class="field">
-		<%= f.label :cubre_pasaje %><br />
-		<%= f.text_field :cubre_pasaje %>
-	</div>
-	<div class="field">
-		<%= f.label :tipo_pasaje, "Tipo Pasaje", :class => "control-label" %><br />
-		<%= f.collection_select :tipo_pasaje, TipoPasajeCatalogo.all, :id, :tipo_pasaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
-	</div>
-	<div class="field">
-		<%= f.label :inst_hospedaje %><br />
-		<%= f.text_field :inst_hospedaje %>
-	</div>
-	<div class="field">
-		<%= f.label :hotel %><br />
-		<%= f.text_field :hotel %>
-	</div>
-	<div class="field">
-		<%= f.label :fechainicio_hotel, "Inicio de Hospedaje", :class => "control-label" %><br />
-		<div class="input-group date">
-			<%= f.text_field :fechainicio_hotel, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-		</div>
-		<script type="text/javascript">
-			$('.input-group.date').datepicker({
-				format: "yyyy-mm-dd",
-				language: "es",
-				autoclose: true,
-				todayHighlight: true
-			});
-		</script>
-	</div>
-	<div class="field">
-		<%= f.label :fechafin_hotel, "Fin de Hospedaje", :class => "control-label" %><br />
-		<div class="input-group date">
-			<%= f.text_field :fechafin_hotel, :class => "form-control" %><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-		</div>
-		<script type="text/javascript">
-			$('.input-group.date').datepicker({
-				format: "yyyy-mm-dd",
-				language: "es",
-				autoclose: true,
-				todayHighlight: true
-			});
-		</script>
-	</div>
-	<div class="field">
-		<%= f.label :id_tema_viaje, "Tema de Viaje", :class => "control-label" %><br />
-		<%= f.collection_select :id_tema_viaje, TviajeCat.all, :id, :tema, {:prompt => 'Seleccione una opción'}, {:class => 'form-control'} %>
-	</div>
-	<div class="actions">
-		<%= f.submit %>
+	<div class="col-md-12">
+		<%= f.submit "Guardar Detalle", :class => 'btn btn-primary' %>
 	</div>
 <% end %>

@@ -37,18 +37,6 @@ class TripsController < ApplicationController
     end
   end
 
-  def update_estado
-		@estados_array = LocalidadesCatalogo.where(:pais => params[:pais_id]).map(&:estado).uniq
-  end
-
-  def update_ciudad
-		@ciudades_array = LocalidadesCatalogo.where(:estado => "Distrito Federal").pluck(:id, :ciudad).uniq
-  end
-
-  def update_localidad
-    @localidad_origen = params[:localidad_id]
-  end
-
   # GET /trips/1/edit
   def edit
     @trip = Trip.find(params[:id])
@@ -100,6 +88,30 @@ class TripsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+def update_estado
+    @estados_array = LocalidadesCatalogo.where(:pais => params[:pais_id]).map(&:estado).uniq
+  end
+
+  def update_ciudad
+    @ciudades_array = LocalidadesCatalogo.where(:estado => params[:estado_id]).pluck(:id, :ciudad).uniq
+  end
+
+  def update_localidad
+    @localidad_origen = params[:localidad_id]
+  end
+
+  def update_estado_d
+    @estados_array = LocalidadesCatalogo.where(:pais => params[:pais_id]).map(&:estado).uniq
+  end
+
+  def update_ciudad_d
+    @ciudades_array = LocalidadesCatalogo.where(:estado => params[:estado_id]).pluck(:id, :ciudad).uniq
+  end
+
+  def update_localidad_d
+    @localidad_origen = params[:localidad_id]
+  end  
 
   def trip_params
     params.require(:trip).permit(:localidad_origen, :localidad_destino, :tipo_viaje, :created_at, :updated_at, :commission_id)
