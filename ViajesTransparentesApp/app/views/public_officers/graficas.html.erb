@@ -65,34 +65,24 @@
 			</div>
 		</div>
 	<div>
-</div>
-
-
-
-<script>
-		var lineChartData = {
-			labels : ["<%=@hash_lablesMXN%>","PUEBLA"],
-			datasets : [
-				{
-					label: "My First dataset",
-					fillColor : "rgba(220,220,220,0.2)",
-					strokeColor : "rgba(220,220,220,1)",
-					pointColor : "rgba(220,220,220,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(220,220,220,1)",
-					data : [<%=@hash_dataMXN%>,200]
-				},
-			]
-
-		}
+	<script>
+	   	
+		var lineChartData = <%= @hash_completoMXN.to_json.html_safe %>
+		var lineChartData2 = <%= @hash_completoUSD.to_json.html_safe %>
 
 		window.onload = function(){
 		var ctxL = document.getElementById("lineas").getContext("2d");
+		var ctxL2 = document.getElementById("lineas2").getContext("2d");
 		
 		window.myLine = new Chart(ctxL).Line(lineChartData, {
 			responsive: true
 		});
 		
+		window.myLine = new Chart(ctxL2).Line(lineChartData2, {
+			responsive: true
+		});
+		
 	}
 	</script>
+</div>
+

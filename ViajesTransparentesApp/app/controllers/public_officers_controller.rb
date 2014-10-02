@@ -127,14 +127,16 @@ class PublicOfficersController < ApplicationController
 
 	def graficas
 	
-		@hash_lablesMXN ||=  []
-		@hash_dataMXN ||=  []
-		
 		@public_officer = PublicOfficer.find(params[:public_officer_id])
-
+	
 		@commissions = @public_officer.commissions.all		
 		@public_officer_nombre = @public_officer.full_name
 
+		@list_labelsMXN ||= [""]
+		@list_dataMXN ||= ["0"]
+		@list_labelsUSD ||= [""]
+		@list_dataUSD ||= ["0"]
+				
 		@commissions.each do |commission|
 			@trips = commission.trips.all
 			@trips.each do |trip|
@@ -145,12 +147,52 @@ class PublicOfficersController < ApplicationController
 				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
 				@gastoTot = trip.expense.gasto_viatico
 				@idMoneda = trip.expense.id_moneda
-				@moneda = MonedaCatalogo.find(@idMoneda).moneda
-				
-				@hash_lablesMXN = @pais +" "+ @estado
-				@hash_dataMXN = @gastoTot.to_s
+						
+				if @idMoneda == 1 then
+					label = @pais + "-"+ @estado
+					dato = @gastoTot
+					@list_labelsMXN << label
+					@list_dataMXN << dato
+				else
+					label = @pais + "-"+ @estado
+					dato = @gastoTot
+					@list_labelsUSD << label
+					@list_dataUSD << dato 
+				end
 			end
 	  	end
+		
+		@list_datasetMXN ||= []
+		@list_datasetUSD ||= []
+		
+		hash_dataset_MXN = {
+			'fillColor' => "rgba(220,220,220,0.5)",
+			'strokeColor' => "rgba(220,220,220,0.8)",
+			'highlightFill' => "rgba(220,220,220,0.75)",
+			'highlightStroke' => "rgba(220,220,220,1)",
+			'data' => @list_dataMXN
+		}
+		
+		hash_dataset_USD = {
+			'fillColor' => "rgba(220,220,220,0.5)",
+			'strokeColor' => "rgba(220,220,220,0.8)",
+			'highlightFill' => "rgba(220,220,220,0.75)",
+			'highlightStroke' => "rgba(220,220,220,1)",
+			'data' => @list_dataUSD
+		}
+
+		@list_datasetMXN << hash_dataset_MXN
+		@list_datasetUSD << hash_dataset_USD
+
+		@hash_completoMXN = {
+			'labels' => @list_labelsMXN,
+			'datasets' => @list_datasetMXN
+		}
+		
+		@hash_completoUSD = {
+			'labels' => @list_labelsUSD,
+			'datasets' => @list_datasetUSD
+		}
 	end
 	
 	def public_officer_params

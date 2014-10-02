@@ -8,7 +8,7 @@ class ViajesInicialController < ApplicationController
 		@url_accion = '/commissions/new'
 
 		@mes_antes = Date.today - 1.month
-		@estatus_liberado = "L"
+		@estatus_liberado = "T"
 		@commissions = Commission.where(["estatus_comision = ? and fechafin_com >= ?", @estatus_liberado, @mes_antes])
 
 		hash_overview = {
