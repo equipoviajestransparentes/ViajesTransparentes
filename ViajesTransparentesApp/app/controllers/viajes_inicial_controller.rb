@@ -33,7 +33,6 @@ class ViajesInicialController < ApplicationController
 				@id_localidad_destino = trip.localidad_destino
 				@latitud = LocalidadesCatalogo.find(@id_localidad_destino).latitud_ciudad
 				@longitud = LocalidadesCatalogo.find(@id_localidad_destino).longitud_ciudad
-
 				hash_slide = {
 					'location' => {
 						'lat' => @latitud,

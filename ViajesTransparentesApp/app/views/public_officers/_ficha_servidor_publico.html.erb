@@ -53,7 +53,7 @@
 			</div>
 			<div class="row-fluid">
 				<button type="button" class="btn btn-default btn-lg">
-					<span class="glyphicon glyphicon-stats"></span> Estadísticas
+					<span class="glyphicon glyphicon-stats"></span> <%= link_to "Estadísticas", public_officer_graficas_path(@public_officer.id)%>
 				</button>
 			</div>
 			<div class="row-fluid">
@@ -69,14 +69,11 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<h4 class="modal-title" id="myModalLabel">Datos ciudadano</h4>
+			<h4 class="modal-title" id="myModalLabel">Registro</h4><small>Ingresa tus datos para recibir notificaciones del servidor público</small>
 		  </div>
 			  <div class="modal-body">
-
+				<%= render 'ciudadanos/form' %>
 			  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-primary">Guardar</button>
-		  </div>
 		</div>
 	  </div>
 	</div>

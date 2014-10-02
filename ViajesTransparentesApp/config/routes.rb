@@ -13,6 +13,7 @@ ViajesTransparentesApp::Application.routes.draw do
   
   resources :public_officers do
     resources :ciudadanos
+	get "/graficas" => "public_officers#graficas"
     resources :commissions do 
       resources :trips do
         resources :details do
@@ -26,6 +27,7 @@ ViajesTransparentesApp::Application.routes.draw do
 
   get "/update_estado" => "trips#update_estado"
   get "/update_ciudad" => "trips#update_ciudad"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

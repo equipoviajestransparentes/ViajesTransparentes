@@ -1,0 +1,98 @@
+<style>
+@media (min-width: 768px) { 
+
+    .navbar-nav > li.f1:before{
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color:rgb(220,220,220);
+        top: 50%;
+        margin-top: -2px;
+        right: -3px;
+        z-index: 1;
+        border-radius: 6px;
+    }
+	
+	
+    .navbar-nav > li:before {
+        right: auto;
+        left: -3px;
+    }
+}
+</style>
+
+<div id="principal" class="divprincipal"> 
+	<br>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+				<div class="panel-heading">Grafica costo vs viajes (MXN)</div>
+				<div class="panel-body">
+					<div id="nav">
+							<div class="container-fluid">
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav">
+										<li>
+											<a><%= @public_officer.full_name %></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<canvas id="lineas" height="250" width="250"></canvas>
+				</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+				<div class="panel-heading">Grafica costo vs viajes (USD)</div>
+				<div class="panel-body">
+					<div id="nav">
+							<div class="container-fluid">
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav">
+										<li>
+											<a><%= @public_officer.full_name %></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<canvas id="lineas2" height="250" width="250"></canvas>
+				</div>
+			</div>
+		</div>
+	<div>
+</div>
+
+
+
+<script>
+		var lineChartData = {
+			labels : ["<%=@hash_lablesMXN%>","PUEBLA"],
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [<%=@hash_dataMXN%>,200]
+				},
+			]
+
+		}
+
+		window.onload = function(){
+		var ctxL = document.getElementById("lineas").getContext("2d");
+		
+		window.myLine = new Chart(ctxL).Line(lineChartData, {
+			responsive: true
+		});
+		
+	}
+	</script>

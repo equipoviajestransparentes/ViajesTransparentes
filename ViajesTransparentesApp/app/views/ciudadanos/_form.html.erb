@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id_correo %><br>
-    <%= f.text_field :id_correo %>
+    <%= f.label :nombre, "Nombre", :class => "control-label"   %><br>
+    <%= f.text_field :nombre, :class => "form-control input-sm" %>
   </div>
   <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.label :ap_paterno, "Apellido paterno", :class => "control-label"  %><br>
+    <%= f.text_field :ap_paterno, :class => "form-control input-sm" %>
   </div>
   <div class="field">
-    <%= f.label :ap_paterno %><br>
-    <%= f.text_field :ap_paterno %>
+    <%= f.label :ap_materno, "Apellido materno", :class => "control-label" %><br>
+    <%= f.text_field :ap_materno, :class => "form-control input-sm" %>
   </div>
   <div class="field">
-    <%= f.label :ap_materno %><br>
-    <%= f.text_field :ap_materno %>
+    <%= f.label :id_correo, "Correo", :class => "control-label"  %><br>
+    <%= f.text_field :id_correo, :class => "form-control input-sm" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+	<div class="actions modal-footer">
+	   <%= f.submit "Guardar", :class => 'btn btn-primary' %>
   </div>
 <% end %>
