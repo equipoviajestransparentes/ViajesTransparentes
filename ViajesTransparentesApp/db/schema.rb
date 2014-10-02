@@ -70,6 +70,10 @@ ActiveRecord::Schema.define(version: 20140930082341) do
     t.datetime "updated_at"
   end
 
+  create_table "creacion_tviaje_cats", force: true do |t|
+    t.string "tema"
+  end
+
   create_table "details", force: true do |t|
     t.integer  "trip_id"
     t.string   "evento"

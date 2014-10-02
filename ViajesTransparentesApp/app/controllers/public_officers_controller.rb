@@ -14,6 +14,7 @@ class PublicOfficersController < ApplicationController
 	# GET /public_officers/1.json
 	def show
 		@public_officer = PublicOfficer.find(params[:id])
+		@ciudadano = Ciudadano.new
 		hash_overview = {
 			'text' => {
 				'headline' => '<span class="vco-test">Historia de Viajes</span>',
@@ -30,18 +31,27 @@ class PublicOfficersController < ApplicationController
 		@commissions.each do |commission|
 			@trips = commission.trips.all
 			@trips.each do |trip|
+				
 				@id_localidad_destino = trip.localidad_destino
 				@latitud = LocalidadesCatalogo.find(@id_localidad_destino).latitud_ciudad
 				@longitud = LocalidadesCatalogo.find(@id_localidad_destino).longitud_ciudad
-
+				@evento = trip.detail.evento
+				@fhinicio = trip.detail.fechainicio_part
+				@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
+				@estado = LocalidadesCatalogo.find(@id_localidad_destino).estado
+				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
+				@gastoTot = trip.expense.gasto_viatico
+				@idMoneda = trip.expense.id_moneda
+				@moneda = MonedaCatalogo.find(@idMoneda).moneda
+								
 				hash_slide = {
 					'location' => {
 						'lat' => @latitud,
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=#>" + @public_officer_nombre + "</a><br><small>Evento</small>",
-						'text' => "<span class=\"map-ini-fecha\">Fecha: <br> HOLAAA </span><br><span clas=\"map-ini-destino\">DESTINO : <br>DESTINO</span><br><span clas=\"map-ini-gasto\">GASTO TOTAL : <br>GASTO-TOTAL</span>"
+						'headline' => "<a href=#>" + @evento + "</a>",
+						'text' => "<span>Fecha:<br>"+@fhinicio.to_s+"</span><br><span>Destino:<br>"+ @pais +"<br> "+ @estado +"<br> "+ @ciudad + "</span><br><span>Gasto total: <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}
 				@list_slides << hash_slide
@@ -115,9 +125,38 @@ class PublicOfficersController < ApplicationController
 		end
 	end
 
+	def graficas
+	
+		@hash_lablesMXN ||=  []
+		@hash_dataMXN ||=  []
+		
+		@public_officer = PublicOfficer.find(params[:public_officer_id])
+
+		@commissions = @public_officer.commissions.all		
+		@public_officer_nombre = @public_officer.full_name
+
+		@commissions.each do |commission|
+			@trips = commission.trips.all
+			@trips.each do |trip|
+				
+				@id_localidad_destino = trip.localidad_destino
+				@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
+				@estado = LocalidadesCatalogo.find(@id_localidad_destino).estado
+				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
+				@gastoTot = trip.expense.gasto_viatico
+				@idMoneda = trip.expense.id_moneda
+				@moneda = MonedaCatalogo.find(@idMoneda).moneda
+				
+				@hash_lablesMXN = @pais +" "+ @estado
+				@hash_dataMXN = @gastoTot.to_s
+			end
+	  	end
+	end
+	
 	def public_officer_params
 		params.require(:public_officer).permit( :id_cargo, :id_cargo_superior, :id_puesto, :id_unidad_adm, :id_institucion, :id_tipo_personal,
 																						:nombre, :ap_paterno, :ap_materno, :correo_electronico, :gastos_comprobados_total, :gastos_sin_comprobar_total,
 																						:costo_total, :viaticos_devueltos_total, :created_at, :updated_at)
 	end
+	
 end

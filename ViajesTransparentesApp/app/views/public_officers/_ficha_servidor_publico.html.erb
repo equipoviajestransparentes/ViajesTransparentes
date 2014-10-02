@@ -1,63 +1,88 @@
 <div class="panel panel-info col-md-12">
-		<div class="panel-heading" align="center">
-			<h3><%= @public_officer.full_name %></h3>
-		</div>
-		<div class="panel-body">
-			<div class="col-md-6">
-				<div class="row-fluid">
-					<label class="control-label"> <b>Cargo:</b></label>
-					<span class="row"><%= @public_officer.desc_cargo %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Cargo del Superior:</b></label>
-					<span class="row"><%= @public_officer.desc_cargo_superior %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Puesto:</b></label>
-					<span class="row"><%= Puesto.where(:id => @public_officer.id_puesto).first.puesto %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Unidad Administrativa:</b></label>
-					<span class="row"> <%= @public_officer.desc_unidad_adm %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Institución:</b></label>
-					<span class="row"> <%= @public_officer.desc_institucion %></span>
-				</div>
+	<div class="panel-heading">
+		<h3 class="panel-tittle">
+			<%= @public_officer.full_name %>
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div class="col-md-6">
+			<div class="row-fluid">
+				<label class="control-label"> <b>Cargo:</b></label>
+				<span class="row"><%= @public_officer.desc_cargo %></span>
 			</div>
-			<div class="col-md-6">
-				<div class="row-fluid">
-					<label class="control-label"><b>Personal Tipo:</b></label>
-					<span class="row"> <%= @public_officer.desc_tipo_personal %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Correo Electrónico:</b></label>
-					<span class="row"> <%= @public_officer.correo_electronico %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Gastos sin comprobar total:</b></label>
-					<span class="row"> <%= @public_officer.gastos_sin_comprobar_total %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Costo total:</b></label>
-					<span class="row">   <%= @public_officer.costo_total %></span>
-				</div>
-				<div class="row-fluid">
-					<label class="control-label"><b>Viaticos devueltos total:</b></label>
-					<span class="row">  <%= @public_officer.viaticos_devueltos_total %></span>
-				</div>
-				<div class="row-fluid">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-count="none"></a>
-				</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Cargo del Superior:</b></label>
+				<span class="row"><%= @public_officer.desc_cargo_superior %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Puesto:</b></label>
+				<span class="row"><%= Puesto.where(:id => @public_officer.id_puesto).first.puesto %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Unidad Administrativa:</b></label>
+				<span class="row"> <%= @public_officer.desc_unidad_adm %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Institución:</b></label>
+				<span class="row"> <%= @public_officer.desc_institucion %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Personal Tipo:</b></label>
+				<span class="row"> <%= @public_officer.desc_tipo_personal %></span>
 			</div>
 		</div>
+		<div class="col-md-6">
+			<div class="row-fluid">
+				<label class="control-label"><b>Correo Electrónico:</b></label>
+				<span class="row"> <%= @public_officer.correo_electronico %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Gastos sin comprobar total:</b></label>
+				<span class="row"> <%= @public_officer.gastos_sin_comprobar_total %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Costo total:</b></label>
+				<span class="row">   <%= @public_officer.costo_total %></span>
+			</div>
+			<div class="row-fluid">
+				<label class="control-label"><b>Viaticos devueltos total:</b></label>
+				<span class="row">  <%= @public_officer.viaticos_devueltos_total %></span>
+			</div>
+			<div class="row-fluid">
+				<a href="https://twitter.com/share" class="social-share twitter-share-button" data-size="large" data-count="none"></a>
+			</div>
+			<div class="row-fluid">
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-stats"></span> <%= link_to "Estadísticas", public_officer_graficas_path(@public_officer.id)%>
+				</button>
+			</div>
+			<div class="row-fluid">
+				<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal">
+					<span class="glyphicon glyphicon-envelope"></span> Seguir al servidor
+				</button>
+			</div>
+		</div>
+	</div>
 </div>		
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0],
-      p=/^http:/.test(d.location)?'http':'https';
-      if(!d.getElementById(id)){
-        js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document, 'script', 'twitter-wjs');
-  </script>  
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4 class="modal-title" id="myModalLabel">Registro</h4><small>Ingresa tus datos para recibir notificaciones del servidor público</small>
+		  </div>
+			  <div class="modal-body">
+				<%= render 'ciudadanos/form' %>
+			  </div>
+		</div>
+	  </div>
+	</div>
+ 	<script>
+		!function(d,s,id){
+		  var js,fjs=d.getElementsByTagName(s)[0],
+		  p=/^http:/.test(d.location)?'http':'https';
+		  if(!d.getElementById(id)){
+			js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);
+		  }
+		}(document, 'script', 'twitter-wjs');
+	</script> 

@@ -17,3 +17,4 @@
 //= require bootstrap
 //= require storymap
 //= require bootstrap-datepicker
+//= require Chart
