@@ -1,5 +1,6 @@
 ViajesTransparentesApp::Application.routes.draw do
 
+  devise_for :users
   resources :consulta_viajes
 
   get "static_pages/consulta_viajes_ifai"
