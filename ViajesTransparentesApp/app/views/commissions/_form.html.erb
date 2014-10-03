@@ -1,125 +1,101 @@
-<%= form_for [@public_officer, @commission], :html => {:class => "form-inline"} do |f| %>
-  <% if @commission.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@commission.errors.count, "error") %> prohibited this commission from being saved:</h2>
+<% disabled ||= false %>
+<%= form_for [@public_officer, @commission] do |f| %>
+	<% if @commission.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@commission.errors.count, "error") %> prohibited this commission from being saved:</h2>
+			<ul>
+				<% @commission.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div class="row">
+		<div class="field col-md-3">
+			<%= f.label :consecutivo, "Comisión", :class => "control-label" %><br />
+			<%= f.text_field :consecutivo, :placeholder => "Num. comision", :class => "form-control input-sm", :id=>"comision", disabled: disabled %>
+		</div>
+		<div class="field col-md-3">
+			<%= f.label :id_mec_origen, "Mecanismo Origen", :class => "control-label" %><br />
+			<%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm', disabled: disabled} %>
+		</div>
+		<div class="field col-md-6">
+			<%= f.label :id_tipo_comision, "Tipo comisión", :class => "control-label" %><br />
+			<%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm', disabled: disabled} %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="field col-md-3">
+			<%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
+			<%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm', disabled: disabled}%>
+		</div>
+		<div class="field col-md-3">
+			<%= f.label :fechainicio_com, "Fecha Inicio", :class => "control-label" %><br />
+			<div class="input-group date">
+				<%= f.text_field :fechainicio_com, disabled: disabled, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
+			</div>
+			<script type="text/javascript">
+				$('.input-group.date').datepicker({
+					format: "yyyy-mm-dd",
+					language: "es",
+					autoclose: true,
+					todayHighlight: true
+				});
+			</script>
+		</div>
+		<div class="field col-md-3">
+			<%= f.label :fechafin_com, "Fecha Fin", :class => "control-label" %><br />
+			<div class="input-group date">
+				<%= f.text_field :fechafin_com, disabled: disabled, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
+			</div>
+			<script type="text/javascript">
+				$('.input-group.date').datepicker({
+					format: "yyyy-mm-dd",
+					language: "es",
+					autoclose: true,
+					todayHighlight: true
+				});
+			</script>
+		</div>
+		<div class="field col-md-3">
+		  <%= f.label :inst_genera, "Instancia", :class => "control-label" %><br />
+		  <%= f.text_field :inst_genera, :placeholder => "Instancia que genera", :class => "form-control input-sm", disabled: disabled %>
+		</div>
+	</div>
 
-      <ul>
-      <% @commission.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="row">
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :consecutivo, "Comisión", :class => "control-label" %><br />
-        <%= f.text_field :consecutivo, :placeholder => "Num. comision", :class => "form-control input-sm", :id=>"comision" %>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :id_mec_origen, "Mecanismo Origen", :class => "control-label" %><br />
-        <%= f.collection_select :id_mec_origen, MecanismoOrigenCatalogo.all, :id, :mec_origen, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :id_tipo_comision, "Tipo comisión", :class => "control-label" %><br />
-        <%= f.collection_select :id_tipo_comision, TipoComision.all, :id, :tipo_com, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'} %>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :id_representacion, "Representación", :class => "control-label" %><br />
-        <%= f.collection_select :id_representacion, RepresentacionCatalogo.all, :id, :tp_representacion, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :fechainicio_com, "Fecha Inicio", :class => "control-label" %><br />
-        <div class="input-group date">
-          <%= f.text_field :fechainicio_com, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
-        </div>
-        <script type="text/javascript">
-          $('.input-group.date').datepicker({
-              format: "yyyy-mm-dd",
-              language: "es",
-              autoclose: true,
-              todayHighlight: true
-          });
-        </script>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :fechafin_com, "Fecha Fin", :class => "control-label" %><br />
-                <div class="input-group date">
-          <%= f.text_field :fechafin_com, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
-        </div>
-        <script type="text/javascript">
-          $('.input-group.date').datepicker({
-              format: "yyyy-mm-dd",
-              language: "es",
-              autoclose: true,
-              todayHighlight: true
-          });
-        </script>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-	 <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :inst_genera, "Instancia", :class => "control-label" %><br />
-        <%= f.text_field :inst_genera, :placeholder => "Instancia que genera", :class => "form-control input-sm" %>
-      </div>
-    </div>
-    <div class="form-group col-md-3">
-      <div class="field">
-        <%= f.label :ur, "Unidad resp.", :class => "control-label" %><br />
-        <%= f.text_field :ur, :placeholder => "UR", :class => "form-control input-sm" %>
-      </div>
-    </div>
-       <div class="col-md-4">
-      <div class="field">
-        <%= f.label :acuerdo, :class => "control-label" %><br />
-        <%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control input-sm"%>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :oficio, :class => "control-label" %><br />
-        <%= f.text_field :oficio, :placeholder => "Oficio", :class => "form-control input-sm" %>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :motivo, :class => "control-label" %><br />
-        <%= f.text_area :motivo, :class => "form-control input-sm" %>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :resultado, :class => "control-label" %><br />
-        <%= f.text_area :resultado, :class => "form-control input-sm"%>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="field">
-        <%= f.label :observaciones, :class => "control-label" %><br />
-        <%= f.text_area :observaciones, :class => "form-control input-sm"%>
-      </div>
-    </div>
-  </div>
-    <div class="actions col-md-offset-10">
-      <%= f.submit "Guardar", :class => 'btn btn-primary' %>
-    </div>
+	<div class="row">
+		<div class="field col-md-4">
+			<%= f.label :ur, "Unidad resp.", :class => "control-label" %><br />
+			<%= f.text_field :ur, :placeholder => "UR", :class => "form-control input-sm", disabled: disabled %>
+		</div>
+		<div class="field col-md-4">
+			<%= f.label :acuerdo, :class => "control-label" %><br />
+			<%= f.text_field :acuerdo, :placeholder => "Acuerdo", :class => "form-control input-sm", disabled: disabled %>
+		</div>
+		<div class="field col-md-4">
+			<%= f.label :oficio, :class => "control-label" %><br />
+			<%= f.text_field :oficio, :placeholder => "Oficio", :class => "form-control input-sm", disabled: disabled %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="field col-md-4">
+			<%= f.label :motivo, :class => "control-label" %><br />
+			<%= f.text_area :motivo, :class => "form-control input-sm", disabled: disabled %>
+		</div>
+		<div class="field col-md-4">
+			<%= f.label :resultado, :class => "control-label" %><br />
+			<%= f.text_area :resultado, :class => "form-control input-sm", disabled: disabled %>
+		</div>
+		<div class="field col-md-4">
+			<%= f.label :observaciones, :class => "control-label" %><br />
+			<%= f.text_area :observaciones, :class => "form-control input-sm", disabled: disabled %>
+		</div>
+	</div>
+	<% if !disabled %>
+	<div class="row">
+		<div class="actions col-md-12">
+			<%= f.submit "Guardar", :class => 'btn btn-primary pull-right', disabled: disabled %>
+		</div>
+	</div>
+	<% end %>
 <% end %>

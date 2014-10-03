@@ -11,7 +11,7 @@
 			</div>
 			<div id="collapseOne" class="panel-collapse collapse">
 				<div class="panel-body">
-					<%= render 'commissions/form' %>
+					<%= render 'commissions/form', :disabled => true %>
 				</div>
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 			</div>
 			<div id="collapseTwo" class="panel-collapse collapse">
 				<div class="panel-body">
-					Form de viajes
+					<%= render 'trips/form', :disabled => true %>
 				</div>
 			</div>
 		</div>	
@@ -33,7 +33,7 @@
 			<div class="panel-heading">
 				<h4 class="panel-tittle">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTree">
-						<span class="glyphicon glyphicon-usd"></span> Captura Detalle de Viaje
+						<span class="glyphicon glyphicon-tasks"></span> Captura Detalle de Viaje
 					</a>
 				</h4>
 			</div>
@@ -42,6 +42,19 @@
 					<%= render 'form' %>
 				</div>
 			</div>
-		</div>	
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+						<span class="glyphicon glyphicon-usd"></span> Captura de Gastos
+					</a>
+				</h4>
+			</div>
+			<div id="collapseFour" class="panel-collapse collapse">
+				<div class="panel-body">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

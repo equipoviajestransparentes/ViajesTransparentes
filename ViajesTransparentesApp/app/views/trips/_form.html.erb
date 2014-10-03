@@ -1,3 +1,4 @@
+<% disabled ||= false %>
 <%= form_for [@public_officer, @commission, @trip] do |f| %>
 	<% if @trip.errors.any? %>
 		<div id="error_explanation">
@@ -11,46 +12,72 @@
 		</div>
 	<% end %>
 	<div class="row">
-		<div class="col-md-12">
-			<div class="row col-md-12">
-				<div class="field col-md-6">
-					<%= f.label :tipo_viaje, "Tipo de Viaje", :class => "control-label" %><br />
-					<%= f.collection_select :tipo_viaje, TipoViajeCatalogo.all, :id, :tipo_viaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control auto'} %>
-				</div>
-			</div>
-			<div class="row col-md-12">
-				<h5>Origen</h5>
-				<div class="form-group col-md-4">
-					<%= f.select(:pais, @paises_array.map { |value| [ value, value ] }, {:prompt => 'País'}, {:class => 'form-control'}) %>
-				</div>
-				<div class="form-group col-md-4">
-					<%= f.select(:estado, [], {:prompt => 'Estado'}, {:class => 'form-control'}) %>
-				</div>
-				<div class="form-group col-md-4">
-					<%= f.select(:ciudad, [], {:prompt => 'Ciudad'}, {:class => 'form-control'}) %>
-				</div>
-			</div>
-			<div class="row col-md-12">			
-				<h5>Destino</h5>
-				<div class="form-group col-md-4">
-					<%= f.select(:pais_d, @paises_array.map { |value| [ value, value ] }, {:prompt => 'País'}, {:class => 'form-control'}) %>
-				</div>
-				<div class="form-group col-md-4">
-					<%= f.select(:estado_d, [], {:prompt => 'Estado'}, {:class => 'form-control'}) %>
-				</div>
-				<div class="form-group col-md-4">
-					<%= f.select(:ciudad_d, [], {:prompt => 'Ciudad'}, {:class => 'form-control'}) %>
-				</div>
-			</div>
-			<%= f.text_field :localidad_origen, :style=>"display: none", :id=>"localidad_origen" %>
-			<%= f.text_field :localidad_destino, :style=>"display: none", :id=>"localidad_destino" %>
-			<div class="row col-md-12">
-				<div class="actions col-md-12">
-					<%= f.submit 'Guardar', :class => 'btn btn-primary' %>
-				</div>
-			</div>
+		<div class="field col-md-6">
+			<%= f.label :tipo_viaje, "Tipo de Viaje", :class => "control-label" %><br />
+			<%= f.collection_select :tipo_viaje, TipoViajeCatalogo.all, :id, :tipo_viaje, {:prompt => 'Seleccione una opción'}, {:class => 'form-control auto input-sm', disabled: disabled } %>
 		</div>
-		<div class="col-md-3">
+		<div class="field col-md-6">
 		</div>
 	</div>
+	<div class="row">
+		<div class="form-field col-md-4">
+			<label class="control-label">Origen</label>
+			<% if !disabled %>
+			<%= f.select(:pais, @paises_array.map { |value| [ value, value ] }, {:prompt => 'País'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :pais, :class => "form-control input-sm", disabled: disabled %>
+			<% end %>
+		</div>
+		<div class="form-field col-md-4">
+			<label class="control-label"></label>
+			<% if !disabled %>
+			<%= f.select(:estado, [], {:prompt => 'Estado'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :estado, :class => "form-control input-sm", disabled: disabled %>
+			<% end %>
+		</div>
+		<div class="form-group col-md-4">
+			<label class="control-label"></label>
+			<% if !disabled %>
+			<%= f.select(:ciudad, [], {:prompt => 'Ciudad'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :ciudad, :class => "form-control input-sm",  :value => LocalidadesCatalogo.find(@trip.ciudad).ciudad, disabled: disabled %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row">			
+		<div class="form-field col-md-4">
+			<label class="control-label">Destino</label>
+			<% if !disabled %>
+			<%= f.select(:pais_d, @paises_array.map { |value| [ value, value ] }, {:prompt => 'País'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :pais_d, :class => "form-control input-sm", :id=>"comision", disabled: disabled %>
+			<% end %>
+		</div>
+		<div class="form-group col-md-4">
+			<label class="control-label"></label>
+			<% if !disabled %>
+			<%= f.select(:estado_d, [], {:prompt => 'Estado'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :estado_d, :class => "form-control input-sm", disabled: disabled %>
+			<% end %>
+		</div>
+		<div class="form-group col-md-4">
+			<label class="control-label"></label>
+			<% if !disabled %>
+			<%= f.select(:ciudad_d, [], {:prompt => 'Ciudad'}, {:class => 'form-control input-sm', disabled: disabled }) %>
+			<% else %>
+			<%= f.text_field :ciudad_d, :value => LocalidadesCatalogo.find(@trip.ciudad_d).ciudad, :class => "form-control input-sm", disabled: disabled %>
+			<% end %>
+		</div>
+	</div>
+	<%= f.text_field :localidad_origen, :style=>"display: none", :id=>"localidad_origen" %>
+	<%= f.text_field :localidad_destino, :style=>"display: none", :id=>"localidad_destino" %>
+	<% if !disabled %>
+	<div class="row">
+		<div class="actions col-md-12">
+			<%= f.submit 'Guardar', :class => 'btn btn-primary pull-right', disabled: disabled %>
+		</div>
+	</div>
+	<% end %>
 <% end %>
