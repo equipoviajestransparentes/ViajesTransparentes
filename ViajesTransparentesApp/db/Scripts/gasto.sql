@@ -98,3 +98,21 @@ INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda,
 (49, 49, '2014-10-06 00:00:00', 1, 7562, 2, 'N', 1);
 INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
 (50, 50, '2014-10-07 00:00:00', 2, 122, 2, 'N', 3);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(51, 51, '2014-09-11 00:00:00', 1, 1200, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(52, 52, '2014-09-12 00:00:00', 3, 1236, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(53, 53, '2014-08-05 00:00:00', 2, 1589, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(54, 54, '2014-10-06 00:00:00', 2, 1589, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(55, 55, '2014-09-12 00:00:00', 1, 1250, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(56, 55, '2014-09-13 00:00:00', 3, 236, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(57, 56, '2014-08-29 00:00:00', 2, 589, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(58, 56, '2014-09-24 00:00:00', 2, 1589, 1, 'S', 4);
+INSERT INTO gastos(id, trip_id, fh_comprobante, id_concepto, importe, id_moneda, existe_comprobante, id_justificacion) VALUES
+(59, 56, '2014-09-24 00:00:00', 2, 1589, 1, 'S', 4);

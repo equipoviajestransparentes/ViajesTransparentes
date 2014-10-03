@@ -98,3 +98,15 @@ INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_
 (49, 49, 2, 301.00, 5629.00, 612.00, 156.00, 5021.00, 1163.00, 128.00, 556.00, 516.00, 310.00, 879.00);
 INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
 (50, 50, 2, 245.00, 1478.00, 621.00, 1036.00, 612.00, 565.00, 856.00, 548.00, 2565.00, 1200.00, 100.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(51, 51, 1, 556.00, 3201.00, 9921.00, 1035.00, 2630.00, 200.00, 1589.00, 516.00, 310.00, 310.00, 987.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(52, 52, 2, 56.00, 159.00, 215.00, 133.00, 310.00, 961.00, 230.00, 516.00, 100.00, 100.00, 230.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(53, 53, 2, 52.00, 260.00, 260.00, 92.00, 100.00, 225.00, 310.00, 354.00, 762.00, 752.00, 310.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(54, 54, 1, 556.00, 3201.00, 921.00, 135.00, 2630.00, 250.00, 1589.00, 516.00, 310.00, 310.00, 987.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(55, 55, 1, 56.00, 1059.00, 1250.00, 133.00, 310.00, 761.00, 630.00, 546.00, 320.00, 250.00, 230.00);
+INSERT INTO expenses(id, trip_id, id_moneda, gasto_pasaje, gasto_viatico, gasto_alimento, gasto_otro, costo_hotel, comprobado, sin_comprobar, viatico_devuelto, tarifa_diaria, viaticos_total, viaticos_faltante) VALUES
+(56, 56, 1, 52.00, 2060.00, 875.00, 92.00, 100.00, 825.00, 510.00, 854.00, 762.00, 752.00, 310.00);

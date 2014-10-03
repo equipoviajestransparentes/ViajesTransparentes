@@ -14,7 +14,7 @@ class ViajesInicialController < ApplicationController
 		hash_overview = {
 			'text' => {
 				'headline' => "<span class=\"vco-test\">BIENVENIDO</span>",
-				'text' => "<center><span>Página de consulta de los viajes de los servidores públicos</span></center>"
+				'text' => "<center><span>Consulta de los viajes de los servidores públicos</span></center>"
 			},
 			'type' => "overview"
 		}

@@ -98,3 +98,15 @@ INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, li
 (49, 49, 'AER-MX12', 'IND/462', 'AEROMEXICO', 'AMERICAN AIRLINES');
 INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
 (50, 50, 'AER-MX13', 'IND/463', 'AEROMEXICO', 'AMERICAN AIRLINES');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(51, 51, 'AQY-12', 'INTER-0', 'AEROMEXICO', 'MEXICANA');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(52, 52, 'AQY-13', 'INTER-1', 'MEXICANA', 'TAESA');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(53, 53, 'AQY-14', 'INTER-2', 'TAESA', 'VOLARIS');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(54, 54, 'AQY-12', 'NACIONAL-0', 'AEROMEXICO', 'MEXICANA');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(55, 55, 'AQY-13', 'NACIONAL-1', 'MEXICANA', 'AEROMEXICO');
+INSERT INTO flights(id, detail_id, vuelo_origen, vuelo_regreso, linea_origen, linea_regreso) VALUES
+(56, 56, 'AQY-14', 'NACIONAL-2', 'AEROMEXICO', 'VOLARIS');

@@ -13,20 +13,27 @@ class PublicOfficersController < ApplicationController
 	# GET /public_officers/1
 	# GET /public_officers/1.json
 	def show
+		@url_principal =  'http://localhost:3000/'
+		@url_objeto = 'public_officers/'
+		@url_com = '/commissions/'
+		@url_trip = '/trips/'
+		@url_det = '/details/'
+		
+		
 		@public_officer = PublicOfficer.find(params[:id])
 		@ciudadano = Ciudadano.new
+		@commissions = @public_officer.commissions.all		
+		@public_officer_nombre = @public_officer.full_name
+		
 		hash_overview = {
 			'text' => {
-				'headline' => '<span class="vco-test">Historia de Viajes</span>',
-				'text' => "<center><span>Continuacion del mensaje de bienvenida</span></center>"
+				'headline' => '<span class="vco-test">Historial de Viajes</span>',
+				'text' => "<center><span>"+ @public_officer_nombre +"</span></center>"
 			},
 			'type' => "overview"
 		}
 		@list_slides ||=  []
 		@list_slides << hash_overview 
-
-		@commissions = @public_officer.commissions.all		
-		@public_officer_nombre = @public_officer.full_name
 
 		@commissions.each do |commission|
 			@trips = commission.trips.all
@@ -35,6 +42,7 @@ class PublicOfficersController < ApplicationController
 				@id_localidad_destino = trip.localidad_destino
 				@latitud = LocalidadesCatalogo.find(@id_localidad_destino).latitud_ciudad
 				@longitud = LocalidadesCatalogo.find(@id_localidad_destino).longitud_ciudad
+				@detail = trip.detail
 				@evento = trip.detail.evento
 				@fhinicio = trip.detail.fechainicio_part
 				@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
@@ -50,7 +58,7 @@ class PublicOfficersController < ApplicationController
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=#>" + @evento + "</a>",
+						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + @url_com + commission.id.to_s + @url_trip + trip.id.to_s + @url_det + @detail.id.to_s + ">" + @evento+ "</a>",
 						'text' => "<span>Fecha:<br>"+@fhinicio.to_s+"</span><br><span>Destino:<br>"+ @pais +"<br> "+ @estado +"<br> "+ @ciudad + "</span><br><span>Gasto total: <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}
@@ -147,17 +155,19 @@ class PublicOfficersController < ApplicationController
 				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
 				@gastoTot = trip.expense.gasto_viatico
 				@idMoneda = trip.expense.id_moneda
-						
+				puts "Moneda ------------------"
+				puts @idMoneda
+				
 				if @idMoneda == 1 then
 					label = @pais + "-"+ @estado
 					dato = @gastoTot
 					@list_labelsMXN << label
 					@list_dataMXN << dato
 				else
-					label = @pais + "-"+ @estado
-					dato = @gastoTot
-					@list_labelsUSD << label
-					@list_dataUSD << dato 
+					label2 = @pais + "-"+ @estado
+					dato2 = @gastoTot
+					@list_labelsUSD << label2
+					@list_dataUSD << dato2 
 				end
 			end
 	  	end

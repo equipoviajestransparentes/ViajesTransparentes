@@ -98,3 +98,15 @@ INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_
 (49, 49, 97014, 90999, 2);
 INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
 (50, 50, 97015, 117454, 2);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(51, 51, 15895, 17296, 1);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(52, 52, 19868, 25415, 1);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(53, 53, 25075, 25098, 1);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(54, 54, 92155, 92900, 1);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(55, 55, 93090, 93552, 1);
+INSERT INTO trips(id, commission_id,  localidad_origen, localidad_destino, tipo_viaje) VALUES
+(56, 56, 94498, 94535, 1);
