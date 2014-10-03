@@ -65,24 +65,31 @@
 			</div>
 		</div>
 	<div>
-	<script>
-	   	
+</div>
+	<script>	
+		
+
+	var ready;
+	ready = function(){
+		
 		var lineChartData = <%= @hash_completoMXN.to_json.html_safe %>
 		var lineChartData2 = <%= @hash_completoUSD.to_json.html_safe %>
-
-		window.onload = function(){
+		
+		
 		var ctxL = document.getElementById("lineas").getContext("2d");
 		var ctxL2 = document.getElementById("lineas2").getContext("2d");
 		
 		window.myLine = new Chart(ctxL).Line(lineChartData, {
 			responsive: true
 		});
-		
-		window.myLine = new Chart(ctxL2).Line(lineChartData2, {
+			
+		window.myLine2 = new Chart(ctxL2).Line(lineChartData2, {
 			responsive: true
-		});
-		
+		});		
 	}
+	
+	$(document).ready(ready);
+	$(document).on('page:load', ready);
+	
+	
 	</script>
-</div>
-

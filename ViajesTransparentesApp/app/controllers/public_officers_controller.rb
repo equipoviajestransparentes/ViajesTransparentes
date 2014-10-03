@@ -15,18 +15,20 @@ class PublicOfficersController < ApplicationController
 	def show
 		@public_officer = PublicOfficer.find(params[:id])
 		@ciudadano = Ciudadano.new
+		@commissions = @public_officer.commissions.all		
+		@public_officer_nombre = @public_officer.full_name
+		
 		hash_overview = {
 			'text' => {
-				'headline' => '<span class="vco-test">Historia de Viajes</span>',
-				'text' => "<center><span>Continuacion del mensaje de bienvenida</span></center>"
+				'headline' => '<span class="vco-test">Historial de Viajes</span>',
+				'text' => "<center><span>"+ @public_officer_nombre +"</span></center>"
 			},
 			'type' => "overview"
 		}
 		@list_slides ||=  []
 		@list_slides << hash_overview 
 
-		@commissions = @public_officer.commissions.all		
-		@public_officer_nombre = @public_officer.full_name
+
 
 		@commissions.each do |commission|
 			@trips = commission.trips.all
@@ -147,17 +149,19 @@ class PublicOfficersController < ApplicationController
 				@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
 				@gastoTot = trip.expense.gasto_viatico
 				@idMoneda = trip.expense.id_moneda
-						
+				puts "Moneda ------------------"
+				puts @idMoneda
+				
 				if @idMoneda == 1 then
 					label = @pais + "-"+ @estado
 					dato = @gastoTot
 					@list_labelsMXN << label
 					@list_dataMXN << dato
 				else
-					label = @pais + "-"+ @estado
-					dato = @gastoTot
-					@list_labelsUSD << label
-					@list_dataUSD << dato 
+					label2 = @pais + "-"+ @estado
+					dato2 = @gastoTot
+					@list_labelsUSD << label2
+					@list_dataUSD << dato2 
 				end
 			end
 	  	end
