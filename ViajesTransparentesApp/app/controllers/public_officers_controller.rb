@@ -13,6 +13,13 @@ class PublicOfficersController < ApplicationController
 	# GET /public_officers/1
 	# GET /public_officers/1.json
 	def show
+		@url_principal =  'http://localhost:3000/'
+		@url_objeto = 'public_officers/'
+		@url_com = '/commissions/'
+		@url_trip = '/trips/'
+		@url_det = '/details/'
+		
+		
 		@public_officer = PublicOfficer.find(params[:id])
 		@ciudadano = Ciudadano.new
 		@commissions = @public_officer.commissions.all		
@@ -28,8 +35,6 @@ class PublicOfficersController < ApplicationController
 		@list_slides ||=  []
 		@list_slides << hash_overview 
 
-
-
 		@commissions.each do |commission|
 			@trips = commission.trips.all
 			@trips.each do |trip|
@@ -37,6 +42,7 @@ class PublicOfficersController < ApplicationController
 				@id_localidad_destino = trip.localidad_destino
 				@latitud = LocalidadesCatalogo.find(@id_localidad_destino).latitud_ciudad
 				@longitud = LocalidadesCatalogo.find(@id_localidad_destino).longitud_ciudad
+				@detail = trip.detail
 				@evento = trip.detail.evento
 				@fhinicio = trip.detail.fechainicio_part
 				@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
@@ -52,7 +58,7 @@ class PublicOfficersController < ApplicationController
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=#>" + @evento + "</a>",
+						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + @url_com + commission.id.to_s + @url_trip + trip.id.to_s + @url_det + @detail.id.to_s + ">" + @evento+ "</a>",
 						'text' => "<span>Fecha:<br>"+@fhinicio.to_s+"</span><br><span>Destino:<br>"+ @pais +"<br> "+ @estado +"<br> "+ @ciudad + "</span><br><span>Gasto total: <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}

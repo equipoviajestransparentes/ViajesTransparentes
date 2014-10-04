@@ -85,7 +85,7 @@ class CommissionsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+    
   def commission_params
     params.require(:commission).permit(:id_mec_origen, :id_tipo_comision, :id_representacion, :fechainicio_com, :fechafin_com, :inst_genera,
                                        :ur, :consecutivo, :acuerdo, :oficio, :motivo, :comprobado_total, :sin_comprobar_total, :viatico_devuelto_total,

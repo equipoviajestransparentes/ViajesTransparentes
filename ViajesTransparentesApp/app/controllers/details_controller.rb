@@ -10,6 +10,12 @@ class DetailsController < ApplicationController
   # GET /details/1
   # GET /details/1.json
   def show
+		@public_officer = PublicOfficer.find(params[:public_officer_id])
+		@public_officer_nombre = @public_officer.full_name
+		@commission = @public_officer.commissions.find(params[:commission_id])
+		@viaje = @commission.trips.find(params[:id])
+		@detalle = @viaje.detail
+		@tema = CreacionTviajeCat.find(@detalle.id_tema_viaje).tema
   end
 
   # GET /details/new
