@@ -15,7 +15,23 @@ class DetailsController < ApplicationController
 		@commission = @public_officer.commissions.find(params[:commission_id])
 		@viaje = @commission.trips.find(params[:id])
 		@detalle = @viaje.detail
-		@tema = CreacionTviajeCat.find(@detalle.id_tema_viaje).tema
+		@tema = TviajeCat.find(@detalle.id_tema_viaje).tema
+		@tipoViaje = TipoPasajeCatalogo.find(@detalle.tipo_pasaje).tipo_pasaje
+		@tipoV = TipoViajeCatalogo.find(@viaje.tipo_viaje).tipo_viaje
+		@vuelo = Flight.find(@detalle.id)
+		@id_localidad_destino = @viaje.localidad_destino
+		
+			@aerolineaOrigen = @vuelo.linea_origen
+			@vueloOrigen = @vuelo.vuelo_origen
+			@aerolineaDestino = @vuelo.linea_regreso
+			@vueloDestino = @vuelo.vuelo_regreso
+		@gastos = @viaje.expense
+		@idMoneda = @viaje.expense.id_moneda
+		@moneda = MonedaCatalogo.find(@idMoneda).moneda
+		
+		@pais = LocalidadesCatalogo.find(@id_localidad_destino).pais
+		@estado = LocalidadesCatalogo.find(@id_localidad_destino).estado
+		@ciudad = LocalidadesCatalogo.find(@id_localidad_destino).ciudad
   end
 
   # GET /details/new

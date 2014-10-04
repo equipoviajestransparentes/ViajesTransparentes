@@ -5,9 +5,21 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+	<script src="https://apis.google.com/js/platform.js" async defer>
+	  {lang: 'es'}
+	</script>
 </head>
 <body>
+<div id="fb-root"></div>
+</style>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
 	<div class="row-fluid" align="center" style="padding: 10px">
 		<div class=".col-md-9">
 			<%= image_tag 'IFAI_logo.png' %><%= image_tag "cabecera.png", width: "60%", height: "90px"  %>
@@ -16,5 +28,16 @@
 	<div class="container">
 		<%= yield %>
 	</div>
+	<footer class="bs-docs-footer" role="contentinfo">
+	  <div class="container">
+		<div class="bs-docs-social">
+			<div class="row-fluid modal-footer navbar navbar-default ">
+				<div align="center">
+					<h3><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;<u><%= link_to "Inicio", root_path() %></u></h3>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</footer>
 </body>
 </html>

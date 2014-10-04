@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930082341) do
+ActiveRecord::Schema.define(version: 20141004004511) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -119,12 +119,12 @@ ActiveRecord::Schema.define(version: 20140930082341) do
 
   create_table "flights", force: true do |t|
     t.integer  "detail_id"
-    t.integer  "vuelo_origen"
-    t.integer  "vuelo_regreso"
-    t.integer  "linea_origen"
-    t.integer  "linea_regreso"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "vuelo_origen"
+    t.string   "vuelo_regreso"
+    t.string   "linea_origen"
+    t.string   "linea_regreso"
   end
 
   create_table "gastos", force: true do |t|
