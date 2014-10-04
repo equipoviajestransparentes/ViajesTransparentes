@@ -54,6 +54,7 @@ class GastosController < ApplicationController
 				@expense.gasto_otro = @expense.gasto_otro + @gasto.importe
 			end
 			@expense.gasto_viatico = @expense.gasto_viatico + @gasto.importe
+      @expense.id_moneda = @gasto.id_moneda
 			@expense.save
       @commission.estatus_comision = "capturada"
       @commission.save

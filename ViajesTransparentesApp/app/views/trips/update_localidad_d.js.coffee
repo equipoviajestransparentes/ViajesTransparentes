@@ -1,1 +1,1 @@
-$("#localidad_origen_d").val(<%= @localidad_origen %>);
+$("#localidad_destino").val(<%= @localidad_destino %>);

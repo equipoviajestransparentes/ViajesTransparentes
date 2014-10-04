@@ -122,7 +122,7 @@ def update_estado
   end
 
   def update_localidad_d
-    @localidad_origen = params[:localidad_id]
+    @localidad_destino = params[:localidad_id]
   end  
 
   def trip_params
