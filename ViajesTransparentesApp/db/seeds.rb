@@ -241,15 +241,15 @@
 #end
 #####################################################
 #######################Vuelo##########################
-# sql_vuelo = File.read('db/Scripts/vuelo.sql')
-#  stat_vuelo = sql_vuelo.split(/;/)
-#  stat_vuelo.pop
-# 
-#  ActiveRecord::Base.transaction do
-#    stat_vuelo.each do |statement|
-#      connection.execute(statement)
-#    end
-#  end
+ sql_vuelo = File.read('db/Scripts/vuelo.sql')
+  stat_vuelo = sql_vuelo.split(/;/)
+  stat_vuelo.pop
+ 
+  ActiveRecord::Base.transaction do
+    stat_vuelo.each do |statement|
+      connection.execute(statement)
+    end
+  end
 #####################################################
 # 
 ########################Costo##########################
@@ -264,13 +264,13 @@
 # end
 ######################################################
 #########################Gasto########################
- sql_gasto = File.read('db/Scripts/gasto.sql')
-  stat_gasto = sql_gasto.split(/;/)
-  stat_gasto.pop
- 
-  ActiveRecord::Base.transaction do
-    stat_gasto.each do |statement|
-      connection.execute(statement)
-    end
-  end
+# sql_gasto = File.read('db/Scripts/gasto.sql')
+#  stat_gasto = sql_gasto.split(/;/)
+#  stat_gasto.pop
+# 
+#  ActiveRecord::Base.transaction do
+#    stat_gasto.each do |statement|
+#      connection.execute(statement)
+#    end
+#  end
 ##################################################
