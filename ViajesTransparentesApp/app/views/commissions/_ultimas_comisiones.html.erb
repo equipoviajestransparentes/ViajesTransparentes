@@ -1,0 +1,14 @@
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h6 class="panel-tittle">Últimas Comisiones</h6>
+		</div>
+		<% @commissions.each do |comision| %>
+		<div class="panel-body">
+			<div class="row-fluid">
+				<%= comision.consecutivo %> 
+				<%= link_to edit_public_officer_commission_path( @public_officer.id, comision.id ), class: "btn btn-default" do %><i class="glyphicon glyphicon-pencil"></i>
+				<% end %>
+			</div>
+		</div>
+		<% end %>
+	</div>

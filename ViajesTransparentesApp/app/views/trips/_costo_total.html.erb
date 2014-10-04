@@ -1,0 +1,8 @@
+<% 
+gasto_total = 0
+@trips.each do |trip|
+	gasto_total = gasto_total + trip.expense.gasto_viatico
+end
+%>
+
+<%= gasto_total %>

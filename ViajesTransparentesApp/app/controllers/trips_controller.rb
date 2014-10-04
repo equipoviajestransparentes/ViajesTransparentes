@@ -1,5 +1,4 @@
 class TripsController < ApplicationController
-  before_action :set_trip, only: [:show, :edit, :update, :destroy]
   # GET /trips
   # GET /trips.json
   def index
@@ -39,7 +38,20 @@ class TripsController < ApplicationController
 
   # GET /trips/1/edit
   def edit
-    @trip = Trip.find(params[:id])
+    @public_officer = PublicOfficer.find(params[:public_officer_id])
+    @commission = @public_officer.commissions.find(params[:commission_id])
+    @trip = @commission.trips.find(params[:id])
+
+    respond_to do |format|
+      if @trip.save
+        format.html { redirect_to new_public_officer_commission_trip_detail_path(@public_officer, @commission, @trip), notice: 'Trip was successfully created.' }
+        format.json { render json: @trip, status: :created, location: @trip }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @trip.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   # POST /trips

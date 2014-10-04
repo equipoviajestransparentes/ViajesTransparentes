@@ -1,8 +1,6 @@
 <div class="col-md-3">
 	<%= render 'commissions/informacion_comision' %>
-	<% if @trip == nil %>
 	<%= render 'commissions/ultimas_comisiones' %>
-	<% end %>
 </div>
 <div class="col-md-9">
 	<div class="panel-group" id="accordion2">
@@ -33,7 +31,7 @@
 					<%= render 'trips/form', :disabled => true %>
 				</div>
 			</div>
-		</div>
+		</div>	
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-tittle">
@@ -64,3 +62,14 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+<%= link_to 'Agregar Vuelo', new_public_officer_commission_trip_detail_flight_path(@public_officer, @commission, @trip, @trip.detail) %>

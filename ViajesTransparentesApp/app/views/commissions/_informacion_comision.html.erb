@@ -1,0 +1,45 @@
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h6 class="panel-tittle">Información Comisión Actual</h6>
+		</div>
+		<div class="panel-body">
+			<div class="row-fluid">
+				<label class="control-label">Comisión</label>
+				<span class="row"><%= @commission.consecutivo %></span>
+			</div>
+			<% if @trips != nil %>
+			<div class="row-fluid">
+				<label class="control-label">Total Gasto de Comisión</label>
+				<span class="row"><%= render 'trips/costo_total' %></span>
+			</div>
+			<% end %>
+			<% if @trips != nil %>
+			<div class="row-fluid">
+				<%= button_to "Agregar Nuevo Viaje", new_public_officer_commission_trip_path(@public_officer, @commission), :class => "btn btn-primary", :method => :get  %>
+			</div>
+			<% end %>
+			<% if @trips != nil && @commission.estatus_comision == "capturada"%>
+			<div class="row-fluid" style="padding:10px">
+				<%= link_to "Liberar Comisión", {:controller => "commissions", :action => "liberar_comision", :public_officer_id => @public_officer.id, :commission_id => @commission.id }%>
+				<%= button_to "Liberar Comisión", liberar_comision_path(@public_officer, @commission), :class => "btn btn-success", :method => :get  %>
+			</div>
+			<% end %>
+		</div>
+		<% if @trips != nil %>
+		<div class="panel-heading">
+			<h6 class="panel-tittle">Información Viaje Actual</h6>
+		</div>
+		<div class="panel-body">
+			<%= render "trips/informacion_trips" %>
+			<% if @trip.detail != nil && @trip.detail.tipo_pasaje == 2 %>
+			<%= button_to "Agregar Vuelo", new_public_officer_commission_trip_path(@public_officer, @commission), :class => "btn btn-primary", :method => :get  %>
+			<% end %>
+		</div>
+		<div class="panel-heading">
+			<h6 class="panel-tittle">Viajes Agregados</h6>
+		</div>
+		<div class="panel-body">
+			<%= render "trips/viajes_agregados" %>
+		</div>
+		<% end %>
+	</div>

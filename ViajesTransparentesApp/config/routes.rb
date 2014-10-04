@@ -10,11 +10,11 @@ ViajesTransparentesApp::Application.routes.draw do
 
   resources :searches
 
-  root :to => 'public_officers#index'
+  root :to => 'static_pages#consulta_viajes_ifai'
   
   resources :public_officers do
     resources :ciudadanos
-	get "/graficas" => "public_officers#graficas"
+    get "/graficas" => "public_officers#graficas"
     resources :commissions do 
       resources :trips do
         resources :details do
@@ -33,6 +33,7 @@ ViajesTransparentesApp::Application.routes.draw do
   get "/update_estado_d" => "trips#update_estado_d"
   get "/update_ciudad_d" => "trips#update_ciudad_d"
   get "/update_localidad_d" => "trips#update_localidad_d"
+  get "/liberar_comision" => "commissions#liberar_comision"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,15 @@
+<% @trips.each do |trip| %>
+	<% if @trip == trip %>
+	<div class="row-fluid">
+		<b><%= trip.estado_d %></b>
+	</div>
+	<% else %>
+	<div class="row-fluid">
+		<% if trip.detail != nil %>
+			<%= link_to trip.estado_d, new_public_officer_commission_trip_gasto_path(@public_officer, @commission, trip) %>
+		<% else %>
+			<%= link_to trip.estado_d, edit_public_officer_commission_trip_path(@public_officer, @commission, trip) %>
+		<% end %>
+	</div>
+	<% end %>
+<% end %>

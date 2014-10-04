@@ -38,7 +38,9 @@ class DetailsController < ApplicationController
   def new
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
+    @commissions= @public_officer.commissions.all
     @trip = @commission.trips.find(params[:trip_id])
+    @trips = @commission.trips.all
     @detail = Detail.new
   end
 

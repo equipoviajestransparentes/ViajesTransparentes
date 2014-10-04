@@ -1,6 +1,58 @@
-<h1>Editing trip</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @trip %> |
-<%= link_to 'Back', trips_path %>
+<div class="col-md-3">
+	<%= render 'commissions/informacion_comision' %>
+	<% if @trip == nil %>
+	<%= render 'commissions/ultimas_comisiones' %>
+	<% end %>
+</div>
+<div class="col-md-9">
+<div class="panel-group" id="accordion2">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						<span class="glyphicon glyphicon-briefcase"></span> Captura de comisión
+					</a>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse">
+				<div class="panel-body" >
+					<div class='disable_input'>
+						<%= render 'commissions/form', :disabled => true %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						<span class="glyphicon glyphicon-plane"></span> Captura de viaje
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse in">
+				<div class="panel-body">
+						<%= render 'form' %>
+				</div>
+			</div>
+		</div>	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-tittle">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" >
+						<span class="glyphicon glyphicon-usd"></span> Captura de gastos
+					</a>
+				</h4>
+			</div>
+			<div id="collapseTree" class="panel-collapse collapse">
+				<div class="panel-body">
+					Form de gastos
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script type="text/javascritp">
+		var tabla = document.getElementById('comision').value;
+		alert(tabla);
+	</script>
+</div>

@@ -1,5 +1,8 @@
 <div class="col-md-3">
-	<%= render 'index_comisiones' %>
+	<%= render 'commissions/informacion_comision' %>
+	<% if @trip == nil %>
+	<%= render 'commissions/ultimas_comisiones' %>
+	<% end %>
 </div>
 <div class="col-md-9">
 	<div class="panel-group" id="accordion2">
