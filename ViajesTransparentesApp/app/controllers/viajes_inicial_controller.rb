@@ -58,7 +58,7 @@ class ViajesInicialController < ApplicationController
 			'storymap' => { 
 				'slides' => @list_slides
 			},
-			'width' => 100, 'height' => 600
+			'width' => 100, 'height' => 300
 		}
 		
 		puts hash_storymap.to_json		

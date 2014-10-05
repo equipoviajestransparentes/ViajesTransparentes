@@ -59,7 +59,7 @@ $ ->
         console.log("Seleccion Dinamica Pais OK")
 
 
-#Evento AJAX OnChange del combo Estado Origen
+#Evento AJAX OnChange del combo Estado Destino
   $(document).on 'change', '#trip_estado_d', (evt) ->
     $.ajax '/update_ciudad_d',
       type: 'GET'
@@ -73,7 +73,7 @@ $ ->
         console.log("Seleccion Dinamica Estado OK")
 
 
-#Evento AJAX OnChange del combo Ciudad Origen
+#Evento AJAX OnChange del combo Ciudad Destino
    $(document).on 'change', '#trip_ciudad_d', (evt) ->
     $.ajax '/update_localidad_d',
       type: 'GET'
