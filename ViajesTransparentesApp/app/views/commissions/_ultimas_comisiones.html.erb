@@ -5,7 +5,7 @@
 		<% @commissions.each do |comision| %>
 		<div class="panel-body">
 			<div class="row-fluid">
-				<%= comision.consecutivo %> 
+				<%= link_to comision.consecutivo, public_officer_commission_path( @public_officer.id, comision.id ) %> 
 				<%= link_to edit_public_officer_commission_path( @public_officer.id, comision.id ), class: "btn btn-default" do %><i class="glyphicon glyphicon-pencil"></i>
 				<% end %>
 			</div>

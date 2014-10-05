@@ -27,6 +27,7 @@ class TripsController < ApplicationController
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commissions = @public_officer.commissions.all
     @commission = @public_officer.commissions.find(params[:commission_id])
+    @trips = @commission.trips.all
     @trip = @commission.trips.new
     @paises_array = LocalidadesCatalogo.select(:pais).map(&:pais).uniq
 

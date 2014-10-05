@@ -24,21 +24,26 @@
 			</div>
 			<% end %>
 		</div>
-		<% if @trips != nil %>
+		<% if @commission.trips.count > 0 %>
+			<div class="panel-heading">
+				<h6 class="panel-tittle">Viajes Agregados</h6>
+			</div>
+			<div class="panel-body">
+				<%= render "trips/viajes_agregados" %>
+			</div>
+			<% end %>
+		<% if @trip != nil && @trip.tipo_viaje != nil %>
 		<div class="panel-heading">
 			<h6 class="panel-tittle">Información Viaje Actual</h6>
 		</div>
 		<div class="panel-body">
+			<% if @trip != nil && @trip.tipo_viaje != nil %>
 			<%= render "trips/informacion_trips" %>
 			<% if @trip.detail != nil && @trip.detail.tipo_pasaje == 2 %>
 			<%= button_to "Agregar Vuelo", new_public_officer_commission_trip_path(@public_officer, @commission), :class => "btn btn-primary", :method => :get  %>
 			<% end %>
-		</div>
-		<div class="panel-heading">
-			<h6 class="panel-tittle">Viajes Agregados</h6>
-		</div>
-		<div class="panel-body">
-			<%= render "trips/viajes_agregados" %>
+			<% end %>
 		</div>
 		<% end %>
 	</div>
+		<%= button_to "Nueva Comisión", new_public_officer_commission_path(@public_officer), :class => "btn btn-primary", :method => :get  %>
