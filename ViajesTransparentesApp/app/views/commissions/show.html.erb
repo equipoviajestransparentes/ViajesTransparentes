@@ -1,80 +1,24 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Id mec origen:</b>
-  <%= @commission.id_mec_origen %>
-</p>
-
-<p>
-  <b>Id tipo comision:</b>
-  <%= @commission.id_tipo_comision %>
-</p>
-
-<p>
-  <b>Id representacion:</b>
-  <%= @commission.id_representacion %>
-</p>
-
-<p>
-  <b>Fechainicio com:</b>
-  <%= @commission.fechainicio_com %>
-</p>
-
-<p>
-  <b>Fechafin com:</b>
-  <%= @commission.fechafin_com %>
-</p>
-
-<p>
-  <b>Inst genera:</b>
-  <%= @commission.inst_genera %>
-</p>
-
-<p>
-  <b>Ur:</b>
-  <%= @commission.ur %>
-</p>
-
-<p>
-  <b>Consecutivo:</b>
-  <%= @commission.consecutivo %>
-</p>
-
-<p>
-  <b>Acuerdo:</b>
-  <%= @commission.acuerdo %>
-</p>
-
-<p>
-  <b>Oficio:</b>
-  <%= @commission.oficio %>
-</p>
-
-<p>
-  <b>Motivo:</b>
-  <%= @commission.motivo %>
-</p>
-
-<p>
-  <b>Comprobado total:</b>
-  <%= @commission.comprobado_total %>
-</p>
-
-<p>
-  <b>Sin comprobar total:</b>
-  <%= @commission.sin_comprobar_total %>
-</p>
-
-<p>
-  <b>Viatico devuelto total:</b>
-  <%= @commission.viatico_devuelto_total %>
-</p>
-
-<p>
-  <b>Estatus comision:</b>
-  <%= @commission.estatus_comision %>
-</p>
-
-
-<%= link_to 'Edit', edit_commission_path(@commission) %> |
-<%= link_to 'Back', commissions_path %>
+<div class="col-md-3">
+  <%= render 'commissions/informacion_comision' %>
+  <% if @trip == nil %>
+  <%= render 'commissions/ultimas_comisiones' %>
+  <% end %>
+</div>
+<div class="col-md-9">
+  <div class="panel-group" id="accordion2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-tittle">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+            <span class="glyphicon glyphicon-briefcase"></span> Captura de comisión
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <%= render 'form', :disabled => true%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

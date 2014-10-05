@@ -13,7 +13,7 @@
 				<span class="row"><%= render 'trips/costo_total' %></span>
 			</div>
 			<% end %>
-			<% if @trips != nil %>
+			<% if @commission.consecutivo != nil %>
 			<div class="row-fluid">
 				<%= button_to "Agregar Nuevo Viaje", new_public_officer_commission_trip_path(@public_officer, @commission), :class => "btn btn-primary", :method => :get  %>
 			</div>

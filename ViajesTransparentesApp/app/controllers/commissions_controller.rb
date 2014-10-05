@@ -13,7 +13,9 @@ class CommissionsController < ApplicationController
 	# GET /commissions/1
 	# GET /commissions/1.json
 	def show
-		@commission = Commission.find(params[:id])
+		@public_officer = PublicOfficer.find(params[:public_officer_id])
+		@commissions = @public_officer.commissions.all
+		@commission = @public_officer.commissions.find(params[:id])
 
 		respond_to do |format|
 			format.html # show.html.erb
@@ -59,7 +61,7 @@ class CommissionsController < ApplicationController
 
 		respond_to do |format|
 			if @commission.save
-				format.html { redirect_to new_public_officer_commission_trip_path(@public_officer, @commission), notice: 'Commission was successfully created.' }
+				format.html { redirect_to public_officer_commission_path(@public_officer, @commission), notice: 'Commission was successfully created.' }
 				format.json { render json: @commission, status: :created, location: @commission }
 			else
 				format.html { render action: "new" }

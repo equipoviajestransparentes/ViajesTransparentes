@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004084814) do
+ActiveRecord::Schema.define(version: 20141005102414) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -185,10 +185,10 @@ ActiveRecord::Schema.define(version: 20141004084814) do
     t.string   "ap_paterno"
     t.string   "ap_materno"
     t.string   "correo_electronico"
-    t.decimal  "gastos_comprobados_total"
-    t.decimal  "gastos_sin_comprobar_total"
-    t.decimal  "costo_total"
-    t.decimal  "viaticos_devueltos_total"
+    t.decimal  "gastos_comprobados_total",   precision: 10, scale: 2, default: 0.0
+    t.decimal  "gastos_sin_comprobar_total", precision: 10, scale: 2, default: 0.0
+    t.decimal  "costo_total",                precision: 10, scale: 2, default: 0.0
+    t.decimal  "viaticos_devueltos_total",   precision: 10, scale: 2, default: 0.0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
