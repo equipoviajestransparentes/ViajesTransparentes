@@ -41,6 +41,7 @@ class TripsController < ApplicationController
   def edit
     @public_officer = PublicOfficer.find(params[:public_officer_id])
     @commission = @public_officer.commissions.find(params[:commission_id])
+    @trips = @commission.trips.all
     @trip = @commission.trips.find(params[:id])
 
     respond_to do |format|

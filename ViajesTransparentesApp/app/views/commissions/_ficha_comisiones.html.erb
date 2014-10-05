@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">Comisiones</div>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    
+                    <td><strong>Consecutivo</strong></td>
+                    <td><strong>Inicio</strong></td>
+                    <td><strong>Fin</strong></td>
+                    <td><strong>Institución que Genera</strong></td>
+                    <td><strong>Acuerdo</strong></td>
+                    <td><strong>Oficio</strong></td>
+                    <td><strong>Motivo</strong></td>
+                    <td><strong>Resultado</strong></td>
+                         
+                </tr>
+                <% @commissions.each do |commission| %>
+                <tr>
+                    <td><%= commission.consecutivo %></td>
+                    <td><%= commission.fechainicio_com %></td>
+                    <td><%= commission.fechafin_com %></td>
+                    <td><%= commission.inst_genera %></td>
+                    <td><%= commission.motivo %></td>
+                    <td><%= commission.resultado %></td>
+                </tr>   
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

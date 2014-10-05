@@ -1,0 +1,33 @@
+<%= form_for(@searchv) do |f| %>
+  <% if @searchv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@searchv.errors.count, "error") %> prohibited this searchv from being saved:</h2>
+
+      <ul>
+      <% @searchv.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :inicio_fecha_rango %><br>
+    <%= f.date_select :inicio_fecha_rango %>
+  </div>
+  <div class="field">
+    <%= f.label :fin_fecha_rango %><br>
+    <%= f.date_select :fin_fecha_rango %>
+  </div>
+  <div class="field">
+    <%= f.label :rango_min_gasto %><br>
+    <%= f.text_field :rango_min_gasto %>
+  </div>
+  <div class="field">
+    <%= f.label :rango_max_gasto %><br>
+    <%= f.text_field :rango_max_gasto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -44,58 +44,6 @@
 
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h4 class="panel-tittle">
-					<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-						Busca viaje
-					</a>
-				</h4>
-			</div>
-			<div id="collapseTwo" class="panel-collapse collapse">
-				<div class="panel-body">
-					<div class="field">
-						<%= f.label :min_fecha, "Fecha Inicio", :class => "control-label" %><br />
-						<div class="input-group date">
-						  <%= f.text_field :min_fecha, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-						<script type="text/javascript">
-						  $('.input-group.date').datepicker({
-							  format: "yyyy-mm-dd",
-							  language: "es",
-							  autoclose: true,
-							  todayHighlight: true
-						  });
-						</script>
-					</div>
-					<div class="field">
-						<%= f.label :max_fecha, "Fecha fin", :class => "control-label" %><br />
-						<div class="input-group date">
-						  <%= f.text_field :max_fecha, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-						<script type="text/javascript">
-						  $('.input-group.date').datepicker({
-							  format: "yyyy-mm-dd",
-							  language: "es",
-							  autoclose: true,
-							  todayHighlight: true
-						  });
-						</script>
-					</div>					
-					<div class="field">
-						<%= f.label :min_gasto, "Gasto inicial", :class => "control-label"%><br />
-						<%= f.text_field :min_gasto, {:class => 'form-control input-sm'} %>
-					</div>
-					<div class="field">
-						<%= f.label :max_gasto, "Gasto final", :class => "control-label"%><br />
-						<%= f.text_field :max_gasto, {:class => 'form-control input-sm'} %>
-					</div>
-					<div class="actions col-md-offset-7">
-						<%= f.submit "Buscar", :class => 'btn btn-primary'  %>
-					</div>
-				</div>
-			</div>
 		</div>	
 	</div>
 <% end %>

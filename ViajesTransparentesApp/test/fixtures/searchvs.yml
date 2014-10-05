@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inicio_fecha_rango: 2014-10-05
+  fin_fecha_rango: 2014-10-05
+  rango_min_gasto: 9.99
+  rango_max_gasto: 9.99
+
+two:
+  inicio_fecha_rango: 2014-10-05
+  fin_fecha_rango: 2014-10-05
+  rango_min_gasto: 9.99
+  rango_max_gasto: 9.99

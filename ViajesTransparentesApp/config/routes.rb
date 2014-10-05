@@ -1,5 +1,9 @@
 ViajesTransparentesApp::Application.routes.draw do
 
+  resources :searchvs
+
+  resources :search_trips
+
   devise_for :users
   resources :consulta_viajes
 

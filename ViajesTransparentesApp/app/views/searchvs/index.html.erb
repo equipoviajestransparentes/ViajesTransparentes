@@ -1,0 +1,33 @@
+<h1>Listing searchvs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Inicio fecha rango</th>
+      <th>Fin fecha rango</th>
+      <th>Rango min gasto</th>
+      <th>Rango max gasto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @searchvs.each do |searchv| %>
+      <tr>
+        <td><%= searchv.inicio_fecha_rango %></td>
+        <td><%= searchv.fin_fecha_rango %></td>
+        <td><%= searchv.rango_min_gasto %></td>
+        <td><%= searchv.rango_max_gasto %></td>
+        <td><%= link_to 'Show', searchv %></td>
+        <td><%= link_to 'Edit', edit_searchv_path(searchv) %></td>
+        <td><%= link_to 'Destroy', searchv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Searchv', new_searchv_path %>

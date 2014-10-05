@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141005102414) do
+ActiveRecord::Schema.define(version: 20141005143925) do
 
   create_table "cargo_catalogos", force: true do |t|
     t.integer "grupo_id"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20141005102414) do
   end
 
   add_index "ciudadanos", ["id_correo"], name: "index_ciudadanos_on_id_correo", unique: true
+
+  create_table "commission_officers", force: true do |t|
+    t.integer  "public_officer_id"
+    t.integer  "commission_id"
+    t.text     "resultado"
+    t.text     "observaciones"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "commissions", force: true do |t|
     t.integer  "id_mec_origen"
@@ -204,6 +213,13 @@ ActiveRecord::Schema.define(version: 20141005102414) do
     t.string "tp_representacion"
   end
 
+  create_table "search_trips", force: true do |t|
+    t.date    "inicio_fecha_rango"
+    t.date    "fin_fecha_rango"
+    t.decimal "rango_min_gasto",    precision: 10, scale: 2, default: 0.0
+    t.decimal "rango_max_gasto",    precision: 10, scale: 2, default: 0.0
+  end
+
   create_table "searches", force: true do |t|
     t.string  "nombre"
     t.string  "primer_ap"
@@ -213,6 +229,12 @@ ActiveRecord::Schema.define(version: 20141005102414) do
     t.decimal "max_gasto"
     t.date    "min_fecha"
     t.date    "max_fecha"
+  end
+
+  create_table "tema_de_viaje_catalogos", force: true do |t|
+    t.string   "tema"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tipo_comisions", force: true do |t|

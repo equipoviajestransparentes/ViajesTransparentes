@@ -1,0 +1,33 @@
+<h1>Listing search_trips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Inicio fecha rango</th>
+      <th>Fin fecha rango</th>
+      <th>Rango min gasto</th>
+      <th>Rango max gasto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search_trips.each do |search_trip| %>
+      <tr>
+        <td><%= search_trip.inicio_fecha_rango %></td>
+        <td><%= search_trip.fin_fecha_rango %></td>
+        <td><%= search_trip.rango_min_gasto %></td>
+        <td><%= search_trip.rango_max_gasto %></td>
+        <td><%= link_to 'Show', search_trip %></td>
+        <td><%= link_to 'Edit', edit_search_trip_path(search_trip) %></td>
+        <td><%= link_to 'Destroy', search_trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Search trip', new_search_trip_path %>

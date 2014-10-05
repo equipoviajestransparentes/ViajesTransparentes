@@ -6,7 +6,7 @@
 	}
 
 	.vco-storymap {
-		margin-bottom:25px;
+		margin-bottom:0px;
 	}
 	
 	#storymap1{
@@ -16,9 +16,16 @@
 		border-bottom: 1px solid #999;
 	}
 </style>
-
-<div id="storymap1"></div>
-<%= link_to 'Conoce más acerca de los viajes de nuestros servidores públicos', new_search_path, { :class=>"btn btn-info btn-large", :style=>"color: #FFF" }%>
+<div class="row">
+	<div id="storymap1"></div>
+</div>
+<div class="row">
+    <div class="col-md-6 text-center" style="border:1px solid rgba(86,61,124,.2);color: #333; background-color: rgba(86,61,124,.15);">
+    	<span class="glyphicon glyphicon-user"></span><%= link_to '  Búqueda de Servidores Públicos', new_search_path %></div>
+    <div class="col-md-6 text-center" style="border:1px solid rgba(86,61,124,.2);color: #333; background-color: rgba(86,61,124,.15);">
+		<span class="glyphicon glyphicon-plane" ></span><%= link_to '  Búqueda de Viajes', new_search_trip_path %>
+    </div>
+</div>
 
 <script>
 	var storymap1 = new VCO.StoryMap('storymap1', 'http://localhost:3000/viajes_inicial', {use_custom_markers:true});

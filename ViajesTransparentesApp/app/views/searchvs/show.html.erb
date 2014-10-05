@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inicio fecha rango:</strong>
+  <%= @searchv.inicio_fecha_rango %>
+</p>
+
+<p>
+  <strong>Fin fecha rango:</strong>
+  <%= @searchv.fin_fecha_rango %>
+</p>
+
+<p>
+  <strong>Rango min gasto:</strong>
+  <%= @searchv.rango_min_gasto %>
+</p>
+
+<p>
+  <strong>Rango max gasto:</strong>
+  <%= @searchv.rango_max_gasto %>
+</p>
+
+<%= link_to 'Edit', edit_searchv_path(@searchv) %> |
+<%= link_to 'Back', searchvs_path %>

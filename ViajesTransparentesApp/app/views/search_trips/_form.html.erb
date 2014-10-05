@@ -1,0 +1,59 @@
+<%= form_for(@search_trip) do |f| %>
+  <% if @search_trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@search_trip.errors.count, "error") %> prohibited this search_trip from being saved:</h2>
+
+      <ul>
+      <% @search_trip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="panel-group" id="accordion2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4 class="panel-tittle">
+          <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+            Busca viaje
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="field">
+            <%= f.label :inicio_fecha_rango, "Fecha Inicio", :class => "control-label" %><br />
+            <div class="input-group date">
+              <%= f.text_field :inicio_fecha_rango, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+            <script type="text/javascript">
+              $('.input-group.date').datepicker({
+                format: "yyyy-mm-dd",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+              });
+            </script>
+          </div>
+          <div class="field">
+            <%= f.label :fin_fecha_rango, "Fecha fin", :class => "control-label" %><br />
+            <div class="input-group date">
+              <%= f.text_field :fin_fecha_rango, :class => "form-control input-sm" %><span class="input-group-addon input-sm"><i class="glyphicon glyphicon-calendar"></i></span>
+            </div>
+            <script type="text/javascript">
+              $('.input-group.date').datepicker({
+                format: "yyyy-mm-dd",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+              });
+            </script>
+          </div>          
+          <div class="actions col-md-offset-7">
+            <%= f.submit "Buscar", :class => 'btn btn-primary'  %>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+<% end %>
