@@ -13,18 +13,21 @@ class DetailsController < ApplicationController
 		@public_officer = PublicOfficer.find(params[:public_officer_id])
 		@public_officer_nombre = @public_officer.full_name
 		@commission = @public_officer.commissions.find(params[:commission_id])
-		@viaje = @commission.trips.find(params[:id])
+		@viaje = @commission.trips.find(params[:trip_id])
 		@detalle = @viaje.detail
 		@tema = TviajeCat.find(@detalle.id_tema_viaje).tema
 		@tipoViaje = TipoPasajeCatalogo.find(@detalle.tipo_pasaje).tipo_pasaje
 		@tipoV = TipoViajeCatalogo.find(@viaje.tipo_viaje).tipo_viaje
-		@vuelo = Flight.find(@detalle.id)
+    if @detalle.flights.count > 0
+		  @vuelo = Flight.find(@detalle.id)
+      @aerolineaOrigen = @vuelo.linea_origen
+      @vueloOrigen = @vuelo.vuelo_origen
+      @aerolineaDestino = @vuelo.linea_regreso
+      @vueloDestino = @vuelo.vuelo_regreso
+    end
 		@id_localidad_destino = @viaje.localidad_destino
 		
-			@aerolineaOrigen = @vuelo.linea_origen
-			@vueloOrigen = @vuelo.vuelo_origen
-			@aerolineaDestino = @vuelo.linea_regreso
-			@vueloDestino = @vuelo.vuelo_regreso
+			
 		@gastos = @viaje.expense
 		@idMoneda = @viaje.expense.id_moneda
 		@moneda = MonedaCatalogo.find(@idMoneda).moneda

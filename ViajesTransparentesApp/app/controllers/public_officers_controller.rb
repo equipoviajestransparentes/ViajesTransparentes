@@ -12,13 +12,7 @@ class PublicOfficersController < ApplicationController
 
 	# GET /public_officers/1
 	# GET /public_officers/1.json
-	def show
-		@url_principal =  'http://localhost:3000/'
-		@url_objeto = 'public_officers/'
-		@url_com = '/commissions/'
-		@url_trip = '/trips/'
-		@url_det = '/details/'
-		
+	def show		
 		
 		@public_officer = PublicOfficer.find(params[:id])
 		@ciudadano = Ciudadano.new
@@ -51,14 +45,16 @@ class PublicOfficersController < ApplicationController
 				@gastoTot = trip.expense.gasto_viatico
 				@idMoneda = trip.expense.id_moneda
 				@moneda = MonedaCatalogo.find(@idMoneda).moneda
-								
+				
+				url_principal1 = (view_context.generar_link(@public_officer.id, commission.id, trip.id, @detail.id, @evento)).to_s
+
 				hash_slide = {
 					'location' => {
 						'lat' => @latitud,
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + @url_com + commission.id.to_s + @url_trip + trip.id.to_s + @url_det + @detail.id.to_s + ">" + @evento+ "</a>",
+						'headline' => url_principal1,
 						'text' => "<span>Fecha:<br>"+@fhinicio.to_s+"</span><br><span>Destino:<br>"+ @pais +"<br> "+ @estado +"<br> "+ @ciudad + "</span><br><span>Gasto total: <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}
@@ -128,7 +124,7 @@ class PublicOfficersController < ApplicationController
 		@public_officer.destroy
 
 		respond_to do |format|
-			format.html { redirect_to public_officers_url }
+			format.html { redirect_to public_officers_path }
 			format.json { head :no_content }
 		end
 	end

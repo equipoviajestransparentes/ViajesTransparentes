@@ -3,10 +3,6 @@ class ViajesInicialController < ApplicationController
 
 	def index
 
-		@url_principal =  'http://localhost:3000/'
-		@url_objeto = 'public_officers/'
-		@url_accion = '/commissions/new'
-
 		@mes_antes = Date.today - 1.month
 		@estatus_liberado = "T"
 		@commissions = Commission.where(["estatus_comision = ? and fechafin_com >= ?", @estatus_liberado, @mes_antes])
@@ -40,20 +36,22 @@ class ViajesInicialController < ApplicationController
 				@gastoTot = trip.expense.gasto_viatico
 				@idMoneda = trip.expense.id_moneda
 				@moneda = MonedaCatalogo.find(@idMoneda).moneda
+
+				url_principal1 = (view_context.generar_link_servidor(@public_officer.id, @public_officer_nombre)).to_s
+
 				hash_slide = {
 					'location' => {
 						'lat' => @latitud,
 						'lon' => @longitud
 					},
 					'text' => {
-						'headline' => "<a href=" + @url_principal + @url_objeto + @public_officer.id.to_s + ">" + @public_officer_nombre + "</a><br><small>"+@evento+"</small>",
+						'headline' => url_principal1 + "<br><small>"+ (view_context.generar_link(@public_officer.id, commission.id, trip.id, trip.detail.id, @evento)).to_s + "</small>",
 						'text' => "<span class=\"map-ini-fecha\">Fecha: <br>" + @fecha_ini_com.to_s + " - " + @fecha_fin_com.to_s + "</span><br><span clas=\"map-ini-destino\">DESTINO : <br>"+ @pais +" - "+ @estado +" - "+ @ciudad + "</span><br><span clas=\"map-ini-gasto\">GASTO TOTAL : <br>"+@gastoTot.to_s+ @moneda+"</span>"
 					}
 				}
 				@list_slides << hash_slide
 			end
 	  	end
-
 		hash_storymap = {
 			'storymap' => { 
 				'slides' => @list_slides

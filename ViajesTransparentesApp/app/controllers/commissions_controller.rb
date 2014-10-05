@@ -42,6 +42,7 @@ class CommissionsController < ApplicationController
 		@public_officer = PublicOfficer.find(params[:public_officer_id])
 		@commissions = @public_officer.commissions.all
 		@commission = @public_officer.commissions.find(params[:id])
+		@trips = @commission.trips.all
 	end
 
 	# POST /commissions

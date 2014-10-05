@@ -17,7 +17,7 @@
                 </tr>
                 <% @commissions.each do |commission| %>
                 <tr>
-                    <td><%= commission.consecutivo %></td>
+                    <td><%= link_to commission.consecutivo, public_officer_commission_trips_path(commission.public_officer_id, commission.id) %></td>
                     <td><%= commission.fechainicio_com %></td>
                     <td><%= commission.fechafin_com %></td>
                     <td><%= commission.inst_genera %></td>
