@@ -35,12 +35,8 @@
 						<%= f.text_field :segundo_ap , {:class => 'form-control input-sm'}%>
 					</div>
 					<div class="field">
-						<%= f.label :id_cargo, "Cargo", :class => "control-label" %><br />
-						<%= f.collection_select :id, Cargo.all, :id, :cargo, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
-					</div>
-					<div class="field">
-						<%= f.label :id_puesto, "Puesto", :class => "control-label" %><br />
-						<%= f.collection_select :id, Puesto.all, :id, :puesto, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
+						<%= f.label :puesto, "Puesto", :class => "control-label" %><br />
+						<%= f.collection_select :puesto, Puesto.all, :id, :puesto, {:prompt => 'Seleccione una opción'}, {:class => 'form-control input-sm'}%>
 					</div>					  
 					<div class="actions col-md-offset-7">
 						<%= f.submit "Buscar", :class => 'btn btn-primary'  %>

@@ -12,6 +12,10 @@ private
 
 	public_officers = public_officers.where("ap_paterno like ?", "%#{primer_ap}%") if primer_ap.present?
 
+	public_officers = public_officers.where("ap_materno like ?", "%#{segundo_ap}%") if segundo_ap.present?
+
+	public_officers = public_officers.where("id_puesto  like ?", "%#{puesto}%") if puesto.present?
+
     public_officers
   end
 end
