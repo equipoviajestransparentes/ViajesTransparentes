@@ -86,10 +86,35 @@
 <h3>
 <a name="dependencias" class="anchor" href="#dependencias"><span class="octicon octicon-link"></span></a>Dependencias</h3>
 
-<h3>
+<ul>
+<li>Rails 4.0</li>
+<li>Ruby 2.02</li> 
+</ul><h3>
 <a name="instalaci%C3%B3n-y-configuraci%C3%B3n" class="anchor" href="#instalaci%C3%B3n-y-configuraci%C3%B3n"><span class="octicon octicon-link"></span></a>Instalación y Configuración</h3>
 
-<h3>
+<h4>
+<a name="desarrollo" class="anchor" href="#desarrollo"><span class="octicon octicon-link"></span></a>Desarrollo</h4>
+
+<ul>
+<li>bundle install para instalar las librerías necesarias.</li>
+<li>rake db:migrate para crear la base de datos</li>
+<li>rake db:seed para poblar las tablas.</li>
+</ul><p><br></p>
+
+<h4>
+<a name="producci%C3%B3n-para-heroku" class="anchor" href="#producci%C3%B3n-para-heroku"><span class="octicon octicon-link"></span></a>Producción para Heroku</h4>
+
+<ul>
+<li>bundle install --without production librerías necesarias</li>
+<li>heroku login crea las llaver para heroku</li>
+<li>heroku create crea una app</li>
+<li>RAILS_ENV=production rake assets:precompile para generar css y javascript pipeline</li>
+<li>git init liga el repositorio con la aplicación </li>
+<li>git add . para ligar los componentes al repositorio</li>
+<li>git commit para crear una versión</li>
+<li>git push heroku master para subir a heroku e instalar</li>
+<li>heroku run db:migrate para crear la base de datos en producción</li>
+</ul><h3>
 <a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
 
 <p><img src="https://raw.githubusercontent.com/equipoviajestransparentes/ViajesTransparentes/master/Screenshots/inicio2.png"></p>
